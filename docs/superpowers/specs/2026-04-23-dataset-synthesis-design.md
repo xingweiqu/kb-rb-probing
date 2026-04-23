@@ -2,7 +2,7 @@
 
 ## Goal
 
-Build a modular, API-driven pipeline that synthesizes ~80-100 item families for behavioral probing. Each family has a latent structure, 19 variant types aligned to 12 atomic capabilities, symbolic counterparts (Unicode symbols), and MCQ versions (symbolic priority).
+Build a modular, API-driven pipeline that synthesizes ~80-100 item families for behavioral probing. Each family has a latent structure, 20 variant types aligned to 12 atomic capabilities, symbolic counterparts (Unicode symbols), and MCQ versions (symbolic priority).
 
 No probing, training, evaluation, or execution — code only.
 
@@ -25,7 +25,7 @@ The dataset is designed to probe 12 atomic capabilities organized into 4 major c
 | Substitution-fragile | terminology-fragile | `terminology_swap` |
 | Substitution-fragile | structure-misaligned | `substitution` |
 
-Plus `cot_shuffled` (CoT chain with shuffled steps). Total: **19 variant types**.
+Plus `cot_shuffled` (CoT chain with shuffled steps). Total: **20 variant types**.
 
 ## Blocks
 
