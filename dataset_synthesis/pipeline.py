@@ -28,6 +28,7 @@ from .mcq import generate_all_mcq
 from .stats import export_stats
 from .structures import generate_all_structures, generate_base_items
 from .symbolic import generate_all_symbolic
+from .validate import validate_dataset
 from .variants import generate_all_variants
 
 logger = logging.getLogger(__name__)
@@ -132,13 +133,37 @@ def run_pipeline(
             with_mcq.extend(enriched)
             _save_checkpoint(with_mcq, ckpt_5)
 
-    # Export
-    logger.info("=== Exporting final dataset ===")
-    families = export_all(ckpt, out)
-    stats = export_stats(families, out / "stats.json")
+    # Merge checkpoints → raw families, then validate
+    logger.info("=== Validating families ===")
+    from .export import merge_checkpoints
+    raw_families = merge_checkpoints(ckpt)
+    kept, val_results = validate_dataset(raw_families)
+    n_discarded = len(raw_families) - len(kept)
+    logger.info("Validation: %d total, %d discarded, %d kept", len(raw_families), n_discarded, len(kept))
 
-    logger.info("Pipeline complete. %d families, stats: %s", len(families), json.dumps(stats, indent=2))
-    return families
+    # Export validated dataset
+    logger.info("=== Exporting final dataset ===")
+    out.mkdir(parents=True, exist_ok=True)
+    with open(out / "dataset.json", "w", encoding="utf-8") as f:
+        json.dump(kept, f, ensure_ascii=False, indent=2)
+    with open(out / "dataset.jsonl", "w", encoding="utf-8") as f:
+        for fam in kept:
+            f.write(json.dumps(fam, ensure_ascii=False) + "\n")
+
+    # Validation report — only families that had issues
+    with open(out / "validation_report.json", "w", encoding="utf-8") as f:
+        json.dump(
+            [
+                {"family_id": r.family_id, "discard": r.discard, "issues": r.issues}
+                for r in val_results
+                if r.issues
+            ],
+            f, ensure_ascii=False, indent=2,
+        )
+
+    stats = export_stats(kept, out / "stats.json")
+    logger.info("Pipeline complete. %d families kept.", len(kept))
+    return kept
 
 
 if __name__ == "__main__":

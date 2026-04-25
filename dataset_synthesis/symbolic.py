@@ -31,12 +31,8 @@ def _extract_entities(structure: dict[str, Any]) -> list[str]:
             entities.append(label)
             seen.add(label)
 
-    # Graph-based: edge relations
-    for edge in structure.get("edges", []):
-        rel = edge.get("relation", "")
-        if rel and rel not in seen:
-            entities.append(rel)
-            seen.add(rel)
+    # Note: edge relations (e.g. "has_capital") are structural labels, not surface
+    # entities that appear in question text, so we intentionally skip them here.
 
     # Rule-based: variables
     for var in structure.get("variables", []):
@@ -66,13 +62,16 @@ def build_entity_map(structure: dict[str, Any], symbol_pool: list[str] | None = 
 def apply_symbol_substitution(text: str, entity_map: dict[str, str]) -> str:
     """Replace all entity occurrences in text with their symbols.
 
-    Replaces longer entities first to avoid partial matches.
+    Uses word-boundary matching so single/short entities (e.g. 'n', 'O', 'Au')
+    don't contaminate surrounding letters. Replaces longer entities first to
+    avoid partial matches on multi-word entities.
     """
     sorted_entities = sorted(entity_map.keys(), key=len, reverse=True)
     result = text
     for entity in sorted_entities:
         symbol = entity_map[entity]
-        result = re.sub(re.escape(entity), symbol, result, flags=re.IGNORECASE)
+        pattern = r"\b" + re.escape(entity) + r"\b"
+        result = re.sub(pattern, symbol, result, flags=re.IGNORECASE)
     return result
 
 
