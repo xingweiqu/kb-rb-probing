@@ -42,19 +42,29 @@ VARIANT_DEFINITIONS = {
         "For single-hop, this is similar to premise but more explicit."
     ),
     "scaffold_1": (
-        "Give ONE intermediate decomposition step. Must NOT give the final answer. "
+        "Give ONE intermediate decomposition step. "
+        "CRITICAL: The step must stop BEFORE computing the final answer — it may set up the "
+        "computation but must NOT state the result. The gold_answer must NOT appear anywhere "
+        "in the question text. "
         "Example: 'First, identify which country has Berlin as a city. Then, ...'"
     ),
     "scaffold_2": (
-        "Give TWO intermediate decomposition steps. Must NOT give the final answer. "
-        "More guidance than scaffold_1 but still requires the model to reach the conclusion."
+        "Give TWO intermediate decomposition steps. "
+        "CRITICAL: The last step must stop BEFORE the final answer is reached — it may set up "
+        "the final computation but must NOT state the result. The gold_answer must NOT appear "
+        "anywhere in the question text. "
+        "More guidance than scaffold_1 but the model must still reach the conclusion."
     ),
     "scaffold_3": (
-        "Give THREE or more intermediate steps. Must NOT give the final answer. "
+        "Give THREE or more intermediate steps. "
+        "CRITICAL: The last step must stop BEFORE the final answer — leave the final computation "
+        "to the model. The gold_answer must NOT appear anywhere in the question text. "
         "Nearly complete walkthrough but the final step is left to the model."
     ),
     "scaffold_shuffled": (
         "Same content as scaffold_2 or scaffold_3, but steps in RANDOMIZED order. "
+        "CRITICAL: The gold_answer must NOT appear anywhere in the question text — apply the "
+        "same 'stop before final answer' rule as scaffold_2/scaffold_3. "
         "The information is all there but the logical sequence is disrupted. "
         "Record both original_order and shuffled_order in metadata."
     ),
@@ -120,6 +130,7 @@ CRITICAL RULES:
 2. Each variant must follow its definition EXACTLY.
 3. Return structured JSON with all variant keys.
 4. For metadata fields, include the specific content described in each variant's definition.
+5. For scaffold_1/2/3/shuffled: the gold_answer string must NOT appear anywhere in the question text.
 
 Variant definitions:
 {definitions}
@@ -131,6 +142,42 @@ Return a JSON object where each key is a variant name and each value is:
 }}
 
 Return ONLY valid JSON, no markdown or explanation."""
+
+SCAFFOLD_REPAIR_SYSTEM = """You are a dataset designer fixing scaffold variants that accidentally revealed the final answer.
+
+The scaffold variants (scaffold_1, scaffold_2, scaffold_3, scaffold_shuffled) must provide intermediate
+decomposition steps WITHOUT stating the final answer. The gold_answer must NOT appear anywhere in the
+question text.
+
+Rules for each scaffold type:
+- scaffold_1: ONE intermediate step that sets up the computation but stops before the final result
+- scaffold_2: TWO steps — the last step must stop before computing the final value
+- scaffold_3: THREE+ steps — the last step must stop before the final value (e.g. "apply h(x) = x-4 to 15" not "= 11")
+- scaffold_shuffled: same content as scaffold_2/3 but reordered — same no-final-answer rule applies
+
+For RB items with arithmetic: stop at the expression setup, not the evaluation.
+  BAD:  "Step 2: h(15) = 15 - 4 = 11"   (reveals answer 11)
+  GOOD: "Step 2: Apply h(x) = x - 4 to x = 15"
+
+Return a JSON object with ONLY the keys that need repair:
+{{
+    "scaffold_1": {{"question": "...", "metadata": {{}}}},
+    "scaffold_2": {{"question": "...", "metadata": {{}}}},
+    ...
+}}
+
+Return ONLY valid JSON, no markdown or explanation."""
+
+SCAFFOLD_REPAIR_USER = """Base item:
+- family_id: {family_id}
+- base_question: {base_question}
+- gold_answer: {gold_answer}
+- gold_reasoning_chain: {gold_reasoning_chain}
+
+These scaffold variants contain the gold_answer ({gold_answer}) and need to be regenerated:
+{leaking_variants}
+
+Regenerate ONLY these variants so they stop before revealing the final answer."""
 
 VARIANT_GENERATION_USER = """Base item:
 - family_id: {family_id}
@@ -168,10 +215,63 @@ def build_variant_prompt(family: dict[str, Any]) -> tuple[str, str]:
     return system, user
 
 
-def generate_variants(client: APIClient, family: dict[str, Any]) -> dict[str, Any]:
+_SCAFFOLD_TYPES = {"scaffold_1", "scaffold_2", "scaffold_3", "scaffold_shuffled"}
+
+
+def _find_leaking_scaffolds(variants: dict[str, Any], gold_answer: str) -> list[str]:
+    """Return scaffold variant names whose question text contains the gold answer."""
+    gold = str(gold_answer).strip().lower()
+    leaking = []
+    for vtype in _SCAFFOLD_TYPES:
+        q = variants.get(vtype, {}).get("question", "")
+        if gold and gold in q.lower():
+            leaking.append(vtype)
+    return leaking
+
+
+def repair_scaffold_leaks(
+    client: APIClient,
+    family: dict[str, Any],
+    variants: dict[str, Any],
+    leaking: list[str],
+) -> dict[str, Any]:
+    """Re-request only the leaking scaffold variants using the repair prompt."""
+    leaking_variants_json = json.dumps(
+        {k: variants[k] for k in leaking if k in variants},
+        ensure_ascii=False,
+        indent=2,
+    )
+    user = SCAFFOLD_REPAIR_USER.format(
+        family_id=family.get("family_id", ""),
+        base_question=family.get("base_question", ""),
+        gold_answer=family.get("gold_answer", ""),
+        gold_reasoning_chain=json.dumps(
+            family.get("gold_reasoning_chain", []), ensure_ascii=False
+        ),
+        leaking_variants=leaking_variants_json,
+    )
+    repaired = client.call_api_json(SCAFFOLD_REPAIR_SYSTEM, user)
+    if not isinstance(repaired, dict):
+        logger.warning("Scaffold repair returned non-dict for %s", family.get("family_id"))
+        return variants
+    updated = {**variants}
+    for k, v in repaired.items():
+        if k in _SCAFFOLD_TYPES:
+            updated[k] = v
+    return updated
+
+
+def generate_variants(
+    client: APIClient,
+    family: dict[str, Any],
+    repair_scaffolds: bool = True,
+    max_repair_attempts: int = 2,
+) -> dict[str, Any]:
     """Generate all 19 variants for a single family.
 
     Returns a dict mapping variant_name -> {question, metadata}.
+    If repair_scaffolds is True, automatically re-requests any scaffold variants
+    that leak the gold answer (up to max_repair_attempts times).
     """
     system, user = build_variant_prompt(family)
     logger.info("Generating variants for %s...", family.get("family_id"))
@@ -186,6 +286,22 @@ def generate_variants(client: APIClient, family: dict[str, Any]) -> dict[str, An
             "question": family.get("base_question", ""),
             "metadata": {},
         }
+
+    # Auto-repair scaffold leaks
+    if repair_scaffolds:
+        gold = family.get("gold_answer", "")
+        for attempt in range(max_repair_attempts):
+            leaking = _find_leaking_scaffolds(result, gold)
+            if not leaking:
+                break
+            logger.warning(
+                "%s: scaffold leak in %s (attempt %d/%d), repairing...",
+                family.get("family_id"),
+                leaking,
+                attempt + 1,
+                max_repair_attempts,
+            )
+            result = repair_scaffold_leaks(client, family, result, leaking)
 
     return result
 
