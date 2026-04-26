@@ -40,7 +40,10 @@ Return ONLY valid JSON."""
 
 
 def build_kb_structure_prompt(count: int) -> str:
-    return f"Generate {count} diverse KB item structures. Distribute across sub-families: country_capital, work_author, element_symbol, entity_attribute."
+    return (
+        f"Generate EXACTLY {count} diverse KB item structures. "
+        "Distribute across sub-families: country_capital, work_author, element_symbol, entity_attribute."
+    )
 
 
 def build_kb_base_item_prompt(structure: dict[str, Any]) -> str:
@@ -56,6 +59,24 @@ def generate_kb_structures(client: APIClient, count: int) -> list[dict[str, Any]
     return result
 
 
+async def generate_kb_structures_async(client: APIClient, count: int) -> list[dict[str, Any]]:
+    prompt = build_kb_structure_prompt(count)
+    # Expect a JSON array, so do NOT force json_object response_format.
+    result = await client.call_api_json_async(KB_STRUCTURE_SYSTEM, prompt, response_format=None)
+    if not isinstance(result, list):
+        result = [result]
+    return result
+
+
 def generate_kb_base_item(client: APIClient, structure: dict[str, Any]) -> dict[str, Any]:
     prompt = build_kb_base_item_prompt(structure)
     return client.call_api_json(KB_BASE_ITEM_SYSTEM, prompt)
+
+
+async def generate_kb_base_item_async(client: APIClient, structure: dict[str, Any]) -> dict[str, Any]:
+    prompt = build_kb_base_item_prompt(structure)
+    return await client.call_api_json_async(
+        KB_BASE_ITEM_SYSTEM,
+        prompt,
+        response_format={"type": "json_object"},
+    )

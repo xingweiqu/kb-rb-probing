@@ -1,0 +1,29 @@
+{
+  "before": {
+    "total_families": 90,
+    "families_with_issues": 90,
+    "issue_counts": {
+      "answer_leak": 166,
+      "symbolic_not_clean": 90,
+      "invalid_substitution": 64,
+      "mcq_type_mismatch": 57,
+      "hybrid_overcomplex": 1
+    },
+    "severity_counts": {
+      "P0": 378
+    }
+  },
+  "after": {
+    "total_families": 90,
+    "families_with_issues": 42,
+    "issue_counts": {
+      "answer_leak": 77,
+      "invalid_substitution": 6,
+      "weak_distractor_set": 3,
+      "mcq_type_mismatch": 1
+    },
+    "severity_counts": {
+      "P0": 87
+    }
+  }
+}

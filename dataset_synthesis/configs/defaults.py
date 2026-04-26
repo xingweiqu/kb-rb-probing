@@ -1,7 +1,8 @@
 """Default configuration for the synthesis pipeline."""
 
-MODEL = "claude-sonnet-4-6"
-MAX_TOKENS = 16384
+MODEL = "gpt-oss-120b"
+# vLLM `max_tokens` for chat completions. Keep below the server's max_model_len budget.
+MAX_TOKENS = 6144
 
 # Family counts per block
 FAMILY_COUNTS = {
@@ -14,7 +15,12 @@ SYMBOLIC_CONTROL_COUNT = 15
 # API retry
 MAX_RETRIES = 3
 RETRY_DELAYS = [1.0, 2.0, 4.0]
-REQUEST_DELAY = 0.5  # seconds between API calls
+# For local multi-endpoint vLLM, keep this at 0 unless you see queue buildup.
+REQUEST_DELAY = 0.0  # seconds between API calls
+
+# Async throughput controls
+CONCURRENCY = 14
+BATCH_SIZE = 28
 
 # Unicode symbol pool — assigned in order to structure nodes
 SYMBOL_POOL = [
@@ -55,10 +61,11 @@ VARIANT_TYPES = [
 SYMBOLIC_VARIANT_TYPES = VARIANT_TYPES
 
 # Atomic capability → variant mapping (for stats / validation)
+# Names are aligned to the intended atomic capability taxonomy.
 ATOMIC_CAPABILITY_MAP = {
-    "evidence_access": ["original", "hint", "premise", "premise_removal"],
-    "evidence_localization": ["highlight"],
-    "evidence_integration": ["full_support_bundle"],
+    "access_sensitive": ["original", "hint", "premise", "premise_removal"],
+    "localization_sensitive": ["highlight"],
+    "integration_sensitive": ["full_support_bundle"],
     "decomposition_sensitive": ["scaffold_1", "scaffold_2", "scaffold_3"],
     "order_sensitive": ["scaffold_shuffled"],
     "intermediate_state_sensitive": ["cot_full", "cot_partial"],

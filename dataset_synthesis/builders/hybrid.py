@@ -45,7 +45,10 @@ Return ONLY valid JSON."""
 
 
 def build_hybrid_structure_prompt(count: int) -> str:
-    return f"Generate {count} diverse Hybrid item structures. Distribute across sub-families: two_hop_relational, retrieve_transform, retrieve_rule_apply."
+    return (
+        f"Generate EXACTLY {count} diverse Hybrid item structures. "
+        "Distribute across sub-families: two_hop_relational, retrieve_transform, retrieve_rule_apply."
+    )
 
 
 def build_hybrid_base_item_prompt(structure: dict[str, Any]) -> str:
@@ -61,6 +64,24 @@ def generate_hybrid_structures(client: APIClient, count: int) -> list[dict[str, 
     return result
 
 
+async def generate_hybrid_structures_async(client: APIClient, count: int) -> list[dict[str, Any]]:
+    prompt = build_hybrid_structure_prompt(count)
+    # Expect a JSON array, so do NOT force json_object response_format.
+    result = await client.call_api_json_async(HYBRID_STRUCTURE_SYSTEM, prompt, response_format=None)
+    if not isinstance(result, list):
+        result = [result]
+    return result
+
+
 def generate_hybrid_base_item(client: APIClient, structure: dict[str, Any]) -> dict[str, Any]:
     prompt = build_hybrid_base_item_prompt(structure)
     return client.call_api_json(HYBRID_BASE_ITEM_SYSTEM, prompt)
+
+
+async def generate_hybrid_base_item_async(client: APIClient, structure: dict[str, Any]) -> dict[str, Any]:
+    prompt = build_hybrid_base_item_prompt(structure)
+    return await client.call_api_json_async(
+        HYBRID_BASE_ITEM_SYSTEM,
+        prompt,
+        response_format={"type": "json_object"},
+    )

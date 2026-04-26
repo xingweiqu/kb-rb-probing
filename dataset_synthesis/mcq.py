@@ -5,11 +5,13 @@ Generates 4-choice MCQ items, prioritizing symbolic families.
 
 from __future__ import annotations
 
+import asyncio
 import json
 import logging
 from typing import Any
 
 from .api_client import APIClient
+from .configs.defaults import BATCH_SIZE, CONCURRENCY
 
 logger = logging.getLogger(__name__)
 
@@ -93,6 +95,25 @@ def generate_mcq(client: APIClient, family: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+async def generate_mcq_async(client: APIClient, family: dict[str, Any]) -> dict[str, Any]:
+    system, user = build_mcq_prompt(family)
+    logger.info("Generating MCQ for %s...", family.get("family_id"))
+    result = await client.call_api_json_async(system, user, response_format={"type": "json_object"})
+
+    sym = family.get("symbolic_variants", {})
+    sym_original = sym.get("original", {})
+    question = sym_original.get("question", "") if isinstance(sym_original, dict) else ""
+
+    return {
+        "symbolic_original": {
+            "question": question,
+            "options": result.get("options", []) if isinstance(result, dict) else [],
+            "correct_index": result.get("correct_index", 0) if isinstance(result, dict) else 0,
+            "option_metadata": result.get("option_metadata", []) if isinstance(result, dict) else [],
+        }
+    }
+
+
 def generate_all_mcq(
     client: APIClient,
     families: list[dict[str, Any]],
@@ -110,4 +131,30 @@ def generate_all_mcq(
         else:
             family_copy = {**family, "mcq_variants": {}}
         enriched.append(family_copy)
+    return enriched
+
+
+async def generate_all_mcq_async(
+    client: APIClient,
+    families: list[dict[str, Any]],
+    *,
+    concurrency: int = CONCURRENCY,
+    batch_size: int = BATCH_SIZE,
+) -> list[dict[str, Any]]:
+    """Generate MCQ for families that have symbolic variants with bounded concurrency."""
+    sem = asyncio.Semaphore(concurrency)
+
+    async def one(family: dict[str, Any]) -> dict[str, Any]:
+        sym = family.get("symbolic_variants", {})
+        if sym and sym.get("original"):
+            async with sem:
+                mcq = await generate_mcq_async(client, family)
+            return {**family, "mcq_variants": mcq}
+        return {**family, "mcq_variants": {}}
+
+    enriched: list[dict[str, Any]] = []
+    for i in range(0, len(families), batch_size):
+        batch = families[i : i + batch_size]
+        out = await asyncio.gather(*(one(f) for f in batch))
+        enriched.extend(out)
     return enriched

@@ -42,7 +42,10 @@ Return ONLY valid JSON."""
 
 
 def build_rb_structure_prompt(count: int) -> str:
-    return f"Generate {count} diverse RB item structures. Distribute across sub-families: linear_equation, syllogistic_logic, sequence_pattern, boolean_logic, function_application."
+    return (
+        f"Generate EXACTLY {count} diverse RB item structures. "
+        "Distribute across sub-families: linear_equation, syllogistic_logic, sequence_pattern, boolean_logic, function_application."
+    )
 
 
 def build_rb_base_item_prompt(structure: dict[str, Any]) -> str:
@@ -58,6 +61,24 @@ def generate_rb_structures(client: APIClient, count: int) -> list[dict[str, Any]
     return result
 
 
+async def generate_rb_structures_async(client: APIClient, count: int) -> list[dict[str, Any]]:
+    prompt = build_rb_structure_prompt(count)
+    # Expect a JSON array, so do NOT force json_object response_format.
+    result = await client.call_api_json_async(RB_STRUCTURE_SYSTEM, prompt, response_format=None)
+    if not isinstance(result, list):
+        result = [result]
+    return result
+
+
 def generate_rb_base_item(client: APIClient, structure: dict[str, Any]) -> dict[str, Any]:
     prompt = build_rb_base_item_prompt(structure)
     return client.call_api_json(RB_BASE_ITEM_SYSTEM, prompt)
+
+
+async def generate_rb_base_item_async(client: APIClient, structure: dict[str, Any]) -> dict[str, Any]:
+    prompt = build_rb_base_item_prompt(structure)
+    return await client.call_api_json_async(
+        RB_BASE_ITEM_SYSTEM,
+        prompt,
+        response_format={"type": "json_object"},
+    )

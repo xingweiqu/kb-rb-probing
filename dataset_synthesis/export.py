@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Any
 
 from .schema import Family
+from .symbolic import derive_symbolic_control_family
 
 logger = logging.getLogger(__name__)
 
@@ -83,3 +84,23 @@ def export_all(
     export_jsonl(families, output_dir / "dataset.jsonl")
 
     return families
+
+
+def export_symbolic_dataset(
+    families: list[dict[str, Any]],
+    output_dir: Path,
+) -> list[dict[str, Any]]:
+    """Export a standalone SymbolicControl dataset derived from families.
+
+    One derived symbolic family per source family.
+    """
+    derived: list[dict[str, Any]] = []
+    for f in families:
+        sym = derive_symbolic_control_family(f)
+        if sym is not None:
+            derived.append(sym)
+
+    export_json(derived, output_dir / "symbolic_dataset.json")
+    export_jsonl(derived, output_dir / "symbolic_dataset.jsonl")
+    logger.info("Exported %d SymbolicControl families to %s", len(derived), output_dir)
+    return derived

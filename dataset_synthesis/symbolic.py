@@ -68,12 +68,102 @@ def apply_symbol_substitution(text: str, entity_map: dict[str, str]) -> str:
 
     Replaces longer entities first to avoid partial matches.
     """
+    def _pattern_and_flags(entity: str) -> tuple[str, int]:
+        # For alphanumeric-ish entities (variables, relations like capital_of), avoid
+        # accidental substitutions inside larger words.
+        if re.fullmatch(r"[A-Za-z0-9_]+", entity):
+            return rf"\b{re.escape(entity)}\b", re.IGNORECASE
+        # For multi-token / non-alnum entities (e.g., "Pride and Prejudice"), do a
+        # literal match.
+        return re.escape(entity), re.IGNORECASE
+
     sorted_entities = sorted(entity_map.keys(), key=len, reverse=True)
     result = text
     for entity in sorted_entities:
         symbol = entity_map[entity]
-        result = re.sub(re.escape(entity), symbol, result, flags=re.IGNORECASE)
+        pat, flags = _pattern_and_flags(entity)
+        result = re.sub(pat, symbol, result, flags=flags)
     return result
+
+
+def deep_apply_symbol_substitution(obj: Any, entity_map: dict[str, str]) -> Any:
+    """Recursively apply symbol substitution to all string leaves.
+
+    - Preserves dict keys (schema keys), only transforms values.
+    - Handles nested dict/list structures.
+    """
+    if isinstance(obj, str):
+        return apply_symbol_substitution(obj, entity_map)
+    if isinstance(obj, list):
+        return [deep_apply_symbol_substitution(x, entity_map) for x in obj]
+    if isinstance(obj, dict):
+        return {k: deep_apply_symbol_substitution(v, entity_map) for k, v in obj.items()}
+    return obj
+
+
+def derive_symbolic_control_family(
+    family: dict[str, Any],
+    symbol_pool: list[str] | None = None,
+) -> dict[str, Any] | None:
+    """Derive a standalone SymbolicControl family from a normal family.
+
+    This makes the symbolic content the *primary* surface form:
+    - task_family = "SymbolicControl"
+    - base_question / normal_variants are symbolic
+    - entity_map is stored in metadata and source_family_id is tracked
+    """
+    source_id = family.get("family_id", "")
+    if not source_id:
+        return None
+
+    structure = family.get("underlying_structure", {})
+    sym_raw = family.get("symbolic_variants")
+    if isinstance(sym_raw, dict) and sym_raw.get("entity_map"):
+        entity_map = sym_raw.get("entity_map", {})
+        sym_variants = {k: v for k, v in sym_raw.items() if k not in ("entity_map", "source_family_id")}
+    else:
+        entity_map = build_entity_map(structure, symbol_pool)
+        sym_variants = generate_symbolic_variants(family, symbol_pool)
+        sym_variants = {k: v for k, v in sym_variants.items() if k not in ("entity_map", "source_family_id")}
+
+    preamble = build_symbolic_preamble(entity_map)
+    base_q = family.get("base_question", "")
+    sym_base_q = f"{preamble}\n{apply_symbol_substitution(base_q, entity_map)}" if base_q else ""
+
+    gold = family.get("gold_answer", "")
+    sym_gold = entity_map.get(gold, gold)
+
+    sym_support_facts = [apply_symbol_substitution(x, entity_map) for x in family.get("support_facts", [])]
+    sym_reasoning = [apply_symbol_substitution(x, entity_map) for x in family.get("gold_reasoning_chain", [])]
+
+    sym_structure = deep_apply_symbol_substitution(structure, entity_map)
+
+    # Use symbolic variants as the normal variants of the derived family.
+    derived_normal_variants: dict[str, Any] = {}
+    for k, v in sym_variants.items():
+        if isinstance(v, dict) and "question" in v:
+            derived_normal_variants[k] = v
+
+    derived_id = f"sym_{source_id}"
+    return {
+        "family_id": derived_id,
+        "task_family": "SymbolicControl",
+        "sub_family": family.get("sub_family", ""),
+        "base_item_id": f"{derived_id}_base",
+        "underlying_structure": sym_structure,
+        "base_question": sym_base_q,
+        "gold_answer": sym_gold,
+        "gold_reasoning_chain": sym_reasoning,
+        "support_facts": sym_support_facts,
+        "required_steps": family.get("required_steps", 1),
+        "normal_variants": derived_normal_variants,
+        "symbolic_variants": None,
+        "mcq_variants": family.get("mcq_variants", {}),
+        "metadata": {
+            "source_family_id": source_id,
+            "entity_map": entity_map,
+        },
+    }
 
 
 def build_symbolic_preamble(entity_map: dict[str, str]) -> str:
@@ -118,24 +208,8 @@ def generate_symbolic_variants(
         sym_question = apply_symbol_substitution(question, entity_map)
         sym_question = f"{preamble}\n{sym_question}"
 
-        sym_metadata = {}
-        orig_meta = variant_data.get("metadata", ) if isinstance(variant_data, dict) else {}
-        for k, v in orig_meta.items():
-            if isinstance(v, str):
-                sym_metadata[k] = apply_symbol_substitution(v, entity_map)
-            elif isinstance(v, list):
-                sym_metadata[k] = [
-                    apply_symbol_substitution(item, entity_map) if isinstance(item, str) else item
-                    for item in v
-                ]
-            elif isinstance(v, dict):
-                sym_metadata[k] = {
-                    apply_symbol_substitution(mk, entity_map) if isinstance(mk, str) else mk:
-                    apply_symbol_substitution(mv, entity_map) if isinstance(mv, str) else mv
-                    for mk, mv in v.items()
-                }
-            else:
-                sym_metadata[k] = v
+        orig_meta = variant_data.get("metadata", {}) if isinstance(variant_data, dict) else {}
+        sym_metadata = deep_apply_symbol_substitution(orig_meta, entity_map)
 
         symbolic[vtype] = {
             "question": sym_question,
