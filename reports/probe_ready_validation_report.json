@@ -1,0 +1,46 @@
+{
+  "summary": {
+    "counts": {
+      "natural": 90,
+      "symbolic": 90,
+      "paired": 180
+    },
+    "count_by_task_family_mode": {
+      "Hybrid": {
+        "naturalized": 30,
+        "strict_symbolic": 30
+      },
+      "KB": {
+        "naturalized": 30,
+        "strict_symbolic": 30
+      },
+      "RB": {
+        "naturalized": 30,
+        "strict_symbolic": 30
+      }
+    },
+    "variant_coverage": {
+      "original": 180,
+      "hint": 180,
+      "premise": 180,
+      "premise_removal": 180,
+      "highlight": 180,
+      "wrongclaim_bare": 180,
+      "competing_claims": 180,
+      "paraphrase": 180,
+      "scaffold_1": 180,
+      "scaffold_2": 180
+    },
+    "severity_counts": {},
+    "issue_counts": {},
+    "leakage_count_by_variant": {},
+    "pair_alignment_pass_rate": 1.0,
+    "quality_grade_count": {
+      "A": 180
+    },
+    "usable_count": 180,
+    "duplicate_prompt_violations": 0
+  },
+  "issues": [],
+  "issues_by_family": {}
+}

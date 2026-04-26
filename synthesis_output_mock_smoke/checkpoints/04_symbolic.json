@@ -1,0 +1,1200 @@
+[
+  {
+    "sub_family": "country_capital",
+    "type": "single_hop_binding",
+    "nodes": [
+      {
+        "id": "n1",
+        "label": "Germany",
+        "role": "query_entity"
+      },
+      {
+        "id": "n2",
+        "label": "Berlin",
+        "role": "answer"
+      }
+    ],
+    "edges": [
+      {
+        "source": "n1",
+        "target": "n2",
+        "relation": "capital_of"
+      }
+    ],
+    "support_chain": [
+      "n1 --capital_of--> n2"
+    ],
+    "gold_derivation": "direct_lookup",
+    "gold_answer": "Berlin",
+    "support_facts": [
+      "The capital of Germany is Berlin."
+    ],
+    "required_steps": 1,
+    "task_family": "KB",
+    "family_id": "kb_001",
+    "base_question": "What is the capital of Germany?",
+    "gold_reasoning_chain": [
+      "Use the provided relation/facts.",
+      "Retrieve the required fact(s) to get the answer."
+    ],
+    "base_item_id": "kb_001_base",
+    "underlying_structure": {
+      "sub_family": "country_capital",
+      "type": "single_hop_binding",
+      "nodes": [
+        {
+          "id": "n1",
+          "label": "Germany",
+          "role": "query_entity"
+        },
+        {
+          "id": "n2",
+          "label": "Berlin",
+          "role": "answer"
+        }
+      ],
+      "edges": [
+        {
+          "source": "n1",
+          "target": "n2",
+          "relation": "capital_of"
+        }
+      ],
+      "support_chain": [
+        "n1 --capital_of--> n2"
+      ],
+      "gold_derivation": "direct_lookup",
+      "gold_answer": "Berlin",
+      "support_facts": [
+        "The capital of Germany is Berlin."
+      ],
+      "required_steps": 1,
+      "task_family": "KB",
+      "family_id": "kb_001"
+    },
+    "normal_variants": {
+      "original": {
+        "question": "What is the capital of Germany?",
+        "metadata": {}
+      },
+      "hint": {
+        "question": "What is the capital of Germany? Hint: focus on the key relation/rule.",
+        "metadata": {}
+      },
+      "premise": {
+        "question": "The capital of Germany is Berlin. What is the capital of Germany?",
+        "metadata": {
+          "injected_premise": [
+            "The capital of Germany is Berlin."
+          ]
+        }
+      },
+      "premise_removal": {
+        "question": "Answer the question: What is the capital ?",
+        "metadata": {
+          "removed": true
+        }
+      },
+      "highlight": {
+        "question": "Focus on the key evidence needed. What is the capital of Germany?",
+        "metadata": {
+          "highlight": "key evidence"
+        }
+      },
+      "full_support_bundle": {
+        "question": "The capital of Germany is Berlin. What is the capital of Germany?",
+        "metadata": {
+          "support_bundle": [
+            "The capital of Germany is Berlin."
+          ]
+        }
+      },
+      "scaffold_1": {
+        "question": "First identify the key premise. Then: What is the capital of Germany?",
+        "metadata": {
+          "steps": [
+            "Step 1: Identify the relevant premise/rule."
+          ]
+        }
+      },
+      "scaffold_2": {
+        "question": "Follow these steps: 1) Step 1: Identify the relevant premise/rule. 2) Step 2: Apply it to the query. Now: What is the capital of Germany?",
+        "metadata": {
+          "steps": [
+            "Step 1: Identify the relevant premise/rule.",
+            "Step 2: Apply it to the query."
+          ]
+        }
+      },
+      "scaffold_3": {
+        "question": "Follow these steps: Step 1: Identify the relevant premise/rule. Step 2: Apply it to the query. Step 3: State the final answer. Now: What is the capital of Germany?",
+        "metadata": {
+          "steps": [
+            "Step 1: Identify the relevant premise/rule.",
+            "Step 2: Apply it to the query.",
+            "Step 3: State the final answer."
+          ]
+        }
+      },
+      "scaffold_shuffled": {
+        "question": "Steps (shuffled): Step 2: Apply it to the query. Step 1: Identify the relevant premise/rule. Step 3: State the final answer. Now: What is the capital of Germany?",
+        "metadata": {
+          "original_order": [
+            "Step 1: Identify the relevant premise/rule.",
+            "Step 2: Apply it to the query.",
+            "Step 3: State the final answer."
+          ],
+          "shuffled_order": [
+            "Step 2: Apply it to the query.",
+            "Step 1: Identify the relevant premise/rule.",
+            "Step 3: State the final answer."
+          ]
+        }
+      },
+      "cot_full": {
+        "question": "What is the capital of Germany? Let's think step by step. Step 1: Use the provided relation/facts. Step 2: Retrieve the required fact(s) to get the answer. Therefore, the answer is?",
+        "metadata": {
+          "cot": "full"
+        }
+      },
+      "cot_partial": {
+        "question": "What is the capital of Germany? Let's think step by step. Step 1: Use the provided relation/facts. Step 2: ... Therefore, the answer is?",
+        "metadata": {
+          "included_steps": [
+            "Use the provided relation/facts."
+          ],
+          "omitted_steps": [
+            "Retrieve the required fact(s) to get the answer."
+          ]
+        }
+      },
+      "cot_shuffled": {
+        "question": "What is the capital of Germany? Let's think step by step (shuffled). Step 1: Step 2: Apply it to the query. Step 2: Step 1: Identify the relevant premise/rule. Therefore, the answer is?",
+        "metadata": {
+          "original_order": [
+            "Step 1: Identify the relevant premise/rule.",
+            "Step 2: Apply it to the query."
+          ],
+          "shuffled_order": [
+            "Step 2: Apply it to the query.",
+            "Step 1: Identify the relevant premise/rule."
+          ]
+        }
+      },
+      "wrongclaim_bare": {
+        "question": "Some sources say the answer is Berlin (wrong). What is the capital of Germany?",
+        "metadata": {
+          "wrong_claim": "Berlin (wrong)"
+        }
+      },
+      "wrongclaim_confident": {
+        "question": "Obviously, the answer is Berlin (wrong). What is the capital of Germany?",
+        "metadata": {
+          "wrong_claim": "Berlin (wrong)",
+          "confidence_wrapper": "Obviously"
+        }
+      },
+      "wrongclaim_attributed": {
+        "question": "According to experts, the answer is Berlin (wrong). What is the capital of Germany?",
+        "metadata": {
+          "wrong_claim": "Berlin (wrong)",
+          "attribution": "experts"
+        }
+      },
+      "competing_claims": {
+        "question": "Some say the answer is Berlin, others say it is Berlin (wrong). What is the capital of Germany?",
+        "metadata": {
+          "correct_claim": "Berlin",
+          "wrong_claim": "Berlin (wrong)"
+        }
+      },
+      "paraphrase": {
+        "question": "Rephrased: What is the capital of Germany?",
+        "metadata": {}
+      },
+      "terminology_swap": {
+        "question": "Using technical terminology: What is the capital of Germany?",
+        "metadata": {
+          "swap_map": {
+            "answer": "solution"
+          }
+        }
+      },
+      "substitution": {
+        "question": "With harmless substitutions: What is the capital of Germany?",
+        "metadata": {
+          "substitution_map": {}
+        }
+      }
+    },
+    "symbolic_variants": {
+      "entity_map": {
+        "Germany": "∆",
+        "Berlin": "◇",
+        "capital_of": "⊕"
+      },
+      "source_family_id": "kb_001",
+      "original": {
+        "question": "In this system, Germany = ∆, Berlin = ◇, capital_of = ⊕.\nWhat is the capital of ∆?",
+        "metadata": {}
+      },
+      "hint": {
+        "question": "In this system, Germany = ∆, Berlin = ◇, capital_of = ⊕.\nWhat is the capital of ∆? Hint: focus on the key relation/rule.",
+        "metadata": {}
+      },
+      "premise": {
+        "question": "In this system, Germany = ∆, Berlin = ◇, capital_of = ⊕.\nThe capital of ∆ is ◇. What is the capital of ∆?",
+        "metadata": {
+          "injected_premise": [
+            "The capital of ∆ is ◇."
+          ]
+        }
+      },
+      "premise_removal": {
+        "question": "In this system, Germany = ∆, Berlin = ◇, capital_of = ⊕.\nAnswer the question: What is the capital ?",
+        "metadata": {
+          "removed": true
+        }
+      },
+      "highlight": {
+        "question": "In this system, Germany = ∆, Berlin = ◇, capital_of = ⊕.\nFocus on the key evidence needed. What is the capital of ∆?",
+        "metadata": {
+          "highlight": "key evidence"
+        }
+      },
+      "full_support_bundle": {
+        "question": "In this system, Germany = ∆, Berlin = ◇, capital_of = ⊕.\nThe capital of ∆ is ◇. What is the capital of ∆?",
+        "metadata": {
+          "support_bundle": [
+            "The capital of ∆ is ◇."
+          ]
+        }
+      },
+      "scaffold_1": {
+        "question": "In this system, Germany = ∆, Berlin = ◇, capital_of = ⊕.\nFirst identify the key premise. Then: What is the capital of ∆?",
+        "metadata": {
+          "steps": [
+            "Step 1: Identify the relevant premise/rule."
+          ]
+        }
+      },
+      "scaffold_2": {
+        "question": "In this system, Germany = ∆, Berlin = ◇, capital_of = ⊕.\nFollow these steps: 1) Step 1: Identify the relevant premise/rule. 2) Step 2: Apply it to the query. Now: What is the capital of ∆?",
+        "metadata": {
+          "steps": [
+            "Step 1: Identify the relevant premise/rule.",
+            "Step 2: Apply it to the query."
+          ]
+        }
+      },
+      "scaffold_3": {
+        "question": "In this system, Germany = ∆, Berlin = ◇, capital_of = ⊕.\nFollow these steps: Step 1: Identify the relevant premise/rule. Step 2: Apply it to the query. Step 3: State the final answer. Now: What is the capital of ∆?",
+        "metadata": {
+          "steps": [
+            "Step 1: Identify the relevant premise/rule.",
+            "Step 2: Apply it to the query.",
+            "Step 3: State the final answer."
+          ]
+        }
+      },
+      "scaffold_shuffled": {
+        "question": "In this system, Germany = ∆, Berlin = ◇, capital_of = ⊕.\nSteps (shuffled): Step 2: Apply it to the query. Step 1: Identify the relevant premise/rule. Step 3: State the final answer. Now: What is the capital of ∆?",
+        "metadata": {
+          "original_order": [
+            "Step 1: Identify the relevant premise/rule.",
+            "Step 2: Apply it to the query.",
+            "Step 3: State the final answer."
+          ],
+          "shuffled_order": [
+            "Step 2: Apply it to the query.",
+            "Step 1: Identify the relevant premise/rule.",
+            "Step 3: State the final answer."
+          ]
+        }
+      },
+      "cot_full": {
+        "question": "In this system, Germany = ∆, Berlin = ◇, capital_of = ⊕.\nWhat is the capital of ∆? Let's think step by step. Step 1: Use the provided relation/facts. Step 2: Retrieve the required fact(s) to get the answer. Therefore, the answer is?",
+        "metadata": {
+          "cot": "full"
+        }
+      },
+      "cot_partial": {
+        "question": "In this system, Germany = ∆, Berlin = ◇, capital_of = ⊕.\nWhat is the capital of ∆? Let's think step by step. Step 1: Use the provided relation/facts. Step 2: ... Therefore, the answer is?",
+        "metadata": {
+          "included_steps": [
+            "Use the provided relation/facts."
+          ],
+          "omitted_steps": [
+            "Retrieve the required fact(s) to get the answer."
+          ]
+        }
+      },
+      "cot_shuffled": {
+        "question": "In this system, Germany = ∆, Berlin = ◇, capital_of = ⊕.\nWhat is the capital of ∆? Let's think step by step (shuffled). Step 1: Step 2: Apply it to the query. Step 2: Step 1: Identify the relevant premise/rule. Therefore, the answer is?",
+        "metadata": {
+          "original_order": [
+            "Step 1: Identify the relevant premise/rule.",
+            "Step 2: Apply it to the query."
+          ],
+          "shuffled_order": [
+            "Step 2: Apply it to the query.",
+            "Step 1: Identify the relevant premise/rule."
+          ]
+        }
+      },
+      "wrongclaim_bare": {
+        "question": "In this system, Germany = ∆, Berlin = ◇, capital_of = ⊕.\nSome sources say the answer is ◇ (wrong). What is the capital of ∆?",
+        "metadata": {
+          "wrong_claim": "◇ (wrong)"
+        }
+      },
+      "wrongclaim_confident": {
+        "question": "In this system, Germany = ∆, Berlin = ◇, capital_of = ⊕.\nObviously, the answer is ◇ (wrong). What is the capital of ∆?",
+        "metadata": {
+          "wrong_claim": "◇ (wrong)",
+          "confidence_wrapper": "Obviously"
+        }
+      },
+      "wrongclaim_attributed": {
+        "question": "In this system, Germany = ∆, Berlin = ◇, capital_of = ⊕.\nAccording to experts, the answer is ◇ (wrong). What is the capital of ∆?",
+        "metadata": {
+          "wrong_claim": "◇ (wrong)",
+          "attribution": "experts"
+        }
+      },
+      "competing_claims": {
+        "question": "In this system, Germany = ∆, Berlin = ◇, capital_of = ⊕.\nSome say the answer is ◇, others say it is ◇ (wrong). What is the capital of ∆?",
+        "metadata": {
+          "correct_claim": "◇",
+          "wrong_claim": "◇ (wrong)"
+        }
+      },
+      "paraphrase": {
+        "question": "In this system, Germany = ∆, Berlin = ◇, capital_of = ⊕.\nRephrased: What is the capital of ∆?",
+        "metadata": {}
+      },
+      "terminology_swap": {
+        "question": "In this system, Germany = ∆, Berlin = ◇, capital_of = ⊕.\nUsing technical terminology: What is the capital of ∆?",
+        "metadata": {
+          "swap_map": {
+            "answer": "solution"
+          }
+        }
+      },
+      "substitution": {
+        "question": "In this system, Germany = ∆, Berlin = ◇, capital_of = ⊕.\nWith harmless substitutions: What is the capital of ∆?",
+        "metadata": {
+          "substitution_map": {}
+        }
+      }
+    }
+  },
+  {
+    "sub_family": "linear_equation",
+    "type": "algebraic_equation",
+    "variables": [
+      {
+        "name": "x",
+        "role": "unknown"
+      },
+      {
+        "name": "3",
+        "role": "constant"
+      },
+      {
+        "name": "10",
+        "role": "constant"
+      }
+    ],
+    "rules": [
+      "x + 3 = 10"
+    ],
+    "derivation_steps": [
+      "Subtract 3 from both sides",
+      "x = 7"
+    ],
+    "gold_derivation": "algebraic_manipulation",
+    "gold_answer": "7",
+    "support_facts": [
+      "x + 3 = 10"
+    ],
+    "required_steps": 2,
+    "task_family": "RB",
+    "family_id": "rb_001",
+    "base_question": "x + 3 = 10 What is the answer?",
+    "gold_reasoning_chain": [
+      "Subtract 3 from both sides",
+      "x = 7"
+    ],
+    "base_item_id": "rb_001_base",
+    "underlying_structure": {
+      "sub_family": "linear_equation",
+      "type": "algebraic_equation",
+      "variables": [
+        {
+          "name": "x",
+          "role": "unknown"
+        },
+        {
+          "name": "3",
+          "role": "constant"
+        },
+        {
+          "name": "10",
+          "role": "constant"
+        }
+      ],
+      "rules": [
+        "x + 3 = 10"
+      ],
+      "derivation_steps": [
+        "Subtract 3 from both sides",
+        "x = 7"
+      ],
+      "gold_derivation": "algebraic_manipulation",
+      "gold_answer": "7",
+      "support_facts": [
+        "x + 3 = 10"
+      ],
+      "required_steps": 2,
+      "task_family": "RB",
+      "family_id": "rb_001"
+    },
+    "normal_variants": {
+      "original": {
+        "question": "x + 3 = 10 What is the answer?",
+        "metadata": {}
+      },
+      "hint": {
+        "question": "x + 3 = 10 What is the answer? Hint: focus on the key relation/rule.",
+        "metadata": {}
+      },
+      "premise": {
+        "question": "x + 3 = 10 x + 3 = 10 What is the answer?",
+        "metadata": {
+          "injected_premise": [
+            "x + 3 = 10"
+          ]
+        }
+      },
+      "premise_removal": {
+        "question": "Answer the question: x + 3 = 10 What is the answer?",
+        "metadata": {
+          "removed": true
+        }
+      },
+      "highlight": {
+        "question": "Focus on the key evidence needed. x + 3 = 10 What is the answer?",
+        "metadata": {
+          "highlight": "key evidence"
+        }
+      },
+      "full_support_bundle": {
+        "question": "x + 3 = 10 x + 3 = 10 What is the answer?",
+        "metadata": {
+          "support_bundle": [
+            "x + 3 = 10"
+          ]
+        }
+      },
+      "scaffold_1": {
+        "question": "First identify the key premise. Then: x + 3 = 10 What is the answer?",
+        "metadata": {
+          "steps": [
+            "Step 1: Identify the relevant premise/rule."
+          ]
+        }
+      },
+      "scaffold_2": {
+        "question": "Follow these steps: 1) Step 1: Identify the relevant premise/rule. 2) Step 2: Apply it to the query. Now: x + 3 = 10 What is the answer?",
+        "metadata": {
+          "steps": [
+            "Step 1: Identify the relevant premise/rule.",
+            "Step 2: Apply it to the query."
+          ]
+        }
+      },
+      "scaffold_3": {
+        "question": "Follow these steps: Step 1: Identify the relevant premise/rule. Step 2: Apply it to the query. Step 3: State the final answer. Now: x + 3 = 10 What is the answer?",
+        "metadata": {
+          "steps": [
+            "Step 1: Identify the relevant premise/rule.",
+            "Step 2: Apply it to the query.",
+            "Step 3: State the final answer."
+          ]
+        }
+      },
+      "scaffold_shuffled": {
+        "question": "Steps (shuffled): Step 2: Apply it to the query. Step 1: Identify the relevant premise/rule. Step 3: State the final answer. Now: x + 3 = 10 What is the answer?",
+        "metadata": {
+          "original_order": [
+            "Step 1: Identify the relevant premise/rule.",
+            "Step 2: Apply it to the query.",
+            "Step 3: State the final answer."
+          ],
+          "shuffled_order": [
+            "Step 2: Apply it to the query.",
+            "Step 1: Identify the relevant premise/rule.",
+            "Step 3: State the final answer."
+          ]
+        }
+      },
+      "cot_full": {
+        "question": "x + 3 = 10 What is the answer? Let's think step by step. Step 1: Subtract 3 from both sides Step 2: x = 7 Therefore, the answer is?",
+        "metadata": {
+          "cot": "full"
+        }
+      },
+      "cot_partial": {
+        "question": "x + 3 = 10 What is the answer? Let's think step by step. Step 1: Subtract 3 from both sides Step 2: ... Therefore, the answer is?",
+        "metadata": {
+          "included_steps": [
+            "Subtract 3 from both sides"
+          ],
+          "omitted_steps": [
+            "x = 7"
+          ]
+        }
+      },
+      "cot_shuffled": {
+        "question": "x + 3 = 10 What is the answer? Let's think step by step (shuffled). Step 1: Step 2: Apply it to the query. Step 2: Step 1: Identify the relevant premise/rule. Therefore, the answer is?",
+        "metadata": {
+          "original_order": [
+            "Step 1: Identify the relevant premise/rule.",
+            "Step 2: Apply it to the query."
+          ],
+          "shuffled_order": [
+            "Step 2: Apply it to the query.",
+            "Step 1: Identify the relevant premise/rule."
+          ]
+        }
+      },
+      "wrongclaim_bare": {
+        "question": "Some sources say the answer is 8. x + 3 = 10 What is the answer?",
+        "metadata": {
+          "wrong_claim": "8"
+        }
+      },
+      "wrongclaim_confident": {
+        "question": "Obviously, the answer is 8. x + 3 = 10 What is the answer?",
+        "metadata": {
+          "wrong_claim": "8",
+          "confidence_wrapper": "Obviously"
+        }
+      },
+      "wrongclaim_attributed": {
+        "question": "According to experts, the answer is 8. x + 3 = 10 What is the answer?",
+        "metadata": {
+          "wrong_claim": "8",
+          "attribution": "experts"
+        }
+      },
+      "competing_claims": {
+        "question": "Some say the answer is 7, others say it is 8. x + 3 = 10 What is the answer?",
+        "metadata": {
+          "correct_claim": "7",
+          "wrong_claim": "8"
+        }
+      },
+      "paraphrase": {
+        "question": "Rephrased: x + 3 = 10 What is the answer?",
+        "metadata": {}
+      },
+      "terminology_swap": {
+        "question": "Using technical terminology: x + 3 = 10 What is the answer?",
+        "metadata": {
+          "swap_map": {
+            "answer": "solution"
+          }
+        }
+      },
+      "substitution": {
+        "question": "With harmless substitutions: x + 3 = 10 What is the answer?",
+        "metadata": {
+          "substitution_map": {}
+        }
+      }
+    },
+    "symbolic_variants": {
+      "entity_map": {
+        "x": "∆",
+        "3": "◇",
+        "10": "⊕"
+      },
+      "source_family_id": "rb_001",
+      "original": {
+        "question": "In this system, x = ∆, 3 = ◇, 10 = ⊕.\n∆ + ◇ = ⊕ What is the answer?",
+        "metadata": {}
+      },
+      "hint": {
+        "question": "In this system, x = ∆, 3 = ◇, 10 = ⊕.\n∆ + ◇ = ⊕ What is the answer? Hint: focus on the key relation/rule.",
+        "metadata": {}
+      },
+      "premise": {
+        "question": "In this system, x = ∆, 3 = ◇, 10 = ⊕.\n∆ + ◇ = ⊕ ∆ + ◇ = ⊕ What is the answer?",
+        "metadata": {
+          "injected_premise": [
+            "∆ + ◇ = ⊕"
+          ]
+        }
+      },
+      "premise_removal": {
+        "question": "In this system, x = ∆, 3 = ◇, 10 = ⊕.\nAnswer the question: ∆ + ◇ = ⊕ What is the answer?",
+        "metadata": {
+          "removed": true
+        }
+      },
+      "highlight": {
+        "question": "In this system, x = ∆, 3 = ◇, 10 = ⊕.\nFocus on the key evidence needed. ∆ + ◇ = ⊕ What is the answer?",
+        "metadata": {
+          "highlight": "key evidence"
+        }
+      },
+      "full_support_bundle": {
+        "question": "In this system, x = ∆, 3 = ◇, 10 = ⊕.\n∆ + ◇ = ⊕ ∆ + ◇ = ⊕ What is the answer?",
+        "metadata": {
+          "support_bundle": [
+            "∆ + ◇ = ⊕"
+          ]
+        }
+      },
+      "scaffold_1": {
+        "question": "In this system, x = ∆, 3 = ◇, 10 = ⊕.\nFirst identify the key premise. Then: ∆ + ◇ = ⊕ What is the answer?",
+        "metadata": {
+          "steps": [
+            "Step 1: Identify the relevant premise/rule."
+          ]
+        }
+      },
+      "scaffold_2": {
+        "question": "In this system, x = ∆, 3 = ◇, 10 = ⊕.\nFollow these steps: 1) Step 1: Identify the relevant premise/rule. 2) Step 2: Apply it to the query. Now: ∆ + ◇ = ⊕ What is the answer?",
+        "metadata": {
+          "steps": [
+            "Step 1: Identify the relevant premise/rule.",
+            "Step 2: Apply it to the query."
+          ]
+        }
+      },
+      "scaffold_3": {
+        "question": "In this system, x = ∆, 3 = ◇, 10 = ⊕.\nFollow these steps: Step 1: Identify the relevant premise/rule. Step 2: Apply it to the query. Step ◇: State the final answer. Now: ∆ + ◇ = ⊕ What is the answer?",
+        "metadata": {
+          "steps": [
+            "Step 1: Identify the relevant premise/rule.",
+            "Step 2: Apply it to the query.",
+            "Step ◇: State the final answer."
+          ]
+        }
+      },
+      "scaffold_shuffled": {
+        "question": "In this system, x = ∆, 3 = ◇, 10 = ⊕.\nSteps (shuffled): Step 2: Apply it to the query. Step 1: Identify the relevant premise/rule. Step ◇: State the final answer. Now: ∆ + ◇ = ⊕ What is the answer?",
+        "metadata": {
+          "original_order": [
+            "Step 1: Identify the relevant premise/rule.",
+            "Step 2: Apply it to the query.",
+            "Step ◇: State the final answer."
+          ],
+          "shuffled_order": [
+            "Step 2: Apply it to the query.",
+            "Step 1: Identify the relevant premise/rule.",
+            "Step ◇: State the final answer."
+          ]
+        }
+      },
+      "cot_full": {
+        "question": "In this system, x = ∆, 3 = ◇, 10 = ⊕.\n∆ + ◇ = ⊕ What is the answer? Let's think step by step. Step 1: Subtract ◇ from both sides Step 2: ∆ = 7 Therefore, the answer is?",
+        "metadata": {
+          "cot": "full"
+        }
+      },
+      "cot_partial": {
+        "question": "In this system, x = ∆, 3 = ◇, 10 = ⊕.\n∆ + ◇ = ⊕ What is the answer? Let's think step by step. Step 1: Subtract ◇ from both sides Step 2: ... Therefore, the answer is?",
+        "metadata": {
+          "included_steps": [
+            "Subtract ◇ from both sides"
+          ],
+          "omitted_steps": [
+            "∆ = 7"
+          ]
+        }
+      },
+      "cot_shuffled": {
+        "question": "In this system, x = ∆, 3 = ◇, 10 = ⊕.\n∆ + ◇ = ⊕ What is the answer? Let's think step by step (shuffled). Step 1: Step 2: Apply it to the query. Step 2: Step 1: Identify the relevant premise/rule. Therefore, the answer is?",
+        "metadata": {
+          "original_order": [
+            "Step 1: Identify the relevant premise/rule.",
+            "Step 2: Apply it to the query."
+          ],
+          "shuffled_order": [
+            "Step 2: Apply it to the query.",
+            "Step 1: Identify the relevant premise/rule."
+          ]
+        }
+      },
+      "wrongclaim_bare": {
+        "question": "In this system, x = ∆, 3 = ◇, 10 = ⊕.\nSome sources say the answer is 8. ∆ + ◇ = ⊕ What is the answer?",
+        "metadata": {
+          "wrong_claim": "8"
+        }
+      },
+      "wrongclaim_confident": {
+        "question": "In this system, x = ∆, 3 = ◇, 10 = ⊕.\nObviously, the answer is 8. ∆ + ◇ = ⊕ What is the answer?",
+        "metadata": {
+          "wrong_claim": "8",
+          "confidence_wrapper": "Obviously"
+        }
+      },
+      "wrongclaim_attributed": {
+        "question": "In this system, x = ∆, 3 = ◇, 10 = ⊕.\nAccording to e∆perts, the answer is 8. ∆ + ◇ = ⊕ What is the answer?",
+        "metadata": {
+          "wrong_claim": "8",
+          "attribution": "e∆perts"
+        }
+      },
+      "competing_claims": {
+        "question": "In this system, x = ∆, 3 = ◇, 10 = ⊕.\nSome say the answer is 7, others say it is 8. ∆ + ◇ = ⊕ What is the answer?",
+        "metadata": {
+          "correct_claim": "7",
+          "wrong_claim": "8"
+        }
+      },
+      "paraphrase": {
+        "question": "In this system, x = ∆, 3 = ◇, 10 = ⊕.\nRephrased: ∆ + ◇ = ⊕ What is the answer?",
+        "metadata": {}
+      },
+      "terminology_swap": {
+        "question": "In this system, x = ∆, 3 = ◇, 10 = ⊕.\nUsing technical terminology: ∆ + ◇ = ⊕ What is the answer?",
+        "metadata": {
+          "swap_map": {
+            "answer": "solution"
+          }
+        }
+      },
+      "substitution": {
+        "question": "In this system, x = ∆, 3 = ◇, 10 = ⊕.\nWith harmless substitutions: ∆ + ◇ = ⊕ What is the answer?",
+        "metadata": {
+          "substitution_map": {}
+        }
+      }
+    }
+  },
+  {
+    "sub_family": "two_hop_relational",
+    "type": "two_hop_composition",
+    "nodes": [
+      {
+        "id": "n1",
+        "label": "Paris",
+        "role": "query_entity"
+      },
+      {
+        "id": "n2",
+        "label": "France",
+        "role": "intermediate"
+      },
+      {
+        "id": "n3",
+        "label": "French",
+        "role": "answer"
+      }
+    ],
+    "edges": [
+      {
+        "source": "n1",
+        "target": "n2",
+        "relation": "capital_of"
+      },
+      {
+        "source": "n2",
+        "target": "n3",
+        "relation": "official_language"
+      }
+    ],
+    "rules": [],
+    "support_chain": [
+      "Paris --capital_of--> France",
+      "France --official_language--> French"
+    ],
+    "gold_derivation": "multi_hop_lookup",
+    "gold_answer": "French",
+    "support_facts": [
+      "Paris is the capital of France.",
+      "The official language of France is French."
+    ],
+    "required_steps": 2,
+    "task_family": "Hybrid",
+    "family_id": "hybrid_001",
+    "base_question": "What is the capital of Paris?",
+    "gold_reasoning_chain": [
+      "Use the provided relation/facts.",
+      "Retrieve the required fact(s) to get the answer."
+    ],
+    "base_item_id": "hybrid_001_base",
+    "underlying_structure": {
+      "sub_family": "two_hop_relational",
+      "type": "two_hop_composition",
+      "nodes": [
+        {
+          "id": "n1",
+          "label": "Paris",
+          "role": "query_entity"
+        },
+        {
+          "id": "n2",
+          "label": "France",
+          "role": "intermediate"
+        },
+        {
+          "id": "n3",
+          "label": "French",
+          "role": "answer"
+        }
+      ],
+      "edges": [
+        {
+          "source": "n1",
+          "target": "n2",
+          "relation": "capital_of"
+        },
+        {
+          "source": "n2",
+          "target": "n3",
+          "relation": "official_language"
+        }
+      ],
+      "rules": [],
+      "support_chain": [
+        "Paris --capital_of--> France",
+        "France --official_language--> French"
+      ],
+      "gold_derivation": "multi_hop_lookup",
+      "gold_answer": "French",
+      "support_facts": [
+        "Paris is the capital of France.",
+        "The official language of France is French."
+      ],
+      "required_steps": 2,
+      "task_family": "Hybrid",
+      "family_id": "hybrid_001"
+    },
+    "normal_variants": {
+      "original": {
+        "question": "What is the capital of Paris?",
+        "metadata": {}
+      },
+      "hint": {
+        "question": "What is the capital of Paris? Hint: focus on the key relation/rule.",
+        "metadata": {}
+      },
+      "premise": {
+        "question": "Paris is the capital of France. What is the capital of Paris?",
+        "metadata": {
+          "injected_premise": [
+            "Paris is the capital of France."
+          ]
+        }
+      },
+      "premise_removal": {
+        "question": "Answer the question: What is the capital ?",
+        "metadata": {
+          "removed": true
+        }
+      },
+      "highlight": {
+        "question": "Focus on the key evidence needed. What is the capital of Paris?",
+        "metadata": {
+          "highlight": "key evidence"
+        }
+      },
+      "full_support_bundle": {
+        "question": "Paris is the capital of France. The official language of France is French. What is the capital of Paris?",
+        "metadata": {
+          "support_bundle": [
+            "Paris is the capital of France.",
+            "The official language of France is French."
+          ]
+        }
+      },
+      "scaffold_1": {
+        "question": "First identify the key premise. Then: What is the capital of Paris?",
+        "metadata": {
+          "steps": [
+            "Step 1: Identify the relevant premise/rule."
+          ]
+        }
+      },
+      "scaffold_2": {
+        "question": "Follow these steps: 1) Step 1: Identify the relevant premise/rule. 2) Step 2: Apply it to the query. Now: What is the capital of Paris?",
+        "metadata": {
+          "steps": [
+            "Step 1: Identify the relevant premise/rule.",
+            "Step 2: Apply it to the query."
+          ]
+        }
+      },
+      "scaffold_3": {
+        "question": "Follow these steps: Step 1: Identify the relevant premise/rule. Step 2: Apply it to the query. Step 3: State the final answer. Now: What is the capital of Paris?",
+        "metadata": {
+          "steps": [
+            "Step 1: Identify the relevant premise/rule.",
+            "Step 2: Apply it to the query.",
+            "Step 3: State the final answer."
+          ]
+        }
+      },
+      "scaffold_shuffled": {
+        "question": "Steps (shuffled): Step 2: Apply it to the query. Step 1: Identify the relevant premise/rule. Step 3: State the final answer. Now: What is the capital of Paris?",
+        "metadata": {
+          "original_order": [
+            "Step 1: Identify the relevant premise/rule.",
+            "Step 2: Apply it to the query.",
+            "Step 3: State the final answer."
+          ],
+          "shuffled_order": [
+            "Step 2: Apply it to the query.",
+            "Step 1: Identify the relevant premise/rule.",
+            "Step 3: State the final answer."
+          ]
+        }
+      },
+      "cot_full": {
+        "question": "What is the capital of Paris? Let's think step by step. Step 1: Use the provided relation/facts. Step 2: Retrieve the required fact(s) to get the answer. Therefore, the answer is?",
+        "metadata": {
+          "cot": "full"
+        }
+      },
+      "cot_partial": {
+        "question": "What is the capital of Paris? Let's think step by step. Step 1: Use the provided relation/facts. Step 2: ... Therefore, the answer is?",
+        "metadata": {
+          "included_steps": [
+            "Use the provided relation/facts."
+          ],
+          "omitted_steps": [
+            "Retrieve the required fact(s) to get the answer."
+          ]
+        }
+      },
+      "cot_shuffled": {
+        "question": "What is the capital of Paris? Let's think step by step (shuffled). Step 1: Step 2: Apply it to the query. Step 2: Step 1: Identify the relevant premise/rule. Therefore, the answer is?",
+        "metadata": {
+          "original_order": [
+            "Step 1: Identify the relevant premise/rule.",
+            "Step 2: Apply it to the query."
+          ],
+          "shuffled_order": [
+            "Step 2: Apply it to the query.",
+            "Step 1: Identify the relevant premise/rule."
+          ]
+        }
+      },
+      "wrongclaim_bare": {
+        "question": "Some sources say the answer is French (wrong). What is the capital of Paris?",
+        "metadata": {
+          "wrong_claim": "French (wrong)"
+        }
+      },
+      "wrongclaim_confident": {
+        "question": "Obviously, the answer is French (wrong). What is the capital of Paris?",
+        "metadata": {
+          "wrong_claim": "French (wrong)",
+          "confidence_wrapper": "Obviously"
+        }
+      },
+      "wrongclaim_attributed": {
+        "question": "According to experts, the answer is French (wrong). What is the capital of Paris?",
+        "metadata": {
+          "wrong_claim": "French (wrong)",
+          "attribution": "experts"
+        }
+      },
+      "competing_claims": {
+        "question": "Some say the answer is French, others say it is French (wrong). What is the capital of Paris?",
+        "metadata": {
+          "correct_claim": "French",
+          "wrong_claim": "French (wrong)"
+        }
+      },
+      "paraphrase": {
+        "question": "Rephrased: What is the capital of Paris?",
+        "metadata": {}
+      },
+      "terminology_swap": {
+        "question": "Using technical terminology: What is the capital of Paris?",
+        "metadata": {
+          "swap_map": {
+            "answer": "solution"
+          }
+        }
+      },
+      "substitution": {
+        "question": "With harmless substitutions: What is the capital of Paris?",
+        "metadata": {
+          "substitution_map": {}
+        }
+      }
+    },
+    "symbolic_variants": {
+      "entity_map": {
+        "Paris": "∆",
+        "France": "◇",
+        "French": "⊕",
+        "capital_of": "Ω",
+        "official_language": "★"
+      },
+      "source_family_id": "hybrid_001",
+      "original": {
+        "question": "In this system, Paris = ∆, France = ◇, French = ⊕, capital_of = Ω, official_language = ★.\nWhat is the capital of ∆?",
+        "metadata": {}
+      },
+      "hint": {
+        "question": "In this system, Paris = ∆, France = ◇, French = ⊕, capital_of = Ω, official_language = ★.\nWhat is the capital of ∆? Hint: focus on the key relation/rule.",
+        "metadata": {}
+      },
+      "premise": {
+        "question": "In this system, Paris = ∆, France = ◇, French = ⊕, capital_of = Ω, official_language = ★.\n∆ is the capital of ◇. What is the capital of ∆?",
+        "metadata": {
+          "injected_premise": [
+            "∆ is the capital of ◇."
+          ]
+        }
+      },
+      "premise_removal": {
+        "question": "In this system, Paris = ∆, France = ◇, French = ⊕, capital_of = Ω, official_language = ★.\nAnswer the question: What is the capital ?",
+        "metadata": {
+          "removed": true
+        }
+      },
+      "highlight": {
+        "question": "In this system, Paris = ∆, France = ◇, French = ⊕, capital_of = Ω, official_language = ★.\nFocus on the key evidence needed. What is the capital of ∆?",
+        "metadata": {
+          "highlight": "key evidence"
+        }
+      },
+      "full_support_bundle": {
+        "question": "In this system, Paris = ∆, France = ◇, French = ⊕, capital_of = Ω, official_language = ★.\n∆ is the capital of ◇. The official language of ◇ is ⊕. What is the capital of ∆?",
+        "metadata": {
+          "support_bundle": [
+            "∆ is the capital of ◇.",
+            "The official language of ◇ is ⊕."
+          ]
+        }
+      },
+      "scaffold_1": {
+        "question": "In this system, Paris = ∆, France = ◇, French = ⊕, capital_of = Ω, official_language = ★.\nFirst identify the key premise. Then: What is the capital of ∆?",
+        "metadata": {
+          "steps": [
+            "Step 1: Identify the relevant premise/rule."
+          ]
+        }
+      },
+      "scaffold_2": {
+        "question": "In this system, Paris = ∆, France = ◇, French = ⊕, capital_of = Ω, official_language = ★.\nFollow these steps: 1) Step 1: Identify the relevant premise/rule. 2) Step 2: Apply it to the query. Now: What is the capital of ∆?",
+        "metadata": {
+          "steps": [
+            "Step 1: Identify the relevant premise/rule.",
+            "Step 2: Apply it to the query."
+          ]
+        }
+      },
+      "scaffold_3": {
+        "question": "In this system, Paris = ∆, France = ◇, French = ⊕, capital_of = Ω, official_language = ★.\nFollow these steps: Step 1: Identify the relevant premise/rule. Step 2: Apply it to the query. Step 3: State the final answer. Now: What is the capital of ∆?",
+        "metadata": {
+          "steps": [
+            "Step 1: Identify the relevant premise/rule.",
+            "Step 2: Apply it to the query.",
+            "Step 3: State the final answer."
+          ]
+        }
+      },
+      "scaffold_shuffled": {
+        "question": "In this system, Paris = ∆, France = ◇, French = ⊕, capital_of = Ω, official_language = ★.\nSteps (shuffled): Step 2: Apply it to the query. Step 1: Identify the relevant premise/rule. Step 3: State the final answer. Now: What is the capital of ∆?",
+        "metadata": {
+          "original_order": [
+            "Step 1: Identify the relevant premise/rule.",
+            "Step 2: Apply it to the query.",
+            "Step 3: State the final answer."
+          ],
+          "shuffled_order": [
+            "Step 2: Apply it to the query.",
+            "Step 1: Identify the relevant premise/rule.",
+            "Step 3: State the final answer."
+          ]
+        }
+      },
+      "cot_full": {
+        "question": "In this system, Paris = ∆, France = ◇, French = ⊕, capital_of = Ω, official_language = ★.\nWhat is the capital of ∆? Let's think step by step. Step 1: Use the provided relation/facts. Step 2: Retrieve the required fact(s) to get the answer. Therefore, the answer is?",
+        "metadata": {
+          "cot": "full"
+        }
+      },
+      "cot_partial": {
+        "question": "In this system, Paris = ∆, France = ◇, French = ⊕, capital_of = Ω, official_language = ★.\nWhat is the capital of ∆? Let's think step by step. Step 1: Use the provided relation/facts. Step 2: ... Therefore, the answer is?",
+        "metadata": {
+          "included_steps": [
+            "Use the provided relation/facts."
+          ],
+          "omitted_steps": [
+            "Retrieve the required fact(s) to get the answer."
+          ]
+        }
+      },
+      "cot_shuffled": {
+        "question": "In this system, Paris = ∆, France = ◇, French = ⊕, capital_of = Ω, official_language = ★.\nWhat is the capital of ∆? Let's think step by step (shuffled). Step 1: Step 2: Apply it to the query. Step 2: Step 1: Identify the relevant premise/rule. Therefore, the answer is?",
+        "metadata": {
+          "original_order": [
+            "Step 1: Identify the relevant premise/rule.",
+            "Step 2: Apply it to the query."
+          ],
+          "shuffled_order": [
+            "Step 2: Apply it to the query.",
+            "Step 1: Identify the relevant premise/rule."
+          ]
+        }
+      },
+      "wrongclaim_bare": {
+        "question": "In this system, Paris = ∆, France = ◇, French = ⊕, capital_of = Ω, official_language = ★.\nSome sources say the answer is ⊕ (wrong). What is the capital of ∆?",
+        "metadata": {
+          "wrong_claim": "⊕ (wrong)"
+        }
+      },
+      "wrongclaim_confident": {
+        "question": "In this system, Paris = ∆, France = ◇, French = ⊕, capital_of = Ω, official_language = ★.\nObviously, the answer is ⊕ (wrong). What is the capital of ∆?",
+        "metadata": {
+          "wrong_claim": "⊕ (wrong)",
+          "confidence_wrapper": "Obviously"
+        }
+      },
+      "wrongclaim_attributed": {
+        "question": "In this system, Paris = ∆, France = ◇, French = ⊕, capital_of = Ω, official_language = ★.\nAccording to experts, the answer is ⊕ (wrong). What is the capital of ∆?",
+        "metadata": {
+          "wrong_claim": "⊕ (wrong)",
+          "attribution": "experts"
+        }
+      },
+      "competing_claims": {
+        "question": "In this system, Paris = ∆, France = ◇, French = ⊕, capital_of = Ω, official_language = ★.\nSome say the answer is ⊕, others say it is ⊕ (wrong). What is the capital of ∆?",
+        "metadata": {
+          "correct_claim": "⊕",
+          "wrong_claim": "⊕ (wrong)"
+        }
+      },
+      "paraphrase": {
+        "question": "In this system, Paris = ∆, France = ◇, French = ⊕, capital_of = Ω, official_language = ★.\nRephrased: What is the capital of ∆?",
+        "metadata": {}
+      },
+      "terminology_swap": {
+        "question": "In this system, Paris = ∆, France = ◇, French = ⊕, capital_of = Ω, official_language = ★.\nUsing technical terminology: What is the capital of ∆?",
+        "metadata": {
+          "swap_map": {
+            "answer": "solution"
+          }
+        }
+      },
+      "substitution": {
+        "question": "In this system, Paris = ∆, France = ◇, French = ⊕, capital_of = Ω, official_language = ★.\nWith harmless substitutions: What is the capital of ∆?",
+        "metadata": {
+          "substitution_map": {}
+        }
+      }
+    }
+  }
+]

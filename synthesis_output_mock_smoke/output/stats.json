@@ -1,0 +1,154 @@
+{
+  "total_families": 3,
+  "block_counts": {
+    "KB": 1,
+    "RB": 1,
+    "Hybrid": 1
+  },
+  "sub_family_counts": {
+    "country_capital": 1,
+    "linear_equation": 1,
+    "two_hop_relational": 1
+  },
+  "variant_coverage_counts": {
+    "original": 3,
+    "hint": 3,
+    "premise": 3,
+    "premise_removal": 3,
+    "highlight": 3,
+    "full_support_bundle": 3,
+    "scaffold_1": 3,
+    "scaffold_2": 3,
+    "scaffold_3": 3,
+    "scaffold_shuffled": 3,
+    "cot_full": 3,
+    "cot_partial": 3,
+    "cot_shuffled": 3,
+    "wrongclaim_bare": 3,
+    "wrongclaim_confident": 3,
+    "wrongclaim_attributed": 3,
+    "competing_claims": 3,
+    "paraphrase": 3,
+    "terminology_swap": 3,
+    "substitution": 3
+  },
+  "variant_coverage_pct": {
+    "original": 100.0,
+    "hint": 100.0,
+    "premise": 100.0,
+    "premise_removal": 100.0,
+    "highlight": 100.0,
+    "full_support_bundle": 100.0,
+    "scaffold_1": 100.0,
+    "scaffold_2": 100.0,
+    "scaffold_3": 100.0,
+    "scaffold_shuffled": 100.0,
+    "cot_full": 100.0,
+    "cot_partial": 100.0,
+    "cot_shuffled": 100.0,
+    "wrongclaim_bare": 100.0,
+    "wrongclaim_confident": 100.0,
+    "wrongclaim_attributed": 100.0,
+    "competing_claims": 100.0,
+    "paraphrase": 100.0,
+    "terminology_swap": 100.0,
+    "substitution": 100.0
+  },
+  "symbolic_families": 3,
+  "symbolic_coverage_pct": 100.0,
+  "mcq_families": 3,
+  "mcq_coverage_pct": 100.0,
+  "atomic_capability_coverage": {
+    "evidence_access": {
+      "variants": [
+        "original",
+        "hint",
+        "premise",
+        "premise_removal"
+      ],
+      "families_with_full_coverage": 3,
+      "coverage_pct": 100.0
+    },
+    "evidence_localization": {
+      "variants": [
+        "highlight"
+      ],
+      "families_with_full_coverage": 3,
+      "coverage_pct": 100.0
+    },
+    "evidence_integration": {
+      "variants": [
+        "full_support_bundle"
+      ],
+      "families_with_full_coverage": 3,
+      "coverage_pct": 100.0
+    },
+    "decomposition_sensitive": {
+      "variants": [
+        "scaffold_1",
+        "scaffold_2",
+        "scaffold_3"
+      ],
+      "families_with_full_coverage": 3,
+      "coverage_pct": 100.0
+    },
+    "order_sensitive": {
+      "variants": [
+        "scaffold_shuffled"
+      ],
+      "families_with_full_coverage": 3,
+      "coverage_pct": 100.0
+    },
+    "intermediate_state_sensitive": {
+      "variants": [
+        "cot_full",
+        "cot_partial"
+      ],
+      "families_with_full_coverage": 3,
+      "coverage_pct": 100.0
+    },
+    "cue_susceptible": {
+      "variants": [
+        "wrongclaim_bare"
+      ],
+      "families_with_full_coverage": 3,
+      "coverage_pct": 100.0
+    },
+    "authority_susceptible": {
+      "variants": [
+        "wrongclaim_confident",
+        "wrongclaim_attributed"
+      ],
+      "families_with_full_coverage": 3,
+      "coverage_pct": 100.0
+    },
+    "conflict_resolution_weak": {
+      "variants": [
+        "competing_claims"
+      ],
+      "families_with_full_coverage": 3,
+      "coverage_pct": 100.0
+    },
+    "lexical_fragile": {
+      "variants": [
+        "paraphrase"
+      ],
+      "families_with_full_coverage": 3,
+      "coverage_pct": 100.0
+    },
+    "terminology_fragile": {
+      "variants": [
+        "terminology_swap"
+      ],
+      "families_with_full_coverage": 3,
+      "coverage_pct": 100.0
+    },
+    "structure_misaligned": {
+      "variants": [
+        "substitution"
+      ],
+      "families_with_full_coverage": 3,
+      "coverage_pct": 100.0
+    }
+  }
+}
