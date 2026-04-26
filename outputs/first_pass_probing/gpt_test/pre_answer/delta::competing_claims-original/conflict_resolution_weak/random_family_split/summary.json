@@ -1,0 +1,21 @@
+{
+  "status": "ok",
+  "dataset": "gpt_test",
+  "label": "conflict_resolution_weak",
+  "split": "random_family_split",
+  "position": "pre_answer",
+  "feature_mode": "delta::competing_claims-original",
+  "variant": "original",
+  "delta_variant": "competing_claims",
+  "best_layer": 3,
+  "best_macro_f1_mean": 0.49056603773584906,
+  "n_train": 126,
+  "n_test": 54,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ]
+}

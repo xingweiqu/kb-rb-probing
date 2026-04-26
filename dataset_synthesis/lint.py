@@ -153,10 +153,20 @@ def lint_family(family: dict[str, Any]) -> AuditRecord:
     gold = str(family.get("gold_answer", "") or "")
 
     # 1) answer leakage (P0)
+    # Round1 focuses on CoT/scaffold leakage; those variants must not contain the gold answer.
     if gold and len(_norm(gold)) >= 2:
         nv = family.get("normal_variants")
         if isinstance(nv, dict):
-            for vt in ("cot_full", "cot_partial", "cot_shuffled", "scaffold_3", "scaffold_2"):
+            high_risk = {
+                "cot_full",
+                "cot_partial",
+                "cot_shuffled",
+                "scaffold_1",
+                "scaffold_2",
+                "scaffold_3",
+                "scaffold_shuffled",
+            }
+            for vt in sorted(high_risk):
                 v = nv.get(vt)
                 q = v.get("question", "") if isinstance(v, dict) else ""
                 if isinstance(q, str) and _token_contains(q, gold):
@@ -166,7 +176,7 @@ def lint_family(family: dict[str, Any]) -> AuditRecord:
                             severity="P0",
                             variant=vt,
                             message=f"{vt} 直接包含 gold_answer: {gold!r}",
-                            recommendation="rewrite_cot/scaffold_remove_final_answer",
+                            recommendation="round1_remove_gold_from_cot_scaffold_and_disable_high_risk",
                         )
                     )
 
@@ -228,14 +238,14 @@ def lint_family(family: dict[str, Any]) -> AuditRecord:
             and isinstance(strict.get("variants"), dict)
             and bool(strict.get("variants"))
         )
-        # overlay preamble leaks real entities by construction
+        # overlay preamble leaks real entities by construction; strict_symbolic is acceptable.
         if not has_strict:
             rec.issues.append(
                 Issue(
                     code="symbolic_not_clean",
                     severity="P0",
                     message="symbolic_variants 属于 symbolic_overlay（preamble 含真实实体），需要生成 strict_symbolic",
-                    recommendation="rewrite_symbolic_to_strict_symbolic",
+                    recommendation="round3_generate_strict_symbolic",
                 )
             )
 

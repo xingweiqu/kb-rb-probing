@@ -1,0 +1,21 @@
+{
+  "status": "ok",
+  "dataset": "cross_dataset_transfer_v2",
+  "label": "wrong_claim_susceptible",
+  "split": "train_gpt_test__test_probe_ready::wrong_claim_susceptible::pre_answer",
+  "position": "pre_answer",
+  "feature_mode": "absolute::h_original",
+  "variant": "original",
+  "delta_variant": null,
+  "best_layer": 10,
+  "best_macro_f1_mean": 0.5744680851063829,
+  "n_train": 180,
+  "n_test": 180,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ]
+}

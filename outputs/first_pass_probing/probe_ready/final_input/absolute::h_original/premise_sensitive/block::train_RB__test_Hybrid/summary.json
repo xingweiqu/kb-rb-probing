@@ -1,0 +1,21 @@
+{
+  "status": "ok",
+  "dataset": "probe_ready",
+  "label": "premise_sensitive",
+  "split": "block::train_RB__test_Hybrid",
+  "position": "final_input",
+  "feature_mode": "absolute::h_original",
+  "variant": "original",
+  "delta_variant": null,
+  "best_layer": 2,
+  "best_macro_f1_mean": 0.5956873315363882,
+  "n_train": 60,
+  "n_test": 60,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ]
+}

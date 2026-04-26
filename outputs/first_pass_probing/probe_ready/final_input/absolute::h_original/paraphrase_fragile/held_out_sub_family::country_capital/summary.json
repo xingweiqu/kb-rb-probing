@@ -1,0 +1,21 @@
+{
+  "status": "ok",
+  "dataset": "probe_ready",
+  "label": "paraphrase_fragile",
+  "split": "held_out_sub_family::country_capital",
+  "position": "final_input",
+  "feature_mode": "absolute::h_original",
+  "variant": "original",
+  "delta_variant": null,
+  "best_layer": 0,
+  "best_macro_f1_mean": 1.0,
+  "n_train": 164,
+  "n_test": 16,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ]
+}

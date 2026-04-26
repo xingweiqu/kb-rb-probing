@@ -1,0 +1,21 @@
+{
+  "status": "ok",
+  "dataset": "gpt_test",
+  "label": "localization_sensitive",
+  "split": "random_family_split",
+  "position": "pre_answer",
+  "feature_mode": "delta::highlight-original",
+  "variant": "original",
+  "delta_variant": "highlight",
+  "best_layer": 31,
+  "best_macro_f1_mean": 0.8064516129032258,
+  "n_train": 126,
+  "n_test": 54,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ]
+}

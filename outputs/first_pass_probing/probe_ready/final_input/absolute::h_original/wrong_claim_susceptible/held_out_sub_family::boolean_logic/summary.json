@@ -1,0 +1,21 @@
+{
+  "status": "ok",
+  "dataset": "probe_ready",
+  "label": "wrong_claim_susceptible",
+  "split": "held_out_sub_family::boolean_logic",
+  "position": "final_input",
+  "feature_mode": "absolute::h_original",
+  "variant": "original",
+  "delta_variant": null,
+  "best_layer": 24,
+  "best_macro_f1_mean": 1.0,
+  "n_train": 172,
+  "n_test": 8,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ]
+}

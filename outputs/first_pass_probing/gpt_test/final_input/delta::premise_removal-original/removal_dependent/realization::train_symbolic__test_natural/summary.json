@@ -1,0 +1,21 @@
+{
+  "status": "ok",
+  "dataset": "gpt_test",
+  "label": "removal_dependent",
+  "split": "realization::train_symbolic__test_natural",
+  "position": "final_input",
+  "feature_mode": "delta::premise_removal-original",
+  "variant": "original",
+  "delta_variant": "premise_removal",
+  "best_layer": 12,
+  "best_macro_f1_mean": 0.6592244418331374,
+  "n_train": 90,
+  "n_test": 90,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ]
+}

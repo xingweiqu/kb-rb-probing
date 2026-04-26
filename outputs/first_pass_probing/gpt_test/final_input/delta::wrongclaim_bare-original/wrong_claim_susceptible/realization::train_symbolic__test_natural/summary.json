@@ -1,0 +1,21 @@
+{
+  "status": "ok",
+  "dataset": "gpt_test",
+  "label": "wrong_claim_susceptible",
+  "split": "realization::train_symbolic__test_natural",
+  "position": "final_input",
+  "feature_mode": "delta::wrongclaim_bare-original",
+  "variant": "original",
+  "delta_variant": "wrongclaim_bare",
+  "best_layer": 22,
+  "best_macro_f1_mean": 0.6199324324324325,
+  "n_train": 90,
+  "n_test": 90,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ]
+}

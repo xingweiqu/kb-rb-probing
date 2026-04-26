@@ -1,0 +1,21 @@
+{
+  "status": "ok",
+  "dataset": "probe_ready",
+  "label": "paraphrase_fragile",
+  "split": "random_family_split",
+  "position": "pre_answer",
+  "feature_mode": "delta::paraphrase-original",
+  "variant": "original",
+  "delta_variant": "paraphrase",
+  "best_layer": 1,
+  "best_macro_f1_mean": 0.9809523809523808,
+  "n_train": 126,
+  "n_test": 54,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ]
+}

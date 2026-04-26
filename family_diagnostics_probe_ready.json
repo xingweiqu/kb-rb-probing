@@ -1,0 +1,3610 @@
+{
+  "n_families": 180,
+  "diagnostic_counts": {
+    "ceiling_family": 37,
+    "floor_family": 9,
+    "informative_family": 134
+  },
+  "families": {
+    "probe_nat_hybrid_025": {
+      "task_family": "Hybrid",
+      "sub_family": "retrieve_rule_apply",
+      "mode": "naturalized",
+      "source_family_id": "hybrid_025",
+      "paired_family_id": "probe_sym_hybrid_025",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_hybrid_026": {
+      "task_family": "Hybrid",
+      "sub_family": "retrieve_rule_apply",
+      "mode": "naturalized",
+      "source_family_id": "hybrid_026",
+      "paired_family_id": "probe_sym_hybrid_026",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_hybrid_027": {
+      "task_family": "Hybrid",
+      "sub_family": "retrieve_rule_apply",
+      "mode": "naturalized",
+      "source_family_id": "hybrid_027",
+      "paired_family_id": "probe_sym_hybrid_027",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "floor_family"
+    },
+    "probe_nat_hybrid_028": {
+      "task_family": "Hybrid",
+      "sub_family": "retrieve_rule_apply",
+      "mode": "naturalized",
+      "source_family_id": "hybrid_028",
+      "paired_family_id": "probe_sym_hybrid_028",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_hybrid_029": {
+      "task_family": "Hybrid",
+      "sub_family": "retrieve_rule_apply",
+      "mode": "naturalized",
+      "source_family_id": "hybrid_029",
+      "paired_family_id": "probe_sym_hybrid_029",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_hybrid_030": {
+      "task_family": "Hybrid",
+      "sub_family": "retrieve_rule_apply",
+      "mode": "naturalized",
+      "source_family_id": "hybrid_030",
+      "paired_family_id": "probe_sym_hybrid_030",
+      "scores": {
+        "original": 0.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_hybrid_011": {
+      "task_family": "Hybrid",
+      "sub_family": "retrieve_transform",
+      "mode": "naturalized",
+      "source_family_id": "hybrid_011",
+      "paired_family_id": "probe_sym_hybrid_011",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_hybrid_012": {
+      "task_family": "Hybrid",
+      "sub_family": "retrieve_transform",
+      "mode": "naturalized",
+      "source_family_id": "hybrid_012",
+      "paired_family_id": "probe_sym_hybrid_012",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_hybrid_013": {
+      "task_family": "Hybrid",
+      "sub_family": "retrieve_transform",
+      "mode": "naturalized",
+      "source_family_id": "hybrid_013",
+      "paired_family_id": "probe_sym_hybrid_013",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "floor_family"
+    },
+    "probe_nat_hybrid_020": {
+      "task_family": "Hybrid",
+      "sub_family": "retrieve_transform",
+      "mode": "naturalized",
+      "source_family_id": "hybrid_020",
+      "paired_family_id": "probe_sym_hybrid_020",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_hybrid_021": {
+      "task_family": "Hybrid",
+      "sub_family": "retrieve_transform",
+      "mode": "naturalized",
+      "source_family_id": "hybrid_021",
+      "paired_family_id": "probe_sym_hybrid_021",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_hybrid_022": {
+      "task_family": "Hybrid",
+      "sub_family": "retrieve_transform",
+      "mode": "naturalized",
+      "source_family_id": "hybrid_022",
+      "paired_family_id": "probe_sym_hybrid_022",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_hybrid_023": {
+      "task_family": "Hybrid",
+      "sub_family": "retrieve_transform",
+      "mode": "naturalized",
+      "source_family_id": "hybrid_023",
+      "paired_family_id": "probe_sym_hybrid_023",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_hybrid_024": {
+      "task_family": "Hybrid",
+      "sub_family": "retrieve_transform",
+      "mode": "naturalized",
+      "source_family_id": "hybrid_024",
+      "paired_family_id": "probe_sym_hybrid_024",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_hybrid_001": {
+      "task_family": "Hybrid",
+      "sub_family": "two_hop_relational",
+      "mode": "naturalized",
+      "source_family_id": "hybrid_001",
+      "paired_family_id": "probe_sym_hybrid_001",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_hybrid_002": {
+      "task_family": "Hybrid",
+      "sub_family": "two_hop_relational",
+      "mode": "naturalized",
+      "source_family_id": "hybrid_002",
+      "paired_family_id": "probe_sym_hybrid_002",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_hybrid_003": {
+      "task_family": "Hybrid",
+      "sub_family": "two_hop_relational",
+      "mode": "naturalized",
+      "source_family_id": "hybrid_003",
+      "paired_family_id": "probe_sym_hybrid_003",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_hybrid_004": {
+      "task_family": "Hybrid",
+      "sub_family": "two_hop_relational",
+      "mode": "naturalized",
+      "source_family_id": "hybrid_004",
+      "paired_family_id": "probe_sym_hybrid_004",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "floor_family"
+    },
+    "probe_nat_hybrid_005": {
+      "task_family": "Hybrid",
+      "sub_family": "two_hop_relational",
+      "mode": "naturalized",
+      "source_family_id": "hybrid_005",
+      "paired_family_id": "probe_sym_hybrid_005",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_hybrid_006": {
+      "task_family": "Hybrid",
+      "sub_family": "two_hop_relational",
+      "mode": "naturalized",
+      "source_family_id": "hybrid_006",
+      "paired_family_id": "probe_sym_hybrid_006",
+      "scores": {
+        "original": 1.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_hybrid_007": {
+      "task_family": "Hybrid",
+      "sub_family": "two_hop_relational",
+      "mode": "naturalized",
+      "source_family_id": "hybrid_007",
+      "paired_family_id": "probe_sym_hybrid_007",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_hybrid_008": {
+      "task_family": "Hybrid",
+      "sub_family": "two_hop_relational",
+      "mode": "naturalized",
+      "source_family_id": "hybrid_008",
+      "paired_family_id": "probe_sym_hybrid_008",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_hybrid_009": {
+      "task_family": "Hybrid",
+      "sub_family": "two_hop_relational",
+      "mode": "naturalized",
+      "source_family_id": "hybrid_009",
+      "paired_family_id": "probe_sym_hybrid_009",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_hybrid_010": {
+      "task_family": "Hybrid",
+      "sub_family": "two_hop_relational",
+      "mode": "naturalized",
+      "source_family_id": "hybrid_010",
+      "paired_family_id": "probe_sym_hybrid_010",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_hybrid_014": {
+      "task_family": "Hybrid",
+      "sub_family": "two_hop_relational",
+      "mode": "naturalized",
+      "source_family_id": "hybrid_014",
+      "paired_family_id": "probe_sym_hybrid_014",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_hybrid_015": {
+      "task_family": "Hybrid",
+      "sub_family": "two_hop_relational",
+      "mode": "naturalized",
+      "source_family_id": "hybrid_015",
+      "paired_family_id": "probe_sym_hybrid_015",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_hybrid_016": {
+      "task_family": "Hybrid",
+      "sub_family": "two_hop_relational",
+      "mode": "naturalized",
+      "source_family_id": "hybrid_016",
+      "paired_family_id": "probe_sym_hybrid_016",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_hybrid_017": {
+      "task_family": "Hybrid",
+      "sub_family": "two_hop_relational",
+      "mode": "naturalized",
+      "source_family_id": "hybrid_017",
+      "paired_family_id": "probe_sym_hybrid_017",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_hybrid_018": {
+      "task_family": "Hybrid",
+      "sub_family": "two_hop_relational",
+      "mode": "naturalized",
+      "source_family_id": "hybrid_018",
+      "paired_family_id": "probe_sym_hybrid_018",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_hybrid_019": {
+      "task_family": "Hybrid",
+      "sub_family": "two_hop_relational",
+      "mode": "naturalized",
+      "source_family_id": "hybrid_019",
+      "paired_family_id": "probe_sym_hybrid_019",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_kb_001": {
+      "task_family": "KB",
+      "sub_family": "country_capital",
+      "mode": "naturalized",
+      "source_family_id": "kb_001",
+      "paired_family_id": "probe_sym_kb_001",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_kb_002": {
+      "task_family": "KB",
+      "sub_family": "country_capital",
+      "mode": "naturalized",
+      "source_family_id": "kb_002",
+      "paired_family_id": "probe_sym_kb_002",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_kb_003": {
+      "task_family": "KB",
+      "sub_family": "country_capital",
+      "mode": "naturalized",
+      "source_family_id": "kb_003",
+      "paired_family_id": "probe_sym_kb_003",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_kb_004": {
+      "task_family": "KB",
+      "sub_family": "country_capital",
+      "mode": "naturalized",
+      "source_family_id": "kb_004",
+      "paired_family_id": "probe_sym_kb_004",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_kb_005": {
+      "task_family": "KB",
+      "sub_family": "country_capital",
+      "mode": "naturalized",
+      "source_family_id": "kb_005",
+      "paired_family_id": "probe_sym_kb_005",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_kb_006": {
+      "task_family": "KB",
+      "sub_family": "country_capital",
+      "mode": "naturalized",
+      "source_family_id": "kb_006",
+      "paired_family_id": "probe_sym_kb_006",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_kb_007": {
+      "task_family": "KB",
+      "sub_family": "country_capital",
+      "mode": "naturalized",
+      "source_family_id": "kb_007",
+      "paired_family_id": "probe_sym_kb_007",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "floor_family"
+    },
+    "probe_nat_kb_008": {
+      "task_family": "KB",
+      "sub_family": "country_capital",
+      "mode": "naturalized",
+      "source_family_id": "kb_008",
+      "paired_family_id": "probe_sym_kb_008",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_kb_017": {
+      "task_family": "KB",
+      "sub_family": "element_symbol",
+      "mode": "naturalized",
+      "source_family_id": "kb_017",
+      "paired_family_id": "probe_sym_kb_017",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_kb_018": {
+      "task_family": "KB",
+      "sub_family": "element_symbol",
+      "mode": "naturalized",
+      "source_family_id": "kb_018",
+      "paired_family_id": "probe_sym_kb_018",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_kb_019": {
+      "task_family": "KB",
+      "sub_family": "element_symbol",
+      "mode": "naturalized",
+      "source_family_id": "kb_019",
+      "paired_family_id": "probe_sym_kb_019",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_kb_020": {
+      "task_family": "KB",
+      "sub_family": "element_symbol",
+      "mode": "naturalized",
+      "source_family_id": "kb_020",
+      "paired_family_id": "probe_sym_kb_020",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_kb_021": {
+      "task_family": "KB",
+      "sub_family": "element_symbol",
+      "mode": "naturalized",
+      "source_family_id": "kb_021",
+      "paired_family_id": "probe_sym_kb_021",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_kb_022": {
+      "task_family": "KB",
+      "sub_family": "element_symbol",
+      "mode": "naturalized",
+      "source_family_id": "kb_022",
+      "paired_family_id": "probe_sym_kb_022",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "floor_family"
+    },
+    "probe_nat_kb_023": {
+      "task_family": "KB",
+      "sub_family": "element_symbol",
+      "mode": "naturalized",
+      "source_family_id": "kb_023",
+      "paired_family_id": "probe_sym_kb_023",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_kb_024": {
+      "task_family": "KB",
+      "sub_family": "entity_attribute",
+      "mode": "naturalized",
+      "source_family_id": "kb_024",
+      "paired_family_id": "probe_sym_kb_024",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_kb_025": {
+      "task_family": "KB",
+      "sub_family": "entity_attribute",
+      "mode": "naturalized",
+      "source_family_id": "kb_025",
+      "paired_family_id": "probe_sym_kb_025",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_kb_026": {
+      "task_family": "KB",
+      "sub_family": "entity_attribute",
+      "mode": "naturalized",
+      "source_family_id": "kb_026",
+      "paired_family_id": "probe_sym_kb_026",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_kb_027": {
+      "task_family": "KB",
+      "sub_family": "entity_attribute",
+      "mode": "naturalized",
+      "source_family_id": "kb_027",
+      "paired_family_id": "probe_sym_kb_027",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_kb_028": {
+      "task_family": "KB",
+      "sub_family": "entity_attribute",
+      "mode": "naturalized",
+      "source_family_id": "kb_028",
+      "paired_family_id": "probe_sym_kb_028",
+      "scores": {
+        "original": 0.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_kb_029": {
+      "task_family": "KB",
+      "sub_family": "entity_attribute",
+      "mode": "naturalized",
+      "source_family_id": "kb_029",
+      "paired_family_id": "probe_sym_kb_029",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_kb_030": {
+      "task_family": "KB",
+      "sub_family": "entity_attribute",
+      "mode": "naturalized",
+      "source_family_id": "kb_030",
+      "paired_family_id": "probe_sym_kb_030",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_kb_009": {
+      "task_family": "KB",
+      "sub_family": "work_author",
+      "mode": "naturalized",
+      "source_family_id": "kb_009",
+      "paired_family_id": "probe_sym_kb_009",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_kb_010": {
+      "task_family": "KB",
+      "sub_family": "work_author",
+      "mode": "naturalized",
+      "source_family_id": "kb_010",
+      "paired_family_id": "probe_sym_kb_010",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_kb_011": {
+      "task_family": "KB",
+      "sub_family": "work_author",
+      "mode": "naturalized",
+      "source_family_id": "kb_011",
+      "paired_family_id": "probe_sym_kb_011",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_kb_012": {
+      "task_family": "KB",
+      "sub_family": "work_author",
+      "mode": "naturalized",
+      "source_family_id": "kb_012",
+      "paired_family_id": "probe_sym_kb_012",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_kb_013": {
+      "task_family": "KB",
+      "sub_family": "work_author",
+      "mode": "naturalized",
+      "source_family_id": "kb_013",
+      "paired_family_id": "probe_sym_kb_013",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_kb_014": {
+      "task_family": "KB",
+      "sub_family": "work_author",
+      "mode": "naturalized",
+      "source_family_id": "kb_014",
+      "paired_family_id": "probe_sym_kb_014",
+      "scores": {
+        "original": 1.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_kb_015": {
+      "task_family": "KB",
+      "sub_family": "work_author",
+      "mode": "naturalized",
+      "source_family_id": "kb_015",
+      "paired_family_id": "probe_sym_kb_015",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_kb_016": {
+      "task_family": "KB",
+      "sub_family": "work_author",
+      "mode": "naturalized",
+      "source_family_id": "kb_016",
+      "paired_family_id": "probe_sym_kb_016",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_rb_018": {
+      "task_family": "RB",
+      "sub_family": "boolean_logic",
+      "mode": "naturalized",
+      "source_family_id": "rb_018",
+      "paired_family_id": "probe_sym_rb_018",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "floor_family"
+    },
+    "probe_nat_rb_019": {
+      "task_family": "RB",
+      "sub_family": "boolean_logic",
+      "mode": "naturalized",
+      "source_family_id": "rb_019",
+      "paired_family_id": "probe_sym_rb_019",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_rb_020": {
+      "task_family": "RB",
+      "sub_family": "boolean_logic",
+      "mode": "naturalized",
+      "source_family_id": "rb_020",
+      "paired_family_id": "probe_sym_rb_020",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_rb_021": {
+      "task_family": "RB",
+      "sub_family": "boolean_logic",
+      "mode": "naturalized",
+      "source_family_id": "rb_021",
+      "paired_family_id": "probe_sym_rb_021",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_rb_022": {
+      "task_family": "RB",
+      "sub_family": "function_application",
+      "mode": "naturalized",
+      "source_family_id": "rb_022",
+      "paired_family_id": "probe_sym_rb_022",
+      "scores": {
+        "original": 0.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_rb_023": {
+      "task_family": "RB",
+      "sub_family": "function_application",
+      "mode": "naturalized",
+      "source_family_id": "rb_023",
+      "paired_family_id": "probe_sym_rb_023",
+      "scores": {
+        "original": 1.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 1.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_rb_024": {
+      "task_family": "RB",
+      "sub_family": "function_application",
+      "mode": "naturalized",
+      "source_family_id": "rb_024",
+      "paired_family_id": "probe_sym_rb_024",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_rb_025": {
+      "task_family": "RB",
+      "sub_family": "function_application",
+      "mode": "naturalized",
+      "source_family_id": "rb_025",
+      "paired_family_id": "probe_sym_rb_025",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_rb_026": {
+      "task_family": "RB",
+      "sub_family": "function_application",
+      "mode": "naturalized",
+      "source_family_id": "rb_026",
+      "paired_family_id": "probe_sym_rb_026",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_rb_027": {
+      "task_family": "RB",
+      "sub_family": "function_application",
+      "mode": "naturalized",
+      "source_family_id": "rb_027",
+      "paired_family_id": "probe_sym_rb_027",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_rb_001": {
+      "task_family": "RB",
+      "sub_family": "linear_equation",
+      "mode": "naturalized",
+      "source_family_id": "rb_001",
+      "paired_family_id": "probe_sym_rb_001",
+      "scores": {
+        "original": 0.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_rb_002": {
+      "task_family": "RB",
+      "sub_family": "linear_equation",
+      "mode": "naturalized",
+      "source_family_id": "rb_002",
+      "paired_family_id": "probe_sym_rb_002",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_rb_003": {
+      "task_family": "RB",
+      "sub_family": "linear_equation",
+      "mode": "naturalized",
+      "source_family_id": "rb_003",
+      "paired_family_id": "probe_sym_rb_003",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_rb_004": {
+      "task_family": "RB",
+      "sub_family": "linear_equation",
+      "mode": "naturalized",
+      "source_family_id": "rb_004",
+      "paired_family_id": "probe_sym_rb_004",
+      "scores": {
+        "original": 1.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_rb_005": {
+      "task_family": "RB",
+      "sub_family": "linear_equation",
+      "mode": "naturalized",
+      "source_family_id": "rb_005",
+      "paired_family_id": "probe_sym_rb_005",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "floor_family"
+    },
+    "probe_nat_rb_006": {
+      "task_family": "RB",
+      "sub_family": "linear_equation",
+      "mode": "naturalized",
+      "source_family_id": "rb_006",
+      "paired_family_id": "probe_sym_rb_006",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_rb_028": {
+      "task_family": "RB",
+      "sub_family": "linear_equation",
+      "mode": "naturalized",
+      "source_family_id": "rb_028",
+      "paired_family_id": "probe_sym_rb_028",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "floor_family"
+    },
+    "probe_nat_rb_013": {
+      "task_family": "RB",
+      "sub_family": "sequence_pattern",
+      "mode": "naturalized",
+      "source_family_id": "rb_013",
+      "paired_family_id": "probe_sym_rb_013",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_rb_014": {
+      "task_family": "RB",
+      "sub_family": "sequence_pattern",
+      "mode": "naturalized",
+      "source_family_id": "rb_014",
+      "paired_family_id": "probe_sym_rb_014",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_rb_015": {
+      "task_family": "RB",
+      "sub_family": "sequence_pattern",
+      "mode": "naturalized",
+      "source_family_id": "rb_015",
+      "paired_family_id": "probe_sym_rb_015",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_rb_016": {
+      "task_family": "RB",
+      "sub_family": "sequence_pattern",
+      "mode": "naturalized",
+      "source_family_id": "rb_016",
+      "paired_family_id": "probe_sym_rb_016",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_rb_017": {
+      "task_family": "RB",
+      "sub_family": "sequence_pattern",
+      "mode": "naturalized",
+      "source_family_id": "rb_017",
+      "paired_family_id": "probe_sym_rb_017",
+      "scores": {
+        "original": 0.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_rb_030": {
+      "task_family": "RB",
+      "sub_family": "sequence_pattern",
+      "mode": "naturalized",
+      "source_family_id": "rb_030",
+      "paired_family_id": "probe_sym_rb_030",
+      "scores": {
+        "original": 0.0,
+        "hint": 1.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_rb_007": {
+      "task_family": "RB",
+      "sub_family": "syllogistic_logic",
+      "mode": "naturalized",
+      "source_family_id": "rb_007",
+      "paired_family_id": "probe_sym_rb_007",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_rb_008": {
+      "task_family": "RB",
+      "sub_family": "syllogistic_logic",
+      "mode": "naturalized",
+      "source_family_id": "rb_008",
+      "paired_family_id": "probe_sym_rb_008",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "floor_family"
+    },
+    "probe_nat_rb_009": {
+      "task_family": "RB",
+      "sub_family": "syllogistic_logic",
+      "mode": "naturalized",
+      "source_family_id": "rb_009",
+      "paired_family_id": "probe_sym_rb_009",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_rb_010": {
+      "task_family": "RB",
+      "sub_family": "syllogistic_logic",
+      "mode": "naturalized",
+      "source_family_id": "rb_010",
+      "paired_family_id": "probe_sym_rb_010",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_rb_011": {
+      "task_family": "RB",
+      "sub_family": "syllogistic_logic",
+      "mode": "naturalized",
+      "source_family_id": "rb_011",
+      "paired_family_id": "probe_sym_rb_011",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "probe_nat_rb_012": {
+      "task_family": "RB",
+      "sub_family": "syllogistic_logic",
+      "mode": "naturalized",
+      "source_family_id": "rb_012",
+      "paired_family_id": "probe_sym_rb_012",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_nat_rb_029": {
+      "task_family": "RB",
+      "sub_family": "syllogistic_logic",
+      "mode": "naturalized",
+      "source_family_id": "rb_029",
+      "paired_family_id": "probe_sym_rb_029",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_hybrid_025": {
+      "task_family": "Hybrid",
+      "sub_family": "retrieve_rule_apply",
+      "mode": "strict_symbolic",
+      "source_family_id": "hybrid_025",
+      "paired_family_id": "probe_nat_hybrid_025",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_hybrid_026": {
+      "task_family": "Hybrid",
+      "sub_family": "retrieve_rule_apply",
+      "mode": "strict_symbolic",
+      "source_family_id": "hybrid_026",
+      "paired_family_id": "probe_nat_hybrid_026",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_hybrid_027": {
+      "task_family": "Hybrid",
+      "sub_family": "retrieve_rule_apply",
+      "mode": "strict_symbolic",
+      "source_family_id": "hybrid_027",
+      "paired_family_id": "probe_nat_hybrid_027",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_hybrid_028": {
+      "task_family": "Hybrid",
+      "sub_family": "retrieve_rule_apply",
+      "mode": "strict_symbolic",
+      "source_family_id": "hybrid_028",
+      "paired_family_id": "probe_nat_hybrid_028",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_hybrid_029": {
+      "task_family": "Hybrid",
+      "sub_family": "retrieve_rule_apply",
+      "mode": "strict_symbolic",
+      "source_family_id": "hybrid_029",
+      "paired_family_id": "probe_nat_hybrid_029",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_hybrid_030": {
+      "task_family": "Hybrid",
+      "sub_family": "retrieve_rule_apply",
+      "mode": "strict_symbolic",
+      "source_family_id": "hybrid_030",
+      "paired_family_id": "probe_nat_hybrid_030",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_hybrid_011": {
+      "task_family": "Hybrid",
+      "sub_family": "retrieve_transform",
+      "mode": "strict_symbolic",
+      "source_family_id": "hybrid_011",
+      "paired_family_id": "probe_nat_hybrid_011",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_hybrid_012": {
+      "task_family": "Hybrid",
+      "sub_family": "retrieve_transform",
+      "mode": "strict_symbolic",
+      "source_family_id": "hybrid_012",
+      "paired_family_id": "probe_nat_hybrid_012",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_hybrid_013": {
+      "task_family": "Hybrid",
+      "sub_family": "retrieve_transform",
+      "mode": "strict_symbolic",
+      "source_family_id": "hybrid_013",
+      "paired_family_id": "probe_nat_hybrid_013",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_hybrid_020": {
+      "task_family": "Hybrid",
+      "sub_family": "retrieve_transform",
+      "mode": "strict_symbolic",
+      "source_family_id": "hybrid_020",
+      "paired_family_id": "probe_nat_hybrid_020",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_hybrid_021": {
+      "task_family": "Hybrid",
+      "sub_family": "retrieve_transform",
+      "mode": "strict_symbolic",
+      "source_family_id": "hybrid_021",
+      "paired_family_id": "probe_nat_hybrid_021",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_hybrid_022": {
+      "task_family": "Hybrid",
+      "sub_family": "retrieve_transform",
+      "mode": "strict_symbolic",
+      "source_family_id": "hybrid_022",
+      "paired_family_id": "probe_nat_hybrid_022",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_hybrid_023": {
+      "task_family": "Hybrid",
+      "sub_family": "retrieve_transform",
+      "mode": "strict_symbolic",
+      "source_family_id": "hybrid_023",
+      "paired_family_id": "probe_nat_hybrid_023",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_hybrid_024": {
+      "task_family": "Hybrid",
+      "sub_family": "retrieve_transform",
+      "mode": "strict_symbolic",
+      "source_family_id": "hybrid_024",
+      "paired_family_id": "probe_nat_hybrid_024",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_hybrid_001": {
+      "task_family": "Hybrid",
+      "sub_family": "two_hop_relational",
+      "mode": "strict_symbolic",
+      "source_family_id": "hybrid_001",
+      "paired_family_id": "probe_nat_hybrid_001",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_hybrid_002": {
+      "task_family": "Hybrid",
+      "sub_family": "two_hop_relational",
+      "mode": "strict_symbolic",
+      "source_family_id": "hybrid_002",
+      "paired_family_id": "probe_nat_hybrid_002",
+      "scores": {
+        "original": 0.0,
+        "hint": 1.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_hybrid_003": {
+      "task_family": "Hybrid",
+      "sub_family": "two_hop_relational",
+      "mode": "strict_symbolic",
+      "source_family_id": "hybrid_003",
+      "paired_family_id": "probe_nat_hybrid_003",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_hybrid_004": {
+      "task_family": "Hybrid",
+      "sub_family": "two_hop_relational",
+      "mode": "strict_symbolic",
+      "source_family_id": "hybrid_004",
+      "paired_family_id": "probe_nat_hybrid_004",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_hybrid_005": {
+      "task_family": "Hybrid",
+      "sub_family": "two_hop_relational",
+      "mode": "strict_symbolic",
+      "source_family_id": "hybrid_005",
+      "paired_family_id": "probe_nat_hybrid_005",
+      "scores": {
+        "original": 0.0,
+        "hint": 1.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_hybrid_006": {
+      "task_family": "Hybrid",
+      "sub_family": "two_hop_relational",
+      "mode": "strict_symbolic",
+      "source_family_id": "hybrid_006",
+      "paired_family_id": "probe_nat_hybrid_006",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_hybrid_007": {
+      "task_family": "Hybrid",
+      "sub_family": "two_hop_relational",
+      "mode": "strict_symbolic",
+      "source_family_id": "hybrid_007",
+      "paired_family_id": "probe_nat_hybrid_007",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_hybrid_008": {
+      "task_family": "Hybrid",
+      "sub_family": "two_hop_relational",
+      "mode": "strict_symbolic",
+      "source_family_id": "hybrid_008",
+      "paired_family_id": "probe_nat_hybrid_008",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_hybrid_009": {
+      "task_family": "Hybrid",
+      "sub_family": "two_hop_relational",
+      "mode": "strict_symbolic",
+      "source_family_id": "hybrid_009",
+      "paired_family_id": "probe_nat_hybrid_009",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_hybrid_010": {
+      "task_family": "Hybrid",
+      "sub_family": "two_hop_relational",
+      "mode": "strict_symbolic",
+      "source_family_id": "hybrid_010",
+      "paired_family_id": "probe_nat_hybrid_010",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_hybrid_014": {
+      "task_family": "Hybrid",
+      "sub_family": "two_hop_relational",
+      "mode": "strict_symbolic",
+      "source_family_id": "hybrid_014",
+      "paired_family_id": "probe_nat_hybrid_014",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_hybrid_015": {
+      "task_family": "Hybrid",
+      "sub_family": "two_hop_relational",
+      "mode": "strict_symbolic",
+      "source_family_id": "hybrid_015",
+      "paired_family_id": "probe_nat_hybrid_015",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_hybrid_016": {
+      "task_family": "Hybrid",
+      "sub_family": "two_hop_relational",
+      "mode": "strict_symbolic",
+      "source_family_id": "hybrid_016",
+      "paired_family_id": "probe_nat_hybrid_016",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_hybrid_017": {
+      "task_family": "Hybrid",
+      "sub_family": "two_hop_relational",
+      "mode": "strict_symbolic",
+      "source_family_id": "hybrid_017",
+      "paired_family_id": "probe_nat_hybrid_017",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_hybrid_018": {
+      "task_family": "Hybrid",
+      "sub_family": "two_hop_relational",
+      "mode": "strict_symbolic",
+      "source_family_id": "hybrid_018",
+      "paired_family_id": "probe_nat_hybrid_018",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_hybrid_019": {
+      "task_family": "Hybrid",
+      "sub_family": "two_hop_relational",
+      "mode": "strict_symbolic",
+      "source_family_id": "hybrid_019",
+      "paired_family_id": "probe_nat_hybrid_019",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_kb_001": {
+      "task_family": "KB",
+      "sub_family": "country_capital",
+      "mode": "strict_symbolic",
+      "source_family_id": "kb_001",
+      "paired_family_id": "probe_nat_kb_001",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_kb_002": {
+      "task_family": "KB",
+      "sub_family": "country_capital",
+      "mode": "strict_symbolic",
+      "source_family_id": "kb_002",
+      "paired_family_id": "probe_nat_kb_002",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_kb_003": {
+      "task_family": "KB",
+      "sub_family": "country_capital",
+      "mode": "strict_symbolic",
+      "source_family_id": "kb_003",
+      "paired_family_id": "probe_nat_kb_003",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_kb_004": {
+      "task_family": "KB",
+      "sub_family": "country_capital",
+      "mode": "strict_symbolic",
+      "source_family_id": "kb_004",
+      "paired_family_id": "probe_nat_kb_004",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_kb_005": {
+      "task_family": "KB",
+      "sub_family": "country_capital",
+      "mode": "strict_symbolic",
+      "source_family_id": "kb_005",
+      "paired_family_id": "probe_nat_kb_005",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_kb_006": {
+      "task_family": "KB",
+      "sub_family": "country_capital",
+      "mode": "strict_symbolic",
+      "source_family_id": "kb_006",
+      "paired_family_id": "probe_nat_kb_006",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_kb_007": {
+      "task_family": "KB",
+      "sub_family": "country_capital",
+      "mode": "strict_symbolic",
+      "source_family_id": "kb_007",
+      "paired_family_id": "probe_nat_kb_007",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_kb_008": {
+      "task_family": "KB",
+      "sub_family": "country_capital",
+      "mode": "strict_symbolic",
+      "source_family_id": "kb_008",
+      "paired_family_id": "probe_nat_kb_008",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_kb_017": {
+      "task_family": "KB",
+      "sub_family": "element_symbol",
+      "mode": "strict_symbolic",
+      "source_family_id": "kb_017",
+      "paired_family_id": "probe_nat_kb_017",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_kb_018": {
+      "task_family": "KB",
+      "sub_family": "element_symbol",
+      "mode": "strict_symbolic",
+      "source_family_id": "kb_018",
+      "paired_family_id": "probe_nat_kb_018",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_kb_019": {
+      "task_family": "KB",
+      "sub_family": "element_symbol",
+      "mode": "strict_symbolic",
+      "source_family_id": "kb_019",
+      "paired_family_id": "probe_nat_kb_019",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_kb_020": {
+      "task_family": "KB",
+      "sub_family": "element_symbol",
+      "mode": "strict_symbolic",
+      "source_family_id": "kb_020",
+      "paired_family_id": "probe_nat_kb_020",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_kb_021": {
+      "task_family": "KB",
+      "sub_family": "element_symbol",
+      "mode": "strict_symbolic",
+      "source_family_id": "kb_021",
+      "paired_family_id": "probe_nat_kb_021",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_kb_022": {
+      "task_family": "KB",
+      "sub_family": "element_symbol",
+      "mode": "strict_symbolic",
+      "source_family_id": "kb_022",
+      "paired_family_id": "probe_nat_kb_022",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_kb_023": {
+      "task_family": "KB",
+      "sub_family": "element_symbol",
+      "mode": "strict_symbolic",
+      "source_family_id": "kb_023",
+      "paired_family_id": "probe_nat_kb_023",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_kb_024": {
+      "task_family": "KB",
+      "sub_family": "entity_attribute",
+      "mode": "strict_symbolic",
+      "source_family_id": "kb_024",
+      "paired_family_id": "probe_nat_kb_024",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_kb_025": {
+      "task_family": "KB",
+      "sub_family": "entity_attribute",
+      "mode": "strict_symbolic",
+      "source_family_id": "kb_025",
+      "paired_family_id": "probe_nat_kb_025",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_kb_026": {
+      "task_family": "KB",
+      "sub_family": "entity_attribute",
+      "mode": "strict_symbolic",
+      "source_family_id": "kb_026",
+      "paired_family_id": "probe_nat_kb_026",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_kb_027": {
+      "task_family": "KB",
+      "sub_family": "entity_attribute",
+      "mode": "strict_symbolic",
+      "source_family_id": "kb_027",
+      "paired_family_id": "probe_nat_kb_027",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_kb_028": {
+      "task_family": "KB",
+      "sub_family": "entity_attribute",
+      "mode": "strict_symbolic",
+      "source_family_id": "kb_028",
+      "paired_family_id": "probe_nat_kb_028",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_kb_029": {
+      "task_family": "KB",
+      "sub_family": "entity_attribute",
+      "mode": "strict_symbolic",
+      "source_family_id": "kb_029",
+      "paired_family_id": "probe_nat_kb_029",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_kb_030": {
+      "task_family": "KB",
+      "sub_family": "entity_attribute",
+      "mode": "strict_symbolic",
+      "source_family_id": "kb_030",
+      "paired_family_id": "probe_nat_kb_030",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_kb_009": {
+      "task_family": "KB",
+      "sub_family": "work_author",
+      "mode": "strict_symbolic",
+      "source_family_id": "kb_009",
+      "paired_family_id": "probe_nat_kb_009",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_kb_010": {
+      "task_family": "KB",
+      "sub_family": "work_author",
+      "mode": "strict_symbolic",
+      "source_family_id": "kb_010",
+      "paired_family_id": "probe_nat_kb_010",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_kb_011": {
+      "task_family": "KB",
+      "sub_family": "work_author",
+      "mode": "strict_symbolic",
+      "source_family_id": "kb_011",
+      "paired_family_id": "probe_nat_kb_011",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_kb_012": {
+      "task_family": "KB",
+      "sub_family": "work_author",
+      "mode": "strict_symbolic",
+      "source_family_id": "kb_012",
+      "paired_family_id": "probe_nat_kb_012",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_kb_013": {
+      "task_family": "KB",
+      "sub_family": "work_author",
+      "mode": "strict_symbolic",
+      "source_family_id": "kb_013",
+      "paired_family_id": "probe_nat_kb_013",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_kb_014": {
+      "task_family": "KB",
+      "sub_family": "work_author",
+      "mode": "strict_symbolic",
+      "source_family_id": "kb_014",
+      "paired_family_id": "probe_nat_kb_014",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_kb_015": {
+      "task_family": "KB",
+      "sub_family": "work_author",
+      "mode": "strict_symbolic",
+      "source_family_id": "kb_015",
+      "paired_family_id": "probe_nat_kb_015",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_kb_016": {
+      "task_family": "KB",
+      "sub_family": "work_author",
+      "mode": "strict_symbolic",
+      "source_family_id": "kb_016",
+      "paired_family_id": "probe_nat_kb_016",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_rb_018": {
+      "task_family": "RB",
+      "sub_family": "boolean_logic",
+      "mode": "strict_symbolic",
+      "source_family_id": "rb_018",
+      "paired_family_id": "probe_nat_rb_018",
+      "scores": {
+        "original": 0.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_rb_019": {
+      "task_family": "RB",
+      "sub_family": "boolean_logic",
+      "mode": "strict_symbolic",
+      "source_family_id": "rb_019",
+      "paired_family_id": "probe_nat_rb_019",
+      "scores": {
+        "original": 0.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_rb_020": {
+      "task_family": "RB",
+      "sub_family": "boolean_logic",
+      "mode": "strict_symbolic",
+      "source_family_id": "rb_020",
+      "paired_family_id": "probe_nat_rb_020",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_rb_021": {
+      "task_family": "RB",
+      "sub_family": "boolean_logic",
+      "mode": "strict_symbolic",
+      "source_family_id": "rb_021",
+      "paired_family_id": "probe_nat_rb_021",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_rb_022": {
+      "task_family": "RB",
+      "sub_family": "function_application",
+      "mode": "strict_symbolic",
+      "source_family_id": "rb_022",
+      "paired_family_id": "probe_nat_rb_022",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_rb_023": {
+      "task_family": "RB",
+      "sub_family": "function_application",
+      "mode": "strict_symbolic",
+      "source_family_id": "rb_023",
+      "paired_family_id": "probe_nat_rb_023",
+      "scores": {
+        "original": 0.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_rb_024": {
+      "task_family": "RB",
+      "sub_family": "function_application",
+      "mode": "strict_symbolic",
+      "source_family_id": "rb_024",
+      "paired_family_id": "probe_nat_rb_024",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_rb_025": {
+      "task_family": "RB",
+      "sub_family": "function_application",
+      "mode": "strict_symbolic",
+      "source_family_id": "rb_025",
+      "paired_family_id": "probe_nat_rb_025",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_rb_026": {
+      "task_family": "RB",
+      "sub_family": "function_application",
+      "mode": "strict_symbolic",
+      "source_family_id": "rb_026",
+      "paired_family_id": "probe_nat_rb_026",
+      "scores": {
+        "original": 0.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_rb_027": {
+      "task_family": "RB",
+      "sub_family": "function_application",
+      "mode": "strict_symbolic",
+      "source_family_id": "rb_027",
+      "paired_family_id": "probe_nat_rb_027",
+      "scores": {
+        "original": 0.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_rb_001": {
+      "task_family": "RB",
+      "sub_family": "linear_equation",
+      "mode": "strict_symbolic",
+      "source_family_id": "rb_001",
+      "paired_family_id": "probe_nat_rb_001",
+      "scores": {
+        "original": 0.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_rb_002": {
+      "task_family": "RB",
+      "sub_family": "linear_equation",
+      "mode": "strict_symbolic",
+      "source_family_id": "rb_002",
+      "paired_family_id": "probe_nat_rb_002",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_rb_003": {
+      "task_family": "RB",
+      "sub_family": "linear_equation",
+      "mode": "strict_symbolic",
+      "source_family_id": "rb_003",
+      "paired_family_id": "probe_nat_rb_003",
+      "scores": {
+        "original": 0.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_rb_004": {
+      "task_family": "RB",
+      "sub_family": "linear_equation",
+      "mode": "strict_symbolic",
+      "source_family_id": "rb_004",
+      "paired_family_id": "probe_nat_rb_004",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_rb_005": {
+      "task_family": "RB",
+      "sub_family": "linear_equation",
+      "mode": "strict_symbolic",
+      "source_family_id": "rb_005",
+      "paired_family_id": "probe_nat_rb_005",
+      "scores": {
+        "original": 0.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_rb_006": {
+      "task_family": "RB",
+      "sub_family": "linear_equation",
+      "mode": "strict_symbolic",
+      "source_family_id": "rb_006",
+      "paired_family_id": "probe_nat_rb_006",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_rb_028": {
+      "task_family": "RB",
+      "sub_family": "linear_equation",
+      "mode": "strict_symbolic",
+      "source_family_id": "rb_028",
+      "paired_family_id": "probe_nat_rb_028",
+      "scores": {
+        "original": 0.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_rb_013": {
+      "task_family": "RB",
+      "sub_family": "sequence_pattern",
+      "mode": "strict_symbolic",
+      "source_family_id": "rb_013",
+      "paired_family_id": "probe_nat_rb_013",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_rb_014": {
+      "task_family": "RB",
+      "sub_family": "sequence_pattern",
+      "mode": "strict_symbolic",
+      "source_family_id": "rb_014",
+      "paired_family_id": "probe_nat_rb_014",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_rb_015": {
+      "task_family": "RB",
+      "sub_family": "sequence_pattern",
+      "mode": "strict_symbolic",
+      "source_family_id": "rb_015",
+      "paired_family_id": "probe_nat_rb_015",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_rb_016": {
+      "task_family": "RB",
+      "sub_family": "sequence_pattern",
+      "mode": "strict_symbolic",
+      "source_family_id": "rb_016",
+      "paired_family_id": "probe_nat_rb_016",
+      "scores": {
+        "original": 0.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_rb_017": {
+      "task_family": "RB",
+      "sub_family": "sequence_pattern",
+      "mode": "strict_symbolic",
+      "source_family_id": "rb_017",
+      "paired_family_id": "probe_nat_rb_017",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_rb_030": {
+      "task_family": "RB",
+      "sub_family": "sequence_pattern",
+      "mode": "strict_symbolic",
+      "source_family_id": "rb_030",
+      "paired_family_id": "probe_nat_rb_030",
+      "scores": {
+        "original": 1.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_rb_007": {
+      "task_family": "RB",
+      "sub_family": "syllogistic_logic",
+      "mode": "strict_symbolic",
+      "source_family_id": "rb_007",
+      "paired_family_id": "probe_nat_rb_007",
+      "scores": {
+        "original": 1.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_rb_008": {
+      "task_family": "RB",
+      "sub_family": "syllogistic_logic",
+      "mode": "strict_symbolic",
+      "source_family_id": "rb_008",
+      "paired_family_id": "probe_nat_rb_008",
+      "scores": {
+        "original": 1.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_rb_009": {
+      "task_family": "RB",
+      "sub_family": "syllogistic_logic",
+      "mode": "strict_symbolic",
+      "source_family_id": "rb_009",
+      "paired_family_id": "probe_nat_rb_009",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_rb_010": {
+      "task_family": "RB",
+      "sub_family": "syllogistic_logic",
+      "mode": "strict_symbolic",
+      "source_family_id": "rb_010",
+      "paired_family_id": "probe_nat_rb_010",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_rb_011": {
+      "task_family": "RB",
+      "sub_family": "syllogistic_logic",
+      "mode": "strict_symbolic",
+      "source_family_id": "rb_011",
+      "paired_family_id": "probe_nat_rb_011",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_rb_012": {
+      "task_family": "RB",
+      "sub_family": "syllogistic_logic",
+      "mode": "strict_symbolic",
+      "source_family_id": "rb_012",
+      "paired_family_id": "probe_nat_rb_012",
+      "scores": {
+        "original": 1.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "probe_sym_rb_029": {
+      "task_family": "RB",
+      "sub_family": "syllogistic_logic",
+      "mode": "strict_symbolic",
+      "source_family_id": "rb_029",
+      "paired_family_id": "probe_nat_rb_029",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    }
+  }
+}

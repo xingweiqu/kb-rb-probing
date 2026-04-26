@@ -1,0 +1,21 @@
+{
+  "status": "ok",
+  "dataset": "probe_ready",
+  "label": "wrong_claim_susceptible",
+  "split": "realization::train_natural__test_symbolic",
+  "position": "pre_answer",
+  "feature_mode": "delta::wrongclaim_bare-original",
+  "variant": "original",
+  "delta_variant": "wrongclaim_bare",
+  "best_layer": 16,
+  "best_macro_f1_mean": 0.608957219251337,
+  "n_train": 90,
+  "n_test": 90,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ]
+}

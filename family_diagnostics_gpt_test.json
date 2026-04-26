@@ -1,0 +1,3610 @@
+{
+  "n_families": 180,
+  "diagnostic_counts": {
+    "ceiling_family": 49,
+    "informative_family": 125,
+    "floor_family": 6
+  },
+  "families": {
+    "KB-N-001": {
+      "task_family": "KB",
+      "sub_family": "country_capital",
+      "mode": "naturalized",
+      "source_family_id": "KB-001",
+      "paired_family_id": "KB-S-001",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "KB-N-002": {
+      "task_family": "KB",
+      "sub_family": "country_currency",
+      "mode": "naturalized",
+      "source_family_id": "KB-002",
+      "paired_family_id": "KB-S-002",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "KB-N-003": {
+      "task_family": "KB",
+      "sub_family": "official_language",
+      "mode": "naturalized",
+      "source_family_id": "KB-003",
+      "paired_family_id": "KB-S-003",
+      "scores": {
+        "original": 1.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-N-004": {
+      "task_family": "KB",
+      "sub_family": "country_continent",
+      "mode": "naturalized",
+      "source_family_id": "KB-004",
+      "paired_family_id": "KB-S-004",
+      "scores": {
+        "original": 1.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-N-005": {
+      "task_family": "KB",
+      "sub_family": "book_author",
+      "mode": "naturalized",
+      "source_family_id": "KB-005",
+      "paired_family_id": "KB-S-005",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "KB-N-006": {
+      "task_family": "KB",
+      "sub_family": "playwright",
+      "mode": "naturalized",
+      "source_family_id": "KB-006",
+      "paired_family_id": "KB-S-006",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 0.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-N-007": {
+      "task_family": "KB",
+      "sub_family": "painting_painter",
+      "mode": "naturalized",
+      "source_family_id": "KB-007",
+      "paired_family_id": "KB-S-007",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "KB-N-008": {
+      "task_family": "KB",
+      "sub_family": "composer",
+      "mode": "naturalized",
+      "source_family_id": "KB-008",
+      "paired_family_id": "KB-S-008",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-N-009": {
+      "task_family": "KB",
+      "sub_family": "movie_director",
+      "mode": "naturalized",
+      "source_family_id": "KB-009",
+      "paired_family_id": "KB-S-009",
+      "scores": {
+        "original": 1.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-N-010": {
+      "task_family": "KB",
+      "sub_family": "inventor",
+      "mode": "naturalized",
+      "source_family_id": "KB-010",
+      "paired_family_id": "KB-S-010",
+      "scores": {
+        "original": 1.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-N-011": {
+      "task_family": "KB",
+      "sub_family": "discoverer",
+      "mode": "naturalized",
+      "source_family_id": "KB-011",
+      "paired_family_id": "KB-S-011",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-N-012": {
+      "task_family": "KB",
+      "sub_family": "scientific_theory_scientist",
+      "mode": "naturalized",
+      "source_family_id": "KB-012",
+      "paired_family_id": "KB-S-012",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "KB-N-013": {
+      "task_family": "KB",
+      "sub_family": "chemical_symbol",
+      "mode": "naturalized",
+      "source_family_id": "KB-013",
+      "paired_family_id": "KB-S-013",
+      "scores": {
+        "original": 1.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-N-014": {
+      "task_family": "KB",
+      "sub_family": "atomic_number",
+      "mode": "naturalized",
+      "source_family_id": "KB-014",
+      "paired_family_id": "KB-S-014",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-N-015": {
+      "task_family": "KB",
+      "sub_family": "planet_order",
+      "mode": "naturalized",
+      "source_family_id": "KB-015",
+      "paired_family_id": "KB-S-015",
+      "scores": {
+        "original": 0.0,
+        "hint": 1.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-N-016": {
+      "task_family": "KB",
+      "sub_family": "notable_moon_host",
+      "mode": "naturalized",
+      "source_family_id": "KB-016",
+      "paired_family_id": "KB-S-016",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-N-017": {
+      "task_family": "KB",
+      "sub_family": "si_unit",
+      "mode": "naturalized",
+      "source_family_id": "KB-017",
+      "paired_family_id": "KB-S-017",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-N-018": {
+      "task_family": "KB",
+      "sub_family": "math_constant",
+      "mode": "naturalized",
+      "source_family_id": "KB-018",
+      "paired_family_id": "KB-S-018",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "KB-N-019": {
+      "task_family": "KB",
+      "sub_family": "landmark_city",
+      "mode": "naturalized",
+      "source_family_id": "KB-019",
+      "paired_family_id": "KB-S-019",
+      "scores": {
+        "original": 1.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-N-020": {
+      "task_family": "KB",
+      "sub_family": "river_city",
+      "mode": "naturalized",
+      "source_family_id": "KB-020",
+      "paired_family_id": "KB-S-020",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "KB-N-021": {
+      "task_family": "KB",
+      "sub_family": "mountain_range",
+      "mode": "naturalized",
+      "source_family_id": "KB-021",
+      "paired_family_id": "KB-S-021",
+      "scores": {
+        "original": 1.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-N-022": {
+      "task_family": "KB",
+      "sub_family": "organization_hq",
+      "mode": "naturalized",
+      "source_family_id": "KB-022",
+      "paired_family_id": "KB-S-022",
+      "scores": {
+        "original": 1.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-N-023": {
+      "task_family": "KB",
+      "sub_family": "acronym_expansion",
+      "mode": "naturalized",
+      "source_family_id": "KB-023",
+      "paired_family_id": "KB-S-023",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "KB-N-024": {
+      "task_family": "KB",
+      "sub_family": "programming_language_creator",
+      "mode": "naturalized",
+      "source_family_id": "KB-024",
+      "paired_family_id": "KB-S-024",
+      "scores": {
+        "original": 1.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 1.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-N-025": {
+      "task_family": "KB",
+      "sub_family": "file_extension_format",
+      "mode": "naturalized",
+      "source_family_id": "KB-025",
+      "paired_family_id": "KB-S-025",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "KB-N-026": {
+      "task_family": "KB",
+      "sub_family": "biological_class",
+      "mode": "naturalized",
+      "source_family_id": "KB-026",
+      "paired_family_id": "KB-S-026",
+      "scores": {
+        "original": 1.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-N-027": {
+      "task_family": "KB",
+      "sub_family": "human_organ_function",
+      "mode": "naturalized",
+      "source_family_id": "KB-027",
+      "paired_family_id": "KB-S-027",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-N-028": {
+      "task_family": "KB",
+      "sub_family": "mythology_domain",
+      "mode": "naturalized",
+      "source_family_id": "KB-028",
+      "paired_family_id": "KB-S-028",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "KB-N-029": {
+      "task_family": "KB",
+      "sub_family": "historical_event_year",
+      "mode": "naturalized",
+      "source_family_id": "KB-029",
+      "paired_family_id": "KB-S-029",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "KB-N-030": {
+      "task_family": "KB",
+      "sub_family": "company_founder",
+      "mode": "naturalized",
+      "source_family_id": "KB-030",
+      "paired_family_id": "KB-S-030",
+      "scores": {
+        "original": 1.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-N-001": {
+      "task_family": "RB",
+      "sub_family": "addition",
+      "mode": "naturalized",
+      "source_family_id": "RB-001",
+      "paired_family_id": "RB-S-001",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-N-002": {
+      "task_family": "RB",
+      "sub_family": "subtraction",
+      "mode": "naturalized",
+      "source_family_id": "RB-002",
+      "paired_family_id": "RB-S-002",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-N-003": {
+      "task_family": "RB",
+      "sub_family": "multiplication",
+      "mode": "naturalized",
+      "source_family_id": "RB-003",
+      "paired_family_id": "RB-S-003",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-N-004": {
+      "task_family": "RB",
+      "sub_family": "division",
+      "mode": "naturalized",
+      "source_family_id": "RB-004",
+      "paired_family_id": "RB-S-004",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "RB-N-005": {
+      "task_family": "RB",
+      "sub_family": "percentage_of",
+      "mode": "naturalized",
+      "source_family_id": "RB-005",
+      "paired_family_id": "RB-S-005",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-N-006": {
+      "task_family": "RB",
+      "sub_family": "percent_increase",
+      "mode": "naturalized",
+      "source_family_id": "RB-006",
+      "paired_family_id": "RB-S-006",
+      "scores": {
+        "original": 0.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-N-007": {
+      "task_family": "RB",
+      "sub_family": "ratio_simplification",
+      "mode": "naturalized",
+      "source_family_id": "RB-007",
+      "paired_family_id": "RB-S-007",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-N-008": {
+      "task_family": "RB",
+      "sub_family": "mean",
+      "mode": "naturalized",
+      "source_family_id": "RB-008",
+      "paired_family_id": "RB-S-008",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 0.0,
+        "premise_removal": 1.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-N-009": {
+      "task_family": "RB",
+      "sub_family": "median",
+      "mode": "naturalized",
+      "source_family_id": "RB-009",
+      "paired_family_id": "RB-S-009",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-N-010": {
+      "task_family": "RB",
+      "sub_family": "range",
+      "mode": "naturalized",
+      "source_family_id": "RB-010",
+      "paired_family_id": "RB-S-010",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-N-011": {
+      "task_family": "RB",
+      "sub_family": "linear_equation",
+      "mode": "naturalized",
+      "source_family_id": "RB-011",
+      "paired_family_id": "RB-S-011",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 1.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-N-012": {
+      "task_family": "RB",
+      "sub_family": "two_step_equation",
+      "mode": "naturalized",
+      "source_family_id": "RB-012",
+      "paired_family_id": "RB-S-012",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 0.0,
+        "premise_removal": 1.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-N-013": {
+      "task_family": "RB",
+      "sub_family": "exponentiation",
+      "mode": "naturalized",
+      "source_family_id": "RB-013",
+      "paired_family_id": "RB-S-013",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-N-014": {
+      "task_family": "RB",
+      "sub_family": "square_root",
+      "mode": "naturalized",
+      "source_family_id": "RB-014",
+      "paired_family_id": "RB-S-014",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "RB-N-015": {
+      "task_family": "RB",
+      "sub_family": "rectangle_area",
+      "mode": "naturalized",
+      "source_family_id": "RB-015",
+      "paired_family_id": "RB-S-015",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-N-016": {
+      "task_family": "RB",
+      "sub_family": "rectangle_perimeter",
+      "mode": "naturalized",
+      "source_family_id": "RB-016",
+      "paired_family_id": "RB-S-016",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "RB-N-017": {
+      "task_family": "RB",
+      "sub_family": "triangle_area",
+      "mode": "naturalized",
+      "source_family_id": "RB-017",
+      "paired_family_id": "RB-S-017",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-N-018": {
+      "task_family": "RB",
+      "sub_family": "circle_circumference",
+      "mode": "naturalized",
+      "source_family_id": "RB-018",
+      "paired_family_id": "RB-S-018",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-N-019": {
+      "task_family": "RB",
+      "sub_family": "coin_probability",
+      "mode": "naturalized",
+      "source_family_id": "RB-019",
+      "paired_family_id": "RB-S-019",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-N-020": {
+      "task_family": "RB",
+      "sub_family": "combination_count",
+      "mode": "naturalized",
+      "source_family_id": "RB-020",
+      "paired_family_id": "RB-S-020",
+      "scores": {
+        "original": 0.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-N-021": {
+      "task_family": "RB",
+      "sub_family": "arithmetic_sequence",
+      "mode": "naturalized",
+      "source_family_id": "RB-021",
+      "paired_family_id": "RB-S-021",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-N-022": {
+      "task_family": "RB",
+      "sub_family": "unit_conversion_time",
+      "mode": "naturalized",
+      "source_family_id": "RB-022",
+      "paired_family_id": "RB-S-022",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "RB-N-023": {
+      "task_family": "RB",
+      "sub_family": "weighted_sum",
+      "mode": "naturalized",
+      "source_family_id": "RB-023",
+      "paired_family_id": "RB-S-023",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-N-024": {
+      "task_family": "RB",
+      "sub_family": "discount",
+      "mode": "naturalized",
+      "source_family_id": "RB-024",
+      "paired_family_id": "RB-S-024",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-N-025": {
+      "task_family": "RB",
+      "sub_family": "speed",
+      "mode": "naturalized",
+      "source_family_id": "RB-025",
+      "paired_family_id": "RB-S-025",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-N-026": {
+      "task_family": "RB",
+      "sub_family": "time_difference",
+      "mode": "naturalized",
+      "source_family_id": "RB-026",
+      "paired_family_id": "RB-S-026",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "RB-N-027": {
+      "task_family": "RB",
+      "sub_family": "fraction_addition",
+      "mode": "naturalized",
+      "source_family_id": "RB-027",
+      "paired_family_id": "RB-S-027",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "RB-N-028": {
+      "task_family": "RB",
+      "sub_family": "fraction_multiplication",
+      "mode": "naturalized",
+      "source_family_id": "RB-028",
+      "paired_family_id": "RB-S-028",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-N-029": {
+      "task_family": "RB",
+      "sub_family": "numeric_comparison",
+      "mode": "naturalized",
+      "source_family_id": "RB-029",
+      "paired_family_id": "RB-S-029",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-N-030": {
+      "task_family": "RB",
+      "sub_family": "syllogism",
+      "mode": "naturalized",
+      "source_family_id": "RB-030",
+      "paired_family_id": "RB-S-030",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "HYB-N-001": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "naturalized",
+      "source_family_id": "HYB-001",
+      "paired_family_id": "HYB-S-001",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-N-002": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "naturalized",
+      "source_family_id": "HYB-002",
+      "paired_family_id": "HYB-S-002",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-N-003": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "naturalized",
+      "source_family_id": "HYB-003",
+      "paired_family_id": "HYB-S-003",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "floor_family"
+    },
+    "HYB-N-004": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "naturalized",
+      "source_family_id": "HYB-004",
+      "paired_family_id": "HYB-S-004",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-N-005": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "naturalized",
+      "source_family_id": "HYB-005",
+      "paired_family_id": "HYB-S-005",
+      "scores": {
+        "original": 0.0,
+        "hint": 1.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-N-006": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "naturalized",
+      "source_family_id": "HYB-006",
+      "paired_family_id": "HYB-S-006",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-N-007": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "naturalized",
+      "source_family_id": "HYB-007",
+      "paired_family_id": "HYB-S-007",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-N-008": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "naturalized",
+      "source_family_id": "HYB-008",
+      "paired_family_id": "HYB-S-008",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "floor_family"
+    },
+    "HYB-N-009": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "naturalized",
+      "source_family_id": "HYB-009",
+      "paired_family_id": "HYB-S-009",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 0.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-N-010": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "naturalized",
+      "source_family_id": "HYB-010",
+      "paired_family_id": "HYB-S-010",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-N-011": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "naturalized",
+      "source_family_id": "HYB-011",
+      "paired_family_id": "HYB-S-011",
+      "scores": {
+        "original": 0.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-N-012": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "naturalized",
+      "source_family_id": "HYB-012",
+      "paired_family_id": "HYB-S-012",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "HYB-N-013": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "naturalized",
+      "source_family_id": "HYB-013",
+      "paired_family_id": "HYB-S-013",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 1.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-N-014": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "naturalized",
+      "source_family_id": "HYB-014",
+      "paired_family_id": "HYB-S-014",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "floor_family"
+    },
+    "HYB-N-015": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "naturalized",
+      "source_family_id": "HYB-015",
+      "paired_family_id": "HYB-S-015",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-N-016": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "naturalized",
+      "source_family_id": "HYB-016",
+      "paired_family_id": "HYB-S-016",
+      "scores": {
+        "original": 1.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 1.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-N-017": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "naturalized",
+      "source_family_id": "HYB-017",
+      "paired_family_id": "HYB-S-017",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "floor_family"
+    },
+    "HYB-N-018": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "naturalized",
+      "source_family_id": "HYB-018",
+      "paired_family_id": "HYB-S-018",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-N-019": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "naturalized",
+      "source_family_id": "HYB-019",
+      "paired_family_id": "HYB-S-019",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "HYB-N-020": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "naturalized",
+      "source_family_id": "HYB-020",
+      "paired_family_id": "HYB-S-020",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-N-021": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "naturalized",
+      "source_family_id": "HYB-021",
+      "paired_family_id": "HYB-S-021",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-N-022": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "naturalized",
+      "source_family_id": "HYB-022",
+      "paired_family_id": "HYB-S-022",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 0.0,
+        "premise_removal": 1.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-N-023": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "naturalized",
+      "source_family_id": "HYB-023",
+      "paired_family_id": "HYB-S-023",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-N-024": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "naturalized",
+      "source_family_id": "HYB-024",
+      "paired_family_id": "HYB-S-024",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-N-025": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "naturalized",
+      "source_family_id": "HYB-025",
+      "paired_family_id": "HYB-S-025",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "HYB-N-026": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "naturalized",
+      "source_family_id": "HYB-026",
+      "paired_family_id": "HYB-S-026",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-N-027": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "naturalized",
+      "source_family_id": "HYB-027",
+      "paired_family_id": "HYB-S-027",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-N-028": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "naturalized",
+      "source_family_id": "HYB-028",
+      "paired_family_id": "HYB-S-028",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "floor_family"
+    },
+    "HYB-N-029": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "naturalized",
+      "source_family_id": "HYB-029",
+      "paired_family_id": "HYB-S-029",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 0.0
+      },
+      "diagnostic": "floor_family"
+    },
+    "HYB-N-030": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "naturalized",
+      "source_family_id": "HYB-030",
+      "paired_family_id": "HYB-S-030",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "KB-S-001": {
+      "task_family": "KB",
+      "sub_family": "country_capital",
+      "mode": "strict_symbolic",
+      "source_family_id": "KB-001",
+      "paired_family_id": "KB-N-001",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-S-002": {
+      "task_family": "KB",
+      "sub_family": "country_currency",
+      "mode": "strict_symbolic",
+      "source_family_id": "KB-002",
+      "paired_family_id": "KB-N-002",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-S-003": {
+      "task_family": "KB",
+      "sub_family": "official_language",
+      "mode": "strict_symbolic",
+      "source_family_id": "KB-003",
+      "paired_family_id": "KB-N-003",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-S-004": {
+      "task_family": "KB",
+      "sub_family": "country_continent",
+      "mode": "strict_symbolic",
+      "source_family_id": "KB-004",
+      "paired_family_id": "KB-N-004",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-S-005": {
+      "task_family": "KB",
+      "sub_family": "book_author",
+      "mode": "strict_symbolic",
+      "source_family_id": "KB-005",
+      "paired_family_id": "KB-N-005",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-S-006": {
+      "task_family": "KB",
+      "sub_family": "playwright",
+      "mode": "strict_symbolic",
+      "source_family_id": "KB-006",
+      "paired_family_id": "KB-N-006",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-S-007": {
+      "task_family": "KB",
+      "sub_family": "painting_painter",
+      "mode": "strict_symbolic",
+      "source_family_id": "KB-007",
+      "paired_family_id": "KB-N-007",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-S-008": {
+      "task_family": "KB",
+      "sub_family": "composer",
+      "mode": "strict_symbolic",
+      "source_family_id": "KB-008",
+      "paired_family_id": "KB-N-008",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-S-009": {
+      "task_family": "KB",
+      "sub_family": "movie_director",
+      "mode": "strict_symbolic",
+      "source_family_id": "KB-009",
+      "paired_family_id": "KB-N-009",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-S-010": {
+      "task_family": "KB",
+      "sub_family": "inventor",
+      "mode": "strict_symbolic",
+      "source_family_id": "KB-010",
+      "paired_family_id": "KB-N-010",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-S-011": {
+      "task_family": "KB",
+      "sub_family": "discoverer",
+      "mode": "strict_symbolic",
+      "source_family_id": "KB-011",
+      "paired_family_id": "KB-N-011",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-S-012": {
+      "task_family": "KB",
+      "sub_family": "scientific_theory_scientist",
+      "mode": "strict_symbolic",
+      "source_family_id": "KB-012",
+      "paired_family_id": "KB-N-012",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-S-013": {
+      "task_family": "KB",
+      "sub_family": "chemical_symbol",
+      "mode": "strict_symbolic",
+      "source_family_id": "KB-013",
+      "paired_family_id": "KB-N-013",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-S-014": {
+      "task_family": "KB",
+      "sub_family": "atomic_number",
+      "mode": "strict_symbolic",
+      "source_family_id": "KB-014",
+      "paired_family_id": "KB-N-014",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-S-015": {
+      "task_family": "KB",
+      "sub_family": "planet_order",
+      "mode": "strict_symbolic",
+      "source_family_id": "KB-015",
+      "paired_family_id": "KB-N-015",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-S-016": {
+      "task_family": "KB",
+      "sub_family": "notable_moon_host",
+      "mode": "strict_symbolic",
+      "source_family_id": "KB-016",
+      "paired_family_id": "KB-N-016",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-S-017": {
+      "task_family": "KB",
+      "sub_family": "si_unit",
+      "mode": "strict_symbolic",
+      "source_family_id": "KB-017",
+      "paired_family_id": "KB-N-017",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-S-018": {
+      "task_family": "KB",
+      "sub_family": "math_constant",
+      "mode": "strict_symbolic",
+      "source_family_id": "KB-018",
+      "paired_family_id": "KB-N-018",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-S-019": {
+      "task_family": "KB",
+      "sub_family": "landmark_city",
+      "mode": "strict_symbolic",
+      "source_family_id": "KB-019",
+      "paired_family_id": "KB-N-019",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-S-020": {
+      "task_family": "KB",
+      "sub_family": "river_city",
+      "mode": "strict_symbolic",
+      "source_family_id": "KB-020",
+      "paired_family_id": "KB-N-020",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-S-021": {
+      "task_family": "KB",
+      "sub_family": "mountain_range",
+      "mode": "strict_symbolic",
+      "source_family_id": "KB-021",
+      "paired_family_id": "KB-N-021",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-S-022": {
+      "task_family": "KB",
+      "sub_family": "organization_hq",
+      "mode": "strict_symbolic",
+      "source_family_id": "KB-022",
+      "paired_family_id": "KB-N-022",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-S-023": {
+      "task_family": "KB",
+      "sub_family": "acronym_expansion",
+      "mode": "strict_symbolic",
+      "source_family_id": "KB-023",
+      "paired_family_id": "KB-N-023",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-S-024": {
+      "task_family": "KB",
+      "sub_family": "programming_language_creator",
+      "mode": "strict_symbolic",
+      "source_family_id": "KB-024",
+      "paired_family_id": "KB-N-024",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-S-025": {
+      "task_family": "KB",
+      "sub_family": "file_extension_format",
+      "mode": "strict_symbolic",
+      "source_family_id": "KB-025",
+      "paired_family_id": "KB-N-025",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-S-026": {
+      "task_family": "KB",
+      "sub_family": "biological_class",
+      "mode": "strict_symbolic",
+      "source_family_id": "KB-026",
+      "paired_family_id": "KB-N-026",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-S-027": {
+      "task_family": "KB",
+      "sub_family": "human_organ_function",
+      "mode": "strict_symbolic",
+      "source_family_id": "KB-027",
+      "paired_family_id": "KB-N-027",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-S-028": {
+      "task_family": "KB",
+      "sub_family": "mythology_domain",
+      "mode": "strict_symbolic",
+      "source_family_id": "KB-028",
+      "paired_family_id": "KB-N-028",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-S-029": {
+      "task_family": "KB",
+      "sub_family": "historical_event_year",
+      "mode": "strict_symbolic",
+      "source_family_id": "KB-029",
+      "paired_family_id": "KB-N-029",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "KB-S-030": {
+      "task_family": "KB",
+      "sub_family": "company_founder",
+      "mode": "strict_symbolic",
+      "source_family_id": "KB-030",
+      "paired_family_id": "KB-N-030",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-S-001": {
+      "task_family": "RB",
+      "sub_family": "addition",
+      "mode": "strict_symbolic",
+      "source_family_id": "RB-001",
+      "paired_family_id": "RB-N-001",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-S-002": {
+      "task_family": "RB",
+      "sub_family": "subtraction",
+      "mode": "strict_symbolic",
+      "source_family_id": "RB-002",
+      "paired_family_id": "RB-N-002",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 0.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-S-003": {
+      "task_family": "RB",
+      "sub_family": "multiplication",
+      "mode": "strict_symbolic",
+      "source_family_id": "RB-003",
+      "paired_family_id": "RB-N-003",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-S-004": {
+      "task_family": "RB",
+      "sub_family": "division",
+      "mode": "strict_symbolic",
+      "source_family_id": "RB-004",
+      "paired_family_id": "RB-N-004",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "RB-S-005": {
+      "task_family": "RB",
+      "sub_family": "percentage_of",
+      "mode": "strict_symbolic",
+      "source_family_id": "RB-005",
+      "paired_family_id": "RB-N-005",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-S-006": {
+      "task_family": "RB",
+      "sub_family": "percent_increase",
+      "mode": "strict_symbolic",
+      "source_family_id": "RB-006",
+      "paired_family_id": "RB-N-006",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "RB-S-007": {
+      "task_family": "RB",
+      "sub_family": "ratio_simplification",
+      "mode": "strict_symbolic",
+      "source_family_id": "RB-007",
+      "paired_family_id": "RB-N-007",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-S-008": {
+      "task_family": "RB",
+      "sub_family": "mean",
+      "mode": "strict_symbolic",
+      "source_family_id": "RB-008",
+      "paired_family_id": "RB-N-008",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "RB-S-009": {
+      "task_family": "RB",
+      "sub_family": "median",
+      "mode": "strict_symbolic",
+      "source_family_id": "RB-009",
+      "paired_family_id": "RB-N-009",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "RB-S-010": {
+      "task_family": "RB",
+      "sub_family": "range",
+      "mode": "strict_symbolic",
+      "source_family_id": "RB-010",
+      "paired_family_id": "RB-N-010",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "RB-S-011": {
+      "task_family": "RB",
+      "sub_family": "linear_equation",
+      "mode": "strict_symbolic",
+      "source_family_id": "RB-011",
+      "paired_family_id": "RB-N-011",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "RB-S-012": {
+      "task_family": "RB",
+      "sub_family": "two_step_equation",
+      "mode": "strict_symbolic",
+      "source_family_id": "RB-012",
+      "paired_family_id": "RB-N-012",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "RB-S-013": {
+      "task_family": "RB",
+      "sub_family": "exponentiation",
+      "mode": "strict_symbolic",
+      "source_family_id": "RB-013",
+      "paired_family_id": "RB-N-013",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "RB-S-014": {
+      "task_family": "RB",
+      "sub_family": "square_root",
+      "mode": "strict_symbolic",
+      "source_family_id": "RB-014",
+      "paired_family_id": "RB-N-014",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "RB-S-015": {
+      "task_family": "RB",
+      "sub_family": "rectangle_area",
+      "mode": "strict_symbolic",
+      "source_family_id": "RB-015",
+      "paired_family_id": "RB-N-015",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-S-016": {
+      "task_family": "RB",
+      "sub_family": "rectangle_perimeter",
+      "mode": "strict_symbolic",
+      "source_family_id": "RB-016",
+      "paired_family_id": "RB-N-016",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "RB-S-017": {
+      "task_family": "RB",
+      "sub_family": "triangle_area",
+      "mode": "strict_symbolic",
+      "source_family_id": "RB-017",
+      "paired_family_id": "RB-N-017",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "RB-S-018": {
+      "task_family": "RB",
+      "sub_family": "circle_circumference",
+      "mode": "strict_symbolic",
+      "source_family_id": "RB-018",
+      "paired_family_id": "RB-N-018",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-S-019": {
+      "task_family": "RB",
+      "sub_family": "coin_probability",
+      "mode": "strict_symbolic",
+      "source_family_id": "RB-019",
+      "paired_family_id": "RB-N-019",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "RB-S-020": {
+      "task_family": "RB",
+      "sub_family": "combination_count",
+      "mode": "strict_symbolic",
+      "source_family_id": "RB-020",
+      "paired_family_id": "RB-N-020",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "RB-S-021": {
+      "task_family": "RB",
+      "sub_family": "arithmetic_sequence",
+      "mode": "strict_symbolic",
+      "source_family_id": "RB-021",
+      "paired_family_id": "RB-N-021",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "RB-S-022": {
+      "task_family": "RB",
+      "sub_family": "unit_conversion_time",
+      "mode": "strict_symbolic",
+      "source_family_id": "RB-022",
+      "paired_family_id": "RB-N-022",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "RB-S-023": {
+      "task_family": "RB",
+      "sub_family": "weighted_sum",
+      "mode": "strict_symbolic",
+      "source_family_id": "RB-023",
+      "paired_family_id": "RB-N-023",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "RB-S-024": {
+      "task_family": "RB",
+      "sub_family": "discount",
+      "mode": "strict_symbolic",
+      "source_family_id": "RB-024",
+      "paired_family_id": "RB-N-024",
+      "scores": {
+        "original": 0.0,
+        "hint": 0.0,
+        "premise": 0.0,
+        "premise_removal": 1.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 0.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-S-025": {
+      "task_family": "RB",
+      "sub_family": "speed",
+      "mode": "strict_symbolic",
+      "source_family_id": "RB-025",
+      "paired_family_id": "RB-N-025",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "RB-S-026": {
+      "task_family": "RB",
+      "sub_family": "time_difference",
+      "mode": "strict_symbolic",
+      "source_family_id": "RB-026",
+      "paired_family_id": "RB-N-026",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "RB-S-027": {
+      "task_family": "RB",
+      "sub_family": "fraction_addition",
+      "mode": "strict_symbolic",
+      "source_family_id": "RB-027",
+      "paired_family_id": "RB-N-027",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "RB-S-028": {
+      "task_family": "RB",
+      "sub_family": "fraction_multiplication",
+      "mode": "strict_symbolic",
+      "source_family_id": "RB-028",
+      "paired_family_id": "RB-N-028",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "RB-S-029": {
+      "task_family": "RB",
+      "sub_family": "numeric_comparison",
+      "mode": "strict_symbolic",
+      "source_family_id": "RB-029",
+      "paired_family_id": "RB-N-029",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "RB-S-030": {
+      "task_family": "RB",
+      "sub_family": "syllogism",
+      "mode": "strict_symbolic",
+      "source_family_id": "RB-030",
+      "paired_family_id": "RB-N-030",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "HYB-S-001": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "strict_symbolic",
+      "source_family_id": "HYB-001",
+      "paired_family_id": "HYB-N-001",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "HYB-S-002": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "strict_symbolic",
+      "source_family_id": "HYB-002",
+      "paired_family_id": "HYB-N-002",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-S-003": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "strict_symbolic",
+      "source_family_id": "HYB-003",
+      "paired_family_id": "HYB-N-003",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-S-004": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "strict_symbolic",
+      "source_family_id": "HYB-004",
+      "paired_family_id": "HYB-N-004",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-S-005": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "strict_symbolic",
+      "source_family_id": "HYB-005",
+      "paired_family_id": "HYB-N-005",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-S-006": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "strict_symbolic",
+      "source_family_id": "HYB-006",
+      "paired_family_id": "HYB-N-006",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-S-007": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "strict_symbolic",
+      "source_family_id": "HYB-007",
+      "paired_family_id": "HYB-N-007",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-S-008": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "strict_symbolic",
+      "source_family_id": "HYB-008",
+      "paired_family_id": "HYB-N-008",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-S-009": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "strict_symbolic",
+      "source_family_id": "HYB-009",
+      "paired_family_id": "HYB-N-009",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "HYB-S-010": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "strict_symbolic",
+      "source_family_id": "HYB-010",
+      "paired_family_id": "HYB-N-010",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-S-011": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "strict_symbolic",
+      "source_family_id": "HYB-011",
+      "paired_family_id": "HYB-N-011",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "HYB-S-012": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "strict_symbolic",
+      "source_family_id": "HYB-012",
+      "paired_family_id": "HYB-N-012",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "HYB-S-013": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "strict_symbolic",
+      "source_family_id": "HYB-013",
+      "paired_family_id": "HYB-N-013",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-S-014": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "strict_symbolic",
+      "source_family_id": "HYB-014",
+      "paired_family_id": "HYB-N-014",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 0.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-S-015": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "strict_symbolic",
+      "source_family_id": "HYB-015",
+      "paired_family_id": "HYB-N-015",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-S-016": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "strict_symbolic",
+      "source_family_id": "HYB-016",
+      "paired_family_id": "HYB-N-016",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-S-017": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "strict_symbolic",
+      "source_family_id": "HYB-017",
+      "paired_family_id": "HYB-N-017",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-S-018": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "strict_symbolic",
+      "source_family_id": "HYB-018",
+      "paired_family_id": "HYB-N-018",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-S-019": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "strict_symbolic",
+      "source_family_id": "HYB-019",
+      "paired_family_id": "HYB-N-019",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-S-020": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "strict_symbolic",
+      "source_family_id": "HYB-020",
+      "paired_family_id": "HYB-N-020",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-S-021": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "strict_symbolic",
+      "source_family_id": "HYB-021",
+      "paired_family_id": "HYB-N-021",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-S-022": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "strict_symbolic",
+      "source_family_id": "HYB-022",
+      "paired_family_id": "HYB-N-022",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "HYB-S-023": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "strict_symbolic",
+      "source_family_id": "HYB-023",
+      "paired_family_id": "HYB-N-023",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-S-024": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "strict_symbolic",
+      "source_family_id": "HYB-024",
+      "paired_family_id": "HYB-N-024",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-S-025": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "strict_symbolic",
+      "source_family_id": "HYB-025",
+      "paired_family_id": "HYB-N-025",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 1.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 1.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "ceiling_family"
+    },
+    "HYB-S-026": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "strict_symbolic",
+      "source_family_id": "HYB-026",
+      "paired_family_id": "HYB-N-026",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-S-027": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "strict_symbolic",
+      "source_family_id": "HYB-027",
+      "paired_family_id": "HYB-N-027",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-S-028": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "strict_symbolic",
+      "source_family_id": "HYB-028",
+      "paired_family_id": "HYB-N-028",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-S-029": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "strict_symbolic",
+      "source_family_id": "HYB-029",
+      "paired_family_id": "HYB-N-029",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 0.0,
+        "wrongclaim_bare": 0.0,
+        "competing_claims": 0.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    },
+    "HYB-S-030": {
+      "task_family": "Hybrid",
+      "sub_family": "",
+      "mode": "strict_symbolic",
+      "source_family_id": "HYB-030",
+      "paired_family_id": "HYB-N-030",
+      "scores": {
+        "original": 1.0,
+        "hint": 1.0,
+        "premise": 1.0,
+        "premise_removal": 0.0,
+        "highlight": 1.0,
+        "wrongclaim_bare": 1.0,
+        "competing_claims": 1.0,
+        "paraphrase": 0.0,
+        "scaffold_1": 1.0,
+        "scaffold_2": 1.0
+      },
+      "diagnostic": "informative_family"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "status": "ok",
+  "dataset": "gpt_test",
+  "label": "premise_sensitive",
+  "split": "realization::train_natural__test_symbolic",
+  "position": "final_input",
+  "feature_mode": "absolute::h_original",
+  "variant": "original",
+  "delta_variant": null,
+  "best_layer": 4,
+  "best_macro_f1_mean": 0.4972067039106145,
+  "n_train": 90,
+  "n_test": 90,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ]
+}

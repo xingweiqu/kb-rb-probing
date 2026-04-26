@@ -38,7 +38,6 @@ class LinearProbe:
                 max_iter=max_iter,
                 C=C,
                 solver="lbfgs",
-                multi_class="auto",
             )
         elif probe_type == "ridge":
             self._model = Ridge(alpha=alpha, random_state=seed)

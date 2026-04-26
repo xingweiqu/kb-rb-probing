@@ -1,0 +1,21 @@
+{
+  "status": "ok",
+  "dataset": "gpt_test",
+  "label": "wrong_claim_susceptible",
+  "split": "block::train_KB_RB__test_Hybrid",
+  "position": "pre_answer",
+  "feature_mode": "absolute::h_original",
+  "variant": "original",
+  "delta_variant": null,
+  "best_layer": 31,
+  "best_macro_f1_mean": 0.7836538461538461,
+  "n_train": 120,
+  "n_test": 60,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ]
+}

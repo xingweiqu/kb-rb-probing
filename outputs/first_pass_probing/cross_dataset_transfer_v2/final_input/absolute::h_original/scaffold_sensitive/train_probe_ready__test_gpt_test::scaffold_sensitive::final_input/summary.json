@@ -1,0 +1,21 @@
+{
+  "status": "ok",
+  "dataset": "cross_dataset_transfer_v2",
+  "label": "scaffold_sensitive",
+  "split": "train_probe_ready__test_gpt_test::scaffold_sensitive::final_input",
+  "position": "final_input",
+  "feature_mode": "absolute::h_original",
+  "variant": "original",
+  "delta_variant": null,
+  "best_layer": 1,
+  "best_macro_f1_mean": 0.4943820224719101,
+  "n_train": 180,
+  "n_test": 180,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ]
+}

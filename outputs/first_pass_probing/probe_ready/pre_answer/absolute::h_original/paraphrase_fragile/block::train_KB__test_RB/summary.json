@@ -1,0 +1,21 @@
+{
+  "status": "ok",
+  "dataset": "probe_ready",
+  "label": "paraphrase_fragile",
+  "split": "block::train_KB__test_RB",
+  "position": "pre_answer",
+  "feature_mode": "absolute::h_original",
+  "variant": "original",
+  "delta_variant": null,
+  "best_layer": 33,
+  "best_macro_f1_mean": 0.4599018003273322,
+  "n_train": 60,
+  "n_test": 60,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ]
+}

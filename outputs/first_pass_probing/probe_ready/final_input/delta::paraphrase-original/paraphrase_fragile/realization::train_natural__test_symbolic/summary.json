@@ -1,0 +1,21 @@
+{
+  "status": "ok",
+  "dataset": "probe_ready",
+  "label": "paraphrase_fragile",
+  "split": "realization::train_natural__test_symbolic",
+  "position": "final_input",
+  "feature_mode": "delta::paraphrase-original",
+  "variant": "original",
+  "delta_variant": "paraphrase",
+  "best_layer": 7,
+  "best_macro_f1_mean": 0.5788770053475936,
+  "n_train": 90,
+  "n_test": 90,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ]
+}

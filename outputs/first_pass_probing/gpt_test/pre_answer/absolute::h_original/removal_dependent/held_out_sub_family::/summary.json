@@ -1,0 +1,21 @@
+{
+  "status": "ok",
+  "dataset": "gpt_test",
+  "label": "removal_dependent",
+  "split": "held_out_sub_family::",
+  "position": "pre_answer",
+  "feature_mode": "absolute::h_original",
+  "variant": "original",
+  "delta_variant": null,
+  "best_layer": 1,
+  "best_macro_f1_mean": 0.6662958843159066,
+  "n_train": 120,
+  "n_test": 60,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ]
+}

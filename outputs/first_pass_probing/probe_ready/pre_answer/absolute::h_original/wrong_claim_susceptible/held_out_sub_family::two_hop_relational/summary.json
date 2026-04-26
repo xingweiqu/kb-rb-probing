@@ -1,0 +1,21 @@
+{
+  "status": "ok",
+  "dataset": "probe_ready",
+  "label": "wrong_claim_susceptible",
+  "split": "held_out_sub_family::two_hop_relational",
+  "position": "pre_answer",
+  "feature_mode": "absolute::h_original",
+  "variant": "original",
+  "delta_variant": null,
+  "best_layer": 16,
+  "best_macro_f1_mean": 0.7257142857142858,
+  "n_train": 148,
+  "n_test": 32,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ]
+}

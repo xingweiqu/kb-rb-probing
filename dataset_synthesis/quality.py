@@ -15,6 +15,31 @@ from .configs.defaults import VARIANT_TYPES
 from .lint import AuditReport
 
 
+# Main experiment: only keep these variants (plus conditional scaffold_2).
+MAIN_EXPERIMENT_VARIANTS = [
+    "original",
+    "hint",
+    "premise",
+    "premise_removal",
+    "highlight",
+    "wrongclaim_bare",
+    "competing_claims",
+    "paraphrase",
+    "strict_substitution",
+    "scaffold_1",
+    "scaffold_2",
+]
+
+OUT_OF_MAIN_EXPERIMENT = {
+    "cot_full",
+    "cot_partial",
+    "cot_shuffled",
+    "scaffold_3",
+    "wrongclaim_confident",
+    "wrongclaim_attributed",
+}
+
+
 def _structural_penalties(family: dict[str, Any]) -> list[tuple[str, str]]:
     """Return list of (severity, code) for structural issues not covered by lint."""
     penalties: list[tuple[str, str]] = []
@@ -120,9 +145,82 @@ def score_families(families: list[dict[str, Any]], audit: AuditReport) -> list[d
         meta["quality_score"] = score
         meta["quality_grade"] = grade
         meta["recommended_action"] = action
+
+        # Also compute a dedicated main-experiment usability flag.
+        usable, reasons = is_usable_for_main_experiment(f, rec)
+        meta["usable_main_experiment"] = usable
+        meta["usable_main_experiment_reasons"] = reasons
         out.append(f)
 
     return out
+
+
+def is_usable_for_main_experiment(
+    family: dict[str, Any],
+    record: Any | None,
+) -> tuple[bool, list[str]]:
+    """Decide if a family should enter the main experiment after round2.
+
+    Policy (deterministic):
+    - Exclude if `metadata.exclude_from_main_experiment` is set.
+    - Exclude Hybrid families flagged overcomplex.
+    - Exclude if any P0 issues remain.
+    - Exclude if any kept scaffold variant is disabled for leak/decorative.
+    """
+    reasons: list[str] = []
+
+    meta = family.get("metadata")
+    if not isinstance(meta, dict):
+        meta = {}
+
+    if meta.get("exclude_from_main_experiment") is True:
+        reasons.append("exclude_from_main_experiment")
+
+    if str(family.get("task_family", "")) == "Hybrid" and meta.get("curation_flag") == "hybrid_overcomplex":
+        reasons.append("hybrid_overcomplex")
+
+    # Only a subset of P0 issues disqualify main experiment.
+    disqualify_p0 = {"answer_leak", "invalid_substitution", "hybrid_overcomplex"}
+    if record is not None and getattr(record, "issues", None):
+        for i in record.issues:
+            if getattr(i, "severity", None) != "P0":
+                continue
+            code = getattr(i, "code", "unknown")
+            if code in disqualify_p0:
+                reasons.append(f"P0:{code}")
+
+    usable = len(reasons) == 0
+    return usable, reasons
+
+
+def project_main_experiment_view(family: dict[str, Any]) -> dict[str, Any]:
+    """Return a copy of family where `normal_variants` contains only main-experiment variants.
+
+    - Removes variants that are explicitly out-of-main-experiment.
+    - Drops `scaffold_2` if it was disabled.
+    """
+    f = dict(family)
+    nv = f.get("normal_variants")
+    if not isinstance(nv, dict):
+        return f
+
+    meta = f.get("metadata")
+    disabled_set: set[str] = set()
+    if isinstance(meta, dict) and isinstance(meta.get("disabled_variants"), list):
+        for x in meta.get("disabled_variants", []):
+            if isinstance(x, dict) and isinstance(x.get("variant"), str):
+                disabled_set.add(x["variant"])
+
+    out_nv: dict[str, Any] = {}
+    for k in MAIN_EXPERIMENT_VARIANTS:
+        if k == "scaffold_2" and k in disabled_set:
+            continue
+        v = nv.get(k)
+        if isinstance(v, dict):
+            out_nv[k] = v
+
+    f["normal_variants"] = out_nv
+    return f
 
 
 def build_usable_subset_manifest(families: list[dict[str, Any]], audit: AuditReport) -> dict[str, Any]:
@@ -174,4 +272,3 @@ def build_usable_subset_manifest(families: list[dict[str, Any]], audit: AuditRep
             "excluded": len(excluded),
         },
     }
-

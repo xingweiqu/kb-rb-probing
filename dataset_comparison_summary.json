@@ -1,0 +1,154 @@
+{
+  "model": "/opt/tiger/coding-agent-synth-data/Qwen3-8B",
+  "probe_ready": {
+    "n_families": 180,
+    "task_family": {
+      "Hybrid": 60,
+      "KB": 60,
+      "RB": 60
+    },
+    "sub_family": {
+      "retrieve_rule_apply": 12,
+      "retrieve_transform": 16,
+      "two_hop_relational": 32,
+      "country_capital": 16,
+      "element_symbol": 14,
+      "entity_attribute": 14,
+      "work_author": 16,
+      "boolean_logic": 8,
+      "function_application": 12,
+      "linear_equation": 14,
+      "sequence_pattern": 12,
+      "syllogistic_logic": 14
+    },
+    "mode": {
+      "naturalized": 90,
+      "strict_symbolic": 90
+    },
+    "variant_coverage": {
+      "original": 180,
+      "hint": 180,
+      "premise": 180,
+      "premise_removal": 180,
+      "highlight": 180,
+      "wrongclaim_bare": 180,
+      "competing_claims": 180,
+      "paraphrase": 180,
+      "scaffold_1": 180,
+      "scaffold_2": 180
+    }
+  },
+  "gpt_test": {
+    "n_families": 180,
+    "task_family": {
+      "KB": 60,
+      "RB": 60,
+      "Hybrid": 60
+    },
+    "sub_family": {
+      "country_capital": 2,
+      "country_currency": 2,
+      "official_language": 2,
+      "country_continent": 2,
+      "book_author": 2,
+      "playwright": 2,
+      "painting_painter": 2,
+      "composer": 2,
+      "movie_director": 2,
+      "inventor": 2,
+      "discoverer": 2,
+      "scientific_theory_scientist": 2,
+      "chemical_symbol": 2,
+      "atomic_number": 2,
+      "planet_order": 2,
+      "notable_moon_host": 2,
+      "si_unit": 2,
+      "math_constant": 2,
+      "landmark_city": 2,
+      "river_city": 2,
+      "mountain_range": 2,
+      "organization_hq": 2,
+      "acronym_expansion": 2,
+      "programming_language_creator": 2,
+      "file_extension_format": 2,
+      "biological_class": 2,
+      "human_organ_function": 2,
+      "mythology_domain": 2,
+      "historical_event_year": 2,
+      "company_founder": 2,
+      "addition": 2,
+      "subtraction": 2,
+      "multiplication": 2,
+      "division": 2,
+      "percentage_of": 2,
+      "percent_increase": 2,
+      "ratio_simplification": 2,
+      "mean": 2,
+      "median": 2,
+      "range": 2,
+      "linear_equation": 2,
+      "two_step_equation": 2,
+      "exponentiation": 2,
+      "square_root": 2,
+      "rectangle_area": 2,
+      "rectangle_perimeter": 2,
+      "triangle_area": 2,
+      "circle_circumference": 2,
+      "coin_probability": 2,
+      "combination_count": 2,
+      "arithmetic_sequence": 2,
+      "unit_conversion_time": 2,
+      "weighted_sum": 2,
+      "discount": 2,
+      "speed": 2,
+      "time_difference": 2,
+      "fraction_addition": 2,
+      "fraction_multiplication": 2,
+      "numeric_comparison": 2,
+      "syllogism": 2,
+      "": 60
+    },
+    "mode": {
+      "naturalized": 90,
+      "strict_symbolic": 90
+    },
+    "variant_coverage": {
+      "original": 180,
+      "hint": 180,
+      "premise": 180,
+      "premise_removal": 180,
+      "highlight": 180,
+      "wrongclaim_bare": 180,
+      "competing_claims": 180,
+      "paraphrase": 180,
+      "scaffold_1": 180,
+      "scaffold_2": 180
+    }
+  },
+  "probe_ready_mcq": {
+    "n_families": 90,
+    "task_family": {
+      "Hybrid": 30,
+      "KB": 30,
+      "RB": 30
+    },
+    "sub_family": {
+      "two_hop_relational": 16,
+      "retrieve_transform": 8,
+      "retrieve_rule_apply": 6,
+      "country_capital": 8,
+      "work_author": 8,
+      "element_symbol": 7,
+      "entity_attribute": 7,
+      "linear_equation": 7,
+      "syllogistic_logic": 7,
+      "sequence_pattern": 6,
+      "boolean_logic": 4,
+      "function_application": 6
+    },
+    "mode": {
+      "strict_symbolic": 90
+    },
+    "has_mcq": 90
+  }
+}
