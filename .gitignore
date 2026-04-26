@@ -1,0 +1,20 @@
+# ===== Generated artifacts (avoid re-pushing huge runs) =====
+
+# model/run caches
+cache/
+outputs/
+
+# python caches
+__pycache__/
+**/__pycache__/
+*.pyc
+
+# logs
+vllm_logs_*/
+
+# large synthesis outputs (generated)
+synthesis_output_*/
+synth_pilot_*/
+synth_eval_*/
+
+
