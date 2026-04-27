@@ -17,4 +17,8 @@ synthesis_output_*/
 synth_pilot_*/
 synth_eval_*/
 
+# MVP run outputs and logs
+test_output_*/
+test_output_*.log
+.DS_Store
 
