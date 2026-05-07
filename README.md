@@ -1,72 +1,145 @@
-# V-Probing: Knowledge vs Reasoning Boundary
+# Atomic Capacities, Not Task Labels
 
-## 目标
+Code for the paper *Atomic Capacities, Not Task Labels: Diagnosing Language
+Model Failures*.
 
-用线性探针（linear probe）在 LLM 各层的 hidden states 上，区分模型是在做**知识检索**还是**推理计算**，并观察这个边界随训练步数如何变化。
+We argue that the actionable diagnostic unit for LLM failure is the
+**atomic capacity** — small enough that a paired assay isolates it,
+specific enough that its failure names a distinct mode, repair-relevant
+enough that the failure points to a different intervention than its
+neighbours. We instantiate nine atomic capacities on a 3 × 3 grid
+(Knowledge / Reasoning / Bridge × Provide / Block / Distract), one
+paired capacity assay per cell, and a behaviour-derived metric
+(gold-answer Δlog p / token).
 
-## 核心假设
+Across 17 Qwen3 / Qwen3.5 models, capacity profiles scale heterogeneously
+and family-level improvement is not capacity-level improvement. Wrong-
+Claim Robustness on the Qwen3 instruct series shows that gold log-prob
+drop and gold-vs-wrong margin grow together: confidence sensitivity
+and decision robustness rise in lockstep.
 
-| 类型 | 特征 | 预期激活模式 |
-|------|------|-------------|
-| Knowledge | 直接事实提取（"巴黎是法国首都"） | 信号在**早期层**就稳定 |
-| Reasoning | 多步推理（数学、逻辑） | 信号在**深层**才出现 |
+## Repository layout
 
-随着训练增加，两类信号的分离度应该增强，边界层（boundary layer）应该更清晰。
-
-## 方法
-
-### 1. 数据集
-- **Knowledge**：factual QA（TriviaQA / NaturalQuestions 风格）
-- **Reasoning**：math/logic（GSM8K / LogiQA 风格）
-
-### 2. 激活提取
-对每个样本，在每层 `l` 提取最后一个 token 的 hidden state `h_l`：
 ```
-sample → [h_0, h_1, ..., h_L]   shape: [n_layers, hidden_dim]
+probing/
+├── dataset_synthesis_mvp/      # 9-variant capacity-assay dataset generator
+│   ├── generate.py             # main entry point
+│   ├── structures.py base_items.py variants.py symbolic.py
+│   ├── validation/             # leakage, type-match, answer-preservation
+│   └── repair/                 # automated fix passes
+├── probing_mvp/
+│   ├── extract_hidden_states.py  # per-item logits + per-layer hidden states
+│   ├── derive_labels.py          # capacity + task-family labels
+│   ├── linear_probe.py           # logistic regression read-out
+│   ├── lora_probe.py             # LoRA-r16 read-out
+│   ├── geometry_analysis.py      # silhouette + clustering
+│   ├── make_summary.py           # per-model summary.json
+│   └── make_plots.py             # capacity matrix + scaling figures
+├── scripts/
+│   ├── score_wrong_answer.py     # plant wrong-answer log-prob (KD/RD/CD)
+│   ├── margin_analysis.py        # gold_drop, margin_variant, forced-choice
+│   ├── bootstrap_ci.py           # paired-bootstrap CIs by family_id
+│   └── run_prompt_artifact_controls.py
+├── runs/<model>/                 # per-model outputs (summary.json etc.)
+├── reports/                      # CSVs of per-cell magnitudes + CIs
+└── figures/                      # rendered plots
 ```
 
-### 3. 线性探针（V-Probing）
-在每层独立训练一个 logistic regression：
-```
-f_l : h_l → {0=knowledge, 1=reasoning}
-```
-用 4-fold cross-validation 评估准确率。
-
-### 4. 跨 Checkpoint 分析
-对不同训练步数的 checkpoint 重复上述过程，观察：
-- 每层探针准确率曲线的形状变化
-- "边界层"（argmax 准确率的层）随训练的漂移
-
-## 运行
+## Setup
 
 ```bash
-# 安装依赖
-pip install numpy scikit-learn matplotlib transformers torch
-
-# 模拟模式（无需 GPU，验证流程）
-python probe.py --simulate
-
-# 真实模型（需要 GPU + HuggingFace checkpoints）
-python probe.py \
-  --model_name gpt2 \
-  --checkpoints ./ckpt_step100 ./ckpt_step500 ./ckpt_step1000 \
-  --device cuda
+pip install torch transformers numpy matplotlib scikit-learn
+# For dataset generation only:
+export ANTHROPIC_BASE_URL=...    # your provider base URL
+export ANTHROPIC_AUTH_TOKEN=...  # your API token
 ```
 
-## 输出
+## Pipeline
 
-`probe_results.png` 包含两张图：
+### 1. Generate the capacity assay dataset (one time)
 
-1. **左图**：每层探针准确率曲线（不同颜色=不同 checkpoint）
-   - 曲线越陡、峰值越高 → 边界越清晰
+```bash
+python -m dataset_synthesis_mvp.generate \
+    --kb 25 --rb 25 --hybrid 25 \
+    --output_dir runs/full_25/output
+```
 
-2. **右图**：边界层（argmax 准确率）随训练步数的变化
-   - 如果边界层随训练向早期层移动 → 知识被"压缩"到浅层
-   - 如果边界层向深层移动 → 推理能力在深层增强
+Produces a 650-item dataset: 75 backbones × (1 original + 8 variants) ×
+(natural + symbolic). Each variant is the paired assay for one of the
+nine atomic capacities (KP / KB / KD / RP / RB / RD / CP / CB / CD).
 
-## 扩展方向
+### 2. Extract per-item logits + hidden states (per model, GPU)
 
-- **更大数据集**：替换 `KNOWLEDGE_SAMPLES` / `REASONING_SAMPLES` 为真实数据集
-- **PCA 可视化**：在 boundary layer 对激活做 PCA，看两类样本的分离
-- **非线性探针**：用 MLP probe 替换 logistic regression，测试是否有更强的非线性结构
-- **Token-level**：不只看最后一个 token，看整个生成过程中激活的演变
+```bash
+python -m probing_mvp.extract_hidden_states \
+    --model_name /path/to/Qwen3-8B \
+    --dataset runs/full_25/output/dataset.jsonl \
+    --output_dir runs/Qwen3-8B \
+    --device cuda
+```
+
+Records per (item, CoT) the gold-answer per-token log-prob, the
+last-token and mean-pool hidden states for every transformer layer, and
+the top-5 competitors at the gold position.
+
+### 3. Score the planted-wrong answer (per model, GPU)
+
+```bash
+python -m scripts.score_wrong_answer \
+    --model_name /path/to/Qwen3-8B \
+    --dataset runs/full_25/output/dataset.jsonl \
+    --model_outputs runs/Qwen3-8B/model_outputs.jsonl \
+    --output runs/Qwen3-8B/model_outputs_with_wrong.jsonl \
+    --device cuda
+```
+
+Adds a wrong-answer log-prob column for the wrongclaim,
+wrong_intermediate, and wrong_bridge variants. The wrong answer is
+parsed from the dataset metadata; no API needed.
+
+### 4. Probes + summary (per model, GPU optional)
+
+```bash
+python -m probing_mvp.linear_probe runs/Qwen3-8B
+python -m probing_mvp.lora_probe   runs/Qwen3-8B
+python -m probing_mvp.make_summary runs/Qwen3-8B
+```
+
+### 5. Cross-model analysis (local, no GPU)
+
+```bash
+python -m scripts.bootstrap_ci \
+    --runs runs/Qwen3-* runs/Qwen3.5-* \
+    --output_matrix reports/behavior_matrix_with_ci.csv \
+    --output_trends reports/headline_trend_tests.csv
+
+python -m scripts.margin_analysis \
+    --runs runs/Qwen3-* runs/Qwen3.5-* \
+    --output_dir reports/margin \
+    --figure_dir figures
+
+python -m probing_mvp.make_plots runs/Qwen3-*/summary.json \
+    --output-dir figures
+```
+
+## Key results
+
+- **Wrong-Claim Robustness (KD)** on Qwen3 instruct: `|mean Δlog p|` grows
+  from 0.38 (1.7B-Base) to 2.34 (8B), and the matched 8B / 8B-Base pair
+  isolates the jump as instruction tuning rather than scale.
+- **Margin decomposition on KD**: gold_drop −0.28 → −2.52 across Qwen3
+  instruct 0.6B → 8B, while margin_variant grows +0.10 → +2.66.
+  Sensitivity rises with scale and decision robustness rises with it.
+- **Bridge-Fact Integration (CP)** decays with scale (1.41 → 0.03):
+  bridge-RAG is high-value on small models, redundant on 8B.
+- **Wrong-Bridge Robustness (CD)** is the opposite of KD: gold_drop
+  grows but margin_variant stays negative throughout. The model is
+  genuinely overridden by the planted wrong bridge.
+
+## Author
+
+Xingwei Qu (`xingweiqu`) / SnowDist.
+
+## License
+
+MIT.
