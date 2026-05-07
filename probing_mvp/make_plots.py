@@ -317,7 +317,7 @@ MATRIX_CAPS = ["KP", "KB", "KD", "RP", "RB", "RD", "CP", "CB", "CD"]
 TASK_FAMILY_TO_CAPS = {
     "KB": ["KP", "KB", "KD"],
     "RB": ["RP", "RB", "RD"],
-    "Hybrid": ["CP", "CB"],   # CD reserved (no variant generated)
+    "Hybrid": ["CP", "CB", "CD"],
 }
 
 
@@ -383,16 +383,16 @@ def _build_capacity_matrix(summary: dict, judge: str = "zscore",
     return M
 
 
-def _annotate_matrix(ax, M, cell_text_fn=None) -> None:
+def _annotate_matrix(ax, M, cell_text_fn=None, fontsize=14) -> None:
     for i in range(M.shape[0]):
         for j in range(M.shape[1]):
             v = M[i, j]
             if np.isnan(v):
-                ax.text(j, i, "—", ha="center", va="center", fontsize=9, color="#888")
+                ax.text(j, i, "—", ha="center", va="center", fontsize=fontsize, color="#888")
             else:
                 txt = cell_text_fn(v) if cell_text_fn else f"{v:.2f}"
                 color = "white" if v > 0.75 or v < 0.55 else "black"
-                ax.text(j, i, txt, ha="center", va="center", fontsize=9, color=color)
+                ax.text(j, i, txt, ha="center", va="center", fontsize=fontsize, color=color, fontweight="bold")
 
 
 def _matrix_color_range(metric: str) -> tuple[float, float, str]:
@@ -418,16 +418,16 @@ def fig_capacity_matrix(summary: dict, out: Path,
     """
     M = _build_capacity_matrix(summary, judge, cot, pool, metric=metric)
     vmin, vmax, cbar_label = _matrix_color_range(metric)
-    fig, ax = plt.subplots(figsize=(10, 3.4))
+    fig, ax = plt.subplots(figsize=(13, 4.2))
     im = ax.imshow(M, cmap="RdYlGn", vmin=vmin, vmax=vmax, aspect="auto")
-    _annotate_matrix(ax, M)
+    _annotate_matrix(ax, M, fontsize=15)
 
     ax.set_yticks(range(len(FAMILY_NAMES)))
-    ax.set_yticklabels(FAMILY_NAMES)
+    ax.set_yticklabels(FAMILY_NAMES, fontsize=14)
     ax.set_xticks(range(len(MATRIX_CAPS)))
-    ax.set_xticklabels(MATRIX_CAPS)
-    ax.set_xlabel("atomic capability")
-    ax.set_ylabel("task family")
+    ax.set_xticklabels(MATRIX_CAPS, fontsize=14)
+    ax.set_xlabel("atomic capacity", fontsize=13)
+    ax.set_ylabel("task family", fontsize=13)
 
     for x in (2.5, 5.5):
         ax.axvline(x, color="black", linewidth=0.5, alpha=0.4)
@@ -463,7 +463,7 @@ def fig_capacity_matrix_grid(summaries: list[dict], out: Path,
         rows = 3; cols = (n + rows - 1) // rows
     else:
         rows = 4; cols = (n + rows - 1) // rows
-    fig, axes = plt.subplots(rows, cols, figsize=(cols * 5.0, rows * 2.6),
+    fig, axes = plt.subplots(rows, cols, figsize=(cols * 6.5, rows * 3.4),
                              squeeze=False)
     vmin, vmax, cbar_label = _matrix_color_range(metric)
     last_im = None
@@ -471,12 +471,12 @@ def fig_capacity_matrix_grid(summaries: list[dict], out: Path,
         ax = axes[idx // cols, idx % cols]
         M = _build_capacity_matrix(s, judge, cot, pool, metric=metric)
         last_im = ax.imshow(M, cmap="RdYlGn", vmin=vmin, vmax=vmax, aspect="auto")
-        _annotate_matrix(ax, M)
-        ax.set_yticks(range(len(FAMILY_NAMES))); ax.set_yticklabels(FAMILY_NAMES, fontsize=8)
-        ax.set_xticks(range(len(MATRIX_CAPS))); ax.set_xticklabels(MATRIX_CAPS, fontsize=8)
+        _annotate_matrix(ax, M, fontsize=12)
+        ax.set_yticks(range(len(FAMILY_NAMES))); ax.set_yticklabels(FAMILY_NAMES, fontsize=11)
+        ax.set_xticks(range(len(MATRIX_CAPS))); ax.set_xticklabels(MATRIX_CAPS, fontsize=11)
         for x in (2.5, 5.5):
             ax.axvline(x, color="black", linewidth=0.5, alpha=0.4)
-        ax.set_title(_model_name(s), fontsize=10)
+        ax.set_title(_model_name(s), fontsize=13, fontweight="bold")
     for idx in range(n, rows * cols):
         axes[idx // cols, idx % cols].set_visible(False)
     if last_im is not None:
