@@ -59,6 +59,58 @@ def _soft_correct(generated: str, gold: str) -> bool:
     return g in p or p.startswith(g)
 
 
+def _gold_logprob(
+    model,
+    tokenizer,
+    prompt: str,
+    gold: str,
+    device: str,
+    max_length: int,
+) -> tuple[float, float, int]:
+    """Sum-logprob and mean-logprob of `gold` conditioned on `prompt`.
+
+    Returns (sum_logprob, mean_logprob, n_gold_tokens). If the prompt+gold
+    overruns max_length, we truncate the prompt from the left so the gold
+    tokens are always scored. Whitespace is preserved between prompt and
+    gold via a single leading space if the prompt does not already end
+    with whitespace.
+    """
+    if not gold:
+        return float("nan"), float("nan"), 0
+    sep = "" if (prompt.endswith((" ", "\n", "\t")) or not prompt) else " "
+    full = prompt + sep + gold
+
+    full_ids = tokenizer(full, return_tensors="pt", add_special_tokens=False).input_ids[0]
+    prompt_ids = tokenizer(prompt, return_tensors="pt", add_special_tokens=False).input_ids[0]
+    n_prompt = prompt_ids.shape[0]
+    n_full = full_ids.shape[0]
+    n_gold = max(n_full - n_prompt, 0)
+    if n_gold == 0:
+        return float("nan"), float("nan"), 0
+
+    if n_full > max_length:
+        # left-truncate prompt to fit
+        keep = max_length
+        full_ids = full_ids[-keep:]
+        n_prompt = max(n_prompt - (n_full - keep), 0)
+        n_full = full_ids.shape[0]
+        n_gold = n_full - n_prompt
+        if n_gold <= 0:
+            return float("nan"), float("nan"), 0
+
+    input_ids = full_ids.unsqueeze(0).to(device)
+    out = model(input_ids=input_ids, use_cache=False)
+    # logits at position t predict token at t+1
+    logits = out.logits[0]                    # [T, V]
+    log_probs = torch.log_softmax(logits.float(), dim=-1)
+    # we want logprob of token full_ids[i] given context up to i-1, for i in [n_prompt, n_full)
+    target_idx = full_ids[n_prompt:].to(device)               # [n_gold]
+    gather_at = log_probs[n_prompt - 1: n_full - 1]           # [n_gold, V]
+    token_lp = gather_at.gather(1, target_idx.unsqueeze(1)).squeeze(1)  # [n_gold]
+    s = float(token_lp.sum().item())
+    return s, s / n_gold, int(n_gold)
+
+
 def extract_hidden_states(
     model_name: str,
     dataset_path: str,
@@ -146,6 +198,12 @@ def extract_hidden_states(
                 cont = tokenizer.decode(
                     gen[0, enc.input_ids.shape[1]:], skip_special_tokens=True
                 ).strip()
+
+                gold = item.get("gold_answer", "")
+                lp_sum, lp_mean, n_gold = _gold_logprob(
+                    model, tokenizer, prompt, gold, device, max_length
+                )
+
                 output_rows.append(
                     {
                         "row": i,
@@ -155,8 +213,11 @@ def extract_hidden_states(
                         "cot_state": cot,
                         "prompt": prompt,
                         "generation": cont,
-                        "gold_answer": item.get("gold_answer", ""),
-                        "correct": _soft_correct(cont, item.get("gold_answer", "")),
+                        "gold_answer": gold,
+                        "correct": _soft_correct(cont, gold),
+                        "gold_logprob_sum": lp_sum,
+                        "gold_logprob_mean": lp_mean,
+                        "n_gold_tokens": n_gold,
                     }
                 )
 

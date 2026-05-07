@@ -146,8 +146,14 @@ def probe_capabilities(
     pool: str,
     n_splits: int = 5,
     rng: int = 42,
+    judge: str = "binary",
 ) -> list[dict]:
-    """One binary probe per atomic capability (using `original` row's hidden state)."""
+    """One binary probe per atomic capability (using `original` row's hidden state).
+
+    `judge` selects which label column from derive_labels.py to read:
+        "binary" : correctness-flip label (legacy, drops on strong models)
+        "delta"  : Δlogprob-thresholded label (preferred when binary collapses)
+    """
     index = _load_index(hidden_dir / "item_index.jsonl")
     H = _load_hidden(hidden_dir / f"hidden_{cot_state}_{pool}.npy")
     labels = json.load(open(labels_path, encoding="utf-8"))
@@ -159,7 +165,12 @@ def probe_capabilities(
 
     cap_to_xy: dict[str, list[tuple[int, bool]]] = defaultdict(list)
     for fid, by_cot in labels.items():
-        cell = by_cot.get(cot_state, {})
+        cell_root = by_cot.get(cot_state, {})
+        # support both new schema {"binary": {...}, "delta": {...}} and old flat dict
+        if isinstance(cell_root, dict) and judge in cell_root:
+            cell = cell_root[judge]
+        else:
+            cell = cell_root  # legacy flat dict
         if fid not in fid_to_orig_row:
             continue
         for cap, val in cell.items():
@@ -203,6 +214,7 @@ def probe_capabilities(
         results.append({
             "target": "capability",
             "capability": cap,
+            "judge": judge,
             "cot_state": cot_state,
             "pool": pool,
             "n_samples": int(len(y)),
@@ -213,6 +225,14 @@ def probe_capabilities(
     return results
 
 
+def _skipped_capability_record(cap, cot_state, pool, judge, y_count):
+    return {
+        "target": "capability", "capability": cap, "judge": judge,
+        "cot_state": cot_state, "pool": pool, "skipped": True,
+        "reason": "insufficient samples", "n_samples": int(y_count),
+    }
+
+
 def run(
     hidden_dir: str,
     labels_path: str,
@@ -221,6 +241,7 @@ def run(
     pools: Iterable[str] = ("last", "mean"),
     n_splits: int = 5,
     rng: int = 42,
+    judges: Iterable[str] = ("binary", "delta"),
 ) -> dict:
     hidden_dir_p = Path(hidden_dir)
     out: dict = {"task_family": [], "capability": []}
@@ -231,9 +252,12 @@ def run(
                 logger.warning("missing %s — skipping", npy)
                 continue
             out["task_family"].append(probe_task_family(hidden_dir_p, cot, pool, n_splits, rng))
-            out["capability"].extend(
-                probe_capabilities(hidden_dir_p, Path(labels_path), cot, pool, n_splits, rng)
-            )
+            for judge in judges:
+                out["capability"].extend(
+                    probe_capabilities(
+                        hidden_dir_p, Path(labels_path), cot, pool, n_splits, rng, judge=judge,
+                    )
+                )
 
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
@@ -251,6 +275,8 @@ def main() -> None:
     p.add_argument("--pools", nargs="+", default=["last", "mean"])
     p.add_argument("--n_splits", type=int, default=5)
     p.add_argument("--rng", type=int, default=42)
+    p.add_argument("--judges", nargs="+", default=["binary", "delta"],
+                   choices=["binary", "delta"])
     args = p.parse_args()
 
     run(
@@ -261,6 +287,7 @@ def main() -> None:
         pools=args.pools,
         n_splits=args.n_splits,
         rng=args.rng,
+        judges=args.judges,
     )
 
 

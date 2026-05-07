@@ -127,9 +127,15 @@ python -m probing_mvp.geometry_analysis \
   --cot_states $COT_STATES \
   --pools $POOLS
 
+echo "[5/5] writing summary.json..."
+python -m probing_mvp.make_summary \
+  --run_dir "$OUT" \
+  --model_path "$MODEL"
+
 echo
 echo "=== done ==="
 echo "results in $OUT/"
+echo "summary file (commit this back to the repo): $OUT/summary.json"
 ls -la "$OUT" | sed 's/^/  /'
 
 start_grabgpu

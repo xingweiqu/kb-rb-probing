@@ -193,6 +193,7 @@ def probe_capabilities(
     n_splits: int,
     device: str,
     rng: int,
+    judge: str = "binary",
 ) -> list[dict]:
     index = _load_index(hidden_dir / "item_index.jsonl")
     H = np.load(hidden_dir / f"hidden_{cot_state}_{pool}.npy").astype(np.float32, copy=False)
@@ -205,7 +206,11 @@ def probe_capabilities(
     }
     cap_to_xy: dict[str, list[tuple[int, bool]]] = defaultdict(list)
     for fid, by_cot in labels.items():
-        cell = by_cot.get(cot_state, {})
+        cell_root = by_cot.get(cot_state, {})
+        if isinstance(cell_root, dict) and judge in cell_root:
+            cell = cell_root[judge]
+        else:
+            cell = cell_root
         if fid not in fid_to_orig_row:
             continue
         for cap, val in cell.items():
@@ -219,7 +224,7 @@ def probe_capabilities(
         y = np.array([1 if v else 0 for _, v in cap_to_xy[cap]])
         if len(np.unique(y)) < 2 or len(y) < 6:
             out.append({
-                "probe_type": "lora", "rank": rank,
+                "probe_type": "lora", "rank": rank, "judge": judge,
                 "target": "capability", "capability": cap,
                 "cot_state": cot_state, "pool": pool,
                 "skipped": True,
@@ -238,7 +243,7 @@ def probe_capabilities(
             })
         best = max(layer_results, key=lambda d: d["balanced_accuracy"] if not np.isnan(d["balanced_accuracy"]) else -1)
         out.append({
-            "probe_type": "lora", "rank": rank,
+            "probe_type": "lora", "rank": rank, "judge": judge,
             "target": "capability", "capability": cap,
             "cot_state": cot_state, "pool": pool,
             "n_samples": int(len(y)),
@@ -262,6 +267,7 @@ def run(
     n_splits: int = 5,
     device: str = "cuda" if torch.cuda.is_available() else "cpu",
     rng: int = 42,
+    judges: Iterable[str] = ("binary", "delta"),
 ) -> dict:
     hidden_dir_p = Path(hidden_dir)
     out: dict = {"task_family": [], "capability": []}
@@ -274,10 +280,11 @@ def run(
             out["task_family"].append(probe_task_family(
                 hidden_dir_p, cot, pool, rank, epochs, lr, weight_decay, n_splits, device, rng,
             ))
-            out["capability"].extend(probe_capabilities(
-                hidden_dir_p, Path(labels_path), cot, pool, rank, epochs, lr, weight_decay,
-                n_splits, device, rng,
-            ))
+            for judge in judges:
+                out["capability"].extend(probe_capabilities(
+                    hidden_dir_p, Path(labels_path), cot, pool, rank, epochs, lr, weight_decay,
+                    n_splits, device, rng, judge=judge,
+                ))
 
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
@@ -300,6 +307,8 @@ def main() -> None:
     p.add_argument("--n_splits", type=int, default=5)
     p.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu")
     p.add_argument("--rng", type=int, default=42)
+    p.add_argument("--judges", nargs="+", default=["binary", "delta"],
+                   choices=["binary", "delta"])
     args = p.parse_args()
     run(
         hidden_dir=args.hidden_dir,
@@ -314,6 +323,7 @@ def main() -> None:
         n_splits=args.n_splits,
         device=args.device,
         rng=args.rng,
+        judges=args.judges,
     )
 
 
