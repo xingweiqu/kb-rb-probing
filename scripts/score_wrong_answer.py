@@ -2,15 +2,25 @@
 wrong_intermediate, and wrong_bridge variants — needed for margin analysis.
 
 Reads:
-    runs/<model>/model_outputs.jsonl  (existing per-item gold logps)
+    runs/<model>/model_outputs.jsonl   (existing per-item gold logps)
     runs/full_25/output/dataset.jsonl  (has wrong-claim metadata)
 
 Writes:
     runs/<model>/model_outputs_with_wrong.jsonl
-        same rows + columns:
+        same rows + (where applicable) columns:
             wrong_answer: str (planted wrong A')
             wrong_logprob_sum, wrong_logprob_mean, n_wrong_tokens
             wrong_per_token_logprob: list[float]
+            wrong_first_token_rank: int
+
+Wrong-answer extraction:
+    - wrong_bridge: read metadata.wrong_bridge_implied_answer directly.
+    - wrongclaim / wrong_intermediate: parse the trailing
+      capitalized-or-numeric phrase from `injected_premise` (preferred)
+      or `wrong_claim`. Rows where parsing fails or the parsed string
+      equals the gold answer are skipped (no wrong_logprob_* written).
+
+No API dependency.
 
 Usage on server:
     python -m scripts.score_wrong_answer \\
@@ -19,9 +29,6 @@ Usage on server:
         --model_outputs runs/Qwen3-8B/model_outputs.jsonl \\
         --output runs/Qwen3-8B/model_outputs_with_wrong.jsonl \\
         --device cuda
-
-Then pull `runs/<model>/model_outputs_with_wrong.jsonl` back locally for
-analysis.
 """
 
 import argparse
@@ -32,49 +39,52 @@ from pathlib import Path
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-# Re-export _gold_logprob from probing_mvp for code reuse
-from probing_mvp.extract_hidden_states import _gold_logprob, COT_PREFIXES
+from probing_mvp.extract_hidden_states import _gold_logprob
 
 logger = logging.getLogger(__name__)
 
+_KEEP_LOWER = {"the", "a", "an", "of", "in"}
 
-def _wrong_answer_for(item: dict) -> str | None:
-    """Extract the planted-wrong answer string for variants where it exists."""
+
+def _extract_wrong_answer(item: dict) -> str | None:
+    """Pure-rule extraction of the planted-wrong answer.
+
+    For wrong_bridge, read metadata.wrong_bridge_implied_answer.
+    For wrongclaim / wrong_intermediate, walk back from the end of
+    `injected_premise` (preferred) or `wrong_claim`, collecting trailing
+    Capitalized / numeric / function-word tokens. Returns None when no
+    candidate can be extracted (the row is then skipped during scoring).
+    """
     md = item.get("metadata", {}) or {}
-    v = item["variant"]
-    if v == "wrong_bridge":
+    if item["variant"] == "wrong_bridge":
         return md.get("wrong_bridge_implied_answer")
-    if v == "wrongclaim":
-        # Parse "Mount Everest is located in India" -> "India".
-        # Heuristic: the part of `wrong_claim` after the gold-related verb.
-        # Safer: store wrong_implied_answer at generation time. We fall back
-        # to last-noun-ish heuristic when not stored.
-        for k in ("wrong_implied_answer", "wrong_answer", "planted_wrong_answer"):
-            if md.get(k):
-                return md[k]
-        # Heuristic last-resort: take the last word of `wrong_claim` that is
-        # capitalized or numeric. Fragile; prefer pre-storing.
-        wc = md.get("wrong_claim", "")
-        if wc:
-            tokens = [t.strip(",.") for t in wc.split() if t.strip(",.")]
-            for tok in reversed(tokens):
-                if tok and (tok[0].isupper() or tok[0].isdigit()):
-                    return tok
+
+    text = md.get("injected_premise") or md.get("wrong_claim", "")
+    if not text:
         return None
-    if v == "wrong_intermediate":
-        # metadata has e.g. {"wrong_claim": "the number is 9", "correct_answer": "6"}
-        wc = md.get("wrong_claim", "")
-        for tok in reversed(wc.replace(".", "").split()):
-            if tok and (tok[0].isdigit() or tok[0].isupper()):
-                return tok
-        return None
-    return None
+
+    text = text.strip().rstrip(".!?,;:")
+    tokens = text.split()
+    keep: list[str] = []
+    for tok in reversed(tokens):
+        bare = tok.strip(",.;:\"'")
+        if not bare:
+            continue
+        if bare[0].isupper() or bare[0].isdigit() or bare.lower() in _KEEP_LOWER:
+            keep.append(bare)
+        else:
+            break
+    keep.reverse()
+    while keep and keep[0].lower() in _KEEP_LOWER:
+        keep.pop(0)
+    return " ".join(keep) if keep else None
 
 
 def main() -> None:
     p = argparse.ArgumentParser()
     p.add_argument("--model_name", required=True)
-    p.add_argument("--dataset", required=True)
+    p.add_argument("--dataset", required=True,
+                   help="dataset.jsonl with metadata.wrong_*; no enrichment needed")
     p.add_argument("--model_outputs", required=True,
                    help="existing model_outputs.jsonl with gold_logprob")
     p.add_argument("--output", required=True)
@@ -87,7 +97,6 @@ def main() -> None:
     logging.basicConfig(level=logging.INFO,
                         format="%(asctime)s %(levelname)s %(message)s")
 
-    # Load dataset and key by (family_id, variant, mode) to grab metadata.
     ds_index: dict[tuple, dict] = {}
     with open(args.dataset) as f:
         for line in f:
@@ -95,14 +104,14 @@ def main() -> None:
             key = (item["family_id"], item["variant"], item.get("mode", "natural"))
             ds_index[key] = item
 
-    # Load existing outputs.
     outs: list[dict] = []
     with open(args.model_outputs) as f:
         for line in f:
             outs.append(json.loads(line))
 
-    # Build a list of rows that need wrong-answer scoring.
     work: list[tuple[int, dict, str]] = []
+    skipped_no_extract = 0
+    skipped_matches_gold = 0
     for i, row in enumerate(outs):
         v = row["variant"]
         if v not in ("wrongclaim", "wrong_intermediate", "wrong_bridge"):
@@ -112,15 +121,20 @@ def main() -> None:
         if item is None:
             logger.warning("missing dataset row for %s; skipping", key)
             continue
-        wrong = _wrong_answer_for(item)
+        wrong = _extract_wrong_answer(item)
         if not wrong:
-            logger.warning("no wrong answer for %s; skipping", key)
+            skipped_no_extract += 1
+            continue
+        if wrong.strip().lower() == row["gold_answer"].strip().lower():
+            skipped_matches_gold += 1
             continue
         work.append((i, row, wrong))
 
-    logger.info("rows needing wrong-answer scoring: %d / %d", len(work), len(outs))
+    logger.info(
+        "rows scoring wrong-answer: %d / %d (skipped: %d unparseable, %d match gold)",
+        len(work), len(outs), skipped_no_extract, skipped_matches_gold,
+    )
 
-    # Load the model.
     dtype = {"float16": torch.float16, "bfloat16": torch.bfloat16,
              "float32": torch.float32}[args.dtype]
     tokenizer = AutoTokenizer.from_pretrained(args.model_name, trust_remote_code=True)
@@ -131,8 +145,7 @@ def main() -> None:
 
     with torch.no_grad():
         for n, (i, row, wrong) in enumerate(work):
-            prompt = row["prompt"]
-            lp = _gold_logprob(model, tokenizer, prompt, wrong,
+            lp = _gold_logprob(model, tokenizer, row["prompt"], wrong,
                                args.device, args.max_length)
             outs[i]["wrong_answer"] = wrong
             outs[i]["wrong_logprob_sum"] = lp["sum"]
