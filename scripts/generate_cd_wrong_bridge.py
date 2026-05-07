@@ -43,7 +43,7 @@ from typing import Any
 # the rest of the data construction.
 from dataset_synthesis_mvp.api_client import APIClient
 from dataset_synthesis_mvp.config import (
-    ANTHROPIC_AUTH_TOKEN, ANTHROPIC_BASE_URL, MODEL,
+    ANTHROPIC_AUTH_TOKEN, ANTHROPIC_BASE_URL, MODEL, SYMBOL_POOL,
 )
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
@@ -84,7 +84,8 @@ Output JSON object with EXACTLY these keys:
     wrong_bridge: string (the chosen B')
     wrong_bridge_claim: string (the inserted false sentence)
     wrong_bridge_implied_answer: string (the answer A' that B' + R would yield;
-                                          best-effort, may be empty if unknown)
+                                          MUST be different from A; otherwise
+                                          pick a different B')
     true_bridge: string (B, copied from input)
 - variant_type: must be the literal string "wrong_bridge".
 
@@ -93,6 +94,12 @@ Hard constraints:
 - The wrong_bridge claim MUST NOT mention A.
 - B' MUST be different from B and of the same type (e.g., country-for-country,
   author-for-author).
+- CRITICAL: the implied answer A' (what B' + R yields) MUST be different
+  from A. For example, if A is a nationality and B' shares the same
+  nationality as B (e.g. both Hemingway and Fitzgerald are American), pick
+  a different B' whose nationality is NOT American (e.g. Camus, Tolstoy,
+  Mishima). If A is a currency and B' shares the same currency zone as B
+  (e.g. France/Belgium both Euro), pick a B' whose currency differs.
 - The original question text after the prepended claim MUST be preserved
   verbatim.
 
@@ -165,34 +172,67 @@ async def generate_one(client: APIClient,
 
 
 def _build_symbolic(natural_item: dict[str, Any],
-                    symbolic_originals: dict[tuple[str, str], dict]) -> dict | None:
-    """Construct a symbolic-mode wrong_bridge by reusing the existing entity
-    map. We look up the symbolic original for the same backbone and apply
-    its `entity_map` to substitute named entities in the natural prompt."""
+                    symbolic_originals: dict[tuple[str, str], dict],
+                    symbol_pool: list[str]) -> dict | None:
+    """Construct a symbolic-mode wrong_bridge by extending the existing
+    entity_map with the wrong_bridge entity (and its implied wrong answer
+    if available), then substituting throughout. Also rebuilds the
+    "In this system, X = ⊕..." preamble so the symbol legend is complete.
+
+    Without this extension the wrong_bridge entity would leak as the
+    natural-language string into symbolic mode, defeating the purpose of
+    the symbolic surface.
+    """
     fid = natural_item["family_id"]
     sym_orig = symbolic_originals.get((fid, "symbolic"))
     if not sym_orig:
         return None
-    entity_map = (sym_orig.get("metadata") or {}).get("entity_map") or {}
-    if not entity_map:
+    base_map: dict[str, str] = dict((sym_orig.get("metadata") or {}).get("entity_map") or {})
+    if not base_map:
         return None
 
-    sym_question = natural_item["question"]
-    for k, v in sorted(entity_map.items(), key=lambda kv: -len(kv[0])):
-        if k:
-            sym_question = sym_question.replace(k, v)
-    sym_gold = entity_map.get(natural_item["gold_answer"], natural_item["gold_answer"])
+    extended_map = dict(base_map)
+    used_symbols = set(extended_map.values())
+    available = [s for s in symbol_pool if s not in used_symbols]
+
+    meta = natural_item["metadata"]
+    wrong_bridge = (meta.get("wrong_bridge") or "").strip()
+    wrong_implied = (meta.get("wrong_bridge_implied_answer") or "").strip()
+    if wrong_bridge and wrong_bridge not in extended_map:
+        if not available:
+            return None
+        extended_map[wrong_bridge] = available.pop(0)
+    if wrong_implied and wrong_implied not in extended_map:
+        if not available:
+            available = [chr(0x2600 + i) for i in range(20)]  # extra fallback symbols
+        extended_map[wrong_implied] = available.pop(0)
+
+    # Build the preamble in the same shape as symbolic.py:
+    # "In this system, A = α, B = β, ...\n<question>"
+    # We must list every entity in extended_map.
+    mappings = ", ".join(f"{k} = {v}" for k, v in extended_map.items())
+    preamble = f"In this system, {mappings}.\n"
+
+    # Take the natural question (which itself has no preamble), substitute,
+    # then prepend the preamble.
+    nat_q = natural_item["question"]
+    sym_q = nat_q
+    for k in sorted(extended_map.keys(), key=len, reverse=True):
+        v = extended_map[k]
+        sym_q = sym_q.replace(k, v)
+    sym_gold = extended_map.get(natural_item["gold_answer"], natural_item["gold_answer"])
 
     return {
         "family_id": fid,
         "task_family": "Hybrid",
         "variant": "wrong_bridge",
         "mode": "symbolic",
-        "question": sym_question,
+        "question": preamble + sym_q,
         "gold_answer": sym_gold,
         "metadata": {
             **natural_item["metadata"],
-            "entity_map": entity_map,
+            "entity_map": extended_map,
+            "symbolic_mode": True,
             "derived_from_natural": True,
         },
     }
@@ -243,7 +283,7 @@ async def run(structures_path: Path, base_items_path: Path,
 
     symbolic_items = []
     for nat in natural_items:
-        sym = _build_symbolic(nat, symbolic_originals)
+        sym = _build_symbolic(nat, symbolic_originals, list(SYMBOL_POOL))
         if sym:
             symbolic_items.append(sym)
     logger.info("derived %d symbolic wrong_bridge items", len(symbolic_items))

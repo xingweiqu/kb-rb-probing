@@ -211,13 +211,23 @@ A legendary rock band that revolutionized popular music was formed in a major po
 hybrid_023_retrieval_blocked_symbolic,hybrid_023,Hybrid,Retrieval-Block Drop (CB),symbolic,"In this system, Pride and Prejudice = ∆, Jane Austen = ◇, 1817 = ⊕, written_by = Ω, death_year = ★.
 In what year did the author of ∆ die?","In this system, Pride and Prejudice = ∆, Jane Austen = ◇, 1817 = ⊕, written_by = Ω, death_year = ★.
 A beloved novel about the Bennet sisters and their romantic entanglements was written by a female author who lived in Hampshire, England. In what year did this author die?",1817,,,,,,,,,
-PLACEHOLDER_Wrong-Bridge Drop (CD)_0,,Hybrid,Wrong-Bridge Drop (CD),,,,,,AWAITING_GENERATION,,,,,,,
-PLACEHOLDER_Wrong-Bridge Drop (CD)_1,,Hybrid,Wrong-Bridge Drop (CD),,,,,,AWAITING_GENERATION,,,,,,,
-PLACEHOLDER_Wrong-Bridge Drop (CD)_2,,Hybrid,Wrong-Bridge Drop (CD),,,,,,AWAITING_GENERATION,,,,,,,
-PLACEHOLDER_Wrong-Bridge Drop (CD)_3,,Hybrid,Wrong-Bridge Drop (CD),,,,,,AWAITING_GENERATION,,,,,,,
-PLACEHOLDER_Wrong-Bridge Drop (CD)_4,,Hybrid,Wrong-Bridge Drop (CD),,,,,,AWAITING_GENERATION,,,,,,,
-PLACEHOLDER_Wrong-Bridge Drop (CD)_5,,Hybrid,Wrong-Bridge Drop (CD),,,,,,AWAITING_GENERATION,,,,,,,
-PLACEHOLDER_Wrong-Bridge Drop (CD)_6,,Hybrid,Wrong-Bridge Drop (CD),,,,,,AWAITING_GENERATION,,,,,,,
-PLACEHOLDER_Wrong-Bridge Drop (CD)_7,,Hybrid,Wrong-Bridge Drop (CD),,,,,,AWAITING_GENERATION,,,,,,,
-PLACEHOLDER_Wrong-Bridge Drop (CD)_8,,Hybrid,Wrong-Bridge Drop (CD),,,,,,AWAITING_GENERATION,,,,,,,
-PLACEHOLDER_Wrong-Bridge Drop (CD)_9,,Hybrid,Wrong-Bridge Drop (CD),,,,,,AWAITING_GENERATION,,,,,,,
+hybrid_020_wrong_bridge_natural,hybrid_020,Hybrid,Wrong-Bridge Drop (CD),natural,What is the capital of the country where the Sydney Opera House is located?,The Sydney Opera House is located in Austria. What is the capital of the country where the Sydney Opera House is located?,Canberra,Vienna,,,,,,,,
+hybrid_008_wrong_bridge_natural,hybrid_008,Hybrid,Wrong-Bridge Drop (CD),natural,What is the capital of the country where the Taj Mahal is located?,The Taj Mahal is located in Portugal. What is the capital of the country where the Taj Mahal is located?,New Delhi,Lisbon,,,,,,,,
+hybrid_024_wrong_bridge_natural,hybrid_024,Hybrid,Wrong-Bridge Drop (CD),natural,What year was the founder of Facebook born?,Facebook was founded by Sheryl Sandberg. What year was the founder of Facebook born?,1984,1969,,,,,,,,
+hybrid_017_wrong_bridge_natural,hybrid_017,Hybrid,Wrong-Bridge Drop (CD),natural,What is the currency of the country where Big Ben is located?,Big Ben is located in Switzerland. What is the currency of the country where Big Ben is located?,Pound Sterling,Swiss Franc,,,,,,,,
+hybrid_011_wrong_bridge_natural,hybrid_011,Hybrid,Wrong-Bridge Drop (CD),natural,What is the nationality of the director of Inception?,Inception was directed by Ridley Scott. What is the nationality of the director of Inception?,British-American,British,,,,,,,,
+hybrid_023_wrong_bridge_symbolic,hybrid_023,Hybrid,Wrong-Bridge Drop (CD),symbolic,"In this system, Pride and Prejudice = ∆, Jane Austen = ◇, 1817 = ⊕, written_by = Ω, death_year = ★.
+In what year did the author of ∆ die?","In this system, Pride and Prejudice = ∆, Jane Austen = ◇, 1817 = ⊕, written_by = Ω, death_year = ★, Charlotte Brontë = ⊗, 1855 = ▽.
+∆ was written by ⊗. In what year did the author of ∆ die?",⊕,1855,,,,,,,,
+hybrid_010_wrong_bridge_symbolic,hybrid_010,Hybrid,Wrong-Bridge Drop (CD),symbolic,"In this system, Statue of Liberty = ∆, France = ◇, Euro = ⊕, gift_from = Ω, currency = ★.
+What is the ★ of the country that gifted the ∆?","In this system, Statue of Liberty = ∆, France = ◇, Euro = ⊕, gift_from = Ω, currency = ★, Switzerland = ⊗, Swiss franc = ▽.
+⊗ gifted the ∆. What is the ★ of the country that gifted the ∆?",⊕,Swiss franc,,,,,,,,
+hybrid_025_wrong_bridge_symbolic,hybrid_025,Hybrid,Wrong-Bridge Drop (CD),symbolic,"In this system, The Scream = ∆, Edvard Munch = ◇, Norwegian = ⊕, painted_by = Ω, nationality = ★.
+What was the ★ of the artist who painted ∆?","In this system, The Scream = ∆, Edvard Munch = ◇, Norwegian = ⊕, painted_by = Ω, nationality = ★, Vincent van Gogh = ⊗, Dutch = ▽.
+∆ was painted by ⊗. What was the ★ of the artist who painted ∆?",⊕,Dutch,,,,,,,,
+hybrid_009_wrong_bridge_symbolic,hybrid_009,Hybrid,Wrong-Bridge Drop (CD),symbolic,"In this system, Harry Potter series = ∆, J.K. Rowling = ◇, British = ⊕, authored_by = Ω, nationality = ★.
+What is the ★ of the author of the ∆?","In this system, Harry Potter series = ∆, J.K. Rowling = ◇, British = ⊕, authored_by = Ω, nationality = ★, Stephen King = ⊗, American = ▽.
+The ∆ was written by ⊗. What is the ★ of the author of the ∆?",⊕,American,,,,,,,,
+hybrid_013_wrong_bridge_symbolic,hybrid_013,Hybrid,Wrong-Bridge Drop (CD),symbolic,"In this system, Colosseum = ∆, Italy = ◇, Rome = ⊕, located_in = Ω, capital = ★.
+What is the ★ of the country where the ∆ is located?","In this system, Colosseum = ∆, Italy = ◇, Rome = ⊕, located_in = Ω, capital = ★, Greece = ⊗, Athens = ▽.
+The ∆ is located in ⊗. What is the ★ of the country where the ∆ is located?",⊕,Athens,,,,,,,,
