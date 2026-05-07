@@ -1,11 +1,13 @@
 {
   "model_path": "/opt/tiger/ouro2/Qwen3-8B",
   "run_dir": "runs/Qwen3-8B",
-  "generated_at": "2026-05-07T08:39:44+08:00",
+  "generated_at": "2026-05-07T10:03:19+08:00",
   "task_family": {
     "linear": [
       {
         "probe_type": "linear",
+        "judge": null,
+        "rank": null,
         "cot_state": "no_cot",
         "pool": "last",
         "n_samples": 75,
@@ -42,6 +44,8 @@
       },
       {
         "probe_type": "linear",
+        "judge": null,
+        "rank": null,
         "cot_state": "no_cot",
         "pool": "mean",
         "n_samples": 75,
@@ -78,6 +82,8 @@
       },
       {
         "probe_type": "linear",
+        "judge": null,
+        "rank": null,
         "cot_state": "with_cot",
         "pool": "last",
         "n_samples": 75,
@@ -114,6 +120,8 @@
       },
       {
         "probe_type": "linear",
+        "judge": null,
+        "rank": null,
         "cot_state": "with_cot",
         "pool": "mean",
         "n_samples": 75,
@@ -152,6 +160,8 @@
     "lora": [
       {
         "probe_type": "lora",
+        "judge": null,
+        "rank": 16,
         "cot_state": "no_cot",
         "pool": "last",
         "n_samples": 75,
@@ -188,6 +198,8 @@
       },
       {
         "probe_type": "lora",
+        "judge": null,
+        "rank": 16,
         "cot_state": "no_cot",
         "pool": "mean",
         "n_samples": 75,
@@ -224,6 +236,8 @@
       },
       {
         "probe_type": "lora",
+        "judge": null,
+        "rank": 16,
         "cot_state": "with_cot",
         "pool": "last",
         "n_samples": 75,
@@ -260,6 +274,8 @@
       },
       {
         "probe_type": "lora",
+        "judge": null,
+        "rank": 16,
         "cot_state": "with_cot",
         "pool": "mean",
         "n_samples": 75,
@@ -298,146 +314,976 @@
   },
   "capability": {
     "label_distribution": {
+      "CP": {
+        "binary": {
+          "no_cot": {
+            "pos": 1,
+            "neg": 0,
+            "drop": 24,
+            "total": 25
+          },
+          "with_cot": {
+            "pos": 0,
+            "neg": 0,
+            "drop": 25,
+            "total": 25
+          }
+        },
+        "delta": {
+          "no_cot": {
+            "pos": 13,
+            "neg": 12,
+            "drop": 0,
+            "total": 25
+          },
+          "with_cot": {
+            "pos": 13,
+            "neg": 10,
+            "drop": 2,
+            "total": 25
+          }
+        }
+      },
       "CB": {
+        "binary": {
+          "no_cot": {
+            "pos": 0,
+            "neg": 0,
+            "drop": 25,
+            "total": 25
+          },
+          "with_cot": {
+            "pos": 0,
+            "neg": 0,
+            "drop": 25,
+            "total": 25
+          }
+        },
+        "delta": {
+          "no_cot": {
+            "pos": 11,
+            "neg": 13,
+            "drop": 1,
+            "total": 25
+          },
+          "with_cot": {
+            "pos": 8,
+            "neg": 17,
+            "drop": 0,
+            "total": 25
+          }
+        }
+      },
+      "CB-control": {
+        "binary": {
+          "no_cot": {
+            "pos": 0,
+            "neg": 0,
+            "drop": 25,
+            "total": 25
+          },
+          "with_cot": {
+            "pos": 0,
+            "neg": 0,
+            "drop": 25,
+            "total": 25
+          }
+        },
+        "delta": {
+          "no_cot": {
+            "pos": 14,
+            "neg": 9,
+            "drop": 2,
+            "total": 25
+          },
+          "with_cot": {
+            "pos": 13,
+            "neg": 10,
+            "drop": 2,
+            "total": 25
+          }
+        }
+      },
+      "KP": {
+        "binary": {
+          "no_cot": {
+            "pos": 1,
+            "neg": 0,
+            "drop": 24,
+            "total": 25
+          },
+          "with_cot": {
+            "pos": 0,
+            "neg": 1,
+            "drop": 24,
+            "total": 25
+          }
+        },
+        "delta": {
+          "no_cot": {
+            "pos": 6,
+            "neg": 17,
+            "drop": 2,
+            "total": 25
+          },
+          "with_cot": {
+            "pos": 17,
+            "neg": 8,
+            "drop": 0,
+            "total": 25
+          }
+        }
+      },
+      "KD": {
+        "binary": {
+          "no_cot": {
+            "pos": 0,
+            "neg": 0,
+            "drop": 25,
+            "total": 25
+          },
+          "with_cot": {
+            "pos": 2,
+            "neg": 0,
+            "drop": 23,
+            "total": 25
+          }
+        },
+        "delta": {
+          "no_cot": {
+            "pos": 23,
+            "neg": 1,
+            "drop": 1,
+            "total": 25
+          },
+          "with_cot": {
+            "pos": 13,
+            "neg": 11,
+            "drop": 1,
+            "total": 25
+          }
+        }
+      },
+      "KB": {
+        "binary": {
+          "no_cot": {
+            "pos": 0,
+            "neg": 0,
+            "drop": 25,
+            "total": 25
+          },
+          "with_cot": {
+            "pos": 2,
+            "neg": 0,
+            "drop": 23,
+            "total": 25
+          }
+        },
+        "delta": {
+          "no_cot": {
+            "pos": 12,
+            "neg": 10,
+            "drop": 3,
+            "total": 25
+          },
+          "with_cot": {
+            "pos": 7,
+            "neg": 13,
+            "drop": 5,
+            "total": 25
+          }
+        }
+      },
+      "RP": {
+        "binary": {
+          "no_cot": {
+            "pos": 0,
+            "neg": 0,
+            "drop": 25,
+            "total": 25
+          },
+          "with_cot": {
+            "pos": 0,
+            "neg": 0,
+            "drop": 25,
+            "total": 25
+          }
+        },
+        "delta": {
+          "no_cot": {
+            "pos": 6,
+            "neg": 19,
+            "drop": 0,
+            "total": 25
+          },
+          "with_cot": {
+            "pos": 12,
+            "neg": 12,
+            "drop": 1,
+            "total": 25
+          }
+        }
+      },
+      "RB": {
+        "binary": {
+          "no_cot": {
+            "pos": 1,
+            "neg": 0,
+            "drop": 24,
+            "total": 25
+          },
+          "with_cot": {
+            "pos": 1,
+            "neg": 0,
+            "drop": 24,
+            "total": 25
+          }
+        },
+        "delta": {
+          "no_cot": {
+            "pos": 13,
+            "neg": 9,
+            "drop": 3,
+            "total": 25
+          },
+          "with_cot": {
+            "pos": 15,
+            "neg": 8,
+            "drop": 2,
+            "total": 25
+          }
+        }
+      },
+      "RD": {
+        "binary": {
+          "no_cot": {
+            "pos": 1,
+            "neg": 0,
+            "drop": 24,
+            "total": 25
+          },
+          "with_cot": {
+            "pos": 1,
+            "neg": 0,
+            "drop": 24,
+            "total": 25
+          }
+        },
+        "delta": {
+          "no_cot": {
+            "pos": 12,
+            "neg": 12,
+            "drop": 1,
+            "total": 25
+          },
+          "with_cot": {
+            "pos": 5,
+            "neg": 19,
+            "drop": 1,
+            "total": 25
+          }
+        }
+      }
+    },
+    "delta_value_stats": {
+      "CP": {
         "no_cot": {
-          "pos": 0,
-          "neg": 0,
-          "drop": 75,
-          "total": 75
+          "n": 25,
+          "mean": -0.03270451736450198,
+          "median": 0.118927001953125,
+          "stdev": 1.912235966375414,
+          "min": -3.9391403198242188,
+          "max": 3.415775775909424
         },
         "with_cot": {
-          "pos": 0,
-          "neg": 0,
-          "drop": 75,
-          "total": 75
+          "n": 25,
+          "mean": 0.18203852589925135,
+          "median": 0.12191518147786518,
+          "stdev": 1.4738806139091052,
+          "min": -2.5925769805908203,
+          "max": 5.561977386474609
+        }
+      },
+      "CB": {
+        "no_cot": {
+          "n": 25,
+          "mean": 0.17991519800821934,
+          "median": 0.4459037780761719,
+          "stdev": 1.852778731360304,
+          "min": -2.9966907501220703,
+          "max": 3.4727859497070312
+        },
+        "with_cot": {
+          "n": 25,
+          "mean": 0.4458522033691406,
+          "median": 0.6503610610961914,
+          "stdev": 1.5520697830718364,
+          "min": -3.5546875,
+          "max": 4.3564453125
         }
       },
       "CB-control": {
         "no_cot": {
-          "pos": 0,
-          "neg": 0,
-          "drop": 75,
-          "total": 75
+          "n": 25,
+          "mean": -0.9093290430704752,
+          "median": -0.6917486190795898,
+          "stdev": 2.243579078116057,
+          "min": -5.977973937988281,
+          "max": 3.083984375
         },
         "with_cot": {
-          "pos": 0,
-          "neg": 0,
-          "drop": 75,
-          "total": 75
-        }
-      },
-      "CP": {
-        "no_cot": {
-          "pos": 1,
-          "neg": 0,
-          "drop": 74,
-          "total": 75
-        },
-        "with_cot": {
-          "pos": 0,
-          "neg": 0,
-          "drop": 75,
-          "total": 75
-        }
-      },
-      "KB": {
-        "no_cot": {
-          "pos": 0,
-          "neg": 0,
-          "drop": 75,
-          "total": 75
-        },
-        "with_cot": {
-          "pos": 2,
-          "neg": 0,
-          "drop": 73,
-          "total": 75
-        }
-      },
-      "KD": {
-        "no_cot": {
-          "pos": 0,
-          "neg": 0,
-          "drop": 75,
-          "total": 75
-        },
-        "with_cot": {
-          "pos": 2,
-          "neg": 0,
-          "drop": 73,
-          "total": 75
+          "n": 25,
+          "mean": -0.19176710764567054,
+          "median": -0.1278848648071289,
+          "stdev": 1.0979233186295199,
+          "min": -3.257488250732422,
+          "max": 1.6796836853027344
         }
       },
       "KP": {
         "no_cot": {
-          "pos": 1,
-          "neg": 0,
-          "drop": 74,
-          "total": 75
+          "n": 25,
+          "mean": -0.7176557462783087,
+          "median": -0.5795783996582031,
+          "stdev": 1.5907592560233585,
+          "min": -4.7820329666137695,
+          "max": 1.9882574081420898
         },
         "with_cot": {
-          "pos": 0,
-          "neg": 1,
-          "drop": 74,
-          "total": 75
+          "n": 25,
+          "mean": 0.20937188357398623,
+          "median": 0.8255825042724609,
+          "stdev": 1.6698349970854411,
+          "min": -4.035760243733723,
+          "max": 3.7392578125
         }
       },
-      "RB": {
+      "KD": {
         "no_cot": {
-          "pos": 1,
-          "neg": 0,
-          "drop": 74,
-          "total": 75
+          "n": 25,
+          "mean": -2.3466286771865117,
+          "median": -2.207029342651367,
+          "stdev": 2.2098834569555494,
+          "min": -9.360113143920898,
+          "max": 0.554408073425293
         },
         "with_cot": {
-          "pos": 1,
-          "neg": 0,
-          "drop": 74,
-          "total": 75
+          "n": 25,
+          "mean": -0.4562909542265393,
+          "median": -0.27245521545410156,
+          "stdev": 2.2567412346635645,
+          "min": -7.980810165405273,
+          "max": 3.2578125
         }
       },
-      "RD": {
+      "KB": {
         "no_cot": {
-          "pos": 1,
-          "neg": 0,
-          "drop": 74,
-          "total": 75
+          "n": 25,
+          "mean": -0.3168275337219239,
+          "median": -0.0486901601155596,
+          "stdev": 1.2714918278855107,
+          "min": -2.7681150436401367,
+          "max": 2.0922088623046875
         },
         "with_cot": {
-          "pos": 1,
-          "neg": 0,
-          "drop": 74,
-          "total": 75
+          "n": 25,
+          "mean": 0.23548774973551428,
+          "median": 0.10836029052734375,
+          "stdev": 1.079961135042441,
+          "min": -2.6972872416178397,
+          "max": 2.510456085205078
         }
       },
       "RP": {
         "no_cot": {
-          "pos": 0,
-          "neg": 0,
-          "drop": 75,
-          "total": 75
+          "n": 25,
+          "mean": -1.162237047467913,
+          "median": -1.0312461853027344,
+          "stdev": 1.5466525353458231,
+          "min": -5.185955047607422,
+          "max": 1.2946141560872384
         },
         "with_cot": {
-          "pos": 0,
-          "neg": 0,
-          "drop": 75,
-          "total": 75
+          "n": 25,
+          "mean": -0.27328874678838816,
+          "median": 0.009479522705078125,
+          "stdev": 1.9091685000153407,
+          "min": -4.898433685302734,
+          "max": 2.7687129974365234
+        }
+      },
+      "RB": {
+        "no_cot": {
+          "n": 25,
+          "mean": -0.5789417048863,
+          "median": -0.10275840759277344,
+          "stdev": 1.7650625460904037,
+          "min": -5.046842575073242,
+          "max": 1.937469482421875
+        },
+        "with_cot": {
+          "n": 25,
+          "mean": -0.7467716616675966,
+          "median": -0.6467323303222656,
+          "stdev": 1.2911924716496608,
+          "min": -5.062496185302734,
+          "max": 1.049578348795574
+        }
+      },
+      "RD": {
+        "no_cot": {
+          "n": 25,
+          "mean": 0.012151020595005769,
+          "median": -0.07334136962890625,
+          "stdev": 1.115952327798477,
+          "min": -2.073629379272461,
+          "max": 2.2656326293945312
+        },
+        "with_cot": {
+          "n": 25,
+          "mean": 1.3237020111083984,
+          "median": 1.4449869791666679,
+          "stdev": 1.5407967562203198,
+          "min": -1.1133066813151054,
+          "max": 5.957927703857422
         }
       }
     },
     "linear": {
-      "probe_type": "linear",
-      "total": 18,
+      "total": 54,
       "skipped": 18,
-      "kept": 0,
-      "top": []
+      "kept": 36,
+      "probe_type": "linear",
+      "top": [
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "KD",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 24,
+          "class_counts": [
+            1,
+            23
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": null,
+          "best_accuracy": null,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "KD",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 24,
+          "class_counts": [
+            1,
+            23
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": null,
+          "best_accuracy": null,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "RB",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 23,
+          "class_counts": [
+            8,
+            15
+          ],
+          "best_layer": 18,
+          "best_balanced_accuracy": 0.8166666666666668,
+          "best_accuracy": 0.86,
+          "confusion_matrix": [
+            [
+              6,
+              2
+            ],
+            [
+              1,
+              14
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "RP",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 24,
+          "class_counts": [
+            12,
+            12
+          ],
+          "best_layer": 35,
+          "best_balanced_accuracy": 0.8166666666666667,
+          "best_accuracy": 0.8400000000000001,
+          "confusion_matrix": [
+            [
+              10,
+              2
+            ],
+            [
+              2,
+              10
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "RB",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 23,
+          "class_counts": [
+            8,
+            15
+          ],
+          "best_layer": 15,
+          "best_balanced_accuracy": 0.7833333333333333,
+          "best_accuracy": 0.8099999999999999,
+          "confusion_matrix": [
+            [
+              6,
+              2
+            ],
+            [
+              2,
+              13
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "KP",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 23,
+          "class_counts": [
+            17,
+            6
+          ],
+          "best_layer": 36,
+          "best_balanced_accuracy": 0.775,
+          "best_accuracy": 0.8400000000000001,
+          "confusion_matrix": [
+            [
+              16,
+              1
+            ],
+            [
+              3,
+              3
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "RB",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 22,
+          "class_counts": [
+            9,
+            13
+          ],
+          "best_layer": 30,
+          "best_balanced_accuracy": 0.7666666666666666,
+          "best_accuracy": 0.74,
+          "confusion_matrix": [
+            [
+              7,
+              2
+            ],
+            [
+              4,
+              9
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "RD",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 24,
+          "class_counts": [
+            12,
+            12
+          ],
+          "best_layer": 26,
+          "best_balanced_accuracy": 0.75,
+          "best_accuracy": 0.75,
+          "confusion_matrix": [
+            [
+              10,
+              2
+            ],
+            [
+              4,
+              8
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "CP",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 23,
+          "class_counts": [
+            10,
+            13
+          ],
+          "best_layer": 35,
+          "best_balanced_accuracy": 0.75,
+          "best_accuracy": 0.74,
+          "confusion_matrix": [
+            [
+              7,
+              3
+            ],
+            [
+              3,
+              10
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "CP",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 23,
+          "class_counts": [
+            10,
+            13
+          ],
+          "best_layer": 11,
+          "best_balanced_accuracy": 0.75,
+          "best_accuracy": 0.74,
+          "confusion_matrix": [
+            [
+              8,
+              2
+            ],
+            [
+              4,
+              9
+            ]
+          ]
+        }
+      ]
     },
     "lora": {
-      "probe_type": "lora",
-      "total": 18,
+      "total": 54,
       "skipped": 18,
-      "kept": 0,
-      "top": []
+      "kept": 36,
+      "probe_type": "lora",
+      "top": [
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "KD",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 24,
+          "class_counts": [
+            1,
+            23
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": null,
+          "best_accuracy": null,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "RB",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 22,
+          "class_counts": [
+            9,
+            13
+          ],
+          "best_layer": 1,
+          "best_balanced_accuracy": 0.7833333333333333,
+          "best_accuracy": 0.78,
+          "confusion_matrix": [
+            [
+              7,
+              2
+            ],
+            [
+              3,
+              10
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "KD",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 24,
+          "class_counts": [
+            1,
+            23
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": null,
+          "best_accuracy": null,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "CP",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 23,
+          "class_counts": [
+            10,
+            13
+          ],
+          "best_layer": 36,
+          "best_balanced_accuracy": 0.8,
+          "best_accuracy": 0.79,
+          "confusion_matrix": [
+            [
+              8,
+              2
+            ],
+            [
+              3,
+              10
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "RB",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 23,
+          "class_counts": [
+            8,
+            15
+          ],
+          "best_layer": 15,
+          "best_balanced_accuracy": 0.7833333333333333,
+          "best_accuracy": 0.8099999999999999,
+          "confusion_matrix": [
+            [
+              6,
+              2
+            ],
+            [
+              2,
+              13
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "RP",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 24,
+          "class_counts": [
+            12,
+            12
+          ],
+          "best_layer": 20,
+          "best_balanced_accuracy": 0.7833333333333333,
+          "best_accuracy": 0.8,
+          "confusion_matrix": [
+            [
+              9,
+              3
+            ],
+            [
+              2,
+              10
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "CP",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 23,
+          "class_counts": [
+            10,
+            13
+          ],
+          "best_layer": 1,
+          "best_balanced_accuracy": 0.7833333333333333,
+          "best_accuracy": 0.78,
+          "confusion_matrix": [
+            [
+              7,
+              3
+            ],
+            [
+              2,
+              11
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "RB",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 23,
+          "class_counts": [
+            8,
+            15
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 0.7666666666666667,
+          "best_accuracy": 0.82,
+          "confusion_matrix": [
+            [
+              5,
+              3
+            ],
+            [
+              1,
+              14
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "KP",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 23,
+          "class_counts": [
+            17,
+            6
+          ],
+          "best_layer": 10,
+          "best_balanced_accuracy": 0.7416666666666667,
+          "best_accuracy": 0.78,
+          "confusion_matrix": [
+            [
+              15,
+              2
+            ],
+            [
+              3,
+              3
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "KB",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 22,
+          "class_counts": [
+            10,
+            12
+          ],
+          "best_layer": 4,
+          "best_balanced_accuracy": 0.7333333333333333,
+          "best_accuracy": 0.73,
+          "confusion_matrix": [
+            [
+              7,
+              3
+            ],
+            [
+              3,
+              9
+            ]
+          ]
+        }
+      ]
     }
   },
   "geometry": {
