@@ -448,13 +448,22 @@ def fig_capacity_matrix(summary: dict, out: Path,
 def fig_capacity_matrix_grid(summaries: list[dict], out: Path,
                              judge: str = "zscore", cot: str = "no_cot",
                              pool: str = "last", metric: str = "delta") -> None:
-    """2x2 grid of capacity matrices, one per model."""
+    """Grid of capacity matrices, one per model.
+
+    Layout adapts: 2-4 models in a single row, 5-9 in 3xN, 10-16 in 4xN,
+    16+ falls back to columns of 4. Each subplot is wider than tall to
+    match the 3x9 matrix shape.
+    """
     n = len(summaries)
     if n == 0:
         return
-    rows = 2 if n > 2 else 1
-    cols = (n + rows - 1) // rows
-    fig, axes = plt.subplots(rows, cols, figsize=(cols * 6.5, rows * 3.0),
+    if n <= 4:
+        rows, cols = 1, n
+    elif n <= 9:
+        rows = 3; cols = (n + rows - 1) // rows
+    else:
+        rows = 4; cols = (n + rows - 1) // rows
+    fig, axes = plt.subplots(rows, cols, figsize=(cols * 5.0, rows * 2.6),
                              squeeze=False)
     vmin, vmax, cbar_label = _matrix_color_range(metric)
     last_im = None
@@ -484,40 +493,65 @@ def fig_capacity_matrix_grid(summaries: list[dict], out: Path,
 
 def fig_capacity_scaling_lines(summaries: list[dict], out: Path,
                                judge: str = "zscore", cot: str = "no_cot",
-                               pool: str = "last") -> None:
-    """One axis, x=model size, y=balanced accuracy, one line per atomic
-    capability. Base / instruct distinguished by marker."""
-    fig, ax = plt.subplots(figsize=(8, 5))
-    cap_to_color = dict(zip(MATRIX_CAPS, plt.cm.tab10(np.linspace(0, 1, len(MATRIX_CAPS)))))
-    plotted_any = False
-    for cap in MATRIX_CAPS:
-        for is_base, marker in [(False, "o"), (True, "s")]:
+                               pool: str = "last", metric: str = "delta") -> None:
+    """3x3 grid of scaling subplots, one per atomic capability.
+
+    x = model size (B params, log), y = signal magnitude. Two lines per
+    panel: instruct (solid o) and base (dashed s). The metric defaults to
+    |Δlogprob/token| (always present); pass metric="bacc" to read the
+    sparse top-N probe accuracy instead.
+    """
+    fig, axes = plt.subplots(3, 3, figsize=(11, 9), sharex=True)
+    if metric == "bacc":
+        ymin, ymax = 0.4, 1.05
+        ylabel = "balanced accuracy"
+        chance = 0.5
+    else:
+        ymin, ymax = 0.0, 3.5
+        ylabel = "|Δlogprob/token|"
+        chance = None
+
+    for ax, cap in zip(axes.flat, MATRIX_CAPS):
+        plotted = False
+        for is_base, marker, style, label in [
+            (False, "o", "-", "instruct"),
+            (True, "s", "--", "base"),
+        ]:
             xs, ys = [], []
             for s in summaries:
                 name = _model_name(s)
                 size = _model_size(name)
                 if size is None: continue
                 if ("base" in name.lower()) != is_base: continue
-                v = _bacc_lookup(s, cap, judge=judge, cot=cot, pool=pool)
+                if metric == "bacc":
+                    v = _bacc_lookup(s, cap, judge=judge, cot=cot, pool=pool)
+                else:
+                    v = _delta_signal_lookup(s, cap, cot=cot)
                 if v is None: continue
                 xs.append(size); ys.append(v)
             if xs:
                 order = np.argsort(xs)
                 xs = np.array(xs)[order]; ys = np.array(ys)[order]
-                style = "-" if not is_base else "--"
-                ax.plot(xs, ys, marker=marker, color=cap_to_color[cap],
-                        linestyle=style, markersize=6, linewidth=1.2,
-                        label=f"{cap} ({'base' if is_base else 'inst'})")
-                plotted_any = True
-    if not plotted_any:
-        plt.close(fig); return
-    ax.set_xscale("log")
-    ax.axhline(0.5, color="gray", ls="--", lw=0.6, label="chance")
-    ax.set_xlabel("model size (B params, log scale)")
-    ax.set_ylabel("balanced accuracy")
-    ax.set_title(f"capability scaling ({judge}, {cot}, {pool})", fontsize=10)
-    ax.legend(loc="center left", bbox_to_anchor=(1.01, 0.5), fontsize=7, ncol=1)
-    fig.tight_layout()
+                ax.plot(xs, ys, marker=marker, linestyle=style,
+                        markersize=5, linewidth=1.2, label=label)
+                plotted = True
+        if chance is not None:
+            ax.axhline(chance, color="gray", ls=":", lw=0.6)
+        ax.set_xscale("log")
+        ax.set_ylim(ymin, ymax)
+        ax.set_title(cap, fontsize=10)
+        ax.grid(True, alpha=0.3)
+    for ax in axes[-1, :]:
+        ax.set_xlabel("size (B)")
+    for ax in axes[:, 0]:
+        ax.set_ylabel(ylabel)
+    handles, labels = axes[0, 0].get_legend_handles_labels()
+    if handles:
+        fig.legend(handles, labels, loc="upper right", ncol=2,
+                   bbox_to_anchor=(0.99, 0.99), fontsize=9)
+    title_metric = "Δlogprob magnitude" if metric == "delta" else f"probe bacc ({judge})"
+    fig.suptitle(f"Atomic-capability scaling — {title_metric}", fontsize=11)
+    fig.tight_layout(rect=[0, 0, 1, 0.97])
     fig.savefig(out, dpi=140, bbox_inches="tight")
     plt.close(fig)
 
