@@ -31,6 +31,51 @@ DTYPE="${DTYPE:-float16}"
 COT_STATES="${COT_STATES:-no_cot with_cot}"
 POOLS="${POOLS:-last mean}"
 
+# Optional: keep GPUs occupied between runs via GrabGPU.
+# Per request: after each probing run, start gg; before each probing run, kill gg.
+GRABGPU_DIR="${GRABGPU_DIR:-/opt/tiger/ouro2/GrabGPU}"
+GRABGPU_ARGS="${GRABGPU_ARGS:-76 1024 0,1,2,3,4,5,6,7}"
+GRABGPU_ENABLE="${GRABGPU_ENABLE:-1}"
+
+kill_grabgpu() {
+  if [[ "$GRABGPU_ENABLE" != "1" ]]; then
+    return 0
+  fi
+  # 1) kill previously recorded pid (if any)
+  if [[ -f "$OUT/gg.pid" ]]; then
+    local pid
+    pid="$(cat "$OUT/gg.pid" 2>/dev/null || true)"
+    if [[ -n "${pid:-}" ]] && kill -0 "$pid" 2>/dev/null; then
+      echo "[GrabGPU] killing previous gg pid=$pid"
+      kill "$pid" 2>/dev/null || true
+      # give it a moment, then hard-kill if needed
+      sleep 1
+      kill -9 "$pid" 2>/dev/null || true
+    fi
+  fi
+  # 2) best-effort cleanup: kill any gg started from GRABGPU_DIR by current user
+  if [[ -x "$GRABGPU_DIR/gg" ]]; then
+    if pgrep -u "${USER:-$(id -un)}" -f "$GRABGPU_DIR/gg" >/dev/null 2>&1; then
+      echo "[GrabGPU] pkill gg under $GRABGPU_DIR"
+      pkill -u "${USER:-$(id -un)}" -f "$GRABGPU_DIR/gg" || true
+    fi
+  fi
+}
+
+start_grabgpu() {
+  if [[ "$GRABGPU_ENABLE" != "1" ]]; then
+    return 0
+  fi
+  if [[ ! -x "$GRABGPU_DIR/gg" ]]; then
+    echo "[GrabGPU] skip: $GRABGPU_DIR/gg not found/executable" >&2
+    return 0
+  fi
+  echo "[GrabGPU] starting: (cd $GRABGPU_DIR && ./gg $GRABGPU_ARGS)"
+  # Do not block the probing script.
+  (cd "$GRABGPU_DIR" && nohup ./gg $GRABGPU_ARGS >/tmp/gg_${RUN_NAME}.log 2>&1 & echo $! > "$OUT/gg.pid")
+  echo "[GrabGPU] pid=$(cat "$OUT/gg.pid" 2>/dev/null || true) log=/tmp/gg_${RUN_NAME}.log"
+}
+
 mkdir -p "$OUT"
 echo "=== probing pipeline ==="
 echo "model:    $MODEL"
@@ -42,6 +87,7 @@ echo "pools:    $POOLS"
 echo
 
 echo "[1/4] extracting hidden states..."
+kill_grabgpu
 python -m probing_mvp.extract_hidden_states \
   --model_name "$MODEL" \
   --dataset "$DATASET" \
@@ -85,3 +131,5 @@ echo
 echo "=== done ==="
 echo "results in $OUT/"
 ls -la "$OUT" | sed 's/^/  /'
+
+start_grabgpu
