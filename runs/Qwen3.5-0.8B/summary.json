@@ -1,7 +1,7 @@
 {
   "model_path": "/opt/tiger/ouro2/Qwen3.5-0.8B",
   "run_dir": "runs/Qwen3.5-0.8B",
-  "generated_at": "2026-05-07T13:57:36+08:00",
+  "generated_at": "2026-05-07T17:06:35+08:00",
   "task_family": {
     "linear": [
       {
@@ -402,6 +402,50 @@
           }
         }
       },
+      "CD": {
+        "binary": {
+          "no_cot": {
+            "pos": 8,
+            "neg": 6,
+            "drop": 11,
+            "total": 25
+          },
+          "with_cot": {
+            "pos": 9,
+            "neg": 4,
+            "drop": 12,
+            "total": 25
+          }
+        },
+        "delta": {
+          "no_cot": {
+            "pos": 8,
+            "neg": 16,
+            "drop": 51,
+            "total": 75
+          },
+          "with_cot": {
+            "pos": 12,
+            "neg": 10,
+            "drop": 53,
+            "total": 75
+          }
+        },
+        "zscore": {
+          "no_cot": {
+            "pos": 4,
+            "neg": 2,
+            "drop": 69,
+            "total": 75
+          },
+          "with_cot": {
+            "pos": 4,
+            "neg": 4,
+            "drop": 67,
+            "total": 75
+          }
+        }
+      },
       "CB-control": {
         "binary": {
           "no_cot": {
@@ -746,6 +790,24 @@
           "stdev": 1.575790147726504,
           "min": -5.065264701843262,
           "max": 1.3476516157388687
+        }
+      },
+      "CD": {
+        "no_cot": {
+          "n": 25,
+          "mean": 0.3098801370559571,
+          "median": 0.38627052307128906,
+          "stdev": 0.715468158082285,
+          "min": -1.1638264656066895,
+          "max": 1.968043327331543
+        },
+        "with_cot": {
+          "n": 25,
+          "mean": -0.19461662199969093,
+          "median": -0.08727368712425232,
+          "stdev": 0.7789451498125166,
+          "min": -1.981454849243164,
+          "max": 0.7925081253051758
         }
       },
       "CB-control": {
@@ -6376,6 +6438,74 @@
             "lp_mean": -2.388167889788747,
             "top1_token": "To",
             "top1_lp": -0.6676628589630127,
+            "gold_first_token": "1"
+          }
+        ]
+      }
+    },
+    "wrong_bridge": {
+      "no_cot": {
+        "n": 50,
+        "top1_match_rate": 0.0,
+        "top5_match_rate": 0.02,
+        "median_rank": 796,
+        "max_rank": 2228,
+        "examples_top1_mismatch_with_high_lp": [
+          {
+            "family_id": "hybrid_024",
+            "rank": 39,
+            "lp_mean": -2.7135872580111027,
+            "top1_token": "Facebook",
+            "top1_lp": -1.121357798576355,
+            "gold_first_token": "1"
+          },
+          {
+            "family_id": "hybrid_019",
+            "rank": 62,
+            "lp_mean": -2.941091138869524,
+            "top1_token": "Paul",
+            "top1_lp": -0.45482900738716125,
+            "gold_first_token": "1"
+          },
+          {
+            "family_id": "hybrid_014",
+            "rank": 1,
+            "lp_mean": -3.1165602318942547,
+            "top1_token": "The",
+            "top1_lp": -0.6428148746490479,
+            "gold_first_token": "1"
+          }
+        ]
+      },
+      "with_cot": {
+        "n": 50,
+        "top1_match_rate": 0.0,
+        "top5_match_rate": 0.02,
+        "median_rank": 929,
+        "max_rank": 1784,
+        "examples_top1_mismatch_with_high_lp": [
+          {
+            "family_id": "hybrid_024",
+            "rank": 18,
+            "lp_mean": -2.621965065598488,
+            "top1_token": "The",
+            "top1_lp": -1.2462303638458252,
+            "gold_first_token": "1"
+          },
+          {
+            "family_id": "hybrid_023",
+            "rank": 24,
+            "lp_mean": -2.668016105890274,
+            "top1_token": "The",
+            "top1_lp": -1.0767649412155151,
+            "gold_first_token": "1"
+          },
+          {
+            "family_id": "hybrid_014",
+            "rank": 1,
+            "lp_mean": -2.89811467891559,
+            "top1_token": "The",
+            "top1_lp": -0.7711900472640991,
             "gold_first_token": "1"
           }
         ]

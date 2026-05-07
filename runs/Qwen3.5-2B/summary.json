@@ -1,7 +1,7 @@
 {
   "model_path": "/opt/tiger/ouro2/Qwen3.5-2B",
   "run_dir": "runs/Qwen3.5-2B",
-  "generated_at": "2026-05-07T14:38:44+08:00",
+  "generated_at": "2026-05-07T17:06:36+08:00",
   "task_family": {
     "linear": [
       {
@@ -707,6 +707,36 @@
             "neg": 0,
             "drop": 25,
             "total": 25
+          }
+        }
+      },
+      "CD": {
+        "delta": {
+          "no_cot": {
+            "pos": 0,
+            "neg": 0,
+            "drop": 75,
+            "total": 75
+          },
+          "with_cot": {
+            "pos": 0,
+            "neg": 0,
+            "drop": 75,
+            "total": 75
+          }
+        },
+        "zscore": {
+          "no_cot": {
+            "pos": 0,
+            "neg": 0,
+            "drop": 75,
+            "total": 75
+          },
+          "with_cot": {
+            "pos": 0,
+            "neg": 0,
+            "drop": 75,
+            "total": 75
           }
         }
       }

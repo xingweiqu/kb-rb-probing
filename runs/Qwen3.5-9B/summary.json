@@ -1,7 +1,7 @@
 {
   "model_path": "/opt/tiger/ouro2/Qwen3.5-9B",
   "run_dir": "runs/Qwen3.5-9B",
-  "generated_at": "2026-05-07T14:10:14+08:00",
+  "generated_at": "2026-05-07T17:55:15+08:00",
   "task_family": {
     "linear": [
       {
@@ -402,6 +402,50 @@
           }
         }
       },
+      "CD": {
+        "binary": {
+          "no_cot": {
+            "pos": 0,
+            "neg": 0,
+            "drop": 25,
+            "total": 25
+          },
+          "with_cot": {
+            "pos": 0,
+            "neg": 0,
+            "drop": 25,
+            "total": 25
+          }
+        },
+        "delta": {
+          "no_cot": {
+            "pos": 21,
+            "neg": 3,
+            "drop": 51,
+            "total": 75
+          },
+          "with_cot": {
+            "pos": 21,
+            "neg": 3,
+            "drop": 51,
+            "total": 75
+          }
+        },
+        "zscore": {
+          "no_cot": {
+            "pos": 3,
+            "neg": 5,
+            "drop": 67,
+            "total": 75
+          },
+          "with_cot": {
+            "pos": 6,
+            "neg": 4,
+            "drop": 65,
+            "total": 75
+          }
+        }
+      },
       "CB-control": {
         "binary": {
           "no_cot": {
@@ -748,6 +792,24 @@
           "max": 2.6192474365234375
         }
       },
+      "CD": {
+        "no_cot": {
+          "n": 25,
+          "mean": -1.2684359016269446,
+          "median": -1.3578127101063728,
+          "stdev": 1.1536310902483513,
+          "min": -3.3265242651104927,
+          "max": 1.7617568969726562
+        },
+        "with_cot": {
+          "n": 25,
+          "mean": -0.9132836753825347,
+          "median": -0.7842585444450378,
+          "stdev": 0.8349872869716153,
+          "min": -2.2697594165802,
+          "max": 0.9519369602203369
+        }
+      },
       "CB-control": {
         "no_cot": {
           "n": 25,
@@ -876,9 +938,9 @@
       }
     },
     "linear": {
-      "total": 72,
+      "total": 80,
       "skipped": 14,
-      "kept": 58,
+      "kept": 66,
       "probe_type": "linear",
       "top": [
         {
@@ -1483,6 +1545,32 @@
           "probe_type": null,
           "judge": "delta",
           "rank": null,
+          "capability": "CD",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 24,
+          "class_counts": [
+            3,
+            21
+          ],
+          "best_layer": 16,
+          "best_balanced_accuracy": 0.7380952380952381,
+          "best_accuracy": 0.7916666666666666,
+          "confusion_matrix": [
+            [
+              2,
+              1
+            ],
+            [
+              4,
+              17
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
           "capability": "RP",
           "cot_state": "no_cot",
           "pool": "mean",
@@ -1535,6 +1623,32 @@
           "probe_type": null,
           "judge": "delta",
           "rank": null,
+          "capability": "CD",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 24,
+          "class_counts": [
+            3,
+            21
+          ],
+          "best_layer": 2,
+          "best_balanced_accuracy": 0.7142857142857144,
+          "best_accuracy": 0.75,
+          "confusion_matrix": [
+            [
+              2,
+              1
+            ],
+            [
+              5,
+              16
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
           "capability": "RP",
           "cot_state": "with_cot",
           "pool": "mean",
@@ -1579,6 +1693,32 @@
             ],
             [
               2,
+              3
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "zscore",
+          "rank": null,
+          "capability": "CD",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 10,
+          "class_counts": [
+            4,
+            6
+          ],
+          "best_layer": 2,
+          "best_balanced_accuracy": 0.6875,
+          "best_accuracy": 0.6666666666666666,
+          "confusion_matrix": [
+            [
+              3,
+              1
+            ],
+            [
+              3,
               3
             ]
           ]
@@ -1949,6 +2089,32 @@
         },
         {
           "probe_type": null,
+          "judge": "zscore",
+          "rank": null,
+          "capability": "CD",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 8,
+          "class_counts": [
+            5,
+            3
+          ],
+          "best_layer": 5,
+          "best_balanced_accuracy": 0.5833333333333334,
+          "best_accuracy": 0.611111111111111,
+          "confusion_matrix": [
+            [
+              3,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
           "judge": "delta",
           "rank": null,
           "capability": "CP",
@@ -1970,6 +2136,32 @@
             [
               6,
               3
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "zscore",
+          "rank": null,
+          "capability": "CD",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 8,
+          "class_counts": [
+            5,
+            3
+          ],
+          "best_layer": 25,
+          "best_balanced_accuracy": 0.5833333333333334,
+          "best_accuracy": 0.611111111111111,
+          "confusion_matrix": [
+            [
+              4,
+              1
+            ],
+            [
+              2,
+              1
             ]
           ]
         },
@@ -2131,6 +2323,32 @@
         },
         {
           "probe_type": null,
+          "judge": "zscore",
+          "rank": null,
+          "capability": "CD",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 10,
+          "class_counts": [
+            4,
+            6
+          ],
+          "best_layer": 2,
+          "best_balanced_accuracy": 0.5625,
+          "best_accuracy": 0.625,
+          "confusion_matrix": [
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              4
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
           "judge": "delta",
           "rank": null,
           "capability": "CB",
@@ -2177,6 +2395,32 @@
             ],
             [
               8,
+              0
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "CD",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 24,
+          "class_counts": [
+            3,
+            21
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 0.5,
+          "best_accuracy": 0.125,
+          "confusion_matrix": [
+            [
+              3,
+              0
+            ],
+            [
+              21,
               0
             ]
           ]
@@ -2256,6 +2500,32 @@
             [
               4,
               0
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "CD",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 24,
+          "class_counts": [
+            3,
+            21
+          ],
+          "best_layer": 27,
+          "best_balanced_accuracy": 0.4761904761904762,
+          "best_accuracy": 0.8333333333333334,
+          "confusion_matrix": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              20
             ]
           ]
         },
@@ -2602,9 +2872,9 @@
       ]
     },
     "lora": {
-      "total": 72,
+      "total": 80,
       "skipped": 14,
-      "kept": 58,
+      "kept": 66,
       "probe_type": "lora",
       "top": [
         {
@@ -3389,6 +3659,32 @@
         },
         {
           "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "CD",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 8,
+          "class_counts": [
+            5,
+            3
+          ],
+          "best_layer": 5,
+          "best_balanced_accuracy": 0.6666666666666666,
+          "best_accuracy": 0.7222222222222222,
+          "confusion_matrix": [
+            [
+              4,
+              1
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
           "judge": "delta",
           "rank": 16,
           "capability": "RP",
@@ -3462,6 +3758,32 @@
             [
               4,
               5
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "CD",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 24,
+          "class_counts": [
+            3,
+            21
+          ],
+          "best_layer": 24,
+          "best_balanced_accuracy": 0.6428571428571429,
+          "best_accuracy": 0.875,
+          "confusion_matrix": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              20
             ]
           ]
         },
@@ -3547,6 +3869,32 @@
           "probe_type": "lora",
           "judge": "delta",
           "rank": 16,
+          "capability": "CD",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 24,
+          "class_counts": [
+            3,
+            21
+          ],
+          "best_layer": 2,
+          "best_balanced_accuracy": 0.6190476190476191,
+          "best_accuracy": 0.8333333333333334,
+          "confusion_matrix": [
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              19
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
           "capability": "CP",
           "cot_state": "no_cot",
           "pool": "last",
@@ -3618,6 +3966,32 @@
             [
               3,
               2
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "CD",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 8,
+          "class_counts": [
+            5,
+            3
+          ],
+          "best_layer": 30,
+          "best_balanced_accuracy": 0.5833333333333334,
+          "best_accuracy": 0.611111111111111,
+          "confusion_matrix": [
+            [
+              4,
+              1
+            ],
+            [
+              2,
+              1
             ]
           ]
         },
@@ -3937,6 +4311,32 @@
           "probe_type": "lora",
           "judge": "delta",
           "rank": 16,
+          "capability": "CD",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 24,
+          "class_counts": [
+            3,
+            21
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 0.5,
+          "best_accuracy": 0.125,
+          "confusion_matrix": [
+            [
+              3,
+              0
+            ],
+            [
+              21,
+              0
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
           "capability": "RB",
           "cot_state": "with_cot",
           "pool": "last",
@@ -3989,6 +4389,32 @@
           "probe_type": "lora",
           "judge": "zscore",
           "rank": 16,
+          "capability": "CD",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 10,
+          "class_counts": [
+            4,
+            6
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 0.5,
+          "best_accuracy": 0.41666666666666663,
+          "confusion_matrix": [
+            [
+              2,
+              2
+            ],
+            [
+              4,
+              2
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
           "capability": "CB",
           "cot_state": "with_cot",
           "pool": "mean",
@@ -4008,6 +4434,58 @@
             [
               3,
               1
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "CD",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 10,
+          "class_counts": [
+            4,
+            6
+          ],
+          "best_layer": 24,
+          "best_balanced_accuracy": 0.5,
+          "best_accuracy": 0.5416666666666666,
+          "confusion_matrix": [
+            [
+              2,
+              2
+            ],
+            [
+              3,
+              3
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "CD",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 24,
+          "class_counts": [
+            3,
+            21
+          ],
+          "best_layer": 6,
+          "best_balanced_accuracy": 0.4761904761904762,
+          "best_accuracy": 0.8333333333333334,
+          "confusion_matrix": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              20
             ]
           ]
         },
@@ -5028,6 +5506,74 @@
             "lp_mean": -5.362531679682434,
             "top1_token": "Thinking",
             "top1_lp": -0.020078271627426147,
+            "gold_first_token": "1"
+          }
+        ]
+      }
+    },
+    "wrong_bridge": {
+      "no_cot": {
+        "n": 50,
+        "top1_match_rate": 0.0,
+        "top5_match_rate": 0.0,
+        "median_rank": 2930,
+        "max_rank": 130039,
+        "examples_top1_mismatch_with_high_lp": [
+          {
+            "family_id": "hybrid_019",
+            "rank": 10,
+            "lp_mean": -5.603547155857086,
+            "top1_token": "Thinking",
+            "top1_lp": -0.0019461041083559394,
+            "gold_first_token": "1"
+          },
+          {
+            "family_id": "hybrid_024",
+            "rank": 10,
+            "lp_mean": -5.638219133019447,
+            "top1_token": "Thinking",
+            "top1_lp": -0.0007027302053757012,
+            "gold_first_token": "1"
+          },
+          {
+            "family_id": "hybrid_012",
+            "rank": 18,
+            "lp_mean": -6.2801676988601685,
+            "top1_token": "Thinking",
+            "top1_lp": -0.0007203606073744595,
+            "gold_first_token": "1"
+          }
+        ]
+      },
+      "with_cot": {
+        "n": 50,
+        "top1_match_rate": 0.0,
+        "top5_match_rate": 0.0,
+        "median_rank": 1676,
+        "max_rank": 52082,
+        "examples_top1_mismatch_with_high_lp": [
+          {
+            "family_id": "hybrid_019",
+            "rank": 23,
+            "lp_mean": -6.490381479263306,
+            "top1_token": "Thinking",
+            "top1_lp": -0.0037370147183537483,
+            "gold_first_token": "1"
+          },
+          {
+            "family_id": "hybrid_024",
+            "rank": 33,
+            "lp_mean": -6.565177321434021,
+            "top1_token": "Thinking",
+            "top1_lp": -0.003546260530129075,
+            "gold_first_token": "1"
+          },
+          {
+            "family_id": "hybrid_012",
+            "rank": 30,
+            "lp_mean": -6.714791357517242,
+            "top1_token": "Thinking",
+            "top1_lp": -0.002062100451439619,
             "gold_first_token": "1"
           }
         ]

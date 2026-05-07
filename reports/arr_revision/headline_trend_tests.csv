@@ -1,0 +1,5 @@
+name,capability,cot,a,b,delta,p_two,ci_low,ci_high,hypothesis
+KD growth: 8B-Base -> 8B-instruct,KD,no_cot,Qwen3-8B-Base,Qwen3-8B,+1.3979,0.0004,+0.5359,+2.3321,Δlogprob magnitude on Wrong-Claim variant grows from base to instruct at 8B
+CP decay: 0.6B-Base -> 8B-Base,CP,no_cot,Qwen3-0.6B-Base,Qwen3-8B-Base,-1.0247,0.0034,-1.6555,-0.3518,Bridge-Fact Gain magnitude shrinks with scale on base models
+RP instruct jump: 8B-Base -> 8B-instruct,RP,no_cot,Qwen3-8B-Base,Qwen3-8B,+0.7148,0.0090,+0.1854,+1.2999,Scaffold Gain magnitude grows from base to instruct at 8B
+CB recovery: 1.7B-Base -> 8B-instruct,CB,no_cot,Qwen3-1.7B-Base,Qwen3-8B,+0.6695,0.0064,+0.1944,+1.1536,Retrieval-Block Drop weakens with scale and instruct

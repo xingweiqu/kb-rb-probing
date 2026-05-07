@@ -1,7 +1,7 @@
 {
   "model_path": "/opt/tiger/ouro2/Qwen3-8B-Base",
   "run_dir": "runs/Qwen3-8B-Base",
-  "generated_at": "2026-05-07T11:54:52+08:00",
+  "generated_at": "2026-05-07T17:06:35+08:00",
   "task_family": {
     "linear": [
       {
@@ -402,6 +402,50 @@
           }
         }
       },
+      "CD": {
+        "binary": {
+          "no_cot": {
+            "pos": 7,
+            "neg": 15,
+            "drop": 3,
+            "total": 25
+          },
+          "with_cot": {
+            "pos": 6,
+            "neg": 16,
+            "drop": 3,
+            "total": 25
+          }
+        },
+        "delta": {
+          "no_cot": {
+            "pos": 24,
+            "neg": 1,
+            "drop": 50,
+            "total": 75
+          },
+          "with_cot": {
+            "pos": 18,
+            "neg": 7,
+            "drop": 50,
+            "total": 75
+          }
+        },
+        "zscore": {
+          "no_cot": {
+            "pos": 2,
+            "neg": 2,
+            "drop": 71,
+            "total": 75
+          },
+          "with_cot": {
+            "pos": 3,
+            "neg": 3,
+            "drop": 69,
+            "total": 75
+          }
+        }
+      },
       "CB-control": {
         "binary": {
           "no_cot": {
@@ -450,14 +494,14 @@
         "delta": {
           "no_cot": {
             "pos": 4,
-            "neg": 17,
-            "drop": 54,
+            "neg": 18,
+            "drop": 53,
             "total": 75
           },
           "with_cot": {
             "pos": 15,
-            "neg": 9,
-            "drop": 51,
+            "neg": 10,
+            "drop": 50,
             "total": 75
           }
         },
@@ -537,9 +581,9 @@
       "KB": {
         "delta": {
           "no_cot": {
-            "pos": 4,
+            "pos": 5,
             "neg": 16,
-            "drop": 55,
+            "drop": 54,
             "total": 75
           },
           "with_cot": {
@@ -715,163 +759,181 @@
       "CP": {
         "no_cot": {
           "n": 25,
-          "mean": 0.07276641605274442,
-          "median": 0.227128267288208,
-          "stdev": 1.5040411357360581,
-          "min": -5.171416878700256,
-          "max": 3.109751107171178
+          "mean": 0.06967965523820992,
+          "median": 0.22959136962890625,
+          "stdev": 1.5060904021888415,
+          "min": -5.213647484779358,
+          "max": 3.102640231139958
         },
         "with_cot": {
           "n": 25,
-          "mean": 0.6396320042380442,
-          "median": 0.5563327578129247,
-          "stdev": 1.245712757872177,
-          "min": -2.7118239402770996,
-          "max": 4.333778381347656
+          "mean": 0.6413024791441857,
+          "median": 0.5544563282746822,
+          "stdev": 1.245395516203734,
+          "min": -2.7012128829956055,
+          "max": 4.347043037414551
         }
       },
       "CB": {
         "no_cot": {
           "n": 25,
-          "mean": -0.686445005871666,
-          "median": -0.5439050006680191,
-          "stdev": 1.3408085459689625,
-          "min": -4.435960531234741,
-          "max": 1.5741701126098633
+          "mean": -0.6873478885235574,
+          "median": -0.5269916420802474,
+          "stdev": 1.337029368350146,
+          "min": -4.411635637283325,
+          "max": 1.5536212921142578
         },
         "with_cot": {
           "n": 25,
-          "mean": -0.31665297762770206,
-          "median": 0.028900240547955036,
-          "stdev": 1.1073162104176297,
-          "min": -2.57088565826416,
-          "max": 2.088757038116455
+          "mean": -0.3154375161662077,
+          "median": 0.03449705522507429,
+          "stdev": 1.1084563176487237,
+          "min": -2.5918145179748535,
+          "max": 2.084672451019287
+        }
+      },
+      "CD": {
+        "no_cot": {
+          "n": 25,
+          "mean": -1.5120705695666061,
+          "median": -1.4351712707430124,
+          "stdev": 1.0275981947964687,
+          "min": -5.433088421821594,
+          "max": 0.5168463815934956
+        },
+        "with_cot": {
+          "n": 25,
+          "mean": -0.6442904602596536,
+          "median": -0.6285341095644981,
+          "stdev": 1.1133286232522372,
+          "min": -2.7595295906066895,
+          "max": 1.6563262939453125
         }
       },
       "CB-control": {
         "no_cot": {
           "n": 25,
-          "mean": -1.7533855209496494,
-          "median": -1.453677475452423,
-          "stdev": 1.638008731732448,
-          "min": -6.617018461227417,
-          "max": 0.2425093650817871
+          "mean": -1.754601860935955,
+          "median": -1.4537490392103791,
+          "stdev": 1.6397440348456407,
+          "min": -6.621471166610718,
+          "max": 0.245133638381958
         },
         "with_cot": {
           "n": 25,
-          "mean": -1.1110174444165701,
-          "median": -0.9348559975624084,
-          "stdev": 1.1107389786827582,
-          "min": -3.709280490875244,
-          "max": 0.6541995815932751
+          "mean": -1.1108737977336471,
+          "median": -0.9434593915939331,
+          "stdev": 1.1118679719064826,
+          "min": -3.715465545654297,
+          "max": 0.6666939407587051
         }
       },
       "KP": {
         "no_cot": {
           "n": 25,
-          "mean": -0.5282386118701821,
-          "median": -0.4255486885085702,
-          "stdev": 0.9270608865254215,
-          "min": -2.327103614807129,
-          "max": 1.5253308936953545
+          "mean": -0.5263622267355691,
+          "median": -0.4156802138313651,
+          "stdev": 0.9289383719059741,
+          "min": -2.3196367025375366,
+          "max": 1.5482577309012413
         },
         "with_cot": {
           "n": 25,
-          "mean": 0.1768664373502806,
-          "median": 0.2108717174269259,
-          "stdev": 1.3171977234807446,
-          "min": -3.6867527961730957,
-          "max": 2.6958322525024414
+          "mean": 0.17664293090950894,
+          "median": 0.20327416178770363,
+          "stdev": 1.3174860352859017,
+          "min": -3.696645975112915,
+          "max": 2.7009007930755615
         }
       },
       "KD": {
         "no_cot": {
           "n": 25,
-          "mean": -0.9115136830984043,
-          "median": -0.764894837513566,
-          "stdev": 0.858611913973579,
-          "min": -2.6661133766174316,
-          "max": 0.5102876502089202
+          "mean": -0.9093817423810833,
+          "median": -0.7576052686199546,
+          "stdev": 0.8598124460057868,
+          "min": -2.67275333404541,
+          "max": 0.514220249047503
         },
         "with_cot": {
           "n": 25,
-          "mean": 0.014138797062105458,
-          "median": -0.08291465758035566,
-          "stdev": 1.3163048677385465,
-          "min": -3.4595537185668945,
-          "max": 2.592644453048706
+          "mean": 0.01495175605942494,
+          "median": -0.08384735758105943,
+          "stdev": 1.316257855804086,
+          "min": -3.4473209381103516,
+          "max": 2.594754219055176
         }
       },
       "KB": {
         "no_cot": {
           "n": 25,
-          "mean": 0.3879810961135248,
-          "median": 0.29068270325660706,
-          "stdev": 0.8930589104182676,
-          "min": -1.5239357948303223,
-          "max": 2.3548779487609863
+          "mean": 0.38848769523466653,
+          "median": 0.29509248910471797,
+          "stdev": 0.8930464558835969,
+          "min": -1.520124077796936,
+          "max": 2.349952220916748
         },
         "with_cot": {
           "n": 25,
-          "mean": 0.01971002218229808,
-          "median": -0.07819502552350355,
-          "stdev": 0.7560527015862845,
-          "min": -1.4398794593289495,
-          "max": 1.9140956401824951
+          "mean": 0.016393038399584062,
+          "median": -0.08473036259723199,
+          "stdev": 0.7545369261299123,
+          "min": -1.4304913100786507,
+          "max": 1.9200687408447266
         }
       },
       "RP": {
         "no_cot": {
           "n": 25,
-          "mean": 0.25450402532415906,
-          "median": 0.12205053369204188,
-          "stdev": 1.0642833843661712,
-          "min": -2.689975455403328,
-          "max": 2.389542579650879
+          "mean": 0.2599795042098101,
+          "median": 0.12420364220937108,
+          "stdev": 1.0724994361299376,
+          "min": -2.6963103264570236,
+          "max": 2.4030332565307617
         },
         "with_cot": {
           "n": 25,
-          "mean": 0.9857757555961697,
-          "median": 0.9305118024349215,
-          "stdev": 0.8431199255181497,
-          "min": -0.6008648624022803,
-          "max": 2.5527868270874023
+          "mean": 0.9892075361511005,
+          "median": 0.9319426119327547,
+          "stdev": 0.8451509693926633,
+          "min": -0.6022273252407708,
+          "max": 2.584787368774414
         }
       },
       "RB": {
         "no_cot": {
           "n": 25,
-          "mean": -0.8066358841250518,
-          "median": -0.7956295013427734,
-          "stdev": 0.9553828110247244,
-          "min": -3.009360432624817,
-          "max": 1.1258034706115723
+          "mean": -0.8078453243346441,
+          "median": -0.7985553741455078,
+          "stdev": 0.9579081219955741,
+          "min": -3.0248003005981445,
+          "max": 1.1324944496154785
         },
         "with_cot": {
           "n": 25,
-          "mean": -0.3265243792462917,
-          "median": -0.18886280059814453,
-          "stdev": 0.645814693847496,
-          "min": -1.999678373336792,
-          "max": 0.7717909812927246
+          "mean": -0.32545292830006,
+          "median": -0.1828913688659668,
+          "stdev": 0.6453163164610265,
+          "min": -1.9969046115875244,
+          "max": 0.7640933990478516
         }
       },
       "RD": {
         "no_cot": {
           "n": 25,
-          "mean": -0.6671959382078301,
-          "median": -0.6204464435577393,
-          "stdev": 0.4338783097291143,
-          "min": -1.5968287363648417,
-          "max": 0.2106611728668213
+          "mean": -0.6658006169434104,
+          "median": -0.600078821182251,
+          "stdev": 0.43387553139286944,
+          "min": -1.5995661839842794,
+          "max": 0.20348405838012695
         },
         "with_cot": {
           "n": 25,
-          "mean": -0.19148753279154854,
-          "median": -0.20995116730531027,
-          "stdev": 0.5154124116196879,
-          "min": -1.3110528935988743,
-          "max": 0.8794176578521729
+          "mean": -0.19179533382168132,
+          "median": -0.2080698013305664,
+          "stdev": 0.5163756577393924,
+          "min": -1.310265832891067,
+          "max": 0.8874950408935547
         }
       }
     },
@@ -1117,6 +1179,32 @@
         },
         {
           "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "RB",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 22,
+          "class_counts": [
+            4,
+            18
+          ],
+          "best_layer": 1,
+          "best_balanced_accuracy": 0.94375,
+          "best_accuracy": 0.9083333333333334,
+          "confusion_matrix": [
+            [
+              4,
+              0
+            ],
+            [
+              2,
+              16
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
           "judge": "binary",
           "rank": null,
           "capability": "KB",
@@ -1139,6 +1227,2440 @@
               0,
               2
             ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "CB",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 25,
+          "class_counts": [
+            6,
+            19
+          ],
+          "best_layer": 31,
+          "best_balanced_accuracy": 0.9,
+          "best_accuracy": 0.96,
+          "confusion_matrix": [
+            [
+              5,
+              1
+            ],
+            [
+              0,
+              19
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "zscore",
+          "rank": null,
+          "capability": "KP",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 7,
+          "class_counts": [
+            4,
+            3
+          ],
+          "best_layer": 1,
+          "best_balanced_accuracy": 0.8333333333333334,
+          "best_accuracy": 0.8888888888888888,
+          "confusion_matrix": [
+            [
+              4,
+              0
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "binary",
+          "rank": null,
+          "capability": "RP",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 7,
+          "class_counts": [
+            5,
+            2
+          ],
+          "best_layer": 1,
+          "best_balanced_accuracy": 0.8333333333333333,
+          "best_accuracy": 0.75,
+          "confusion_matrix": [
+            [
+              3,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "RP",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 21,
+          "class_counts": [
+            7,
+            14
+          ],
+          "best_layer": 30,
+          "best_balanced_accuracy": 0.8333333333333333,
+          "best_accuracy": 0.85,
+          "confusion_matrix": [
+            [
+              6,
+              1
+            ],
+            [
+              2,
+              12
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "CP",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 25,
+          "class_counts": [
+            8,
+            17
+          ],
+          "best_layer": 29,
+          "best_balanced_accuracy": 0.825,
+          "best_accuracy": 0.8400000000000001,
+          "confusion_matrix": [
+            [
+              5,
+              3
+            ],
+            [
+              1,
+              16
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "binary",
+          "rank": null,
+          "capability": "CP",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 21,
+          "class_counts": [
+            20,
+            1
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": null,
+          "best_accuracy": null,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "binary",
+          "rank": null,
+          "capability": "KD",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 25,
+          "class_counts": [
+            24,
+            1
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": null,
+          "best_accuracy": null,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "binary",
+          "rank": null,
+          "capability": "RP",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 7,
+          "class_counts": [
+            5,
+            2
+          ],
+          "best_layer": 13,
+          "best_balanced_accuracy": 1.0,
+          "best_accuracy": 1.0,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "CB-control",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 24,
+          "class_counts": [
+            1,
+            23
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": null,
+          "best_accuracy": null,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "RD",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 24,
+          "class_counts": [
+            1,
+            23
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": null,
+          "best_accuracy": null,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "zscore",
+          "rank": null,
+          "capability": "RB",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 7,
+          "class_counts": [
+            4,
+            3
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 1.0,
+          "best_accuracy": 1.0,
+          "confusion_matrix": [
+            [
+              4,
+              0
+            ],
+            [
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "zscore",
+          "rank": null,
+          "capability": "RP",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 6,
+          "class_counts": [
+            2,
+            4
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 1.0,
+          "best_accuracy": 1.0,
+          "confusion_matrix": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              4
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "RB",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 22,
+          "class_counts": [
+            4,
+            18
+          ],
+          "best_layer": 1,
+          "best_balanced_accuracy": 0.94375,
+          "best_accuracy": 0.9083333333333334,
+          "confusion_matrix": [
+            [
+              4,
+              0
+            ],
+            [
+              2,
+              16
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "binary",
+          "rank": null,
+          "capability": "RD",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 10,
+          "class_counts": [
+            3,
+            7
+          ],
+          "best_layer": 29,
+          "best_balanced_accuracy": 0.861111111111111,
+          "best_accuracy": 0.8055555555555555,
+          "confusion_matrix": [
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              5
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "zscore",
+          "rank": null,
+          "capability": "KB",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 8,
+          "class_counts": [
+            5,
+            3
+          ],
+          "best_layer": 1,
+          "best_balanced_accuracy": 0.8333333333333334,
+          "best_accuracy": 0.8888888888888888,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "zscore",
+          "rank": null,
+          "capability": "KD",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 7,
+          "class_counts": [
+            3,
+            4
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 0.8333333333333334,
+          "best_accuracy": 0.8888888888888888,
+          "confusion_matrix": [
+            [
+              2,
+              1
+            ],
+            [
+              0,
+              4
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "CP",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 25,
+          "class_counts": [
+            8,
+            17
+          ],
+          "best_layer": 1,
+          "best_balanced_accuracy": 0.7916666666666666,
+          "best_accuracy": 0.8,
+          "confusion_matrix": [
+            [
+              5,
+              3
+            ],
+            [
+              2,
+              15
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "RP",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 21,
+          "class_counts": [
+            7,
+            14
+          ],
+          "best_layer": 13,
+          "best_balanced_accuracy": 0.7833333333333333,
+          "best_accuracy": 0.8,
+          "confusion_matrix": [
+            [
+              5,
+              2
+            ],
+            [
+              2,
+              12
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "CB",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 25,
+          "class_counts": [
+            6,
+            19
+          ],
+          "best_layer": 26,
+          "best_balanced_accuracy": 0.75,
+          "best_accuracy": 0.8799999999999999,
+          "confusion_matrix": [
+            [
+              3,
+              3
+            ],
+            [
+              0,
+              19
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "zscore",
+          "rank": null,
+          "capability": "CB",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 7,
+          "class_counts": [
+            3,
+            4
+          ],
+          "best_layer": 2,
+          "best_balanced_accuracy": 0.75,
+          "best_accuracy": 0.7222222222222222,
+          "confusion_matrix": [
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              3
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "KD",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 25,
+          "class_counts": [
+            3,
+            22
+          ],
+          "best_layer": 1,
+          "best_balanced_accuracy": 0.7172619047619048,
+          "best_accuracy": 0.7592592592592592,
+          "confusion_matrix": [
+            [
+              2,
+              1
+            ],
+            [
+              5,
+              17
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "binary",
+          "rank": null,
+          "capability": "CB-control",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 22,
+          "class_counts": [
+            9,
+            13
+          ],
+          "best_layer": 27,
+          "best_balanced_accuracy": 0.7,
+          "best_accuracy": 0.6799999999999999,
+          "confusion_matrix": [
+            [
+              6,
+              3
+            ],
+            [
+              4,
+              9
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "binary",
+          "rank": null,
+          "capability": "RB",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 10,
+          "class_counts": [
+            2,
+            8
+          ],
+          "best_layer": 7,
+          "best_balanced_accuracy": 0.6875,
+          "best_accuracy": 0.8,
+          "confusion_matrix": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              7
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "binary",
+          "rank": null,
+          "capability": "CB-control",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 22,
+          "class_counts": [
+            9,
+            13
+          ],
+          "best_layer": 6,
+          "best_balanced_accuracy": 0.6833333333333333,
+          "best_accuracy": 0.6799999999999999,
+          "confusion_matrix": [
+            [
+              5,
+              4
+            ],
+            [
+              3,
+              10
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "zscore",
+          "rank": null,
+          "capability": "KB",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 8,
+          "class_counts": [
+            5,
+            3
+          ],
+          "best_layer": 1,
+          "best_balanced_accuracy": 0.6666666666666666,
+          "best_accuracy": 0.6666666666666666,
+          "confusion_matrix": [
+            [
+              3,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "KB",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 21,
+          "class_counts": [
+            16,
+            5
+          ],
+          "best_layer": 34,
+          "best_balanced_accuracy": 0.6666666666666666,
+          "best_accuracy": 0.8099999999999999,
+          "confusion_matrix": [
+            [
+              15,
+              1
+            ],
+            [
+              3,
+              2
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "zscore",
+          "rank": null,
+          "capability": "KP",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 7,
+          "class_counts": [
+            4,
+            3
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 0.6666666666666666,
+          "best_accuracy": 0.7222222222222222,
+          "confusion_matrix": [
+            [
+              4,
+              0
+            ],
+            [
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "KB",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 21,
+          "class_counts": [
+            16,
+            5
+          ],
+          "best_layer": 4,
+          "best_balanced_accuracy": 0.6333333333333333,
+          "best_accuracy": 0.75,
+          "confusion_matrix": [
+            [
+              14,
+              2
+            ],
+            [
+              3,
+              2
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "KP",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 22,
+          "class_counts": [
+            18,
+            4
+          ],
+          "best_layer": 7,
+          "best_balanced_accuracy": 0.625,
+          "best_accuracy": 0.8583333333333334,
+          "confusion_matrix": [
+            [
+              18,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "KP",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 22,
+          "class_counts": [
+            18,
+            4
+          ],
+          "best_layer": 19,
+          "best_balanced_accuracy": 0.625,
+          "best_accuracy": 0.8583333333333334,
+          "confusion_matrix": [
+            [
+              18,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "binary",
+          "rank": null,
+          "capability": "CB",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 22,
+          "class_counts": [
+            14,
+            8
+          ],
+          "best_layer": 8,
+          "best_balanced_accuracy": 0.5666666666666667,
+          "best_accuracy": 0.58,
+          "confusion_matrix": [
+            [
+              10,
+              4
+            ],
+            [
+              5,
+              3
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "binary",
+          "rank": null,
+          "capability": "CB",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 22,
+          "class_counts": [
+            14,
+            8
+          ],
+          "best_layer": 6,
+          "best_balanced_accuracy": 0.5666666666666667,
+          "best_accuracy": 0.6,
+          "confusion_matrix": [
+            [
+              10,
+              4
+            ],
+            [
+              5,
+              3
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "binary",
+          "rank": null,
+          "capability": "RB",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 10,
+          "class_counts": [
+            2,
+            8
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 0.5,
+          "best_accuracy": 0.2,
+          "confusion_matrix": [
+            [
+              2,
+              0
+            ],
+            [
+              8,
+              0
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "zscore",
+          "rank": null,
+          "capability": "RD",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 7,
+          "class_counts": [
+            3,
+            4
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 0.5,
+          "best_accuracy": 0.4444444444444444,
+          "confusion_matrix": [
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "binary",
+          "rank": null,
+          "capability": "KB",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 25,
+          "class_counts": [
+            23,
+            2
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 0.5,
+          "best_accuracy": 0.9198717948717949,
+          "confusion_matrix": [
+            [
+              23,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "KD",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 25,
+          "class_counts": [
+            3,
+            22
+          ],
+          "best_layer": 1,
+          "best_balanced_accuracy": 0.5,
+          "best_accuracy": 0.8796296296296297,
+          "confusion_matrix": [
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              22
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "zscore",
+          "rank": null,
+          "capability": "RD",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 7,
+          "class_counts": [
+            3,
+            4
+          ],
+          "best_layer": 3,
+          "best_balanced_accuracy": 0.5,
+          "best_accuracy": 0.4444444444444444,
+          "confusion_matrix": [
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": null,
+          "rank": null,
+          "capability": "KP",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "skipped": true,
+          "reason": "insufficient samples (n=24, classes=1)",
+          "n_samples": 24,
+          "class_counts": [
+            24,
+            0
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": null,
+          "rank": null,
+          "capability": "CB-control",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "skipped": true,
+          "reason": "insufficient samples (n=5, classes=2)",
+          "n_samples": 5,
+          "class_counts": [
+            2,
+            3
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": null,
+          "rank": null,
+          "capability": "CP",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "skipped": true,
+          "reason": "insufficient samples (n=5, classes=2)",
+          "n_samples": 5,
+          "class_counts": [
+            2,
+            3
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": null,
+          "rank": null,
+          "capability": "KP",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "skipped": true,
+          "reason": "insufficient samples (n=24, classes=1)",
+          "n_samples": 24,
+          "class_counts": [
+            24,
+            0
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": null,
+          "rank": null,
+          "capability": "CB-control",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "skipped": true,
+          "reason": "insufficient samples (n=5, classes=2)",
+          "n_samples": 5,
+          "class_counts": [
+            2,
+            3
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": null,
+          "rank": null,
+          "capability": "CP",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "skipped": true,
+          "reason": "insufficient samples (n=5, classes=2)",
+          "n_samples": 5,
+          "class_counts": [
+            2,
+            3
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "binary",
+          "rank": null,
+          "capability": "KP",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 22,
+          "class_counts": [
+            21,
+            1
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": null,
+          "best_accuracy": null,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "binary",
+          "rank": null,
+          "capability": "RB",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 8,
+          "class_counts": [
+            1,
+            7
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": null,
+          "best_accuracy": null,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "binary",
+          "rank": null,
+          "capability": "RD",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 8,
+          "class_counts": [
+            4,
+            4
+          ],
+          "best_layer": 1,
+          "best_balanced_accuracy": 1.0,
+          "best_accuracy": 1.0,
+          "confusion_matrix": [
+            [
+              4,
+              0
+            ],
+            [
+              0,
+              4
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "zscore",
+          "rank": null,
+          "capability": "CB-control",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 6,
+          "class_counts": [
+            3,
+            3
+          ],
+          "best_layer": 27,
+          "best_balanced_accuracy": 1.0,
+          "best_accuracy": 1.0,
+          "confusion_matrix": [
+            [
+              3,
+              0
+            ],
+            [
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "zscore",
+          "rank": null,
+          "capability": "CP",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 6,
+          "class_counts": [
+            3,
+            3
+          ],
+          "best_layer": 8,
+          "best_balanced_accuracy": 1.0,
+          "best_accuracy": 1.0,
+          "confusion_matrix": [
+            [
+              3,
+              0
+            ],
+            [
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "zscore",
+          "rank": null,
+          "capability": "KD",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 7,
+          "class_counts": [
+            4,
+            3
+          ],
+          "best_layer": 3,
+          "best_balanced_accuracy": 1.0,
+          "best_accuracy": 1.0,
+          "confusion_matrix": [
+            [
+              4,
+              0
+            ],
+            [
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "zscore",
+          "rank": null,
+          "capability": "KP",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 6,
+          "class_counts": [
+            2,
+            4
+          ],
+          "best_layer": 4,
+          "best_balanced_accuracy": 1.0,
+          "best_accuracy": 1.0,
+          "confusion_matrix": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              4
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "zscore",
+          "rank": null,
+          "capability": "RB",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 7,
+          "class_counts": [
+            5,
+            2
+          ],
+          "best_layer": 35,
+          "best_balanced_accuracy": 1.0,
+          "best_accuracy": 1.0,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "binary",
+          "rank": null,
+          "capability": "KP",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 22,
+          "class_counts": [
+            21,
+            1
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": null,
+          "best_accuracy": null,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "binary",
+          "rank": null,
+          "capability": "RB",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 8,
+          "class_counts": [
+            1,
+            7
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": null,
+          "best_accuracy": null,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "zscore",
+          "rank": null,
+          "capability": "CB-control",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 6,
+          "class_counts": [
+            3,
+            3
+          ],
+          "best_layer": 6,
+          "best_balanced_accuracy": 1.0,
+          "best_accuracy": 1.0,
+          "confusion_matrix": [
+            [
+              3,
+              0
+            ],
+            [
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "zscore",
+          "rank": null,
+          "capability": "CP",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 6,
+          "class_counts": [
+            3,
+            3
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 1.0,
+          "best_accuracy": 1.0,
+          "confusion_matrix": [
+            [
+              3,
+              0
+            ],
+            [
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "zscore",
+          "rank": null,
+          "capability": "KP",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 6,
+          "class_counts": [
+            2,
+            4
+          ],
+          "best_layer": 1,
+          "best_balanced_accuracy": 1.0,
+          "best_accuracy": 1.0,
+          "confusion_matrix": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              4
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "RB",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 20,
+          "class_counts": [
+            5,
+            15
+          ],
+          "best_layer": 2,
+          "best_balanced_accuracy": 0.9333333333333332,
+          "best_accuracy": 0.9,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              2,
+              13
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "binary",
+          "rank": null,
+          "capability": "KD",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 23,
+          "class_counts": [
+            21,
+            2
+          ],
+          "best_layer": 1,
+          "best_balanced_accuracy": 0.9295454545454546,
+          "best_accuracy": 0.8712121212121212,
+          "confusion_matrix": [
+            [
+              18,
+              3
+            ],
+            [
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "CP",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 23,
+          "class_counts": [
+            5,
+            18
+          ],
+          "best_layer": 11,
+          "best_balanced_accuracy": 0.875,
+          "best_accuracy": 0.9199999999999999,
+          "confusion_matrix": [
+            [
+              4,
+              1
+            ],
+            [
+              1,
+              17
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "binary",
+          "rank": null,
+          "capability": "RD",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 8,
+          "class_counts": [
+            4,
+            4
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 0.875,
+          "best_accuracy": 0.875,
+          "confusion_matrix": [
+            [
+              3,
+              1
+            ],
+            [
+              0,
+              4
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "zscore",
+          "rank": null,
+          "capability": "RD",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 9,
+          "class_counts": [
+            5,
+            4
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 0.875,
+          "best_accuracy": 0.9166666666666666,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              1,
+              3
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "KP",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 25,
+          "class_counts": [
+            10,
+            15
+          ],
+          "best_layer": 23,
+          "best_balanced_accuracy": 0.8666666666666666,
+          "best_accuracy": 0.8799999999999999,
+          "confusion_matrix": [
+            [
+              8,
+              2
+            ],
+            [
+              1,
+              14
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "CP",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 23,
+          "class_counts": [
+            5,
+            18
+          ],
+          "best_layer": 1,
+          "best_balanced_accuracy": 0.85,
+          "best_accuracy": 0.8800000000000001,
+          "confusion_matrix": [
+            [
+              4,
+              1
+            ],
+            [
+              2,
+              16
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "CB",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 22,
+          "class_counts": [
+            10,
+            12
+          ],
+          "best_layer": 29,
+          "best_balanced_accuracy": 0.8333333333333333,
+          "best_accuracy": 0.82,
+          "confusion_matrix": [
+            [
+              9,
+              1
+            ],
+            [
+              3,
+              9
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "zscore",
+          "rank": null,
+          "capability": "RD",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 9,
+          "class_counts": [
+            5,
+            4
+          ],
+          "best_layer": 6,
+          "best_balanced_accuracy": 0.8125,
+          "best_accuracy": 0.7916666666666666,
+          "confusion_matrix": [
+            [
+              4,
+              1
+            ],
+            [
+              1,
+              3
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "zscore",
+          "rank": null,
+          "capability": "RB",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 7,
+          "class_counts": [
+            5,
+            2
+          ],
+          "best_layer": 3,
+          "best_balanced_accuracy": 0.75,
+          "best_accuracy": 0.8333333333333333,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "RB",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 20,
+          "class_counts": [
+            5,
+            15
+          ],
+          "best_layer": 2,
+          "best_balanced_accuracy": 0.7333333333333333,
+          "best_accuracy": 0.8,
+          "confusion_matrix": [
+            [
+              3,
+              2
+            ],
+            [
+              2,
+              13
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "KP",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 25,
+          "class_counts": [
+            10,
+            15
+          ],
+          "best_layer": 11,
+          "best_balanced_accuracy": 0.7333333333333332,
+          "best_accuracy": 0.76,
+          "confusion_matrix": [
+            [
+              6,
+              4
+            ],
+            [
+              2,
+              13
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "binary",
+          "rank": null,
+          "capability": "CB",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 22,
+          "class_counts": [
+            8,
+            14
+          ],
+          "best_layer": 16,
+          "best_balanced_accuracy": 0.7,
+          "best_accuracy": 0.71,
+          "confusion_matrix": [
+            [
+              6,
+              2
+            ],
+            [
+              4,
+              10
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "CB",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 22,
+          "class_counts": [
+            10,
+            12
+          ],
+          "best_layer": 7,
+          "best_balanced_accuracy": 0.6833333333333333,
+          "best_accuracy": 0.6799999999999999,
+          "confusion_matrix": [
+            [
+              7,
+              3
+            ],
+            [
+              4,
+              8
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "RP",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 24,
+          "class_counts": [
+            2,
+            22
+          ],
+          "best_layer": 8,
+          "best_balanced_accuracy": 0.6818181818181819,
+          "best_accuracy": 0.8333333333333333,
+          "confusion_matrix": [
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              19
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "binary",
+          "rank": null,
+          "capability": "RP",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 7,
+          "class_counts": [
+            4,
+            3
+          ],
+          "best_layer": 2,
+          "best_balanced_accuracy": 0.6666666666666666,
+          "best_accuracy": 0.611111111111111,
+          "confusion_matrix": [
+            [
+              2,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "zscore",
+          "rank": null,
+          "capability": "CB",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 7,
+          "class_counts": [
+            3,
+            4
+          ],
+          "best_layer": 29,
+          "best_balanced_accuracy": 0.6666666666666666,
+          "best_accuracy": 0.611111111111111,
+          "confusion_matrix": [
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "zscore",
+          "rank": null,
+          "capability": "RP",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 9,
+          "class_counts": [
+            3,
+            6
+          ],
+          "best_layer": 1,
+          "best_balanced_accuracy": 0.6666666666666666,
+          "best_accuracy": 0.7777777777777777,
+          "confusion_matrix": [
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              6
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "binary",
+          "rank": null,
+          "capability": "CB",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 22,
+          "class_counts": [
+            8,
+            14
+          ],
+          "best_layer": 6,
+          "best_balanced_accuracy": 0.6666666666666666,
+          "best_accuracy": 0.72,
+          "confusion_matrix": [
+            [
+              5,
+              3
+            ],
+            [
+              3,
+              11
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "binary",
+          "rank": null,
+          "capability": "RP",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 7,
+          "class_counts": [
+            4,
+            3
+          ],
+          "best_layer": 7,
+          "best_balanced_accuracy": 0.6666666666666666,
+          "best_accuracy": 0.611111111111111,
+          "confusion_matrix": [
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "zscore",
+          "rank": null,
+          "capability": "KD",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 7,
+          "class_counts": [
+            4,
+            3
+          ],
+          "best_layer": 3,
+          "best_balanced_accuracy": 0.6666666666666666,
+          "best_accuracy": 0.6666666666666666,
+          "confusion_matrix": [
+            [
+              4,
+              0
+            ],
+            [
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "zscore",
+          "rank": null,
+          "capability": "RP",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 9,
+          "class_counts": [
+            3,
+            6
+          ],
+          "best_layer": 4,
+          "best_balanced_accuracy": 0.6666666666666666,
+          "best_accuracy": 0.7777777777777777,
+          "confusion_matrix": [
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              6
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "KB",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 22,
+          "class_counts": [
+            10,
+            12
+          ],
+          "best_layer": 28,
+          "best_balanced_accuracy": 0.65,
+          "best_accuracy": 0.6599999999999999,
+          "confusion_matrix": [
+            [
+              6,
+              4
+            ],
+            [
+              3,
+              9
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "zscore",
+          "rank": null,
+          "capability": "KB",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 8,
+          "class_counts": [
+            4,
+            4
+          ],
+          "best_layer": 1,
+          "best_balanced_accuracy": 0.625,
+          "best_accuracy": 0.625,
+          "confusion_matrix": [
+            [
+              3,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "zscore",
+          "rank": null,
+          "capability": "KB",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 8,
+          "class_counts": [
+            4,
+            4
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 0.625,
+          "best_accuracy": 0.625,
+          "confusion_matrix": [
+            [
+              3,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "RD",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 22,
+          "class_counts": [
+            7,
+            15
+          ],
+          "best_layer": 11,
+          "best_balanced_accuracy": 0.6166666666666666,
+          "best_accuracy": 0.73,
+          "confusion_matrix": [
+            [
+              2,
+              5
+            ],
+            [
+              1,
+              14
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "KD",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 22,
+          "class_counts": [
+            10,
+            12
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 0.6,
+          "best_accuracy": 0.6,
+          "confusion_matrix": [
+            [
+              6,
+              4
+            ],
+            [
+              5,
+              7
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "binary",
+          "rank": null,
+          "capability": "CB-control",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 22,
+          "class_counts": [
+            10,
+            12
+          ],
+          "best_layer": 5,
+          "best_balanced_accuracy": 0.5833333333333333,
+          "best_accuracy": 0.5900000000000001,
+          "confusion_matrix": [
+            [
+              5,
+              5
+            ],
+            [
+              4,
+              8
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "binary",
+          "rank": null,
+          "capability": "CB-control",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 22,
+          "class_counts": [
+            10,
+            12
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 0.5833333333333333,
+          "best_accuracy": 0.5900000000000001,
+          "confusion_matrix": [
+            [
+              6,
+              4
+            ],
+            [
+              5,
+              7
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "KD",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 22,
+          "class_counts": [
+            10,
+            12
+          ],
+          "best_layer": 36,
+          "best_balanced_accuracy": 0.55,
+          "best_accuracy": 0.5599999999999999,
+          "confusion_matrix": [
+            [
+              5,
+              5
+            ],
+            [
+              5,
+              7
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "binary",
+          "rank": null,
+          "capability": "CP",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 23,
+          "class_counts": [
+            21,
+            2
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 0.5,
+          "best_accuracy": 0.9128787878787878,
+          "confusion_matrix": [
+            [
+              21,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "CB-control",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 23,
+          "class_counts": [
+            2,
+            21
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 0.5,
+          "best_accuracy": 0.08712121212121213,
+          "confusion_matrix": [
+            [
+              2,
+              0
+            ],
+            [
+              21,
+              0
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "RP",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 24,
+          "class_counts": [
+            2,
+            22
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 0.5,
+          "best_accuracy": 0.08333333333333333,
+          "confusion_matrix": [
+            [
+              2,
+              0
+            ],
+            [
+              22,
+              0
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "binary",
+          "rank": null,
+          "capability": "CP",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 23,
+          "class_counts": [
+            21,
+            2
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 0.5,
+          "best_accuracy": 0.9128787878787878,
+          "confusion_matrix": [
+            [
+              21,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "binary",
+          "rank": null,
+          "capability": "KD",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 23,
+          "class_counts": [
+            21,
+            2
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 0.5,
+          "best_accuracy": 0.9128787878787878,
+          "confusion_matrix": [
+            [
+              21,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "KB",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 22,
+          "class_counts": [
+            10,
+            12
+          ],
+          "best_layer": 12,
+          "best_balanced_accuracy": 0.5,
+          "best_accuracy": 0.52,
+          "confusion_matrix": [
+            [
+              3,
+              7
+            ],
+            [
+              3,
+              9
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "zscore",
+          "rank": null,
+          "capability": "CB",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 7,
+          "class_counts": [
+            3,
+            4
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 0.5,
+          "best_accuracy": 0.4444444444444444,
+          "confusion_matrix": [
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "RD",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 22,
+          "class_counts": [
+            7,
+            15
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 0.4833333333333334,
+          "best_accuracy": 0.54,
+          "confusion_matrix": [
+            [
+              2,
+              5
+            ],
+            [
+              5,
+              10
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": "delta",
+          "rank": null,
+          "capability": "CB-control",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 23,
+          "class_counts": [
+            2,
+            21
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 0.4772727272727273,
+          "best_accuracy": 0.8712121212121212,
+          "confusion_matrix": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              20
+            ]
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": null,
+          "rank": null,
+          "capability": "KB",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "skipped": true,
+          "reason": "insufficient samples (n=23, classes=1)",
+          "n_samples": 23,
+          "class_counts": [
+            23,
+            0
+          ]
+        },
+        {
+          "probe_type": null,
+          "judge": null,
+          "rank": null,
+          "capability": "KB",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "skipped": true,
+          "reason": "insufficient samples (n=23, classes=1)",
+          "n_samples": 23,
+          "class_counts": [
+            23,
+            0
           ]
         }
       ]
@@ -1224,32 +3746,6 @@
             [
               0,
               7
-            ]
-          ]
-        },
-        {
-          "probe_type": "lora",
-          "judge": "delta",
-          "rank": 16,
-          "capability": "CB",
-          "cot_state": "no_cot",
-          "pool": "last",
-          "n_samples": 25,
-          "class_counts": [
-            6,
-            19
-          ],
-          "best_layer": 28,
-          "best_balanced_accuracy": 0.9,
-          "best_accuracy": 0.96,
-          "confusion_matrix": [
-            [
-              5,
-              1
-            ],
-            [
-              0,
-              19
             ]
           ]
         },
@@ -1361,6 +3857,110 @@
           "probe_type": "lora",
           "judge": "delta",
           "rank": 16,
+          "capability": "RB",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 22,
+          "class_counts": [
+            4,
+            18
+          ],
+          "best_layer": 1,
+          "best_balanced_accuracy": 0.94375,
+          "best_accuracy": 0.9083333333333334,
+          "confusion_matrix": [
+            [
+              4,
+              0
+            ],
+            [
+              2,
+              16
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "CB",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 7,
+          "class_counts": [
+            3,
+            4
+          ],
+          "best_layer": 26,
+          "best_balanced_accuracy": 0.9166666666666666,
+          "best_accuracy": 0.8888888888888888,
+          "confusion_matrix": [
+            [
+              3,
+              0
+            ],
+            [
+              1,
+              3
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "KD",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 7,
+          "class_counts": [
+            3,
+            4
+          ],
+          "best_layer": 13,
+          "best_balanced_accuracy": 0.9166666666666666,
+          "best_accuracy": 0.8888888888888888,
+          "confusion_matrix": [
+            [
+              3,
+              0
+            ],
+            [
+              1,
+              3
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "CB",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 25,
+          "class_counts": [
+            6,
+            19
+          ],
+          "best_layer": 28,
+          "best_balanced_accuracy": 0.9,
+          "best_accuracy": 0.96,
+          "confusion_matrix": [
+            [
+              5,
+              1
+            ],
+            [
+              0,
+              19
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
           "capability": "CP",
           "cot_state": "no_cot",
           "pool": "last",
@@ -1380,6 +3980,344 @@
             [
               2,
               15
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "KP",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 7,
+          "class_counts": [
+            4,
+            3
+          ],
+          "best_layer": 1,
+          "best_balanced_accuracy": 0.8333333333333334,
+          "best_accuracy": 0.8888888888888888,
+          "confusion_matrix": [
+            [
+              4,
+              0
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "binary",
+          "rank": 16,
+          "capability": "CP",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 21,
+          "class_counts": [
+            20,
+            1
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": null,
+          "best_accuracy": null,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "binary",
+          "rank": 16,
+          "capability": "KD",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 25,
+          "class_counts": [
+            24,
+            1
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": null,
+          "best_accuracy": null,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "CB-control",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 24,
+          "class_counts": [
+            1,
+            23
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": null,
+          "best_accuracy": null,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "RB",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 22,
+          "class_counts": [
+            4,
+            18
+          ],
+          "best_layer": 1,
+          "best_balanced_accuracy": 1.0,
+          "best_accuracy": 1.0,
+          "confusion_matrix": [
+            [
+              4,
+              0
+            ],
+            [
+              0,
+              18
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "RD",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 24,
+          "class_counts": [
+            1,
+            23
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": null,
+          "best_accuracy": null,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "KD",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 7,
+          "class_counts": [
+            3,
+            4
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 1.0,
+          "best_accuracy": 1.0,
+          "confusion_matrix": [
+            [
+              3,
+              0
+            ],
+            [
+              0,
+              4
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "RB",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 7,
+          "class_counts": [
+            4,
+            3
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 1.0,
+          "best_accuracy": 1.0,
+          "confusion_matrix": [
+            [
+              4,
+              0
+            ],
+            [
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "RP",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 6,
+          "class_counts": [
+            2,
+            4
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 1.0,
+          "best_accuracy": 1.0,
+          "confusion_matrix": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              4
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "KP",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 7,
+          "class_counts": [
+            4,
+            3
+          ],
+          "best_layer": 33,
+          "best_balanced_accuracy": 0.9166666666666666,
+          "best_accuracy": 0.8888888888888888,
+          "confusion_matrix": [
+            [
+              3,
+              1
+            ],
+            [
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "RP",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 21,
+          "class_counts": [
+            7,
+            14
+          ],
+          "best_layer": 32,
+          "best_balanced_accuracy": 0.9,
+          "best_accuracy": 0.95,
+          "confusion_matrix": [
+            [
+              6,
+              1
+            ],
+            [
+              0,
+              14
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "RP",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 21,
+          "class_counts": [
+            7,
+            14
+          ],
+          "best_layer": 30,
+          "best_balanced_accuracy": 0.8666666666666666,
+          "best_accuracy": 0.9,
+          "confusion_matrix": [
+            [
+              6,
+              1
+            ],
+            [
+              1,
+              13
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "binary",
+          "rank": 16,
+          "capability": "RD",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 10,
+          "class_counts": [
+            3,
+            7
+          ],
+          "best_layer": 14,
+          "best_balanced_accuracy": 0.861111111111111,
+          "best_accuracy": 0.8055555555555555,
+          "confusion_matrix": [
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              5
             ]
           ]
         },
@@ -1408,6 +4346,2026 @@
               2
             ]
           ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "CB",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 7,
+          "class_counts": [
+            3,
+            4
+          ],
+          "best_layer": 27,
+          "best_balanced_accuracy": 0.8333333333333334,
+          "best_accuracy": 0.7777777777777777,
+          "confusion_matrix": [
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "KB",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 8,
+          "class_counts": [
+            5,
+            3
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 0.8333333333333334,
+          "best_accuracy": 0.8888888888888888,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "binary",
+          "rank": 16,
+          "capability": "RP",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 7,
+          "class_counts": [
+            5,
+            2
+          ],
+          "best_layer": 1,
+          "best_balanced_accuracy": 0.8333333333333333,
+          "best_accuracy": 0.75,
+          "confusion_matrix": [
+            [
+              3,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "binary",
+          "rank": 16,
+          "capability": "RP",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 7,
+          "class_counts": [
+            5,
+            2
+          ],
+          "best_layer": 5,
+          "best_balanced_accuracy": 0.8333333333333333,
+          "best_accuracy": 0.75,
+          "confusion_matrix": [
+            [
+              3,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "CP",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 25,
+          "class_counts": [
+            8,
+            17
+          ],
+          "best_layer": 1,
+          "best_balanced_accuracy": 0.825,
+          "best_accuracy": 0.8400000000000001,
+          "confusion_matrix": [
+            [
+              5,
+              3
+            ],
+            [
+              1,
+              16
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "binary",
+          "rank": 16,
+          "capability": "CB-control",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 22,
+          "class_counts": [
+            9,
+            13
+          ],
+          "best_layer": 27,
+          "best_balanced_accuracy": 0.75,
+          "best_accuracy": 0.72,
+          "confusion_matrix": [
+            [
+              7,
+              2
+            ],
+            [
+              4,
+              9
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "binary",
+          "rank": 16,
+          "capability": "KB",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 25,
+          "class_counts": [
+            23,
+            2
+          ],
+          "best_layer": 6,
+          "best_balanced_accuracy": 0.75,
+          "best_accuracy": 0.9615384615384616,
+          "confusion_matrix": [
+            [
+              23,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "CB",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 25,
+          "class_counts": [
+            6,
+            19
+          ],
+          "best_layer": 24,
+          "best_balanced_accuracy": 0.75,
+          "best_accuracy": 0.8799999999999999,
+          "confusion_matrix": [
+            [
+              3,
+              3
+            ],
+            [
+              0,
+              19
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "binary",
+          "rank": 16,
+          "capability": "CB-control",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 22,
+          "class_counts": [
+            9,
+            13
+          ],
+          "best_layer": 4,
+          "best_balanced_accuracy": 0.7333333333333333,
+          "best_accuracy": 0.72,
+          "confusion_matrix": [
+            [
+              6,
+              3
+            ],
+            [
+              3,
+              10
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "binary",
+          "rank": 16,
+          "capability": "KB",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 25,
+          "class_counts": [
+            23,
+            2
+          ],
+          "best_layer": 26,
+          "best_balanced_accuracy": 0.7291666666666666,
+          "best_accuracy": 0.9198717948717949,
+          "confusion_matrix": [
+            [
+              22,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "KB",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 21,
+          "class_counts": [
+            16,
+            5
+          ],
+          "best_layer": 32,
+          "best_balanced_accuracy": 0.7,
+          "best_accuracy": 0.86,
+          "confusion_matrix": [
+            [
+              16,
+              0
+            ],
+            [
+              3,
+              2
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "KB",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 21,
+          "class_counts": [
+            16,
+            5
+          ],
+          "best_layer": 32,
+          "best_balanced_accuracy": 0.7,
+          "best_accuracy": 0.86,
+          "confusion_matrix": [
+            [
+              16,
+              0
+            ],
+            [
+              3,
+              2
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "KD",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 25,
+          "class_counts": [
+            3,
+            22
+          ],
+          "best_layer": 3,
+          "best_balanced_accuracy": 0.6666666666666666,
+          "best_accuracy": 0.9212962962962963,
+          "confusion_matrix": [
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              22
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "RD",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 7,
+          "class_counts": [
+            3,
+            4
+          ],
+          "best_layer": 30,
+          "best_balanced_accuracy": 0.6666666666666666,
+          "best_accuracy": 0.611111111111111,
+          "confusion_matrix": [
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "binary",
+          "rank": 16,
+          "capability": "CB",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 22,
+          "class_counts": [
+            14,
+            8
+          ],
+          "best_layer": 3,
+          "best_balanced_accuracy": 0.65,
+          "best_accuracy": 0.6900000000000001,
+          "confusion_matrix": [
+            [
+              11,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "KP",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 22,
+          "class_counts": [
+            18,
+            4
+          ],
+          "best_layer": 9,
+          "best_balanced_accuracy": 0.625,
+          "best_accuracy": 0.8583333333333334,
+          "confusion_matrix": [
+            [
+              18,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "KD",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 25,
+          "class_counts": [
+            3,
+            22
+          ],
+          "best_layer": 30,
+          "best_balanced_accuracy": 0.6220238095238095,
+          "best_accuracy": 0.8425925925925926,
+          "confusion_matrix": [
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              20
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "binary",
+          "rank": 16,
+          "capability": "CB",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 22,
+          "class_counts": [
+            14,
+            8
+          ],
+          "best_layer": 3,
+          "best_balanced_accuracy": 0.6,
+          "best_accuracy": 0.63,
+          "confusion_matrix": [
+            [
+              10,
+              4
+            ],
+            [
+              4,
+              4
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "KP",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 22,
+          "class_counts": [
+            18,
+            4
+          ],
+          "best_layer": 34,
+          "best_balanced_accuracy": 0.6,
+          "best_accuracy": 0.8166666666666667,
+          "confusion_matrix": [
+            [
+              17,
+              1
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "RD",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 7,
+          "class_counts": [
+            3,
+            4
+          ],
+          "best_layer": 8,
+          "best_balanced_accuracy": 0.5833333333333334,
+          "best_accuracy": 0.5555555555555555,
+          "confusion_matrix": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "binary",
+          "rank": 16,
+          "capability": "RB",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "n_samples": 10,
+          "class_counts": [
+            2,
+            8
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 0.5,
+          "best_accuracy": 0.8,
+          "confusion_matrix": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              8
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "binary",
+          "rank": 16,
+          "capability": "RB",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "n_samples": 10,
+          "class_counts": [
+            2,
+            8
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 0.5,
+          "best_accuracy": 0.8,
+          "confusion_matrix": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              8
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "binary",
+          "rank": 16,
+          "capability": "KP",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "skipped": true,
+          "reason": "insufficient samples (n=24)",
+          "n_samples": null,
+          "class_counts": null
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "CB-control",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "skipped": true,
+          "reason": "insufficient samples (n=5)",
+          "n_samples": null,
+          "class_counts": null
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "CP",
+          "cot_state": "no_cot",
+          "pool": "last",
+          "skipped": true,
+          "reason": "insufficient samples (n=5)",
+          "n_samples": null,
+          "class_counts": null
+        },
+        {
+          "probe_type": "lora",
+          "judge": "binary",
+          "rank": 16,
+          "capability": "KP",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "skipped": true,
+          "reason": "insufficient samples (n=24)",
+          "n_samples": null,
+          "class_counts": null
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "CB-control",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "skipped": true,
+          "reason": "insufficient samples (n=5)",
+          "n_samples": null,
+          "class_counts": null
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "CP",
+          "cot_state": "no_cot",
+          "pool": "mean",
+          "skipped": true,
+          "reason": "insufficient samples (n=5)",
+          "n_samples": null,
+          "class_counts": null
+        },
+        {
+          "probe_type": "lora",
+          "judge": "binary",
+          "rank": 16,
+          "capability": "KP",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 22,
+          "class_counts": [
+            21,
+            1
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": null,
+          "best_accuracy": null,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "binary",
+          "rank": 16,
+          "capability": "RB",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 8,
+          "class_counts": [
+            1,
+            7
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": null,
+          "best_accuracy": null,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "binary",
+          "rank": 16,
+          "capability": "RD",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 8,
+          "class_counts": [
+            4,
+            4
+          ],
+          "best_layer": 1,
+          "best_balanced_accuracy": 1.0,
+          "best_accuracy": 1.0,
+          "confusion_matrix": [
+            [
+              4,
+              0
+            ],
+            [
+              0,
+              4
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "CB-control",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 6,
+          "class_counts": [
+            3,
+            3
+          ],
+          "best_layer": 33,
+          "best_balanced_accuracy": 1.0,
+          "best_accuracy": 1.0,
+          "confusion_matrix": [
+            [
+              3,
+              0
+            ],
+            [
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "CP",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 6,
+          "class_counts": [
+            3,
+            3
+          ],
+          "best_layer": 8,
+          "best_balanced_accuracy": 1.0,
+          "best_accuracy": 1.0,
+          "confusion_matrix": [
+            [
+              3,
+              0
+            ],
+            [
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "KP",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 6,
+          "class_counts": [
+            2,
+            4
+          ],
+          "best_layer": 3,
+          "best_balanced_accuracy": 1.0,
+          "best_accuracy": 1.0,
+          "confusion_matrix": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              4
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "RB",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 7,
+          "class_counts": [
+            5,
+            2
+          ],
+          "best_layer": 21,
+          "best_balanced_accuracy": 1.0,
+          "best_accuracy": 1.0,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "binary",
+          "rank": 16,
+          "capability": "KP",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 22,
+          "class_counts": [
+            21,
+            1
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": null,
+          "best_accuracy": null,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "binary",
+          "rank": 16,
+          "capability": "RB",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 8,
+          "class_counts": [
+            1,
+            7
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": null,
+          "best_accuracy": null,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "binary",
+          "rank": 16,
+          "capability": "RD",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 8,
+          "class_counts": [
+            4,
+            4
+          ],
+          "best_layer": 10,
+          "best_balanced_accuracy": 1.0,
+          "best_accuracy": 1.0,
+          "confusion_matrix": [
+            [
+              4,
+              0
+            ],
+            [
+              0,
+              4
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "CP",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 6,
+          "class_counts": [
+            3,
+            3
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 1.0,
+          "best_accuracy": 1.0,
+          "confusion_matrix": [
+            [
+              3,
+              0
+            ],
+            [
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "KP",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 6,
+          "class_counts": [
+            2,
+            4
+          ],
+          "best_layer": 1,
+          "best_balanced_accuracy": 1.0,
+          "best_accuracy": 1.0,
+          "confusion_matrix": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              4
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "RB",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 7,
+          "class_counts": [
+            5,
+            2
+          ],
+          "best_layer": 17,
+          "best_balanced_accuracy": 1.0,
+          "best_accuracy": 1.0,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "RD",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 9,
+          "class_counts": [
+            5,
+            4
+          ],
+          "best_layer": 6,
+          "best_balanced_accuracy": 0.9375,
+          "best_accuracy": 0.9166666666666666,
+          "confusion_matrix": [
+            [
+              4,
+              1
+            ],
+            [
+              0,
+              4
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "RD",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 9,
+          "class_counts": [
+            5,
+            4
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 0.875,
+          "best_accuracy": 0.9166666666666666,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              1,
+              3
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "CP",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 23,
+          "class_counts": [
+            5,
+            18
+          ],
+          "best_layer": 23,
+          "best_balanced_accuracy": 0.85,
+          "best_accuracy": 0.8800000000000001,
+          "confusion_matrix": [
+            [
+              4,
+              1
+            ],
+            [
+              2,
+              16
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "CB",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 7,
+          "class_counts": [
+            3,
+            4
+          ],
+          "best_layer": 27,
+          "best_balanced_accuracy": 0.8333333333333334,
+          "best_accuracy": 0.7777777777777777,
+          "confusion_matrix": [
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "KD",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 7,
+          "class_counts": [
+            4,
+            3
+          ],
+          "best_layer": 3,
+          "best_balanced_accuracy": 0.8333333333333334,
+          "best_accuracy": 0.8333333333333334,
+          "confusion_matrix": [
+            [
+              4,
+              0
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "CB-control",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 6,
+          "class_counts": [
+            3,
+            3
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 0.8333333333333334,
+          "best_accuracy": 0.8333333333333334,
+          "confusion_matrix": [
+            [
+              2,
+              1
+            ],
+            [
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "RP",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 9,
+          "class_counts": [
+            3,
+            6
+          ],
+          "best_layer": 29,
+          "best_balanced_accuracy": 0.8333333333333334,
+          "best_accuracy": 0.8888888888888888,
+          "confusion_matrix": [
+            [
+              2,
+              1
+            ],
+            [
+              0,
+              6
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "CB",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 22,
+          "class_counts": [
+            10,
+            12
+          ],
+          "best_layer": 26,
+          "best_balanced_accuracy": 0.8,
+          "best_accuracy": 0.8099999999999999,
+          "confusion_matrix": [
+            [
+              7,
+              3
+            ],
+            [
+              1,
+              11
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "KP",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 25,
+          "class_counts": [
+            10,
+            15
+          ],
+          "best_layer": 7,
+          "best_balanced_accuracy": 0.8,
+          "best_accuracy": 0.8,
+          "confusion_matrix": [
+            [
+              8,
+              2
+            ],
+            [
+              3,
+              12
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "RB",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 20,
+          "class_counts": [
+            5,
+            15
+          ],
+          "best_layer": 23,
+          "best_balanced_accuracy": 0.8,
+          "best_accuracy": 0.9,
+          "confusion_matrix": [
+            [
+              3,
+              2
+            ],
+            [
+              0,
+              15
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "RB",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 20,
+          "class_counts": [
+            5,
+            15
+          ],
+          "best_layer": 3,
+          "best_balanced_accuracy": 0.8,
+          "best_accuracy": 0.9,
+          "confusion_matrix": [
+            [
+              3,
+              2
+            ],
+            [
+              0,
+              15
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "binary",
+          "rank": 16,
+          "capability": "CP",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 23,
+          "class_counts": [
+            21,
+            2
+          ],
+          "best_layer": 24,
+          "best_balanced_accuracy": 0.75,
+          "best_accuracy": 0.9545454545454546,
+          "confusion_matrix": [
+            [
+              21,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "binary",
+          "rank": 16,
+          "capability": "RP",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 7,
+          "class_counts": [
+            4,
+            3
+          ],
+          "best_layer": 15,
+          "best_balanced_accuracy": 0.75,
+          "best_accuracy": 0.7222222222222222,
+          "confusion_matrix": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "KB",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 8,
+          "class_counts": [
+            4,
+            4
+          ],
+          "best_layer": 35,
+          "best_balanced_accuracy": 0.75,
+          "best_accuracy": 0.75,
+          "confusion_matrix": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              3
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "binary",
+          "rank": 16,
+          "capability": "KD",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 23,
+          "class_counts": [
+            21,
+            2
+          ],
+          "best_layer": 24,
+          "best_balanced_accuracy": 0.75,
+          "best_accuracy": 0.9545454545454546,
+          "confusion_matrix": [
+            [
+              21,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "binary",
+          "rank": 16,
+          "capability": "RP",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 7,
+          "class_counts": [
+            4,
+            3
+          ],
+          "best_layer": 13,
+          "best_balanced_accuracy": 0.75,
+          "best_accuracy": 0.7222222222222222,
+          "confusion_matrix": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "CP",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 23,
+          "class_counts": [
+            5,
+            18
+          ],
+          "best_layer": 1,
+          "best_balanced_accuracy": 0.75,
+          "best_accuracy": 0.8300000000000001,
+          "confusion_matrix": [
+            [
+              3,
+              2
+            ],
+            [
+              2,
+              16
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "KD",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 7,
+          "class_counts": [
+            4,
+            3
+          ],
+          "best_layer": 4,
+          "best_balanced_accuracy": 0.75,
+          "best_accuracy": 0.7222222222222222,
+          "confusion_matrix": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "KP",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 25,
+          "class_counts": [
+            10,
+            15
+          ],
+          "best_layer": 1,
+          "best_balanced_accuracy": 0.7333333333333333,
+          "best_accuracy": 0.76,
+          "confusion_matrix": [
+            [
+              6,
+              4
+            ],
+            [
+              2,
+              13
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "binary",
+          "rank": 16,
+          "capability": "KD",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 23,
+          "class_counts": [
+            21,
+            2
+          ],
+          "best_layer": 29,
+          "best_balanced_accuracy": 0.7,
+          "best_accuracy": 0.8674242424242424,
+          "confusion_matrix": [
+            [
+              19,
+              2
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "CB",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 22,
+          "class_counts": [
+            10,
+            12
+          ],
+          "best_layer": 15,
+          "best_balanced_accuracy": 0.6833333333333333,
+          "best_accuracy": 0.6799999999999999,
+          "confusion_matrix": [
+            [
+              5,
+              5
+            ],
+            [
+              2,
+              10
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "RP",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 9,
+          "class_counts": [
+            3,
+            6
+          ],
+          "best_layer": 1,
+          "best_balanced_accuracy": 0.6666666666666666,
+          "best_accuracy": 0.7777777777777777,
+          "confusion_matrix": [
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              6
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "CB",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 7,
+          "class_counts": [
+            3,
+            4
+          ],
+          "best_layer": 9,
+          "best_balanced_accuracy": 0.6666666666666666,
+          "best_accuracy": 0.7222222222222222,
+          "confusion_matrix": [
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              4
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "binary",
+          "rank": 16,
+          "capability": "CB",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 22,
+          "class_counts": [
+            8,
+            14
+          ],
+          "best_layer": 6,
+          "best_balanced_accuracy": 0.6333333333333334,
+          "best_accuracy": 0.67,
+          "confusion_matrix": [
+            [
+              4,
+              4
+            ],
+            [
+              3,
+              11
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "zscore",
+          "rank": 16,
+          "capability": "KB",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 8,
+          "class_counts": [
+            4,
+            4
+          ],
+          "best_layer": 5,
+          "best_balanced_accuracy": 0.625,
+          "best_accuracy": 0.625,
+          "confusion_matrix": [
+            [
+              4,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "binary",
+          "rank": 16,
+          "capability": "CB",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 22,
+          "class_counts": [
+            8,
+            14
+          ],
+          "best_layer": 7,
+          "best_balanced_accuracy": 0.6166666666666666,
+          "best_accuracy": 0.6799999999999999,
+          "confusion_matrix": [
+            [
+              4,
+              4
+            ],
+            [
+              3,
+              11
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "binary",
+          "rank": 16,
+          "capability": "CB-control",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 22,
+          "class_counts": [
+            10,
+            12
+          ],
+          "best_layer": 10,
+          "best_balanced_accuracy": 0.6166666666666666,
+          "best_accuracy": 0.6,
+          "confusion_matrix": [
+            [
+              7,
+              3
+            ],
+            [
+              6,
+              6
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "binary",
+          "rank": 16,
+          "capability": "CB-control",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 22,
+          "class_counts": [
+            10,
+            12
+          ],
+          "best_layer": 3,
+          "best_balanced_accuracy": 0.5833333333333333,
+          "best_accuracy": 0.5900000000000001,
+          "confusion_matrix": [
+            [
+              5,
+              5
+            ],
+            [
+              4,
+              8
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "RD",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 22,
+          "class_counts": [
+            7,
+            15
+          ],
+          "best_layer": 16,
+          "best_balanced_accuracy": 0.5666666666666667,
+          "best_accuracy": 0.6900000000000001,
+          "confusion_matrix": [
+            [
+              1,
+              6
+            ],
+            [
+              1,
+              14
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "KD",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 22,
+          "class_counts": [
+            10,
+            12
+          ],
+          "best_layer": 23,
+          "best_balanced_accuracy": 0.5666666666666667,
+          "best_accuracy": 0.55,
+          "confusion_matrix": [
+            [
+              8,
+              2
+            ],
+            [
+              8,
+              4
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "KB",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 22,
+          "class_counts": [
+            10,
+            12
+          ],
+          "best_layer": 27,
+          "best_balanced_accuracy": 0.55,
+          "best_accuracy": 0.58,
+          "confusion_matrix": [
+            [
+              2,
+              8
+            ],
+            [
+              1,
+              11
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "KB",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 22,
+          "class_counts": [
+            10,
+            12
+          ],
+          "best_layer": 20,
+          "best_balanced_accuracy": 0.55,
+          "best_accuracy": 0.58,
+          "confusion_matrix": [
+            [
+              5,
+              5
+            ],
+            [
+              4,
+              8
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "KD",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 22,
+          "class_counts": [
+            10,
+            12
+          ],
+          "best_layer": 2,
+          "best_balanced_accuracy": 0.5333333333333334,
+          "best_accuracy": 0.54,
+          "confusion_matrix": [
+            [
+              5,
+              5
+            ],
+            [
+              5,
+              7
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "CB-control",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 23,
+          "class_counts": [
+            2,
+            21
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 0.5,
+          "best_accuracy": 0.9128787878787878,
+          "confusion_matrix": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              21
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "RP",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "n_samples": 24,
+          "class_counts": [
+            2,
+            22
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 0.5,
+          "best_accuracy": 0.9166666666666666,
+          "confusion_matrix": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              22
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "binary",
+          "rank": 16,
+          "capability": "CP",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 23,
+          "class_counts": [
+            21,
+            2
+          ],
+          "best_layer": 0,
+          "best_balanced_accuracy": 0.5,
+          "best_accuracy": 0.9128787878787878,
+          "confusion_matrix": [
+            [
+              21,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "CB-control",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 23,
+          "class_counts": [
+            2,
+            21
+          ],
+          "best_layer": 35,
+          "best_balanced_accuracy": 0.5,
+          "best_accuracy": 0.9128787878787878,
+          "confusion_matrix": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              21
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "RD",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 22,
+          "class_counts": [
+            7,
+            15
+          ],
+          "best_layer": 33,
+          "best_balanced_accuracy": 0.5,
+          "best_accuracy": 0.5900000000000001,
+          "confusion_matrix": [
+            [
+              1,
+              6
+            ],
+            [
+              3,
+              12
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "delta",
+          "rank": 16,
+          "capability": "RP",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "n_samples": 24,
+          "class_counts": [
+            2,
+            22
+          ],
+          "best_layer": 10,
+          "best_balanced_accuracy": 0.5,
+          "best_accuracy": 0.9166666666666666,
+          "confusion_matrix": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              22
+            ]
+          ]
+        },
+        {
+          "probe_type": "lora",
+          "judge": "binary",
+          "rank": 16,
+          "capability": "KB",
+          "cot_state": "with_cot",
+          "pool": "last",
+          "skipped": true,
+          "reason": "insufficient samples (n=23)",
+          "n_samples": null,
+          "class_counts": null
+        },
+        {
+          "probe_type": "lora",
+          "judge": "binary",
+          "rank": 16,
+          "capability": "KB",
+          "cot_state": "with_cot",
+          "pool": "mean",
+          "skipped": true,
+          "reason": "insufficient samples (n=23)",
+          "n_samples": null,
+          "class_counts": null
         }
       ]
     }
@@ -1485,30 +6443,30 @@
         "top1_match_rate": 0.02666666666666667,
         "top5_match_rate": 0.30666666666666664,
         "median_rank": 10,
-        "max_rank": 3873,
+        "max_rank": 3860,
         "examples_top1_mismatch_with_high_lp": [
           {
             "family_id": "kb_002",
             "rank": 1,
-            "lp_mean": -0.33999725186731666,
+            "lp_mean": -0.3422208409756422,
             "top1_token": "Albert",
-            "top1_lp": -0.7052990198135376,
+            "top1_lp": -0.6989971399307251,
             "gold_first_token": "1"
           },
           {
             "family_id": "hybrid_012",
             "rank": 1,
-            "lp_mean": -0.47899019438773394,
+            "lp_mean": -0.48268775560427457,
             "top1_token": "The",
-            "top1_lp": -0.7222033143043518,
+            "top1_lp": -0.7191675305366516,
             "gold_first_token": "1"
           },
           {
             "family_id": "hybrid_024",
             "rank": 3,
-            "lp_mean": -0.6179613965796307,
+            "lp_mean": -0.615173764701467,
             "top1_token": "The",
-            "top1_lp": -0.8853352665901184,
+            "top1_lp": -0.889822781085968,
             "gold_first_token": "1"
           }
         ]
@@ -1518,30 +6476,30 @@
         "top1_match_rate": 0.006666666666666667,
         "top5_match_rate": 0.16,
         "median_rank": 16,
-        "max_rank": 1285,
+        "max_rank": 1278,
         "examples_top1_mismatch_with_high_lp": [
           {
             "family_id": "kb_024",
             "rank": 4,
-            "lp_mean": -0.5058289483034363,
+            "lp_mean": -0.5058820380363613,
             "top1_token": "The",
-            "top1_lp": -1.8693668842315674,
+            "top1_lp": -1.870117425918579,
             "gold_first_token": "Sym"
           },
           {
             "family_id": "kb_007",
             "rank": 16,
-            "lp_mean": -0.6734930787185606,
+            "lp_mean": -0.6735126350208053,
             "top1_token": "In",
-            "top1_lp": -2.5256879329681396,
+            "top1_lp": -2.5103507041931152,
             "gold_first_token": "Str"
           },
           {
             "family_id": "hybrid_023",
             "rank": 2,
-            "lp_mean": -0.7146604247391224,
+            "lp_mean": -0.720879603177309,
             "top1_token": "The",
-            "top1_lp": -1.441899299621582,
+            "top1_lp": -1.4452413320541382,
             "gold_first_token": "1"
           }
         ]
@@ -1551,32 +6509,32 @@
       "no_cot": {
         "n": 50,
         "top1_match_rate": 0.02,
-        "top5_match_rate": 0.36,
+        "top5_match_rate": 0.34,
         "median_rank": 8,
-        "max_rank": 297,
+        "max_rank": 299,
         "examples_top1_mismatch_with_high_lp": [
           {
             "family_id": "kb_007",
             "rank": 5,
-            "lp_mean": -0.4737468887968654,
+            "lp_mean": -0.4743667576279092,
             "top1_token": "In",
-            "top1_lp": -1.712815284729004,
+            "top1_lp": -1.7170114517211914,
             "gold_first_token": "Str"
           },
           {
             "family_id": "kb_007",
             "rank": 6,
-            "lp_mean": -0.5270588272407102,
+            "lp_mean": -0.5297629896745742,
             "top1_token": "William",
-            "top1_lp": -1.0625474452972412,
+            "top1_lp": -1.0641322135925293,
             "gold_first_token": "Str"
           },
           {
             "family_id": "kb_013",
             "rank": 4,
-            "lp_mean": -0.6361187288537622,
+            "lp_mean": -0.6365797930397094,
             "top1_token": "In",
-            "top1_lp": -1.6191601753234863,
+            "top1_lp": -1.6215217113494873,
             "gold_first_token": "Pr"
           }
         ]
@@ -1586,30 +6544,30 @@
         "top1_match_rate": 0.02,
         "top5_match_rate": 0.26,
         "median_rank": 12,
-        "max_rank": 443,
+        "max_rank": 439,
         "examples_top1_mismatch_with_high_lp": [
           {
             "family_id": "kb_007",
             "rank": 9,
-            "lp_mean": -0.5983969392005487,
+            "lp_mean": -0.59706878074212,
             "top1_token": "Let",
-            "top1_lp": -1.1030617952346802,
+            "top1_lp": -1.1094369888305664,
             "gold_first_token": "Str"
           },
           {
             "family_id": "kb_002",
             "rank": 1,
-            "lp_mean": -0.6356794051826,
+            "lp_mean": -0.6338822682155296,
             "top1_token": "Albert",
-            "top1_lp": -0.8612712621688843,
+            "top1_lp": -0.8553118705749512,
             "gold_first_token": "1"
           },
           {
             "family_id": "kb_024",
             "rank": 6,
-            "lp_mean": -0.6610449651100984,
+            "lp_mean": -0.664893060301741,
             "top1_token": "Let",
-            "top1_lp": -1.0526493787765503,
+            "top1_lp": -1.044228434562683,
             "gold_first_token": "Sym"
           }
         ]
@@ -1621,30 +6579,30 @@
         "top1_match_rate": 0.02,
         "top5_match_rate": 0.2,
         "median_rank": 17,
-        "max_rank": 225,
+        "max_rank": 226,
         "examples_top1_mismatch_with_high_lp": [
           {
             "family_id": "kb_013",
             "rank": 5,
-            "lp_mean": -0.7338759592734277,
+            "lp_mean": -0.7321233414579182,
             "top1_token": "The",
-            "top1_lp": -2.178441286087036,
+            "top1_lp": -2.16988205909729,
             "gold_first_token": "Pr"
           },
           {
             "family_id": "kb_002",
             "rank": 1,
-            "lp_mean": -0.7357239872217178,
+            "lp_mean": -0.7331519487779588,
             "top1_token": "Albert",
-            "top1_lp": -0.8848216533660889,
+            "top1_lp": -0.8914175629615784,
             "gold_first_token": "1"
           },
           {
             "family_id": "kb_007",
-            "rank": 30,
-            "lp_mean": -0.7850436474878474,
+            "rank": 29,
+            "lp_mean": -0.7854546842198553,
             "top1_token": "In",
-            "top1_lp": -2.0061419010162354,
+            "top1_lp": -1.9937340021133423,
             "gold_first_token": "Str"
           }
         ]
@@ -1654,30 +6612,30 @@
         "top1_match_rate": 0.0,
         "top5_match_rate": 0.22,
         "median_rank": 11,
-        "max_rank": 767,
+        "max_rank": 758,
         "examples_top1_mismatch_with_high_lp": [
           {
             "family_id": "kb_007",
-            "rank": 15,
-            "lp_mean": -0.6845586922302443,
+            "rank": 14,
+            "lp_mean": -0.6836794003361969,
             "top1_token": "Let",
-            "top1_lp": -2.180354356765747,
+            "top1_lp": -2.1738381385803223,
             "gold_first_token": "Str"
           },
           {
             "family_id": "kb_024",
-            "rank": 10,
-            "lp_mean": -0.7293449678303053,
+            "rank": 9,
+            "lp_mean": -0.7269196400884539,
             "top1_token": "Let",
-            "top1_lp": -1.2668325901031494,
+            "top1_lp": -1.2678449153900146,
             "gold_first_token": "Sym"
           },
           {
             "family_id": "kb_002",
             "rank": 3,
-            "lp_mean": -0.7671049168566242,
+            "lp_mean": -0.7633792193373665,
             "top1_token": "Let",
-            "top1_lp": -1.9113547801971436,
+            "top1_lp": -1.9173369407653809,
             "gold_first_token": "1"
           }
         ]
@@ -1689,30 +6647,30 @@
         "top1_match_rate": 0.08,
         "top5_match_rate": 0.6,
         "median_rank": 3,
-        "max_rank": 400,
+        "max_rank": 407,
         "examples_top1_mismatch_with_high_lp": [
           {
             "family_id": "kb_002",
             "rank": 1,
-            "lp_mean": -0.3780483810696751,
+            "lp_mean": -0.37583771091885865,
             "top1_token": "Albert",
-            "top1_lp": -0.8998878002166748,
+            "top1_lp": -0.906565248966217,
             "gold_first_token": "1"
           },
           {
             "family_id": "kb_018",
             "rank": 1,
-            "lp_mean": -0.39342093337327244,
+            "lp_mean": -0.39113590056076647,
             "top1_token": "The",
-            "top1_lp": -1.3309522867202759,
+            "top1_lp": -1.3367557525634766,
             "gold_first_token": "On"
           },
           {
             "family_id": "kb_024",
             "rank": 3,
-            "lp_mean": -0.6261440482145796,
+            "lp_mean": -0.6272610958355168,
             "top1_token": "The",
-            "top1_lp": -1.363208293914795,
+            "top1_lp": -1.3544961214065552,
             "gold_first_token": "Sym"
           }
         ]
@@ -1722,30 +6680,30 @@
         "top1_match_rate": 0.02,
         "top5_match_rate": 0.3,
         "median_rank": 9,
-        "max_rank": 1963,
+        "max_rank": 1968,
         "examples_top1_mismatch_with_high_lp": [
           {
             "family_id": "kb_024",
             "rank": 7,
-            "lp_mean": -0.6584574781979123,
+            "lp_mean": -0.6587403193116188,
             "top1_token": "The",
-            "top1_lp": -1.5834693908691406,
+            "top1_lp": -1.5860381126403809,
             "gold_first_token": "Sym"
           },
           {
             "family_id": "kb_024",
             "rank": 7,
-            "lp_mean": -0.7666076472960413,
+            "lp_mean": -0.7676898643064002,
             "top1_token": "The",
-            "top1_lp": -1.496993899345398,
+            "top1_lp": -1.4931471347808838,
             "gold_first_token": "Sym"
           },
           {
             "family_id": "kb_002",
             "rank": 5,
-            "lp_mean": -0.8508499810704961,
+            "lp_mean": -0.8543965122662485,
             "top1_token": "Albert",
-            "top1_lp": -0.9273937344551086,
+            "top1_lp": -0.9246504902839661,
             "gold_first_token": "1"
           }
         ]
@@ -1757,30 +6715,30 @@
         "top1_match_rate": 0.0,
         "top5_match_rate": 0.06,
         "median_rank": 10,
-        "max_rank": 58,
+        "max_rank": 59,
         "examples_top1_mismatch_with_high_lp": [
           {
             "family_id": "rb_013",
             "rank": 1,
-            "lp_mean": -0.8535273857414722,
+            "lp_mean": -0.8520116433501244,
             "top1_token": "Given",
-            "top1_lp": -1.190237283706665,
+            "top1_lp": -1.191141128540039,
             "gold_first_token": "A"
           },
           {
             "family_id": "rb_013",
             "rank": 6,
-            "lp_mean": -1.1143472865223885,
+            "lp_mean": -1.1159548452124,
             "top1_token": "In",
-            "top1_lp": -2.1874547004699707,
+            "top1_lp": -2.1785247325897217,
             "gold_first_token": "A"
           },
           {
             "family_id": "rb_006",
             "rank": 18,
-            "lp_mean": -1.2212189882993698,
+            "lp_mean": -1.2154048114482845,
             "top1_token": "To",
-            "top1_lp": -1.8130531311035156,
+            "top1_lp": -1.814508318901062,
             "gold_first_token": "x"
           }
         ]
@@ -1795,25 +6753,25 @@
           {
             "family_id": "rb_013",
             "rank": 2,
-            "lp_mean": -0.9820863325148821,
+            "lp_mean": -0.9823559038341045,
             "top1_token": "Given",
-            "top1_lp": -1.7014565467834473,
+            "top1_lp": -1.705245018005371,
             "gold_first_token": "A"
           },
           {
             "family_id": "rb_006",
             "rank": 5,
-            "lp_mean": -1.0090459119528532,
+            "lp_mean": -1.0100667772016354,
             "top1_token": "Let",
-            "top1_lp": -1.2919012308120728,
+            "top1_lp": -1.2900832891464233,
             "gold_first_token": "x"
           },
           {
             "family_id": "rb_013",
-            "rank": 2,
-            "lp_mean": -1.0629110466688871,
+            "rank": 3,
+            "lp_mean": -1.0652961507439613,
             "top1_token": "Let",
-            "top1_lp": -1.4415180683135986,
+            "top1_lp": -1.4376591444015503,
             "gold_first_token": "A"
           }
         ]
@@ -1823,32 +6781,32 @@
       "no_cot": {
         "n": 50,
         "top1_match_rate": 0.0,
-        "top5_match_rate": 0.1,
+        "top5_match_rate": 0.08,
         "median_rank": 16,
-        "max_rank": 383,
+        "max_rank": 379,
         "examples_top1_mismatch_with_high_lp": [
           {
             "family_id": "rb_013",
             "rank": 3,
-            "lp_mean": -1.095888389274478,
+            "lp_mean": -1.0947269517928362,
             "top1_token": "Given",
-            "top1_lp": -2.2022478580474854,
+            "top1_lp": -2.202932357788086,
             "gold_first_token": "A"
           },
           {
             "family_id": "rb_006",
             "rank": 19,
-            "lp_mean": -1.3991620891860552,
+            "lp_mean": -1.396435315587691,
             "top1_token": "To",
-            "top1_lp": -1.9214740991592407,
+            "top1_lp": -1.9127347469329834,
             "gold_first_token": "x"
           },
           {
             "family_id": "rb_009",
-            "rank": 4,
-            "lp_mean": -1.6082450151443481,
+            "rank": 5,
+            "lp_mean": -1.6158068478107452,
             "top1_token": "In",
-            "top1_lp": -1.513108253479004,
+            "top1_lp": -1.510406732559204,
             "gold_first_token": "1"
           }
         ]
@@ -1856,32 +6814,32 @@
       "with_cot": {
         "n": 50,
         "top1_match_rate": 0.0,
-        "top5_match_rate": 0.06,
+        "top5_match_rate": 0.08,
         "median_rank": 18,
-        "max_rank": 183,
+        "max_rank": 182,
         "examples_top1_mismatch_with_high_lp": [
           {
             "family_id": "rb_013",
-            "rank": 5,
-            "lp_mean": -1.051472995430231,
+            "rank": 4,
+            "lp_mean": -1.048608860000968,
             "top1_token": "Let",
-            "top1_lp": -2.278362274169922,
+            "top1_lp": -2.2894461154937744,
             "gold_first_token": "A"
           },
           {
             "family_id": "rb_006",
             "rank": 27,
-            "lp_mean": -1.405944890741791,
+            "lp_mean": -1.4059994901929582,
             "top1_token": "Let",
-            "top1_lp": -1.0925102233886719,
+            "top1_lp": -1.0826282501220703,
             "gold_first_token": "x"
           },
           {
             "family_id": "rb_012",
             "rank": 6,
-            "lp_mean": -1.5649755378253758,
+            "lp_mean": -1.561041890643537,
             "top1_token": "Let",
-            "top1_lp": -2.3083324432373047,
+            "top1_lp": -2.3053131103515625,
             "gold_first_token": "3"
           }
         ]
@@ -1898,25 +6856,25 @@
           {
             "family_id": "rb_006",
             "rank": 24,
-            "lp_mean": -1.2590873425028153,
+            "lp_mean": -1.2601630522736482,
             "top1_token": "Yes",
-            "top1_lp": -1.3090506792068481,
+            "top1_lp": -1.309592366218567,
             "gold_first_token": "x"
           },
           {
             "family_id": "rb_013",
             "rank": 12,
-            "lp_mean": -1.4213715586811304,
+            "lp_mean": -1.4261988792568445,
             "top1_token": "The",
-            "top1_lp": -2.00242018699646,
+            "top1_lp": -1.9946448802947998,
             "gold_first_token": "A"
           },
           {
             "family_id": "rb_006",
             "rank": 13,
-            "lp_mean": -1.8060364233595985,
+            "lp_mean": -1.8055186261023795,
             "top1_token": "Yes",
-            "top1_lp": -1.6050972938537598,
+            "top1_lp": -1.602152705192566,
             "gold_first_token": "x"
           }
         ]
@@ -1926,30 +6884,30 @@
         "top1_match_rate": 0.0,
         "top5_match_rate": 0.0,
         "median_rank": 25,
-        "max_rank": 207,
+        "max_rank": 206,
         "examples_top1_mismatch_with_high_lp": [
           {
             "family_id": "rb_013",
             "rank": 7,
-            "lp_mean": -1.1368937119841576,
+            "lp_mean": -1.1378121869638562,
             "top1_token": "The",
-            "top1_lp": -2.0259172916412354,
+            "top1_lp": -2.0237061977386475,
             "gold_first_token": "A"
           },
           {
             "family_id": "rb_006",
             "rank": 35,
-            "lp_mean": -1.3735631400985377,
+            "lp_mean": -1.3700980903314692,
             "top1_token": "Let",
-            "top1_lp": -1.615731120109558,
+            "top1_lp": -1.6059439182281494,
             "gold_first_token": "x"
           },
           {
             "family_id": "rb_012",
             "rank": 16,
-            "lp_mean": -1.8345110466470942,
+            "lp_mean": -1.8351721070939675,
             "top1_token": "Yes",
-            "top1_lp": -1.6792188882827759,
+            "top1_lp": -1.6810529232025146,
             "gold_first_token": "3"
           }
         ]
@@ -1961,30 +6919,30 @@
         "top1_match_rate": 0.04,
         "top5_match_rate": 0.4,
         "median_rank": 7,
-        "max_rank": 319,
+        "max_rank": 314,
         "examples_top1_mismatch_with_high_lp": [
           {
             "family_id": "hybrid_024",
             "rank": 1,
-            "lp_mean": -0.32951936940662563,
+            "lp_mean": -0.3246432823361829,
             "top1_token": "Mark",
-            "top1_lp": -0.6012400388717651,
+            "top1_lp": -0.6129255294799805,
             "gold_first_token": "1"
           },
           {
             "family_id": "hybrid_012",
             "rank": 1,
-            "lp_mean": -0.3338745202636346,
+            "lp_mean": -0.33223204291425645,
             "top1_token": "Jeff",
-            "top1_lp": -1.1242433786392212,
+            "top1_lp": -1.1333447694778442,
             "gold_first_token": "1"
           },
           {
             "family_id": "hybrid_007",
             "rank": 1,
-            "lp_mean": -0.34572771286669496,
+            "lp_mean": -0.34271812208074454,
             "top1_token": "Tesla",
-            "top1_lp": -0.9682276248931885,
+            "top1_lp": -0.9752877950668335,
             "gold_first_token": "El"
           }
         ]
@@ -1994,30 +6952,30 @@
         "top1_match_rate": 0.08,
         "top5_match_rate": 0.32,
         "median_rank": 9,
-        "max_rank": 278,
+        "max_rank": 290,
         "examples_top1_mismatch_with_high_lp": [
           {
             "family_id": "hybrid_012",
             "rank": 1,
-            "lp_mean": -0.4634120975388214,
+            "lp_mean": -0.46429358853492886,
             "top1_token": "Let",
-            "top1_lp": -1.4604631662368774,
+            "top1_lp": -1.4483813047409058,
             "gold_first_token": "1"
           },
           {
             "family_id": "hybrid_004",
             "rank": 1,
-            "lp_mean": -0.5569382784888148,
+            "lp_mean": -0.5591577539453283,
             "top1_token": "Leon",
-            "top1_lp": -0.7542898058891296,
+            "top1_lp": -0.7472044825553894,
             "gold_first_token": "1"
           },
           {
             "family_id": "hybrid_018",
             "rank": 3,
-            "lp_mean": -0.6693108596373349,
+            "lp_mean": -0.6690132843796164,
             "top1_token": "J",
-            "top1_lp": -1.5138893127441406,
+            "top1_lp": -1.5123686790466309,
             "gold_first_token": "1"
           }
         ]
@@ -2029,30 +6987,30 @@
         "top1_match_rate": 0.0,
         "top5_match_rate": 0.26,
         "median_rank": 16,
-        "max_rank": 6747,
+        "max_rank": 6583,
         "examples_top1_mismatch_with_high_lp": [
           {
             "family_id": "hybrid_004",
             "rank": 2,
-            "lp_mean": -0.47276736330240965,
+            "lp_mean": -0.46910901088267565,
             "top1_token": "Leon",
-            "top1_lp": -1.4604780673980713,
+            "top1_lp": -1.4621142148971558,
             "gold_first_token": "1"
           },
           {
             "family_id": "hybrid_019",
             "rank": 2,
-            "lp_mean": -0.5462323217652738,
+            "lp_mean": -0.5461312250699848,
             "top1_token": "The",
-            "top1_lp": -1.6199887990951538,
+            "top1_lp": -1.6200032234191895,
             "gold_first_token": "1"
           },
           {
             "family_id": "hybrid_007",
             "rank": 2,
-            "lp_mean": -0.6978630390949547,
-            "top1_token": "Tesla",
-            "top1_lp": -1.7757370471954346,
+            "lp_mean": -0.6999071592775484,
+            "top1_token": "The",
+            "top1_lp": -1.78252112865448,
             "gold_first_token": "El"
           }
         ]
@@ -2062,30 +7020,30 @@
         "top1_match_rate": 0.02,
         "top5_match_rate": 0.08,
         "median_rank": 24,
-        "max_rank": 9073,
+        "max_rank": 8882,
         "examples_top1_mismatch_with_high_lp": [
           {
             "family_id": "hybrid_004",
             "rank": 3,
-            "lp_mean": -0.7411639085039496,
+            "lp_mean": -0.7416300494223833,
             "top1_token": "The",
-            "top1_lp": -1.9284859895706177,
+            "top1_lp": -1.9299736022949219,
             "gold_first_token": "1"
           },
           {
             "family_id": "hybrid_019",
             "rank": 4,
-            "lp_mean": -0.831442161463201,
+            "lp_mean": -0.8316935496404767,
             "top1_token": "Let",
-            "top1_lp": -1.3547883033752441,
+            "top1_lp": -1.3569828271865845,
             "gold_first_token": "1"
           },
           {
             "family_id": "hybrid_014",
             "rank": 5,
-            "lp_mean": -0.8918352220207453,
+            "lp_mean": -0.8893388067372143,
             "top1_token": "The",
-            "top1_lp": -1.4461103677749634,
+            "top1_lp": -1.4505646228790283,
             "gold_first_token": "1"
           }
         ]
@@ -2097,30 +7055,30 @@
         "top1_match_rate": 0.02,
         "top5_match_rate": 0.14,
         "median_rank": 37,
-        "max_rank": 4716,
+        "max_rank": 4731,
         "examples_top1_mismatch_with_high_lp": [
           {
             "family_id": "hybrid_012",
             "rank": 3,
-            "lp_mean": -1.0107304523698986,
+            "lp_mean": -1.0096947709098458,
             "top1_token": "In",
-            "top1_lp": -1.858731746673584,
+            "top1_lp": -1.856374979019165,
             "gold_first_token": "1"
           },
           {
             "family_id": "hybrid_018",
             "rank": 5,
-            "lp_mean": -1.014247303828597,
+            "lp_mean": -1.014602756127715,
             "top1_token": "The",
-            "top1_lp": -1.1245659589767456,
+            "top1_lp": -1.1259180307388306,
             "gold_first_token": "1"
           },
           {
             "family_id": "hybrid_019",
             "rank": 2,
-            "lp_mean": -1.0655668592080474,
+            "lp_mean": -1.069957415573299,
             "top1_token": "The",
-            "top1_lp": -1.1403244733810425,
+            "top1_lp": -1.1437777280807495,
             "gold_first_token": "1"
           }
         ]
@@ -2129,31 +7087,99 @@
         "n": 50,
         "top1_match_rate": 0.02,
         "top5_match_rate": 0.08,
-        "median_rank": 45,
-        "max_rank": 8306,
+        "median_rank": 44,
+        "max_rank": 8216,
         "examples_top1_mismatch_with_high_lp": [
           {
             "family_id": "hybrid_019",
             "rank": 3,
-            "lp_mean": -0.9821854792535305,
+            "lp_mean": -0.9856775514781475,
             "top1_token": "The",
-            "top1_lp": -1.581486701965332,
+            "top1_lp": -1.5702937841415405,
             "gold_first_token": "1"
           },
           {
             "family_id": "hybrid_018",
             "rank": 6,
-            "lp_mean": -0.9950975179672241,
+            "lp_mean": -0.9915666654706001,
             "top1_token": "The",
-            "top1_lp": -1.3539620637893677,
+            "top1_lp": -1.3615607023239136,
             "gold_first_token": "1"
           },
           {
             "family_id": "hybrid_024",
             "rank": 11,
-            "lp_mean": -1.0403895350173116,
+            "lp_mean": -1.0446103038266301,
             "top1_token": "Let",
-            "top1_lp": -1.9084264039993286,
+            "top1_lp": -1.9073454141616821,
+            "gold_first_token": "1"
+          }
+        ]
+      }
+    },
+    "wrong_bridge": {
+      "no_cot": {
+        "n": 50,
+        "top1_match_rate": 0.02,
+        "top5_match_rate": 0.16,
+        "median_rank": 52,
+        "max_rank": 1270,
+        "examples_top1_mismatch_with_high_lp": [
+          {
+            "family_id": "hybrid_012",
+            "rank": 2,
+            "lp_mean": -1.4092666539363563,
+            "top1_token": "The",
+            "top1_lp": -1.8121168613433838,
+            "gold_first_token": "1"
+          },
+          {
+            "family_id": "hybrid_004",
+            "rank": 3,
+            "lp_mean": -1.8001932688057423,
+            "top1_token": "The",
+            "top1_lp": -0.827267587184906,
+            "gold_first_token": "1"
+          },
+          {
+            "family_id": "hybrid_024",
+            "rank": 1,
+            "lp_mean": -2.1477609807625413,
+            "top1_token": "Sh",
+            "top1_lp": -1.389527440071106,
+            "gold_first_token": "1"
+          }
+        ]
+      },
+      "with_cot": {
+        "n": 50,
+        "top1_match_rate": 0.02,
+        "top5_match_rate": 0.14,
+        "median_rank": 30,
+        "max_rank": 2560,
+        "examples_top1_mismatch_with_high_lp": [
+          {
+            "family_id": "hybrid_012",
+            "rank": 4,
+            "lp_mean": -1.5038464448880404,
+            "top1_token": "The",
+            "top1_lp": -1.3837711811065674,
+            "gold_first_token": "1"
+          },
+          {
+            "family_id": "hybrid_004",
+            "rank": 4,
+            "lp_mean": -1.7922089155763388,
+            "top1_token": "The",
+            "top1_lp": -1.5570614337921143,
+            "gold_first_token": "1"
+          },
+          {
+            "family_id": "hybrid_019",
+            "rank": 7,
+            "lp_mean": -2.1159646874293685,
+            "top1_token": "The",
+            "top1_lp": -2.165323495864868,
             "gold_first_token": "1"
           }
         ]
