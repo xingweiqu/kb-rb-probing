@@ -58,10 +58,30 @@ def _trim_task_family(rec: dict) -> dict:
     }
 
 
-def _trim_capability_top(records: list[dict], top_k: int = 10) -> list[dict]:
+def _trim_capability_top(records: list[dict], top_k: int | None = None) -> list[dict]:
+    """Roll up per-cell capability probe records.
+
+    Each kept entry is one (capability, judge, cot_state, pool) cell with
+    only the best-layer metrics retained (per-layer arrays are dropped).
+    Skipped probes are also kept (with skipped=True) so the failure-diagnosis
+    matrix can render them as N/A rather than missing entries. Pass
+    ``top_k`` to truncate; default keeps every cell.
+    """
     keep = []
     for r in records:
         if r.get("skipped"):
+            keep.append({
+                "probe_type": r.get("probe_type"),
+                "judge": r.get("judge"),
+                "rank": r.get("rank"),
+                "capability": r.get("capability"),
+                "cot_state": r.get("cot_state"),
+                "pool": r.get("pool"),
+                "skipped": True,
+                "reason": r.get("reason"),
+                "n_samples": r.get("n_samples"),
+                "class_counts": r.get("class_counts"),
+            })
             continue
         by_layer = r.get("by_layer") or []
         best_layer = r.get("best_layer")
@@ -82,8 +102,11 @@ def _trim_capability_top(records: list[dict], top_k: int = 10) -> list[dict]:
             "best_accuracy": best.get("accuracy"),
             "confusion_matrix": best.get("confusion_matrix"),
         })
-    keep.sort(key=lambda d: d["best_balanced_accuracy"] or -1, reverse=True)
-    return keep[:top_k]
+    keep.sort(key=lambda d: (d.get("best_balanced_accuracy") if not d.get("skipped") else -1) or -1,
+              reverse=True)
+    if top_k is not None:
+        return keep[:top_k]
+    return keep
 
 
 def _capability_skip_stats(records: list[dict]) -> dict:
@@ -245,12 +268,12 @@ def make_summary(run_dir: str, model_path: str, output: str | None = None) -> di
             "linear": {
                 **_capability_skip_stats(linear.get("capability", [])),
                 "probe_type": "linear",
-                "top": _trim_capability_top(linear.get("capability", []), top_k=10),
+                "top": _trim_capability_top(linear.get("capability", [])),
             },
             "lora": {
                 **_capability_skip_stats(lora.get("capability", [])),
                 "probe_type": "lora",
-                "top": _trim_capability_top(lora.get("capability", []), top_k=10),
+                "top": _trim_capability_top(lora.get("capability", [])),
             },
         },
         "geometry": _geometry_summary(geom),
