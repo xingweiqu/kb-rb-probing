@@ -418,30 +418,31 @@ def fig_capacity_matrix(summary: dict, out: Path,
     """
     M = _build_capacity_matrix(summary, judge, cot, pool, metric=metric)
     vmin, vmax, cbar_label = _matrix_color_range(metric)
-    fig, ax = plt.subplots(figsize=(13, 4.2))
+    fig, ax = plt.subplots(figsize=(15, 5.2))
     im = ax.imshow(M, cmap="RdYlGn", vmin=vmin, vmax=vmax, aspect="auto")
-    _annotate_matrix(ax, M, fontsize=15)
+    _annotate_matrix(ax, M, fontsize=20)
 
     ax.set_yticks(range(len(FAMILY_NAMES)))
-    ax.set_yticklabels(FAMILY_NAMES, fontsize=14)
+    ax.set_yticklabels(FAMILY_NAMES, fontsize=18)
     ax.set_xticks(range(len(MATRIX_CAPS)))
-    ax.set_xticklabels(MATRIX_CAPS, fontsize=14)
-    ax.set_xlabel("atomic capacity", fontsize=13)
-    ax.set_ylabel("task family", fontsize=13)
+    ax.set_xticklabels(MATRIX_CAPS, fontsize=18)
+    ax.set_xlabel("atomic capacity", fontsize=17)
+    ax.set_ylabel("task family", fontsize=17)
 
     for x in (2.5, 5.5):
-        ax.axvline(x, color="black", linewidth=0.5, alpha=0.4)
+        ax.axvline(x, color="black", linewidth=0.7, alpha=0.5)
 
-    fig.colorbar(im, ax=ax, label=cbar_label, fraction=0.04, pad=0.02)
-    title_metric = "Δlogprob magnitude" if metric == "delta" else f"probe bacc ({judge})"
+    cbar = fig.colorbar(im, ax=ax, label=cbar_label, fraction=0.04, pad=0.02)
+    cbar.ax.tick_params(labelsize=14)
+    cbar.set_label(cbar_label, fontsize=15)
+    title_metric = "|mean Δlogprob/token|" if metric == "delta" else f"probe bacc ({judge})"
     ax.set_title(
-        f"Failure-diagnosis matrix — {_model_name(summary)} "
-        f"({title_metric}, {cot}, {pool})\n"
-        "cell = perturbation signal on its native task family",
-        fontsize=10,
+        f"Atomic-capacity profile — {_model_name(summary)} "
+        f"({title_metric}, {cot})",
+        fontsize=15,
     )
     fig.tight_layout()
-    fig.savefig(out, dpi=140)
+    fig.savefig(out, dpi=220, bbox_inches="tight")
     plt.close(fig)
 
 
@@ -457,13 +458,19 @@ def fig_capacity_matrix_grid(summaries: list[dict], out: Path,
     n = len(summaries)
     if n == 0:
         return
-    if n <= 4:
-        rows, cols = 1, n
+    if n == 1:
+        rows, cols = 1, 1
+    elif n == 2:
+        rows, cols = 1, 2
+    elif n <= 4:
+        rows, cols = 2, 2
+    elif n <= 6:
+        rows, cols = 2, 3
     elif n <= 9:
-        rows = 3; cols = (n + rows - 1) // rows
+        rows, cols = 3, 3
     else:
         rows = 4; cols = (n + rows - 1) // rows
-    fig, axes = plt.subplots(rows, cols, figsize=(cols * 6.5, rows * 3.4),
+    fig, axes = plt.subplots(rows, cols, figsize=(cols * 9.5, rows * 4.0),
                              squeeze=False)
     vmin, vmax, cbar_label = _matrix_color_range(metric)
     last_im = None
@@ -471,23 +478,25 @@ def fig_capacity_matrix_grid(summaries: list[dict], out: Path,
         ax = axes[idx // cols, idx % cols]
         M = _build_capacity_matrix(s, judge, cot, pool, metric=metric)
         last_im = ax.imshow(M, cmap="RdYlGn", vmin=vmin, vmax=vmax, aspect="auto")
-        _annotate_matrix(ax, M, fontsize=12)
-        ax.set_yticks(range(len(FAMILY_NAMES))); ax.set_yticklabels(FAMILY_NAMES, fontsize=11)
-        ax.set_xticks(range(len(MATRIX_CAPS))); ax.set_xticklabels(MATRIX_CAPS, fontsize=11)
+        _annotate_matrix(ax, M, fontsize=18)
+        ax.set_yticks(range(len(FAMILY_NAMES))); ax.set_yticklabels(FAMILY_NAMES, fontsize=15)
+        ax.set_xticks(range(len(MATRIX_CAPS))); ax.set_xticklabels(MATRIX_CAPS, fontsize=15)
         for x in (2.5, 5.5):
-            ax.axvline(x, color="black", linewidth=0.5, alpha=0.4)
-        ax.set_title(_model_name(s), fontsize=13, fontweight="bold")
+            ax.axvline(x, color="black", linewidth=0.7, alpha=0.5)
+        ax.set_title(_model_name(s), fontsize=17, fontweight="bold")
     for idx in range(n, rows * cols):
         axes[idx // cols, idx % cols].set_visible(False)
     if last_im is not None:
-        fig.colorbar(last_im, ax=axes.ravel().tolist(),
-                     label=cbar_label, fraction=0.025, pad=0.02)
-    title_metric = "Δlogprob magnitude" if metric == "delta" else f"probe bacc ({judge})"
+        cbar = fig.colorbar(last_im, ax=axes.ravel().tolist(),
+                            label=cbar_label, fraction=0.025, pad=0.02)
+        cbar.ax.tick_params(labelsize=14)
+        cbar.set_label(cbar_label, fontsize=15)
+    title_metric = "|mean Δlogprob/token|" if metric == "delta" else f"probe bacc ({judge})"
     fig.suptitle(
-        f"Failure-diagnosis matrix across models ({title_metric}, {cot}, {pool})",
-        fontsize=11,
+        f"Atomic-capacity profile across models ({title_metric}, {cot})",
+        fontsize=17,
     )
-    fig.savefig(out, dpi=140, bbox_inches="tight")
+    fig.savefig(out, dpi=220, bbox_inches="tight")
     plt.close(fig)
 
 
