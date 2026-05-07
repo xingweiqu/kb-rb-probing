@@ -35,16 +35,44 @@ sample mismatched-but-high-lp families for manual inspection.
 
 ## What to run
 
-Pull the latest ``feat/probing-pipeline`` branch and run as before. The shell
-script handles the new logprob extraction and the new summary step
-automatically:
+Pull the latest ``feat/probing-pipeline`` branch:
 
 ```bash
 git pull origin feat/probing-pipeline
+```
+
+### Parallel run across 8 GPUs (recommended)
+
+The user has 8 GPUs. Use the dispatcher to run all models in parallel,
+one model per GPU:
+
+```bash
+./probing_mvp/run_all_models.sh \
+    /opt/tiger/ouro2/Qwen3-0.5B \
+    /opt/tiger/ouro2/Qwen3-1.7B \
+    /opt/tiger/ouro2/Qwen3-4B \
+    /opt/tiger/ouro2/Qwen3-8B \
+    /opt/tiger/ouro2/Qwen3-8B-Base
+```
+
+Each model gets pinned to one GPU via ``CUDA_VISIBLE_DEVICES``. Logs go
+to ``logs/<model_name>.log``. The dispatcher waits for all jobs and prints a
+final summary listing the ``summary.json`` files to push.
+
+The dispatcher passes ``GRABGPU_ENABLE=0`` to each child because the
+keepalive logic assumes single-script ownership of all 8 cards. **Start
+GrabGPU manually before the dispatcher and kill it manually after, if you
+need keepalive.**
+
+### Sequential run (one model at a time)
+
+If you only want to run one model:
+
+```bash
 ./probing_mvp/run_probing.sh /opt/tiger/ouro2/Qwen3-8B
 ```
 
-This produces ``runs/Qwen3-8B/summary.json``. Repeat per model.
+This produces ``runs/Qwen3-8B/summary.json``.
 
 ## Models to run, in priority order
 
