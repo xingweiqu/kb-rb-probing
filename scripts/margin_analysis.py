@@ -192,68 +192,81 @@ def write_csv(path: Path, rows: list[dict]) -> None:
 
 def plot_family_vs_capacity(family_rows: list[dict], capacity_rows: list[dict],
                             figpath: Path) -> None:
-    """Scaling figure: family score (black) vs three atomic capacities
-    (colored) per family, x = model size on log scale, two series per
-    line (instruct solid, base dashed). One subplot per family."""
+    """3 rows (Knowledge / Reasoning / Bridge) x 4 cols (family + 3 caps).
+    First column shows family score; remaining columns show one capacity
+    each. Each subplot: x = model size (log), y = signal magnitude, two
+    series (instruct = solid blue circles, base = dashed gray squares).
+    Big markers, big labels, no legend collisions, no overlapping lines.
+    """
     import matplotlib.pyplot as plt
-    fig, axes = plt.subplots(1, 3, figsize=(18, 5.2))
+    fig, axes = plt.subplots(3, 4, figsize=(20, 12), sharex=True)
     panels = [
         ("KB", ["KP", "KB", "KD"], "Knowledge"),
         ("RB", ["RP", "RB", "RD"], "Reasoning"),
         ("Hybrid", ["CP", "CB", "CD"], "Bridge"),
     ]
-    cap_colors = {"KP": "#1f77b4", "KB": "#ff7f0e", "KD": "#2ca02c",
-                  "RP": "#1f77b4", "RB": "#ff7f0e", "RD": "#2ca02c",
-                  "CP": "#1f77b4", "CB": "#ff7f0e", "CD": "#2ca02c"}
-    for ax, (fam, caps, title) in zip(axes, panels):
-        ax2 = ax.twinx()
-        for cot in ("no_cot",):
-            for is_inst, ls, marker in [(True, "-", "o"), (False, "--", "s")]:
-                fam_pts = []
-                for r in family_rows:
-                    if (r["family"] == fam and r["cot_state"] == cot
-                            and _is_instruct(r["model"]) == is_inst):
-                        sz = _model_size_b(r["model"])
-                        if sz is None:
-                            continue
-                        v = r["mean_orig_gold_lp"]
-                        if not _isnan(v):
-                            fam_pts.append((sz, v))
-                fam_pts.sort()
-                if fam_pts:
-                    xs, ys = zip(*fam_pts)
-                    ax.plot(xs, ys, color="black", linestyle=ls, marker=marker,
-                            markersize=6, alpha=0.85, linewidth=2.0,
-                            label=f"family score ({'instruct' if is_inst else 'base'})")
-                for cap in caps:
-                    cap_pts = []
-                    for r in capacity_rows:
-                        if (r["capacity"] == cap and r["cot_state"] == cot
-                                and _is_instruct(r["model"]) == is_inst):
-                            sz = _model_size_b(r["model"])
-                            if sz is None:
-                                continue
-                            v = r.get("abs_delta_mean")
-                            if v is not None and not _isnan(v):
-                                cap_pts.append((sz, v))
-                    cap_pts.sort()
-                    if cap_pts:
-                        xs, ys = zip(*cap_pts)
-                        ax2.plot(xs, ys, color=cap_colors[cap], linestyle=ls,
-                                 marker=marker, markersize=5, alpha=0.7,
-                                 label=f"{cap} ({'instruct' if is_inst else 'base'})")
+
+    def _series(rows, key_fn, is_inst):
+        pts = []
+        for r in rows:
+            if _is_instruct(r["model"]) != is_inst:
+                continue
+            sz = _model_size_b(r["model"])
+            if sz is None:
+                continue
+            v = key_fn(r)
+            if v is None or _isnan(v):
+                continue
+            pts.append((sz, v))
+        pts.sort()
+        return pts
+
+    for row, (fam, caps, title) in enumerate(panels):
+        # Column 0: family score
+        ax = axes[row, 0]
+        fam_subset = [r for r in family_rows
+                      if r["family"] == fam and r["cot_state"] == "no_cot"]
+        for is_inst, color, ls, marker, label in [
+                (True, "#1f6feb", "-", "o", "instruct"),
+                (False, "#666666", "--", "s", "base"),
+        ]:
+            pts = _series(fam_subset, lambda r: r["mean_orig_gold_lp"], is_inst)
+            if pts:
+                xs, ys = zip(*pts)
+                ax.plot(xs, ys, color=color, linestyle=ls, marker=marker,
+                        markersize=10, linewidth=2.5, label=label)
         ax.set_xscale("log")
-        ax.set_title(title, fontsize=14, fontweight="bold")
-        ax.set_xlabel("model size (B params, log)", fontsize=12)
-        ax.set_ylabel("family score: mean orig gold logp", fontsize=12)
-        ax2.set_ylabel("|mean Δlogp/token| per capacity", fontsize=12)
-        ax.tick_params(axis="both", labelsize=11)
-        ax2.tick_params(axis="y", labelsize=11)
-        h1, l1 = ax.get_legend_handles_labels()
-        h2, l2 = ax2.get_legend_handles_labels()
-        ax.legend(h1 + h2, l1 + l2, loc="best", fontsize=8, framealpha=0.9, ncol=2)
-    fig.suptitle("Family score vs atomic-capacity profile (no-CoT)",
-                 fontsize=15, fontweight="bold")
+        ax.set_title(f"{title} family score", fontsize=15, fontweight="bold")
+        ax.set_ylabel("mean orig gold logp", fontsize=13)
+        ax.tick_params(axis="both", labelsize=12)
+        ax.grid(alpha=0.3)
+        ax.legend(loc="best", fontsize=11, framealpha=0.9)
+
+        # Columns 1..3: per-capacity
+        for col, cap in enumerate(caps, start=1):
+            ax = axes[row, col]
+            cap_subset = [r for r in capacity_rows
+                          if r["capacity"] == cap and r["cot_state"] == "no_cot"]
+            for is_inst, color, ls, marker, label in [
+                    (True, "#1f6feb", "-", "o", "instruct"),
+                    (False, "#666666", "--", "s", "base"),
+            ]:
+                pts = _series(cap_subset, lambda r: r.get("abs_delta_mean"),
+                              is_inst)
+                if pts:
+                    xs, ys = zip(*pts)
+                    ax.plot(xs, ys, color=color, linestyle=ls, marker=marker,
+                            markersize=10, linewidth=2.5, label=label)
+            ax.set_xscale("log")
+            ax.set_title(f"{title}: {cap}", fontsize=15, fontweight="bold")
+            ax.set_ylabel("|mean Δlogp/token|", fontsize=13)
+            ax.tick_params(axis="both", labelsize=12)
+            ax.grid(alpha=0.3)
+
+    for ax in axes[-1]:
+        ax.set_xlabel("model size (B params, log)", fontsize=13)
+    fig.suptitle("Family score vs atomic-capacity scaling (no-CoT, instruct vs base)",
+                 fontsize=18, fontweight="bold", y=1.0)
     fig.tight_layout()
     figpath.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(figpath, dpi=200, bbox_inches="tight")
@@ -273,72 +286,74 @@ def _is_instruct(name: str) -> bool:
 
 
 def plot_wrong_claim_margin(capacity_rows: list[dict], figpath: Path) -> None:
-    """Scaling figure: x = model size (log B params), y = signal magnitude.
-    One subplot per cell (KD / RD / CD), two series per subplot (instruct
-    solid, base dashed). Two y-axes per subplot (gold_drop blue, margin
-    red) so the empirical claim "gold_drop ↑ AND margin ↑ as scale grows"
-    is visible at a glance. Error bars are 95% bootstrap CIs by family_id."""
+    """3 rows (KD / RD / CD) x 2 cols (gold_drop / margin_variant).
+    Each subplot: x = model size (log), y = single signal, two series
+    (instruct solid blue, base dashed gray) with 95% bootstrap CI bars.
+    Big markers, big fonts, no overlapping lines, no twin axis."""
     import matplotlib.pyplot as plt
-    fig, axes = plt.subplots(1, 3, figsize=(18, 5.2))
+    fig, axes = plt.subplots(3, 2, figsize=(15, 13), sharex=True)
     panels = [("KD", "Wrong-Claim (Knowledge)"),
               ("RD", "Wrong-Step (Reasoning)"),
               ("CD", "Wrong-Bridge (Hybrid)")]
-    for ax, (cap, title) in zip(axes, panels):
-        rows = [r for r in capacity_rows
-                if r["capacity"] == cap and r["cot_state"] == "no_cot"
-                and "gold_drop_mean" in r and not _isnan(r["gold_drop_mean"])]
-        if not rows:
-            ax.set_visible(False)
-            continue
-        # Group by instruct/base, attach size
-        for r in rows:
-            r["_size"] = _model_size_b(r["model"])
-        rows = [r for r in rows if r["_size"] is not None]
-        instruct = sorted([r for r in rows if _is_instruct(r["model"])],
-                          key=lambda r: r["_size"])
-        base     = sorted([r for r in rows if not _is_instruct(r["model"])],
-                          key=lambda r: r["_size"])
 
-        ax2 = ax.twinx()
-        for series, marker, ls, label_suffix in [
-                (instruct, "o", "-",  "instruct"),
-                (base,     "s", "--", "base"),
-        ]:
-            if not series:
+    def _series(cap, key_mean, key_lo, key_hi, is_inst):
+        pts = []
+        for r in capacity_rows:
+            if r["capacity"] != cap or r["cot_state"] != "no_cot":
                 continue
-            xs = [r["_size"] for r in series]
-            gd = [r["gold_drop_mean"] for r in series]
-            gd_lo = [r["gold_drop_lo"] for r in series]
-            gd_hi = [r["gold_drop_hi"] for r in series]
-            mv = [r["margin_var_mean"] for r in series]
-            mv_lo = [r["margin_var_lo"] for r in series]
-            mv_hi = [r["margin_var_hi"] for r in series]
-            ax.errorbar(xs, gd,
-                        yerr=[[g - l for g, l in zip(gd, gd_lo)],
-                              [h - g for g, h in zip(gd, gd_hi)]],
-                        fmt=marker, linestyle=ls, color="#1f6feb",
-                        markersize=7, capsize=3, alpha=0.85,
-                        label=f"gold_drop ({label_suffix})")
-            ax2.errorbar(xs, mv,
-                         yerr=[[m - l for m, l in zip(mv, mv_lo)],
-                               [h - m for m, h in zip(mv, mv_hi)]],
-                         fmt=marker, linestyle=ls, color="#d6336c",
-                         markersize=7, capsize=3, alpha=0.85,
-                         label=f"margin_variant ({label_suffix})")
-        ax.set_xscale("log")
-        ax.set_title(title, fontsize=14, fontweight="bold")
-        ax.set_xlabel("model size (B params, log)", fontsize=12)
-        ax.set_ylabel("gold log-prob drop  (variant − orig)", color="#1f6feb", fontsize=12)
-        ax2.set_ylabel("variant margin  (gold − wrong)", color="#d6336c", fontsize=12)
-        ax.tick_params(axis="both", labelsize=11)
-        ax2.tick_params(axis="y", labelsize=11)
-        ax.axhline(0, color="gray", linewidth=0.6, alpha=0.5, zorder=0)
-        # Combined legend
-        h1, l1 = ax.get_legend_handles_labels()
-        h2, l2 = ax2.get_legend_handles_labels()
-        ax.legend(h1 + h2, l1 + l2, loc="best", fontsize=9, framealpha=0.9)
-    fig.suptitle("Wrong-distractor cells: confidence cost vs decision margin (scaling)",
-                 fontsize=15, fontweight="bold")
+            if _is_instruct(r["model"]) != is_inst:
+                continue
+            sz = _model_size_b(r["model"])
+            if sz is None:
+                continue
+            v = r.get(key_mean)
+            if v is None or _isnan(v):
+                continue
+            lo = r.get(key_lo); hi = r.get(key_hi)
+            pts.append((sz, v,
+                        v - lo if lo is not None and not _isnan(lo) else 0.0,
+                        hi - v if hi is not None and not _isnan(hi) else 0.0))
+        pts.sort()
+        return pts
+
+    for row, (cap, title) in enumerate(panels):
+        for col, (key_mean, key_lo, key_hi, ylabel, header) in enumerate([
+                ("gold_drop_mean", "gold_drop_lo", "gold_drop_hi",
+                 "log p(gold)$_v$ − log p(gold)$_o$",
+                 "Confidence cost: gold_drop"),
+                ("margin_var_mean", "margin_var_lo", "margin_var_hi",
+                 "log p(gold)$_v$ − log p(wrong)$_v$",
+                 "Decision margin: margin_variant"),
+        ]):
+            ax = axes[row, col]
+            for is_inst, color, ls, marker, label in [
+                    (True, "#1f6feb", "-", "o", "instruct"),
+                    (False, "#666666", "--", "s", "base"),
+            ]:
+                pts = _series(cap, key_mean, key_lo, key_hi, is_inst)
+                if not pts:
+                    continue
+                xs = [p[0] for p in pts]
+                ys = [p[1] for p in pts]
+                lerr = [p[2] for p in pts]
+                herr = [p[3] for p in pts]
+                ax.errorbar(xs, ys, yerr=[lerr, herr],
+                            color=color, linestyle=ls, marker=marker,
+                            markersize=11, linewidth=2.5, capsize=5,
+                            elinewidth=1.5, alpha=0.9, label=label)
+            ax.axhline(0, color="black", linewidth=0.7, alpha=0.4, zorder=0)
+            ax.set_xscale("log")
+            ax.set_title(f"{title} — {header}", fontsize=14, fontweight="bold")
+            ax.set_ylabel(ylabel, fontsize=13)
+            ax.tick_params(axis="both", labelsize=12)
+            ax.grid(alpha=0.3)
+            if row == 0 and col == 0:
+                ax.legend(loc="best", fontsize=12, framealpha=0.9)
+
+    for ax in axes[-1]:
+        ax.set_xlabel("model size (B params, log)", fontsize=13)
+    fig.suptitle("Wrong-distractor cells: confidence cost vs decision margin (no-CoT)",
+                 fontsize=18, fontweight="bold", y=1.0)
     fig.tight_layout()
     figpath.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(figpath, dpi=200, bbox_inches="tight")
