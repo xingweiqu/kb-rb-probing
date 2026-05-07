@@ -1,9 +1,11 @@
 """Configuration for atomic capability benchmark MVP."""
 
-# API Configuration
-ANTHROPIC_BASE_URL = "https://api.ridgerzhu.com/api"
-ANTHROPIC_AUTH_TOKEN = "REDACTED"
-MODEL = "claude-sonnet-4-5-20250929"
+import os
+
+# API Configuration. Set ANTHROPIC_AUTH_TOKEN in your shell before running.
+ANTHROPIC_BASE_URL = os.environ.get("ANTHROPIC_BASE_URL", "")
+ANTHROPIC_AUTH_TOKEN = os.environ.get("ANTHROPIC_AUTH_TOKEN", "")
+MODEL = os.environ.get("ANTHROPIC_MODEL", "claude-sonnet-4-5-20250929")
 MAX_TOKENS = 6144
 CONCURRENCY = 14
 BATCH_SIZE = 28

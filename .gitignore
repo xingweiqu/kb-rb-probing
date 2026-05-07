@@ -36,3 +36,15 @@ runs_*.log
 # editor temp files
 .~*
 
+
+# ===== Local-only files =====
+CLAUDE.md
+.claude/
+.CLAUDE.md.local
+*.local
+
+# Secrets / API config (never commit)
+**/api_token*
+**/.env
+**/*.token
+**/secrets.py
