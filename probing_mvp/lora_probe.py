@@ -301,7 +301,20 @@ def main() -> None:
     p.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu")
     p.add_argument("--rng", type=int, default=42)
     args = p.parse_args()
-    run(**vars(args))
+    run(
+        hidden_dir=args.hidden_dir,
+        labels_path=args.labels,
+        output_path=args.output,
+        cot_states=args.cot_states,
+        pools=args.pools,
+        rank=args.rank,
+        epochs=args.epochs,
+        lr=args.lr,
+        weight_decay=args.weight_decay,
+        n_splits=args.n_splits,
+        device=args.device,
+        rng=args.rng,
+    )
 
 
 if __name__ == "__main__":

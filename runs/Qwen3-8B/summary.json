@@ -1,0 +1,509 @@
+{
+  "model_path": "/opt/tiger/ouro2/Qwen3-8B",
+  "run_dir": "runs/Qwen3-8B",
+  "generated_at": "2026-05-07T08:39:44+08:00",
+  "task_family": {
+    "linear": [
+      {
+        "probe_type": "linear",
+        "cot_state": "no_cot",
+        "pool": "last",
+        "n_samples": 75,
+        "class_counts": [
+          25,
+          25,
+          25
+        ],
+        "label_names": [
+          "KB",
+          "RB",
+          "Hybrid"
+        ],
+        "best_layer": 12,
+        "best_balanced_accuracy": 0.9866666666666667,
+        "best_accuracy": 0.9866666666666667,
+        "confusion_matrix": [
+          [
+            25,
+            0,
+            0
+          ],
+          [
+            0,
+            25,
+            0
+          ],
+          [
+            1,
+            0,
+            24
+          ]
+        ]
+      },
+      {
+        "probe_type": "linear",
+        "cot_state": "no_cot",
+        "pool": "mean",
+        "n_samples": 75,
+        "class_counts": [
+          25,
+          25,
+          25
+        ],
+        "label_names": [
+          "KB",
+          "RB",
+          "Hybrid"
+        ],
+        "best_layer": 16,
+        "best_balanced_accuracy": 0.9733333333333333,
+        "best_accuracy": 0.9733333333333334,
+        "confusion_matrix": [
+          [
+            24,
+            0,
+            1
+          ],
+          [
+            0,
+            25,
+            0
+          ],
+          [
+            1,
+            0,
+            24
+          ]
+        ]
+      },
+      {
+        "probe_type": "linear",
+        "cot_state": "with_cot",
+        "pool": "last",
+        "n_samples": 75,
+        "class_counts": [
+          25,
+          25,
+          25
+        ],
+        "label_names": [
+          "KB",
+          "RB",
+          "Hybrid"
+        ],
+        "best_layer": 12,
+        "best_balanced_accuracy": 0.9866666666666667,
+        "best_accuracy": 0.9866666666666667,
+        "confusion_matrix": [
+          [
+            25,
+            0,
+            0
+          ],
+          [
+            0,
+            25,
+            0
+          ],
+          [
+            1,
+            0,
+            24
+          ]
+        ]
+      },
+      {
+        "probe_type": "linear",
+        "cot_state": "with_cot",
+        "pool": "mean",
+        "n_samples": 75,
+        "class_counts": [
+          25,
+          25,
+          25
+        ],
+        "label_names": [
+          "KB",
+          "RB",
+          "Hybrid"
+        ],
+        "best_layer": 5,
+        "best_balanced_accuracy": 0.9733333333333333,
+        "best_accuracy": 0.9733333333333334,
+        "confusion_matrix": [
+          [
+            24,
+            0,
+            1
+          ],
+          [
+            0,
+            25,
+            0
+          ],
+          [
+            1,
+            0,
+            24
+          ]
+        ]
+      }
+    ],
+    "lora": [
+      {
+        "probe_type": "lora",
+        "cot_state": "no_cot",
+        "pool": "last",
+        "n_samples": 75,
+        "class_counts": [
+          25,
+          25,
+          25
+        ],
+        "label_names": [
+          "KB",
+          "RB",
+          "Hybrid"
+        ],
+        "best_layer": 10,
+        "best_balanced_accuracy": 0.9866666666666667,
+        "best_accuracy": 0.9866666666666667,
+        "confusion_matrix": [
+          [
+            25,
+            0,
+            0
+          ],
+          [
+            0,
+            25,
+            0
+          ],
+          [
+            1,
+            0,
+            24
+          ]
+        ]
+      },
+      {
+        "probe_type": "lora",
+        "cot_state": "no_cot",
+        "pool": "mean",
+        "n_samples": 75,
+        "class_counts": [
+          25,
+          25,
+          25
+        ],
+        "label_names": [
+          "KB",
+          "RB",
+          "Hybrid"
+        ],
+        "best_layer": 12,
+        "best_balanced_accuracy": 0.9866666666666667,
+        "best_accuracy": 0.9866666666666667,
+        "confusion_matrix": [
+          [
+            25,
+            0,
+            0
+          ],
+          [
+            0,
+            25,
+            0
+          ],
+          [
+            1,
+            0,
+            24
+          ]
+        ]
+      },
+      {
+        "probe_type": "lora",
+        "cot_state": "with_cot",
+        "pool": "last",
+        "n_samples": 75,
+        "class_counts": [
+          25,
+          25,
+          25
+        ],
+        "label_names": [
+          "KB",
+          "RB",
+          "Hybrid"
+        ],
+        "best_layer": 11,
+        "best_balanced_accuracy": 0.9866666666666667,
+        "best_accuracy": 0.9866666666666667,
+        "confusion_matrix": [
+          [
+            25,
+            0,
+            0
+          ],
+          [
+            0,
+            25,
+            0
+          ],
+          [
+            1,
+            0,
+            24
+          ]
+        ]
+      },
+      {
+        "probe_type": "lora",
+        "cot_state": "with_cot",
+        "pool": "mean",
+        "n_samples": 75,
+        "class_counts": [
+          25,
+          25,
+          25
+        ],
+        "label_names": [
+          "KB",
+          "RB",
+          "Hybrid"
+        ],
+        "best_layer": 2,
+        "best_balanced_accuracy": 0.9733333333333333,
+        "best_accuracy": 0.9733333333333334,
+        "confusion_matrix": [
+          [
+            24,
+            0,
+            1
+          ],
+          [
+            0,
+            25,
+            0
+          ],
+          [
+            1,
+            0,
+            24
+          ]
+        ]
+      }
+    ]
+  },
+  "capability": {
+    "label_distribution": {
+      "CB": {
+        "no_cot": {
+          "pos": 0,
+          "neg": 0,
+          "drop": 75,
+          "total": 75
+        },
+        "with_cot": {
+          "pos": 0,
+          "neg": 0,
+          "drop": 75,
+          "total": 75
+        }
+      },
+      "CB-control": {
+        "no_cot": {
+          "pos": 0,
+          "neg": 0,
+          "drop": 75,
+          "total": 75
+        },
+        "with_cot": {
+          "pos": 0,
+          "neg": 0,
+          "drop": 75,
+          "total": 75
+        }
+      },
+      "CP": {
+        "no_cot": {
+          "pos": 1,
+          "neg": 0,
+          "drop": 74,
+          "total": 75
+        },
+        "with_cot": {
+          "pos": 0,
+          "neg": 0,
+          "drop": 75,
+          "total": 75
+        }
+      },
+      "KB": {
+        "no_cot": {
+          "pos": 0,
+          "neg": 0,
+          "drop": 75,
+          "total": 75
+        },
+        "with_cot": {
+          "pos": 2,
+          "neg": 0,
+          "drop": 73,
+          "total": 75
+        }
+      },
+      "KD": {
+        "no_cot": {
+          "pos": 0,
+          "neg": 0,
+          "drop": 75,
+          "total": 75
+        },
+        "with_cot": {
+          "pos": 2,
+          "neg": 0,
+          "drop": 73,
+          "total": 75
+        }
+      },
+      "KP": {
+        "no_cot": {
+          "pos": 1,
+          "neg": 0,
+          "drop": 74,
+          "total": 75
+        },
+        "with_cot": {
+          "pos": 0,
+          "neg": 1,
+          "drop": 74,
+          "total": 75
+        }
+      },
+      "RB": {
+        "no_cot": {
+          "pos": 1,
+          "neg": 0,
+          "drop": 74,
+          "total": 75
+        },
+        "with_cot": {
+          "pos": 1,
+          "neg": 0,
+          "drop": 74,
+          "total": 75
+        }
+      },
+      "RD": {
+        "no_cot": {
+          "pos": 1,
+          "neg": 0,
+          "drop": 74,
+          "total": 75
+        },
+        "with_cot": {
+          "pos": 1,
+          "neg": 0,
+          "drop": 74,
+          "total": 75
+        }
+      },
+      "RP": {
+        "no_cot": {
+          "pos": 0,
+          "neg": 0,
+          "drop": 75,
+          "total": 75
+        },
+        "with_cot": {
+          "pos": 0,
+          "neg": 0,
+          "drop": 75,
+          "total": 75
+        }
+      }
+    },
+    "linear": {
+      "probe_type": "linear",
+      "total": 18,
+      "skipped": 18,
+      "kept": 0,
+      "top": []
+    },
+    "lora": {
+      "probe_type": "lora",
+      "total": 18,
+      "skipped": 18,
+      "kept": 0,
+      "top": []
+    }
+  },
+  "geometry": {
+    "per_setting": [
+      {
+        "cot_state": "no_cot",
+        "pool": "last",
+        "n_samples": 75,
+        "class_counts": [
+          25,
+          25,
+          25
+        ],
+        "best_silhouette_layer": 7,
+        "best_silhouette": 0.23763419687747955
+      },
+      {
+        "cot_state": "no_cot",
+        "pool": "mean",
+        "n_samples": 75,
+        "class_counts": [
+          25,
+          25,
+          25
+        ],
+        "best_silhouette_layer": 7,
+        "best_silhouette": 0.40704792737960815
+      },
+      {
+        "cot_state": "with_cot",
+        "pool": "last",
+        "n_samples": 75,
+        "class_counts": [
+          25,
+          25,
+          25
+        ],
+        "best_silhouette_layer": 7,
+        "best_silhouette": 0.2541111409664154
+      },
+      {
+        "cot_state": "with_cot",
+        "pool": "mean",
+        "n_samples": 75,
+        "class_counts": [
+          25,
+          25,
+          25
+        ],
+        "best_silhouette_layer": 7,
+        "best_silhouette": 0.40309569239616394
+      }
+    ],
+    "cot_shift_last_layer": [
+      {
+        "pool": "last",
+        "KB": 72.5142822265625,
+        "RB": 79.9702377319336,
+        "Hybrid": 70.62040710449219
+      },
+      {
+        "pool": "mean",
+        "KB": 23.362934112548828,
+        "RB": 13.835942268371582,
+        "Hybrid": 19.337129592895508
+      }
+    ]
+  }
+}
