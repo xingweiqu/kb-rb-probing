@@ -22,3 +22,17 @@ test_output_*/
 test_output_*.log
 .DS_Store
 
+# probing run intermediates and per-model outputs
+runs/*/checkpoints/
+runs/*/hidden_*.npy
+runs/*/model_outputs.jsonl
+runs/*/item_index.jsonl
+runs/*/capability_labels.json
+runs/*/linear_probe.json
+runs/*/lora_probe.json
+runs/*/probe_geometry.*
+runs_*.log
+
+# editor temp files
+.~*
+

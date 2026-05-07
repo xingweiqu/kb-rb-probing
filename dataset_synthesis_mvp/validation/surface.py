@@ -49,24 +49,34 @@ class SurfaceValidator:
         return _guess_type(wrong_claim) == _guess_type(gold_answer)
 
     def _is_decorative_removal(self, item: dict[str, Any], family: dict[str, Any]) -> bool:
-        """Check if removal is fake (just added prefix)."""
-        q = item["question"].lower()
-        base = family["base_question"].lower()
+        """Flag a removal as decorative when it only wraps the original question.
 
-        # If removal question is 80%+ similar to base, it's decorative
-        ratio = SequenceMatcher(None, q, base).ratio()
-        if ratio > 0.8:
-            return True
+        Structural removals delete a clause / fact / entity, so the question
+        is typically *shorter* than (or similar in length to) the base. Pure
+        decoration prepends or appends a phrase, so the question is longer
+        AND uses one of a few telltale wrappers.
+        """
+        q = item["question"].lower().strip()
+        base = family["base_question"].lower().strip()
 
-        # If contains "without relying/using", it's decorative
-        decorative_phrases = [
+        decorative_phrases = (
             "without relying",
             "without using",
             "without the",
             "ignoring the",
-            "answer without"
-        ]
-        if any(phrase in q for phrase in decorative_phrases):
+            "answer without",
+            "do not use",
+            "do not rely",
+            "don't rely",
+            "don't use",
+        )
+        has_phrase = any(p in q for p in decorative_phrases)
+        if has_phrase:
+            return True
+
+        # Near-identical to base AND no length reduction => no real removal
+        ratio = SequenceMatcher(None, q, base).ratio()
+        if ratio > 0.95 and len(q) >= len(base):
             return True
 
         return False
