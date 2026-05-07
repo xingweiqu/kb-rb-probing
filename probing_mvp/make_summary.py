@@ -100,12 +100,8 @@ def _capability_label_distribution(labels: dict) -> dict:
     out: dict[str, dict[str, dict[str, dict[str, int]]]] = {}
     for fid, by_cot in labels.items():
         for cot, cell_root in by_cot.items():
-            judges = (
-                cell_root.keys() if isinstance(cell_root, dict)
-                and any(k in cell_root for k in ("binary", "delta")) else ["binary"]
-            )
-            for judge in ("binary", "delta"):
-                if judge in cell_root:
+            for judge in ("binary", "delta", "zscore"):
+                if isinstance(cell_root, dict) and judge in cell_root:
                     cell = cell_root[judge]
                 elif judge == "binary" and not isinstance(cell_root, dict):
                     cell = cell_root
@@ -123,6 +119,51 @@ def _capability_label_distribution(labels: dict) -> dict:
                     else:
                         bucket["drop"] += 1
     return out
+
+
+def _logits_diagnostics(model_outputs_path: Path) -> dict:
+    """Aggregate top-1 mismatch rate, gold rank distribution, and per-variant
+    competitor stats from model_outputs.jsonl. Designed to surface why raw
+    Δlogprob looks weird (e.g. RD with_cot positive shift).
+    """
+    if not model_outputs_path.exists():
+        return {}
+    rows_by = {}
+    for line in open(model_outputs_path, encoding="utf-8"):
+        r = json.loads(line)
+        rank = r.get("gold_first_token_rank", -1)
+        if rank is None:
+            rank = -1
+        key = (r.get("variant", "?"), r.get("cot_state", "?"))
+        bucket = rows_by.setdefault(key, [])
+        bucket.append({
+            "family_id": r.get("family_id"),
+            "rank": int(rank),
+            "lp_mean": r.get("gold_logprob_mean"),
+            "top1_token": (r.get("top_k_tokens") or [[None]])[0][0] if r.get("top_k_tokens") else None,
+            "top1_lp": (r.get("top_k_logprobs") or [[None]])[0][0] if r.get("top_k_logprobs") else None,
+            "gold_first_token": (r.get("gold_token_strs") or [None])[0] if r.get("gold_token_strs") else None,
+        })
+    summary = {}
+    for (variant, cot), rows in rows_by.items():
+        ranks = [x["rank"] for x in rows if x["rank"] >= 0]
+        if not ranks:
+            continue
+        top1_match = sum(1 for x in rows if x["rank"] == 0)
+        top5_match = sum(1 for x in rows if 0 <= x["rank"] < 5)
+        summary.setdefault(variant, {})[cot] = {
+            "n": len(rows),
+            "top1_match_rate": top1_match / len(rows) if rows else 0.0,
+            "top5_match_rate": top5_match / len(rows) if rows else 0.0,
+            "median_rank": int(sorted(ranks)[len(ranks) // 2]),
+            "max_rank": int(max(ranks)),
+            "examples_top1_mismatch_with_high_lp": sorted(
+                [x for x in rows if x["rank"] > 0 and x.get("lp_mean") is not None],
+                key=lambda x: x.get("lp_mean") or float("-inf"),
+                reverse=True,
+            )[:3],
+        }
+    return summary
 
 
 def _delta_stats(labels: dict) -> dict:
@@ -188,6 +229,7 @@ def make_summary(run_dir: str, model_path: str, output: str | None = None) -> di
     lora = json.load(open(p / "lora_probe.json", encoding="utf-8")) if (p / "lora_probe.json").exists() else {"task_family": [], "capability": []}
     geom = json.load(open(p / "probe_geometry.json", encoding="utf-8")) if (p / "probe_geometry.json").exists() else {}
     labels = json.load(open(p / "capability_labels.json", encoding="utf-8")) if (p / "capability_labels.json").exists() else {}
+    logits_diag = _logits_diagnostics(p / "model_outputs.jsonl")
 
     summary = {
         "model_path": model_path,
@@ -212,6 +254,7 @@ def make_summary(run_dir: str, model_path: str, output: str | None = None) -> di
             },
         },
         "geometry": _geometry_summary(geom),
+        "logits_diagnostics": logits_diag,
     }
 
     summary = _clean(summary)

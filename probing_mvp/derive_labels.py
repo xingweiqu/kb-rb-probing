@@ -1,6 +1,6 @@
 """Derive 2x3 atomic capability labels + CoT state from model behavior.
 
-Two judgment systems are emitted side-by-side:
+Three judgment systems are emitted side-by-side:
 
 1. ``binary`` — based on the soft-correct flag in model_outputs.jsonl.
    Provide axis    : ¬orig_correct ∧ variant_correct  -> True
@@ -9,21 +9,28 @@ Two judgment systems are emitted side-by-side:
    Loses signal when both items are correct, which is what happens with
    strong models on easy data.
 
-2. ``delta`` — based on Δlogprob of the gold answer:
+2. ``delta`` — based on raw Δlogprob of the gold answer:
        delta = mean_logprob(gold | variant) - mean_logprob(gold | original)
    Provide axis: delta > +tau -> True, delta < -tau -> False
    Block axis  : delta < -tau -> True, delta > +tau -> False
    Distract    : delta < -tau -> True, delta > +tau -> False
-   Tau is in nats (default 0.1 ≈ ~10% probability change). If the model
-   was already wildly wrong on both, delta still moves and produces a
-   real label — that is the point.
+   Tau is in nats (default 0.1 per token). Robust to both items being
+   correct, but raw delta is sensitive to the family's base difficulty.
+
+3. ``zscore`` — Δlogprob normalized within (capability, cot_state):
+       z = (delta - mean_over_families) / stdev_over_families
+   This removes per-capability scale (some capabilities naturally have
+   bigger deltas than others) and gives a comparable signal across the
+   2x3 grid. Default threshold |z| > 1.0 (one stdev above the mean).
 
 Output schema:
 
     labels[family_id][cot_state] = {
-        "binary":  {capability: True | False | null},
-        "delta":   {capability: True | False | null},
+        "binary":      {capability: True | False | null},
+        "delta":       {capability: True | False | null},
+        "zscore":      {capability: True | False | null},
         "delta_value": {capability: float},   # raw Δlogprob (mean per token)
+        "zscore_value":{capability: float},   # z-normalized within (cap, cot)
     }
 
 Capability map (mechanism × perturbation):
@@ -127,6 +134,47 @@ def _safe_get_lp(record: dict[str, Any]) -> float | None:
     return v if not math.isnan(v) else None
 
 
+def _zscore_within(deltas_by_cap_cot: dict) -> dict:
+    """Per (capability, cot_state), z-score the delta values across families.
+
+    Input:  {(cap, cot): {fid: delta}}
+    Output: {(cap, cot): {fid: zscore}}  (None where stdev is zero)
+    """
+    out: dict = {}
+    for key, fid_to_delta in deltas_by_cap_cot.items():
+        vals = [v for v in fid_to_delta.values() if v is not None]
+        if len(vals) < 2:
+            out[key] = {fid: None for fid in fid_to_delta}
+            continue
+        mean = sum(vals) / len(vals)
+        var = sum((v - mean) ** 2 for v in vals) / len(vals)
+        std = math.sqrt(var)
+        if std < 1e-9:
+            out[key] = {fid: None for fid in fid_to_delta}
+            continue
+        out[key] = {
+            fid: ((v - mean) / std if v is not None else None)
+            for fid, v in fid_to_delta.items()
+        }
+    return out
+
+
+def _judge_zscore(z: float | None, axis: str, z_tau: float) -> bool | None:
+    if z is None or math.isnan(z):
+        return None
+    if axis == "provide":
+        if z > z_tau:
+            return True
+        if z < -z_tau:
+            return False
+        return None
+    if z < -z_tau:
+        return True
+    if z > z_tau:
+        return False
+    return None
+
+
 def derive_atomic_labels(
     dataset_path: str,
     model_outputs_path: str,
@@ -134,6 +182,7 @@ def derive_atomic_labels(
     cot_states: list[str] | None = None,
     mode: str = "natural",
     tau: float = 0.1,
+    z_tau: float = 1.0,
 ) -> dict[str, dict[str, dict[str, Any]]]:
     cot_states = cot_states or COT_STATES
 
@@ -151,49 +200,69 @@ def derive_atomic_labels(
             outputs_by_key[_output_key(o["family_id"], o["variant"], o.get("mode", "natural"), cot)] = o
 
     families = sorted({it["family_id"] for it in items_by_key.values()})
-    labels: dict[str, dict[str, dict[str, Any]]] = {}
-    has_logprob = False
 
+    # First pass: collect raw delta values per (capability, cot, family).
+    deltas_by_cap_cot: dict[tuple[str, str], dict[str, float | None]] = {}
+    binary_by_fam_cot: dict[tuple[str, str], dict[str, bool | None]] = {}
+    has_logprob = False
     for family_id in families:
-        labels[family_id] = {}
         for cot in cot_states:
-            cell_binary: dict[str, bool | None] = {}
-            cell_delta: dict[str, bool | None] = {}
-            cell_value: dict[str, float | None] = {}
             orig = outputs_by_key.get(_output_key(family_id, "original", mode, cot))
             if not orig:
-                labels[family_id][cot] = {
-                    "binary": cell_binary, "delta": cell_delta, "delta_value": cell_value,
-                }
                 continue
             orig_correct = bool(orig.get("correct", False))
             orig_lp = _safe_get_lp(orig)
-
+            cap_to_delta: dict[str, float | None] = {}
+            cap_to_binary: dict[str, bool | None] = {}
             for variant, (capability, axis) in VARIANT_TO_CAPABILITY.items():
                 v = outputs_by_key.get(_output_key(family_id, variant, mode, cot))
                 if not v:
                     continue
-                v_lp = _safe_get_lp(v)
-                cell_binary[capability] = _judge_binary(
+                cap_to_binary[capability] = _judge_binary(
                     orig_correct, bool(v.get("correct", False)), axis,
                 )
+                v_lp = _safe_get_lp(v)
                 if orig_lp is not None and v_lp is not None:
                     has_logprob = True
-                    delta = v_lp - orig_lp
-                    cell_value[capability] = float(delta)
-                    cell_delta[capability] = _judge_delta(delta, axis, tau)
+                    cap_to_delta[capability] = float(v_lp - orig_lp)
                 else:
-                    cell_value[capability] = None
-                    cell_delta[capability] = None
+                    cap_to_delta[capability] = None
+            binary_by_fam_cot[(family_id, cot)] = cap_to_binary
+            for cap, val in cap_to_delta.items():
+                deltas_by_cap_cot.setdefault((cap, cot), {})[family_id] = val
 
+    # Second pass: compute z-scores within (capability, cot_state).
+    zscores = _zscore_within(deltas_by_cap_cot)
+
+    # Third pass: assemble final labels per (family, cot).
+    labels: dict[str, dict[str, dict[str, Any]]] = {}
+    for family_id in families:
+        labels[family_id] = {}
+        for cot in cot_states:
+            cell_binary = binary_by_fam_cot.get((family_id, cot), {})
+            cell_delta: dict[str, bool | None] = {}
+            cell_value: dict[str, float | None] = {}
+            cell_zscore: dict[str, bool | None] = {}
+            cell_zscore_value: dict[str, float | None] = {}
+            for capability, axis in {c: a for v, (c, a) in VARIANT_TO_CAPABILITY.items()}.items():
+                delta = deltas_by_cap_cot.get((capability, cot), {}).get(family_id)
+                z = zscores.get((capability, cot), {}).get(family_id)
+                cell_value[capability] = delta
+                cell_delta[capability] = _judge_delta(delta, axis, tau) if delta is not None else None
+                cell_zscore_value[capability] = z
+                cell_zscore[capability] = _judge_zscore(z, axis, z_tau) if z is not None else None
             labels[family_id][cot] = {
-                "binary": cell_binary, "delta": cell_delta, "delta_value": cell_value,
+                "binary": cell_binary,
+                "delta": cell_delta,
+                "delta_value": cell_value,
+                "zscore": cell_zscore,
+                "zscore_value": cell_zscore_value,
             }
 
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(labels, f, indent=2, ensure_ascii=False)
 
-    _log_summary(labels, cot_states, has_logprob, tau)
+    _log_summary(labels, cot_states, has_logprob, tau, z_tau)
     return labels
 
 
@@ -227,6 +296,7 @@ def _log_summary(
     cot_states: list[str],
     has_logprob: bool,
     tau: float,
+    z_tau: float,
 ) -> None:
     logger.info("=" * 72)
     logger.info("LABEL SUMMARY (capability × cot_state)")
@@ -235,9 +305,11 @@ def _log_summary(
     if has_logprob:
         logger.info("")
         _summary_block(labels, cot_states, "delta", f"delta judge (Δmean-logprob, tau={tau:.3f})")
+        logger.info("")
+        _summary_block(labels, cot_states, "zscore", f"zscore judge (within-capability, |z|>{z_tau:.2f})")
     else:
         logger.info("")
-        logger.info("[delta judge] no gold_logprob_mean field in model_outputs — skipped")
+        logger.info("[delta/zscore judge] no gold_logprob_mean field in model_outputs — skipped")
     logger.info("=" * 72)
 
 
@@ -250,6 +322,8 @@ def main() -> None:
     p.add_argument("--cot-states", nargs="+", default=COT_STATES)
     p.add_argument("--tau", type=float, default=0.1,
                    help="Δlogprob threshold (in nats per token) for delta judge")
+    p.add_argument("--z-tau", type=float, default=1.0,
+                   help="|z-score| threshold for zscore judge (default 1.0 stdev)")
     args = p.parse_args()
 
     derive_atomic_labels(
@@ -259,6 +333,7 @@ def main() -> None:
         cot_states=args.cot_states,
         mode=args.mode,
         tau=args.tau,
+        z_tau=args.z_tau,
     )
 
 

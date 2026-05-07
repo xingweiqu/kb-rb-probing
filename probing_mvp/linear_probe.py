@@ -241,7 +241,7 @@ def run(
     pools: Iterable[str] = ("last", "mean"),
     n_splits: int = 5,
     rng: int = 42,
-    judges: Iterable[str] = ("binary", "delta"),
+    judges: Iterable[str] = ("binary", "delta", "zscore"),
 ) -> dict:
     hidden_dir_p = Path(hidden_dir)
     out: dict = {"task_family": [], "capability": []}
@@ -275,8 +275,8 @@ def main() -> None:
     p.add_argument("--pools", nargs="+", default=["last", "mean"])
     p.add_argument("--n_splits", type=int, default=5)
     p.add_argument("--rng", type=int, default=42)
-    p.add_argument("--judges", nargs="+", default=["binary", "delta"],
-                   choices=["binary", "delta"])
+    p.add_argument("--judges", nargs="+", default=["binary", "delta", "zscore"],
+                   choices=["binary", "delta", "zscore"])
     args = p.parse_args()
 
     run(

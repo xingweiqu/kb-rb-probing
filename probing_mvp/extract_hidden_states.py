@@ -66,17 +66,31 @@ def _gold_logprob(
     gold: str,
     device: str,
     max_length: int,
-) -> tuple[float, float, int]:
-    """Sum-logprob and mean-logprob of `gold` conditioned on `prompt`.
+    top_k: int = 5,
+) -> dict:
+    """Score `gold` conditioned on `prompt`. Returns rich diagnostics:
 
-    Returns (sum_logprob, mean_logprob, n_gold_tokens). If the prompt+gold
-    overruns max_length, we truncate the prompt from the left so the gold
-    tokens are always scored. Whitespace is preserved between prompt and
-    gold via a single leading space if the prompt does not already end
-    with whitespace.
+        sum, mean: total / per-token log-probability of gold
+        n_tokens: number of gold tokens scored
+        per_token_logprob: list[float], length n_tokens
+        gold_token_strs: list[str] (decoded gold tokens, for debugging)
+        gold_first_token_rank: int — vocab rank of the first gold token at
+                                its prediction position (0 = top-1)
+        top_k_tokens: list[list[str]] — for each gold position, the top-k
+                                competitors (decoded)
+        top_k_logprobs: list[list[float]] — same shape, the logprobs of those
+
+    If the prompt+gold overruns max_length, we left-truncate the prompt so
+    the gold tokens are always scored.
     """
+    nan_record = {
+        "sum": float("nan"), "mean": float("nan"), "n_tokens": 0,
+        "per_token_logprob": [], "gold_token_strs": [],
+        "gold_first_token_rank": -1,
+        "top_k_tokens": [], "top_k_logprobs": [],
+    }
     if not gold:
-        return float("nan"), float("nan"), 0
+        return nan_record
     sep = "" if (prompt.endswith((" ", "\n", "\t")) or not prompt) else " "
     full = prompt + sep + gold
 
@@ -86,29 +100,50 @@ def _gold_logprob(
     n_full = full_ids.shape[0]
     n_gold = max(n_full - n_prompt, 0)
     if n_gold == 0:
-        return float("nan"), float("nan"), 0
+        return nan_record
 
     if n_full > max_length:
-        # left-truncate prompt to fit
         keep = max_length
         full_ids = full_ids[-keep:]
         n_prompt = max(n_prompt - (n_full - keep), 0)
         n_full = full_ids.shape[0]
         n_gold = n_full - n_prompt
         if n_gold <= 0:
-            return float("nan"), float("nan"), 0
+            return nan_record
 
     input_ids = full_ids.unsqueeze(0).to(device)
     out = model(input_ids=input_ids, use_cache=False)
-    # logits at position t predict token at t+1
-    logits = out.logits[0]                    # [T, V]
+    logits = out.logits[0]                                  # [T, V]
     log_probs = torch.log_softmax(logits.float(), dim=-1)
-    # we want logprob of token full_ids[i] given context up to i-1, for i in [n_prompt, n_full)
-    target_idx = full_ids[n_prompt:].to(device)               # [n_gold]
-    gather_at = log_probs[n_prompt - 1: n_full - 1]           # [n_gold, V]
-    token_lp = gather_at.gather(1, target_idx.unsqueeze(1)).squeeze(1)  # [n_gold]
-    s = float(token_lp.sum().item())
-    return s, s / n_gold, int(n_gold)
+    # gold positions in input_ids are [n_prompt, n_full); their logits live at [n_prompt-1, n_full-1)
+    target_idx = full_ids[n_prompt:].to(device)             # [n_gold]
+    gather_at = log_probs[n_prompt - 1: n_full - 1]         # [n_gold, V]
+    token_lp = gather_at.gather(1, target_idx.unsqueeze(1)).squeeze(1)
+    per_token = token_lp.cpu().tolist()
+    s = float(sum(per_token))
+
+    # gold rank at first gold position
+    first_pos_lp = gather_at[0]                              # [V]
+    sorted_desc = first_pos_lp.argsort(descending=True)
+    rank_pos = (sorted_desc == target_idx[0]).nonzero(as_tuple=True)[0]
+    gold_rank = int(rank_pos.item()) if rank_pos.numel() else -1
+
+    # top-k competitors per gold position
+    top_vals, top_idx = gather_at.topk(top_k, dim=-1)        # [n_gold, top_k]
+    top_k_tokens = [[tokenizer.decode([int(t)]) for t in row] for row in top_idx.cpu().tolist()]
+    top_k_logprobs = top_vals.cpu().tolist()
+    gold_token_strs = [tokenizer.decode([int(t)]) for t in target_idx.cpu().tolist()]
+
+    return {
+        "sum": s,
+        "mean": s / n_gold,
+        "n_tokens": int(n_gold),
+        "per_token_logprob": per_token,
+        "gold_token_strs": gold_token_strs,
+        "gold_first_token_rank": gold_rank,
+        "top_k_tokens": top_k_tokens,
+        "top_k_logprobs": top_k_logprobs,
+    }
 
 
 def extract_hidden_states(
@@ -200,9 +235,7 @@ def extract_hidden_states(
                 ).strip()
 
                 gold = item.get("gold_answer", "")
-                lp_sum, lp_mean, n_gold = _gold_logprob(
-                    model, tokenizer, prompt, gold, device, max_length
-                )
+                lp = _gold_logprob(model, tokenizer, prompt, gold, device, max_length)
 
                 output_rows.append(
                     {
@@ -215,9 +248,14 @@ def extract_hidden_states(
                         "generation": cont,
                         "gold_answer": gold,
                         "correct": _soft_correct(cont, gold),
-                        "gold_logprob_sum": lp_sum,
-                        "gold_logprob_mean": lp_mean,
-                        "n_gold_tokens": n_gold,
+                        "gold_logprob_sum": lp["sum"],
+                        "gold_logprob_mean": lp["mean"],
+                        "n_gold_tokens": lp["n_tokens"],
+                        "gold_per_token_logprob": lp["per_token_logprob"],
+                        "gold_token_strs": lp["gold_token_strs"],
+                        "gold_first_token_rank": lp["gold_first_token_rank"],
+                        "top_k_tokens": lp["top_k_tokens"],
+                        "top_k_logprobs": lp["top_k_logprobs"],
                     }
                 )
 

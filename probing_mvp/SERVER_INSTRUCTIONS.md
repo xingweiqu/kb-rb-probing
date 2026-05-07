@@ -4,18 +4,34 @@ You are running probing on a GPU machine. Read this whole file before doing anyt
 
 ## Context (what changed since last run)
 
-The previous run on Qwen3-8B produced near-perfect task_family results (98.7%
-balanced accuracy) but **all 18 capability probes were skipped** because the
-binary correctness flag never flipped — Qwen3-8B is too strong for the data
-and gets ~everything right under both the original and variant prompts.
+Three things since the previous Qwen3-8B summary:
 
-To recover capability signal, the pipeline now records **gold-answer logprob**
-at extract time and derives capability labels from **Δlogprob** (continuous,
-sensitive when both items are correct). Binary judgments are still emitted
-side-by-side as a sanity check.
+1. **LoRA probe is much faster.** Previously each (layer, capability, fold) ran
+   sequentially with constant tensor-creation overhead. The new ``ProbeBank``
+   trains all transformer layers in parallel as one batched module — about
+   30× faster on small datasets like ours.
 
-There is also a new ``make_summary.py`` step. The whole run still ends with
-one ``summary.json`` per run, which is what you should push back.
+2. **Per-token logits diagnostics.** ``extract_hidden_states.py`` now records
+   for each (item, cot_state):
+   - ``gold_per_token_logprob`` — list[float], one per gold sub-token
+   - ``gold_token_strs`` — decoded gold tokens
+   - ``gold_first_token_rank`` — vocab rank of the first gold token (0 = top-1)
+   - ``top_k_tokens`` / ``top_k_logprobs`` — the top-5 competitor tokens at
+     each gold position
+   These let downstream analysis tell apart "model genuinely confident in
+   gold" vs "gold rises in a flat distribution" — useful for explaining
+   anomalies like RD-with_cot Δlogprob > 0.
+
+3. **z-score judge.** ``derive_labels.py`` now emits a third capability label
+   axis: ``zscore`` — Δlogprob z-normalized within each (capability,
+   cot_state) group across families. Removes per-capability scale, so
+   thresholds are comparable across the 2x3 grid. Default |z| > 1.0.
+
+   Output schema is now ``{binary, delta, zscore, delta_value, zscore_value}``.
+
+The summary roll-up also includes a new ``logits_diagnostics`` block:
+top-1/top-5 match rate per (variant, cot_state), median gold rank, and
+sample mismatched-but-high-lp families for manual inspection.
 
 ## What to run
 
@@ -32,17 +48,16 @@ This produces ``runs/Qwen3-8B/summary.json``. Repeat per model.
 
 ## Models to run, in priority order
 
-1. ``Qwen3-8B`` (rerun, since the schema is new)
-2. ``Qwen3-1.5B`` (or ``Qwen3-1.7B`` if 1.5B is unavailable; whichever
-   smaller Qwen3 you have locally) — important: smaller model is more
-   likely to produce non-zero capability signal under either judge
-3. ``Qwen3-8B-Base`` (base, not instruct) — to compare base vs instruct
+The user is downloading these to ``/opt/tiger/ouro2/`` (or similar):
 
-If any of these aren't available locally, run whichever Qwen-family models
-you do have. Skip non-Qwen for now.
+1. ``Qwen3-8B`` (instruct) — rerun since the schema is new
+2. ``Qwen3-0.5B``
+3. ``Qwen3-1.7B``
+4. ``Qwen3-4B``
+5. ``Qwen3-8B-Base`` (base, not instruct — for base vs instruct contrast)
 
-Use the model directory name as the run_name. The shell script auto-derives
-``runs/<basename>`` if you don't pass one.
+Pick whichever are downloaded and run them in any order. Use the model
+directory name as the run_name (the script auto-derives this).
 
 ## What to push back
 
