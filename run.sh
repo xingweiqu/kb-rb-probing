@@ -7,16 +7,19 @@
 # Example (local weights):
 #   ./run.sh /opt/tiger/Flame/Qwen3-8B
 #
-# Example (HuggingFace ID — auto-downloads):
+# Example (HuggingFace ID -- auto-downloads):
 #   ./run.sh Qwen/Qwen3-8B
 #
 # What it does:
-#   1. Extract hidden states + per-item gold log-probabilities from the model
-#      on the 650-item atomic-capacity dataset.
-#   2. Summarise per-cell |mean Δlog p / token| into summary.json.
-#   3. Plot the 3×9 atomic-capacity matrix (Figure 2 in the paper).
+#   1. Extract per-item gold log-probabilities + hidden states from the model
+#      on the 650-item atomic-capacity dataset (no-CoT + CoT).
+#   2. Derive capacity labels (per (family_id, capability, cot) judgments).
+#   3. Roll up per-cell |mean Delta log p / token| stats into summary.json.
+#   4. Plot the 3 x 9 atomic-capacity matrix (Figure 2 in the paper).
 #
 # Output:
+#   runs/<model_name>/model_outputs.jsonl
+#   runs/<model_name>/capability_labels.json
 #   runs/<model_name>/summary.json
 #   figures/<model_name>/fig_capacity_matrix.png
 #
@@ -33,28 +36,40 @@ fi
 MODEL_PATH="$1"
 MODEL_NAME="$(basename "$MODEL_PATH")"
 OUT_DIR="${2:-runs/${MODEL_NAME}}"
-FIG_DIR="figures/${MODEL_NAME}"
+DATASET="runs/full_25/output/dataset.jsonl"
 
-mkdir -p "$OUT_DIR" "$FIG_DIR"
+mkdir -p "$OUT_DIR" figures
 
-echo "=== [1/3] Extracting hidden states + log-probs for ${MODEL_NAME} ==="
+echo "=== [1/4] Extract hidden states + log-probs for ${MODEL_NAME} ==="
 python -m probing_mvp.extract_hidden_states \
     --model_name "$MODEL_PATH" \
-    --dataset runs/full_25/output/dataset.jsonl \
+    --dataset "$DATASET" \
     --output_dir "$OUT_DIR" \
     --device cuda \
     --dtype float16 \
     --max_length 1024
 
 echo ""
-echo "=== [2/3] Building summary.json ==="
-python -m probing_mvp.make_summary "$OUT_DIR"
+echo "=== [2/4] Derive capacity labels ==="
+python -m probing_mvp.derive_labels \
+    --dataset "$DATASET" \
+    --model_outputs "${OUT_DIR}/model_outputs.jsonl" \
+    --output "${OUT_DIR}/capability_labels.json" \
+    --mode natural
 
 echo ""
-echo "=== [3/3] Rendering Figure 2 (atomic-capacity matrix) ==="
-python -m probing_mvp.make_plots "${OUT_DIR}/summary.json" --output-dir figures
+echo "=== [3/4] Build summary.json ==="
+python -m probing_mvp.make_summary \
+    --run_dir "$OUT_DIR" \
+    --model_path "$MODEL_PATH"
+
+echo ""
+echo "=== [4/4] Render Figure 2 (3 x 9 atomic-capacity matrix) ==="
+python -m probing_mvp.make_plots \
+    "${OUT_DIR}/summary.json" \
+    --output-dir figures
 
 echo ""
 echo "Done."
 echo "  summary:  ${OUT_DIR}/summary.json"
-echo "  figure:   ${FIG_DIR}/fig_capacity_matrix.png"
+echo "  figure:   figures/${MODEL_NAME}/fig_capacity_matrix.png"
