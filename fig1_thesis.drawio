@@ -1,0 +1,75 @@
+<mxfile host="app.diagrams.net" agent="claude" version="24.0.0">
+  <diagram name="fig1_thesis" id="fig1">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="780" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ============ ROW 1: the benchmark item ============ -->
+        <mxCell id="qbox" value="Benchmark question&#10;&#10;Q:  &quot;What is the capital of Australia?&quot;&#10;Gold answer:  Canberra" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#888888;fontColor=#222222;fontSize=15;align=left;spacingLeft=20;spacingTop=10;spacingBottom=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="40" width="560" height="100" as="geometry" />
+        </mxCell>
+
+        <mxCell id="qarrow" style="endArrow=classic;html=1;rounded=0;strokeColor=#888888;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="qbox" target="abox">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="abox" value="Model answer&#10;&#10;&quot;Sydney&quot;   ✗" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE4E4;strokeColor=#D04A4A;strokeWidth=2;fontColor=#7A1F1F;fontSize=15;fontStyle=1;align=left;spacingLeft=20;spacingTop=10;spacingBottom=10;" vertex="1" parent="1">
+          <mxGeometry x="720" y="40" width="560" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- ============ THE PIVOT QUESTION ============ -->
+        <mxCell id="pivot" value="A family score just says &quot;Knowledge: low.&quot;&#10;But why did this item fail? Three very different causes — three very different repairs." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F4F4;strokeColor=#999999;fontColor=#222222;fontSize=15;fontStyle=2;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="80" y="170" width="1200" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ============ THREE CAUSE-REPAIR COLUMNS ============ -->
+
+        <!-- Column 1: Surfacing -->
+        <mxCell id="c1_cause" value="Cause ①&#10;&#10;The model never reliably&#10;stored this fact.&#10;&#10;(Knowing &quot;Australia&quot; alone is not&#10;enough to retrieve &quot;Canberra&quot;.)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2E5BBA;strokeWidth=2;fontColor=#1F3D80;fontSize=13;align=left;spacingLeft=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="260" width="400" height="180" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c1_arrow" style="endArrow=classic;html=1;rounded=0;strokeColor=#2D8A4F;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="c1_cause" target="c1_repair">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c1_repair" value="Repair&#10;&#10;Add the fact during training&#10;or via retrieval." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F4EA;strokeColor=#2D8A4F;strokeWidth=2;fontColor=#1F5A33;fontSize=13;fontStyle=1;align=left;spacingLeft=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="470" width="400" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Column 2: Paraphrase -->
+        <mxCell id="c2_cause" value="Cause ②&#10;&#10;It knows the fact, but only&#10;under one phrasing.&#10;&#10;(&quot;Canberra is the capital of…&quot; ✓&#10;&#10;&quot;What is the capital of…?&quot; ✗)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2E5BBA;strokeWidth=2;fontColor=#1F3D80;fontSize=13;align=left;spacingLeft=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="1">
+          <mxGeometry x="500" y="260" width="400" height="180" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c2_arrow" style="endArrow=classic;html=1;rounded=0;strokeColor=#2D8A4F;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="c2_cause" target="c2_repair">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c2_repair" value="Repair&#10;&#10;Paraphrase-augmented&#10;pretraining or fine-tuning." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F4EA;strokeColor=#2D8A4F;strokeWidth=2;fontColor=#1F5A33;fontSize=13;fontStyle=1;align=left;spacingLeft=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="1">
+          <mxGeometry x="500" y="470" width="400" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Column 3: Wrong-claim -->
+        <mxCell id="c3_cause" value="Cause ③&#10;&#10;The prompt contains a wrong&#10;claim, and the model goes along.&#10;&#10;(User wrote: &quot;Sydney, the capital&#10;of Australia, …&quot; — the model&#10;repeats &quot;Sydney&quot;.)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2E5BBA;strokeWidth=2;fontColor=#1F3D80;fontSize=13;align=left;spacingLeft=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="1">
+          <mxGeometry x="920" y="260" width="400" height="180" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c3_arrow" style="endArrow=classic;html=1;rounded=0;strokeColor=#2D8A4F;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="c3_cause" target="c3_repair">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c3_repair" value="Repair&#10;&#10;Guarded decoding or&#10;contradiction filter." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F4EA;strokeColor=#2D8A4F;strokeWidth=2;fontColor=#1F5A33;fontSize=13;fontStyle=1;align=left;spacingLeft=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="1">
+          <mxGeometry x="920" y="470" width="400" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- ============ TAKEAWAY BAR ============ -->
+        <mxCell id="take" value="One family failure → three different causes → three different repairs.   An atomic capacity is a paired probe that names which cause it is." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F4F4;strokeColor=#999999;fontColor=#222222;fontSize=15;fontStyle=2;align=center;" vertex="1" parent="1">
+          <mxGeometry x="80" y="610" width="1200" height="48" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
