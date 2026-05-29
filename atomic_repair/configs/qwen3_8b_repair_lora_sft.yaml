@@ -1,0 +1,47 @@
+### Atomic-repair LoRA SFT config for LLaMA-Factory.
+### Update model_name_or_path and dataset_dir on the server before running.
+### Verify the Qwen3 template name in your LLaMA-Factory version (commonly `qwen`).
+
+model_name_or_path: /path/to/Qwen3-8B-Base
+
+# Dataset settings.
+dataset: atomic_repair_train
+eval_dataset: atomic_repair_eval
+dataset_dir: ./data       # directory containing dataset_info.json and the lf JSON files
+template: qwen            # verify against your LLaMA-Factory version
+cutoff_len: 2048
+overwrite_cache: true
+preprocessing_num_workers: 8
+
+# Method.
+stage: sft
+do_train: true
+finetuning_type: lora
+lora_target: all
+lora_rank: 16
+lora_alpha: 32
+lora_dropout: 0.05
+
+# Training hyperparameters.
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 16
+learning_rate: 2.0e-5
+num_train_epochs: 3
+lr_scheduler_type: cosine
+warmup_ratio: 0.03
+weight_decay: 0.0
+bf16: true
+gradient_checkpointing: true
+
+# Logging / checkpointing.
+output_dir: ./output/qwen3_8b_repair_lora
+logging_steps: 20
+save_steps: 500
+save_total_limit: 3
+overwrite_output_dir: true
+report_to: none
+
+# Eval.
+per_device_eval_batch_size: 1
+evaluation_strategy: steps
+eval_steps: 500

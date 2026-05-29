@@ -1,0 +1,26 @@
+### Atomic-repair LoRA prediction config for LLaMA-Factory.
+### Run after the SFT job; point adapter_name_or_path at the saved LoRA dir.
+
+model_name_or_path: /path/to/Qwen3-8B-Base
+adapter_name_or_path: ./output/qwen3_8b_repair_lora
+
+dataset: atomic_repair_eval
+dataset_dir: ./data
+template: qwen
+cutoff_len: 2048
+
+stage: sft
+do_predict: true
+finetuning_type: lora
+
+# Inference.
+per_device_eval_batch_size: 1
+predict_with_generate: true
+max_new_tokens: 512
+temperature: 0.0
+top_p: 1.0
+bf16: true
+
+output_dir: ./output/qwen3_8b_repair_lora_predict
+overwrite_output_dir: true
+report_to: none

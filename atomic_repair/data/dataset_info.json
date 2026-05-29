@@ -1,0 +1,18 @@
+{
+  "atomic_repair_train": {
+    "file_name": "repair_lf_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "atomic_repair_eval": {
+    "file_name": "repair_lf_eval.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  }
+}

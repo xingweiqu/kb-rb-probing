@@ -1,0 +1,860 @@
+{
+  "counts": {
+    "train_total": 2100,
+    "eval_total": 550,
+    "train_by_cell": {
+      "H-Aug": 400,
+      "H-Abl": 400,
+      "H-Cor": 500,
+      "K-Cor": 400,
+      "Clean": 400
+    },
+    "eval_by_cell": {
+      "H-Aug": 100,
+      "H-Abl": 100,
+      "H-Cor": 150,
+      "K-Cor": 100,
+      "Clean": 100
+    },
+    "train_by_family": {
+      "book_author_nationality": 352,
+      "city_country_currency": 352,
+      "company_founder_nationality": 351,
+      "product_company_country": 351,
+      "artwork_artist_country": 347,
+      "scientist_discovery_field": 347
+    },
+    "eval_by_family": {
+      "book_author_nationality": 93,
+      "city_country_currency": 93,
+      "company_founder_nationality": 93,
+      "product_company_country": 93,
+      "artwork_artist_country": 89,
+      "scientist_discovery_field": 89
+    },
+    "train_by_surface": {
+      "naturalized": 1562,
+      "fact_table": 349,
+      "compact": 189
+    },
+    "eval_by_surface": {
+      "naturalized": 386,
+      "fact_table": 115,
+      "compact": 49
+    }
+  },
+  "held_out_templates": {
+    "train_template_ids": [
+      "artwork_T1",
+      "artwork_T2",
+      "book_T1",
+      "book_T2",
+      "city_T1",
+      "city_T2",
+      "company_T1",
+      "company_T2",
+      "product_T1",
+      "product_T2",
+      "scientist_T1",
+      "scientist_T2"
+    ],
+    "eval_template_ids": [
+      "artwork_E1",
+      "book_E1",
+      "city_E1",
+      "company_E1",
+      "product_E1",
+      "scientist_E1"
+    ],
+    "overlap": []
+  },
+  "held_out_entities": {
+    "train_entity_count": 191,
+    "eval_entity_count": 31,
+    "overlap_count": 0
+  },
+  "duplicate_problems": {
+    "train_problem_only": 149,
+    "eval_problem_only": 29,
+    "train_pair": 0,
+    "eval_pair": 0
+  },
+  "samples": {
+    "train": {
+      "H-Aug": [
+        {
+          "id": "H-Aug_train_000000",
+          "cell": "H-Aug",
+          "surface_type": "naturalized",
+          "relation_family": "book_author_nationality",
+          "problem": "What is the nationality of the author who wrote The Iron Falcon?",
+          "tentative_answer": "Lydorian",
+          "gold_answer": "Norlandian",
+          "planted_wrong_answer": null,
+          "repair_trace": "The tentative answer is unsupported because the bridge fact is missing from the problem. Retrieve the bridge fact: The Iron Falcon was written by Anton Hale. Then use the second fact: Anton Hale is Norlandian. Therefore the final answer is Norlandian.",
+          "oracle_facts": [
+            "The Iron Falcon was written by Anton Hale.",
+            "Anton Hale is Norlandian."
+          ]
+        },
+        {
+          "id": "H-Aug_train_000001",
+          "cell": "H-Aug",
+          "surface_type": "naturalized",
+          "relation_family": "city_country_currency",
+          "problem": "The currency of the country in which Olstaad sits -- what is it?",
+          "tentative_answer": "pendra",
+          "gold_answer": "marin",
+          "planted_wrong_answer": null,
+          "repair_trace": "The tentative answer is unsupported because the bridge fact is missing from the problem. Retrieve the bridge fact: Olstaad is located in Mavinia. Then use the second fact: Mavinia uses the marin. Therefore the final answer is marin.",
+          "oracle_facts": [
+            "Olstaad is located in Mavinia.",
+            "Mavinia uses the marin."
+          ]
+        },
+        {
+          "id": "H-Aug_train_000002",
+          "cell": "H-Aug",
+          "surface_type": "naturalized",
+          "relation_family": "company_founder_nationality",
+          "problem": "What is the nationality of the founder of Hesper Glassworks?",
+          "tentative_answer": "Brendaran",
+          "gold_answer": "Forenzan",
+          "planted_wrong_answer": null,
+          "repair_trace": "The tentative answer is unsupported because the bridge fact is missing from the problem. Retrieve the bridge fact: Hesper Glassworks was founded by Roan Caltor. Then use the second fact: Roan Caltor is Forenzan. Therefore the final answer is Forenzan.",
+          "oracle_facts": [
+            "Hesper Glassworks was founded by Roan Caltor.",
+            "Roan Caltor is Forenzan."
+          ]
+        },
+        {
+          "id": "H-Aug_train_000003",
+          "cell": "H-Aug",
+          "surface_type": "naturalized",
+          "relation_family": "product_company_country",
+          "problem": "Where is the maker of ClearStitch based?",
+          "tentative_answer": "Tarsisia",
+          "gold_answer": "Mavinia",
+          "planted_wrong_answer": null,
+          "repair_trace": "The tentative answer is unsupported because the bridge fact is missing from the problem. Retrieve the bridge fact: ClearStitch is made by Pendral Foundry. Then use the second fact: Pendral Foundry is headquartered in Mavinia. Therefore the final answer is Mavinia.",
+          "oracle_facts": [
+            "ClearStitch is made by Pendral Foundry.",
+            "Pendral Foundry is headquartered in Mavinia."
+          ]
+        },
+        {
+          "id": "H-Aug_train_000004",
+          "cell": "H-Aug",
+          "surface_type": "fact_table",
+          "relation_family": "artwork_artist_country",
+          "problem": "Facts:\n- Soft Border is an artwork.\nQuestion:\n- Birth country of its creator?",
+          "tentative_answer": "Quintaria",
+          "gold_answer": "Mavinia",
+          "planted_wrong_answer": null,
+          "repair_trace": "The tentative answer is unsupported because the bridge fact is missing from the problem. Retrieve the bridge fact: Soft Border was created by Hilde Olmari. Then use the second fact: Hilde Olmari was born in Mavinia. Therefore the final answer is Mavinia.",
+          "oracle_facts": [
+            "Soft Border was created by Hilde Olmari.",
+            "Hilde Olmari was born in Mavinia."
+          ]
+        }
+      ],
+      "H-Abl": [
+        {
+          "id": "H-Abl_train_000000",
+          "cell": "H-Abl",
+          "surface_type": "naturalized",
+          "relation_family": "book_author_nationality",
+          "problem": "Case #1387-00: What is the nationality of the author of a novel that some call simply 'the book'?",
+          "tentative_answer": "Korbenian",
+          "gold_answer": "Norlandian",
+          "planted_wrong_answer": null,
+          "repair_trace": "The problem hides or removes the bridge entity. Recover the bridge entity from oracle facts: The Iron Falcon was written by Anton Hale. Then use the recovered entity to answer: Anton Hale is Norlandian. Therefore the final answer is Norlandian.",
+          "oracle_facts": [
+            "The Iron Falcon was written by Anton Hale.",
+            "Anton Hale is Norlandian."
+          ]
+        },
+        {
+          "id": "H-Abl_train_000001",
+          "cell": "H-Abl",
+          "surface_type": "naturalized",
+          "relation_family": "city_country_currency",
+          "problem": "Case #2871-01: The currency of the country in which this city sits -- what is it?",
+          "tentative_answer": "noric",
+          "gold_answer": "marin",
+          "planted_wrong_answer": null,
+          "repair_trace": "The problem hides or removes the bridge entity. Recover the bridge entity from oracle facts: Olstaad is located in Mavinia. Then use the recovered entity to answer: Mavinia uses the marin. Therefore the final answer is marin.",
+          "oracle_facts": [
+            "Olstaad is located in Mavinia.",
+            "Mavinia uses the marin."
+          ]
+        },
+        {
+          "id": "H-Abl_train_000002",
+          "cell": "H-Abl",
+          "surface_type": "naturalized",
+          "relation_family": "company_founder_nationality",
+          "problem": "Case #0205-02: What is the nationality of the founder of this company?",
+          "tentative_answer": "Solenian",
+          "gold_answer": "Forenzan",
+          "planted_wrong_answer": null,
+          "repair_trace": "The problem hides or removes the bridge entity. Recover the bridge entity from oracle facts: Hesper Glassworks was founded by Roan Caltor. Then use the recovered entity to answer: Roan Caltor is Forenzan. Therefore the final answer is Forenzan.",
+          "oracle_facts": [
+            "Hesper Glassworks was founded by Roan Caltor.",
+            "Roan Caltor is Forenzan."
+          ]
+        },
+        {
+          "id": "H-Abl_train_000003",
+          "cell": "H-Abl",
+          "surface_type": "naturalized",
+          "relation_family": "product_company_country",
+          "problem": "Case #5184-03: Where is the maker of this product based?",
+          "tentative_answer": "Korbenia",
+          "gold_answer": "Mavinia",
+          "planted_wrong_answer": null,
+          "repair_trace": "The problem hides or removes the bridge entity. Recover the bridge entity from oracle facts: ClearStitch is made by Pendral Foundry. Then use the recovered entity to answer: Pendral Foundry is headquartered in Mavinia. Therefore the final answer is Mavinia.",
+          "oracle_facts": [
+            "ClearStitch is made by Pendral Foundry.",
+            "Pendral Foundry is headquartered in Mavinia."
+          ]
+        },
+        {
+          "id": "H-Abl_train_000004",
+          "cell": "H-Abl",
+          "surface_type": "naturalized",
+          "relation_family": "artwork_artist_country",
+          "problem": "Case #3206-04: In which country was the artist who created this artwork born?",
+          "tentative_answer": "Lydoria",
+          "gold_answer": "Mavinia",
+          "planted_wrong_answer": null,
+          "repair_trace": "The problem hides or removes the bridge entity. Recover the bridge entity from oracle facts: Soft Border was created by Hilde Olmari. Then use the recovered entity to answer: Hilde Olmari was born in Mavinia. Therefore the final answer is Mavinia.",
+          "oracle_facts": [
+            "Soft Border was created by Hilde Olmari.",
+            "Hilde Olmari was born in Mavinia."
+          ]
+        }
+      ],
+      "H-Cor": [
+        {
+          "id": "H-Cor_train_000000",
+          "cell": "H-Cor",
+          "surface_type": "naturalized",
+          "relation_family": "book_author_nationality",
+          "problem": "It is widely said that The Iron Falcon was written by Olin Veltra. What is the nationality of the author who wrote The Iron Falcon?",
+          "tentative_answer": "Brendaran",
+          "gold_answer": "Norlandian",
+          "planted_wrong_answer": "Brendaran",
+          "repair_trace": "The tentative answer follows the planted bridge 'Olin Veltra'. Verify the bridge claim against the known facts. The planted bridge is false: The Iron Falcon was written by Anton Hale. (not Olin Veltra). Use the correct bridge fact: Anton Hale is Norlandian. Therefore the final answer is Norlandian, not Brendaran.",
+          "oracle_facts": [
+            "The Iron Falcon was written by Anton Hale.",
+            "Anton Hale is Norlandian.",
+            "Olin Veltra is Brendaran."
+          ]
+        },
+        {
+          "id": "H-Cor_train_000001",
+          "cell": "H-Cor",
+          "surface_type": "naturalized",
+          "relation_family": "city_country_currency",
+          "problem": "Many travel guides say Olstaad sits within Brendara. The currency of the country in which Olstaad sits -- what is it?",
+          "tentative_answer": "brend",
+          "gold_answer": "marin",
+          "planted_wrong_answer": "brend",
+          "repair_trace": "The tentative answer follows the planted bridge 'Brendara'. Verify the bridge claim against the known facts. The planted bridge is false: Olstaad is located in Mavinia. (not Brendara). Use the correct bridge fact: Mavinia uses the marin. Therefore the final answer is marin, not brend.",
+          "oracle_facts": [
+            "Olstaad is located in Mavinia.",
+            "Mavinia uses the marin.",
+            "Brendara uses the brend."
+          ]
+        },
+        {
+          "id": "H-Cor_train_000002",
+          "cell": "H-Cor",
+          "surface_type": "naturalized",
+          "relation_family": "company_founder_nationality",
+          "problem": "It is widely reported that Hesper Glassworks was founded by Lou Pendholt. What is the nationality of the founder of Hesper Glassworks?",
+          "tentative_answer": "Olmarisian",
+          "gold_answer": "Forenzan",
+          "planted_wrong_answer": "Olmarisian",
+          "repair_trace": "The tentative answer follows the planted bridge 'Lou Pendholt'. Verify the bridge claim against the known facts. The planted bridge is false: Hesper Glassworks was founded by Roan Caltor. (not Lou Pendholt). Use the correct bridge fact: Roan Caltor is Forenzan. Therefore the final answer is Forenzan, not Olmarisian.",
+          "oracle_facts": [
+            "Hesper Glassworks was founded by Roan Caltor.",
+            "Roan Caltor is Forenzan.",
+            "Lou Pendholt is Olmarisian."
+          ]
+        },
+        {
+          "id": "H-Cor_train_000003",
+          "cell": "H-Cor",
+          "surface_type": "compact",
+          "relation_family": "product_company_country",
+          "problem": "hint: Many say the maker of ClearStitch is Drasov Networks.\nEval: country(hq(maker(ClearStitch)))",
+          "tentative_answer": "Olmaris",
+          "gold_answer": "Mavinia",
+          "planted_wrong_answer": "Olmaris",
+          "repair_trace": "The tentative answer follows the planted bridge 'Drasov Networks'. Verify the bridge claim against the known facts. The planted bridge is false: ClearStitch is made by Pendral Foundry. (not Drasov Networks). Use the correct bridge fact: Pendral Foundry is headquartered in Mavinia. Therefore the final answer is Mavinia, not Olmaris.",
+          "oracle_facts": [
+            "ClearStitch is made by Pendral Foundry.",
+            "Pendral Foundry is headquartered in Mavinia.",
+            "Drasov Networks is headquartered in Olmaris."
+          ]
+        },
+        {
+          "id": "H-Cor_train_000004",
+          "cell": "H-Cor",
+          "surface_type": "naturalized",
+          "relation_family": "artwork_artist_country",
+          "problem": "It is sometimes said Soft Border was created by Maeve Quintas. In which country was the artist who created Soft Border born?",
+          "tentative_answer": "Veltria",
+          "gold_answer": "Mavinia",
+          "planted_wrong_answer": "Veltria",
+          "repair_trace": "The tentative answer follows the planted bridge 'Maeve Quintas'. Verify the bridge claim against the known facts. The planted bridge is false: Soft Border was created by Hilde Olmari. (not Maeve Quintas). Use the correct bridge fact: Hilde Olmari was born in Mavinia. Therefore the final answer is Mavinia, not Veltria.",
+          "oracle_facts": [
+            "Soft Border was created by Hilde Olmari.",
+            "Hilde Olmari was born in Mavinia.",
+            "Maeve Quintas was born in Veltria."
+          ]
+        }
+      ],
+      "K-Cor": [
+        {
+          "id": "K-Cor_train_000000",
+          "cell": "K-Cor",
+          "surface_type": "naturalized",
+          "relation_family": "book_author_nationality",
+          "problem": "Some claim Anton Hale is Forenzan. What is the nationality of Anton Hale?",
+          "tentative_answer": "Forenzan",
+          "gold_answer": "Norlandian",
+          "planted_wrong_answer": "Forenzan",
+          "repair_trace": "Check the stated claim against the known fact. The stated claim says 'Anton Hale' is 'Forenzan', but the known fact is: Anton Hale is Norlandian. The stated claim is false. Use the correct fact. Therefore the final answer is Norlandian.",
+          "oracle_facts": [
+            "Anton Hale is Norlandian."
+          ]
+        },
+        {
+          "id": "K-Cor_train_000001",
+          "cell": "K-Cor",
+          "surface_type": "naturalized",
+          "relation_family": "city_country_currency",
+          "problem": "Some travel guides state that Mavinia uses the brend. Which currency does Mavinia use?",
+          "tentative_answer": "brend",
+          "gold_answer": "marin",
+          "planted_wrong_answer": "brend",
+          "repair_trace": "Check the stated claim against the known fact. The stated claim says 'Mavinia' is 'brend', but the known fact is: Mavinia uses the marin. The stated claim is false. Use the correct fact. Therefore the final answer is marin.",
+          "oracle_facts": [
+            "Mavinia uses the marin."
+          ]
+        },
+        {
+          "id": "K-Cor_train_000002",
+          "cell": "K-Cor",
+          "surface_type": "fact_table",
+          "relation_family": "company_founder_nationality",
+          "problem": "Facts:\n- Some reports state Roan Caltor is Drasivian.\nQuestion:\n- What is the nationality of Roan Caltor?",
+          "tentative_answer": "Drasivian",
+          "gold_answer": "Forenzan",
+          "planted_wrong_answer": "Drasivian",
+          "repair_trace": "Check the stated claim against the known fact. The stated claim says 'Roan Caltor' is 'Drasivian', but the known fact is: Roan Caltor is Forenzan. The stated claim is false. Use the correct fact. Therefore the final answer is Forenzan.",
+          "oracle_facts": [
+            "Roan Caltor is Forenzan."
+          ]
+        },
+        {
+          "id": "K-Cor_train_000003",
+          "cell": "K-Cor",
+          "surface_type": "naturalized",
+          "relation_family": "product_company_country",
+          "problem": "Many say Pendral Foundry is based in Pendralia. Where is Pendral Foundry based?",
+          "tentative_answer": "Pendralia",
+          "gold_answer": "Mavinia",
+          "planted_wrong_answer": "Pendralia",
+          "repair_trace": "Check the stated claim against the known fact. The stated claim says 'Pendral Foundry' is 'Pendralia', but the known fact is: Pendral Foundry is headquartered in Mavinia. The stated claim is false. Use the correct fact. Therefore the final answer is Mavinia.",
+          "oracle_facts": [
+            "Pendral Foundry is headquartered in Mavinia."
+          ]
+        },
+        {
+          "id": "K-Cor_train_000004",
+          "cell": "K-Cor",
+          "surface_type": "naturalized",
+          "relation_family": "artwork_artist_country",
+          "problem": "Some say Hilde Olmari was born in Caltoria. In which country was Hilde Olmari born?",
+          "tentative_answer": "Caltoria",
+          "gold_answer": "Mavinia",
+          "planted_wrong_answer": "Caltoria",
+          "repair_trace": "Check the stated claim against the known fact. The stated claim says 'Hilde Olmari' is 'Caltoria', but the known fact is: Hilde Olmari was born in Mavinia. The stated claim is false. Use the correct fact. Therefore the final answer is Mavinia.",
+          "oracle_facts": [
+            "Hilde Olmari was born in Mavinia."
+          ]
+        }
+      ],
+      "Clean": [
+        {
+          "id": "Clean_train_000000",
+          "cell": "Clean",
+          "surface_type": "fact_table",
+          "relation_family": "book_author_nationality",
+          "problem": "Facts:\n- The Iron Falcon is a novel.\nQuestion:\n- What is the nationality of the author?",
+          "tentative_answer": "Norlandian",
+          "gold_answer": "Norlandian",
+          "planted_wrong_answer": null,
+          "repair_trace": "The tentative answer is already consistent with the known facts. Specifically, The Iron Falcon was written by Anton Hale. Anton Hale is Norlandian. So the tentative answer 'Norlandian' matches the chain. No repair is needed.",
+          "oracle_facts": [
+            "The Iron Falcon was written by Anton Hale.",
+            "Anton Hale is Norlandian."
+          ]
+        },
+        {
+          "id": "Clean_train_000001",
+          "cell": "Clean",
+          "surface_type": "naturalized",
+          "relation_family": "city_country_currency",
+          "problem": "The currency of the country in which Olstaad sits -- what is it?",
+          "tentative_answer": "marin",
+          "gold_answer": "marin",
+          "planted_wrong_answer": null,
+          "repair_trace": "The tentative answer is already consistent with the known facts. Specifically, Olstaad is located in Mavinia. Mavinia uses the marin. So the tentative answer 'marin' matches the chain. No repair is needed.",
+          "oracle_facts": [
+            "Olstaad is located in Mavinia.",
+            "Mavinia uses the marin."
+          ]
+        },
+        {
+          "id": "Clean_train_000002",
+          "cell": "Clean",
+          "surface_type": "fact_table",
+          "relation_family": "company_founder_nationality",
+          "problem": "Facts:\n- Hesper Glassworks is a company.\nQuestion:\n- Nationality of its founder?",
+          "tentative_answer": "Forenzan",
+          "gold_answer": "Forenzan",
+          "planted_wrong_answer": null,
+          "repair_trace": "The tentative answer is already consistent with the known facts. Specifically, Hesper Glassworks was founded by Roan Caltor. Roan Caltor is Forenzan. So the tentative answer 'Forenzan' matches the chain. No repair is needed.",
+          "oracle_facts": [
+            "Hesper Glassworks was founded by Roan Caltor.",
+            "Roan Caltor is Forenzan."
+          ]
+        },
+        {
+          "id": "Clean_train_000003",
+          "cell": "Clean",
+          "surface_type": "naturalized",
+          "relation_family": "product_company_country",
+          "problem": "Where is the maker of ClearStitch based?",
+          "tentative_answer": "Mavinia",
+          "gold_answer": "Mavinia",
+          "planted_wrong_answer": null,
+          "repair_trace": "The tentative answer is already consistent with the known facts. Specifically, ClearStitch is made by Pendral Foundry. Pendral Foundry is headquartered in Mavinia. So the tentative answer 'Mavinia' matches the chain. No repair is needed.",
+          "oracle_facts": [
+            "ClearStitch is made by Pendral Foundry.",
+            "Pendral Foundry is headquartered in Mavinia."
+          ]
+        },
+        {
+          "id": "Clean_train_000004",
+          "cell": "Clean",
+          "surface_type": "naturalized",
+          "relation_family": "artwork_artist_country",
+          "problem": "In which country was the artist who created Soft Border born?",
+          "tentative_answer": "Mavinia",
+          "gold_answer": "Mavinia",
+          "planted_wrong_answer": null,
+          "repair_trace": "The tentative answer is already consistent with the known facts. Specifically, Soft Border was created by Hilde Olmari. Hilde Olmari was born in Mavinia. So the tentative answer 'Mavinia' matches the chain. No repair is needed.",
+          "oracle_facts": [
+            "Soft Border was created by Hilde Olmari.",
+            "Hilde Olmari was born in Mavinia."
+          ]
+        }
+      ]
+    },
+    "eval": {
+      "H-Aug": [
+        {
+          "id": "H-Aug_eval_000000",
+          "cell": "H-Aug",
+          "surface_type": "naturalized",
+          "relation_family": "book_author_nationality",
+          "problem": "Of which country is the author of Silver River a national?",
+          "tentative_answer": "Drasivian",
+          "gold_answer": "Lydorian",
+          "planted_wrong_answer": null,
+          "repair_trace": "The tentative answer is unsupported because the bridge fact is missing from the problem. Retrieve the bridge fact: Silver River was written by Maria Voss. Then use the second fact: Maria Voss is Lydorian. Therefore the final answer is Lydorian.",
+          "oracle_facts": [
+            "Silver River was written by Maria Voss.",
+            "Maria Voss is Lydorian."
+          ]
+        },
+        {
+          "id": "H-Aug_eval_000001",
+          "cell": "H-Aug",
+          "surface_type": "naturalized",
+          "relation_family": "city_country_currency",
+          "problem": "Which currency would you use in the country containing Veltra Bay?",
+          "tentative_answer": "hespera",
+          "gold_answer": "noric",
+          "planted_wrong_answer": null,
+          "repair_trace": "The tentative answer is unsupported because the bridge fact is missing from the problem. Retrieve the bridge fact: Veltra Bay is located in Norlandia. Then use the second fact: Norlandia uses the noric. Therefore the final answer is noric.",
+          "oracle_facts": [
+            "Veltra Bay is located in Norlandia.",
+            "Norlandia uses the noric."
+          ]
+        },
+        {
+          "id": "H-Aug_eval_000002",
+          "cell": "H-Aug",
+          "surface_type": "naturalized",
+          "relation_family": "company_founder_nationality",
+          "problem": "What citizenship does the founder of Pendral Foundry hold?",
+          "tentative_answer": "Pendralian",
+          "gold_answer": "Mavinian",
+          "planted_wrong_answer": null,
+          "repair_trace": "The tentative answer is unsupported because the bridge fact is missing from the problem. Retrieve the bridge fact: Pendral Foundry was founded by Wren Solen. Then use the second fact: Wren Solen is Mavinian. Therefore the final answer is Mavinian.",
+          "oracle_facts": [
+            "Pendral Foundry was founded by Wren Solen.",
+            "Wren Solen is Mavinian."
+          ]
+        },
+        {
+          "id": "H-Aug_eval_000003",
+          "cell": "H-Aug",
+          "surface_type": "naturalized",
+          "relation_family": "product_company_country",
+          "problem": "The company that manufactures PolarHull -- in which country is its head office?",
+          "tentative_answer": "Quintaria",
+          "gold_answer": "Korbenia",
+          "planted_wrong_answer": null,
+          "repair_trace": "The tentative answer is unsupported because the bridge fact is missing from the problem. Retrieve the bridge fact: PolarHull is made by Tarsia Components. Then use the second fact: Tarsia Components is headquartered in Korbenia. Therefore the final answer is Korbenia.",
+          "oracle_facts": [
+            "PolarHull is made by Tarsia Components.",
+            "Tarsia Components is headquartered in Korbenia."
+          ]
+        },
+        {
+          "id": "H-Aug_eval_000004",
+          "cell": "H-Aug",
+          "surface_type": "naturalized",
+          "relation_family": "artwork_artist_country",
+          "problem": "Of which country is the artist who produced The Borrowed Garden a native?",
+          "tentative_answer": "Tarsisia",
+          "gold_answer": "Olmaris",
+          "planted_wrong_answer": null,
+          "repair_trace": "The tentative answer is unsupported because the bridge fact is missing from the problem. Retrieve the bridge fact: The Borrowed Garden was created by Mira Caltor. Then use the second fact: Mira Caltor was born in Olmaris. Therefore the final answer is Olmaris.",
+          "oracle_facts": [
+            "The Borrowed Garden was created by Mira Caltor.",
+            "Mira Caltor was born in Olmaris."
+          ]
+        }
+      ],
+      "H-Abl": [
+        {
+          "id": "H-Abl_eval_000000",
+          "cell": "H-Abl",
+          "surface_type": "naturalized",
+          "relation_family": "book_author_nationality",
+          "problem": "Case #2151-00: Of which country is the author of this novel a national?",
+          "tentative_answer": "Hesperinian",
+          "gold_answer": "Lydorian",
+          "planted_wrong_answer": null,
+          "repair_trace": "The problem hides or removes the bridge entity. Recover the bridge entity from oracle facts: Silver River was written by Maria Voss. Then use the recovered entity to answer: Maria Voss is Lydorian. Therefore the final answer is Lydorian.",
+          "oracle_facts": [
+            "Silver River was written by Maria Voss.",
+            "Maria Voss is Lydorian."
+          ]
+        },
+        {
+          "id": "H-Abl_eval_000001",
+          "cell": "H-Abl",
+          "surface_type": "naturalized",
+          "relation_family": "city_country_currency",
+          "problem": "Case #6033-01: Which currency would you use in the country containing this city?",
+          "tentative_answer": "solen",
+          "gold_answer": "noric",
+          "planted_wrong_answer": null,
+          "repair_trace": "The problem hides or removes the bridge entity. Recover the bridge entity from oracle facts: Veltra Bay is located in Norlandia. Then use the recovered entity to answer: Norlandia uses the noric. Therefore the final answer is noric.",
+          "oracle_facts": [
+            "Veltra Bay is located in Norlandia.",
+            "Norlandia uses the noric."
+          ]
+        },
+        {
+          "id": "H-Abl_eval_000002",
+          "cell": "H-Abl",
+          "surface_type": "naturalized",
+          "relation_family": "company_founder_nationality",
+          "problem": "Case #4898-02: What citizenship does the founder of this company hold?",
+          "tentative_answer": "Olmarisian",
+          "gold_answer": "Mavinian",
+          "planted_wrong_answer": null,
+          "repair_trace": "The problem hides or removes the bridge entity. Recover the bridge entity from oracle facts: Pendral Foundry was founded by Wren Solen. Then use the recovered entity to answer: Wren Solen is Mavinian. Therefore the final answer is Mavinian.",
+          "oracle_facts": [
+            "Pendral Foundry was founded by Wren Solen.",
+            "Wren Solen is Mavinian."
+          ]
+        },
+        {
+          "id": "H-Abl_eval_000003",
+          "cell": "H-Abl",
+          "surface_type": "naturalized",
+          "relation_family": "product_company_country",
+          "problem": "Case #2759-03: The company that manufactures this product -- in which country is its head office?",
+          "tentative_answer": "Lydoria",
+          "gold_answer": "Korbenia",
+          "planted_wrong_answer": null,
+          "repair_trace": "The problem hides or removes the bridge entity. Recover the bridge entity from oracle facts: PolarHull is made by Tarsia Components. Then use the recovered entity to answer: Tarsia Components is headquartered in Korbenia. Therefore the final answer is Korbenia.",
+          "oracle_facts": [
+            "PolarHull is made by Tarsia Components.",
+            "Tarsia Components is headquartered in Korbenia."
+          ]
+        },
+        {
+          "id": "H-Abl_eval_000004",
+          "cell": "H-Abl",
+          "surface_type": "naturalized",
+          "relation_family": "artwork_artist_country",
+          "problem": "Case #5276-04: Of which country is the artist who produced this artwork a native?",
+          "tentative_answer": "Quintaria",
+          "gold_answer": "Olmaris",
+          "planted_wrong_answer": null,
+          "repair_trace": "The problem hides or removes the bridge entity. Recover the bridge entity from oracle facts: The Borrowed Garden was created by Mira Caltor. Then use the recovered entity to answer: Mira Caltor was born in Olmaris. Therefore the final answer is Olmaris.",
+          "oracle_facts": [
+            "The Borrowed Garden was created by Mira Caltor.",
+            "Mira Caltor was born in Olmaris."
+          ]
+        }
+      ],
+      "H-Cor": [
+        {
+          "id": "H-Cor_eval_000000",
+          "cell": "H-Cor",
+          "surface_type": "fact_table",
+          "relation_family": "book_author_nationality",
+          "problem": "Facts:\n- The novel Silver River has a single recorded author.\n- It is sometimes stated that Silver River was penned by Helena Marsh.\nQuestion:\n- Author's nationality?",
+          "tentative_answer": "Tarsisian",
+          "gold_answer": "Lydorian",
+          "planted_wrong_answer": "Tarsisian",
+          "repair_trace": "The tentative answer follows the planted bridge 'Helena Marsh'. Verify the bridge claim against the known facts. The planted bridge is false: Silver River was written by Maria Voss. (not Helena Marsh). Use the correct bridge fact: Maria Voss is Lydorian. Therefore the final answer is Lydorian, not Tarsisian.",
+          "oracle_facts": [
+            "Silver River was written by Maria Voss.",
+            "Maria Voss is Lydorian.",
+            "Helena Marsh is Tarsisian."
+          ]
+        },
+        {
+          "id": "H-Cor_eval_000001",
+          "cell": "H-Cor",
+          "surface_type": "naturalized",
+          "relation_family": "city_country_currency",
+          "problem": "Some sources place Veltra Bay inside Olmaris. Which currency would you use in the country containing Veltra Bay?",
+          "tentative_answer": "olmar",
+          "gold_answer": "noric",
+          "planted_wrong_answer": "olmar",
+          "repair_trace": "The tentative answer follows the planted bridge 'Olmaris'. Verify the bridge claim against the known facts. The planted bridge is false: Veltra Bay is located in Norlandia. (not Olmaris). Use the correct bridge fact: Norlandia uses the noric. Therefore the final answer is noric, not olmar.",
+          "oracle_facts": [
+            "Veltra Bay is located in Norlandia.",
+            "Norlandia uses the noric.",
+            "Olmaris uses the olmar."
+          ]
+        },
+        {
+          "id": "H-Cor_eval_000002",
+          "cell": "H-Cor",
+          "surface_type": "naturalized",
+          "relation_family": "company_founder_nationality",
+          "problem": "It is occasionally claimed that Pendral Foundry was founded by Lena Olfast. What citizenship does the founder of Pendral Foundry hold?",
+          "tentative_answer": "Solenian",
+          "gold_answer": "Mavinian",
+          "planted_wrong_answer": "Solenian",
+          "repair_trace": "The tentative answer follows the planted bridge 'Lena Olfast'. Verify the bridge claim against the known facts. The planted bridge is false: Pendral Foundry was founded by Wren Solen. (not Lena Olfast). Use the correct bridge fact: Wren Solen is Mavinian. Therefore the final answer is Mavinian, not Solenian.",
+          "oracle_facts": [
+            "Pendral Foundry was founded by Wren Solen.",
+            "Wren Solen is Mavinian.",
+            "Lena Olfast is Solenian."
+          ]
+        },
+        {
+          "id": "H-Cor_eval_000003",
+          "cell": "H-Cor",
+          "surface_type": "naturalized",
+          "relation_family": "product_company_country",
+          "problem": "It is reported in some places that PolarHull is made by Quintas Hydraulics. The company that manufactures PolarHull -- in which country is its head office?",
+          "tentative_answer": "Solenia",
+          "gold_answer": "Korbenia",
+          "planted_wrong_answer": "Solenia",
+          "repair_trace": "The tentative answer follows the planted bridge 'Quintas Hydraulics'. Verify the bridge claim against the known facts. The planted bridge is false: PolarHull is made by Tarsia Components. (not Quintas Hydraulics). Use the correct bridge fact: Tarsia Components is headquartered in Korbenia. Therefore the final answer is Korbenia, not Solenia.",
+          "oracle_facts": [
+            "PolarHull is made by Tarsia Components.",
+            "Tarsia Components is headquartered in Korbenia.",
+            "Quintas Hydraulics is headquartered in Solenia."
+          ]
+        },
+        {
+          "id": "H-Cor_eval_000004",
+          "cell": "H-Cor",
+          "surface_type": "fact_table",
+          "relation_family": "artwork_artist_country",
+          "problem": "Facts:\n- The Borrowed Garden is a recognized artwork.\n- Several reviewers state that The Borrowed Garden was made by Tess Hespermill.\nQuestion:\n- Native country of its artist?",
+          "tentative_answer": "Tarsisia",
+          "gold_answer": "Olmaris",
+          "planted_wrong_answer": "Tarsisia",
+          "repair_trace": "The tentative answer follows the planted bridge 'Tess Hespermill'. Verify the bridge claim against the known facts. The planted bridge is false: The Borrowed Garden was created by Mira Caltor. (not Tess Hespermill). Use the correct bridge fact: Mira Caltor was born in Olmaris. Therefore the final answer is Olmaris, not Tarsisia.",
+          "oracle_facts": [
+            "The Borrowed Garden was created by Mira Caltor.",
+            "Mira Caltor was born in Olmaris.",
+            "Tess Hespermill was born in Tarsisia."
+          ]
+        }
+      ],
+      "K-Cor": [
+        {
+          "id": "K-Cor_eval_000000",
+          "cell": "K-Cor",
+          "surface_type": "fact_table",
+          "relation_family": "book_author_nationality",
+          "problem": "Facts:\n- Some sources state Maria Voss is Veltrian.\nQuestion:\n- Of which country is Maria Voss a national?",
+          "tentative_answer": "Veltrian",
+          "gold_answer": "Lydorian",
+          "planted_wrong_answer": "Veltrian",
+          "repair_trace": "Check the stated claim against the known fact. The stated claim says 'Maria Voss' is 'Veltrian', but the known fact is: Maria Voss is Lydorian. The stated claim is false. Use the correct fact. Therefore the final answer is Lydorian.",
+          "oracle_facts": [
+            "Maria Voss is Lydorian."
+          ]
+        },
+        {
+          "id": "K-Cor_eval_000001",
+          "cell": "K-Cor",
+          "surface_type": "fact_table",
+          "relation_family": "city_country_currency",
+          "problem": "Facts:\n- Some sources say Norlandia's currency is the pendra.\nQuestion:\n- Which currency would you use in Norlandia?",
+          "tentative_answer": "pendra",
+          "gold_answer": "noric",
+          "planted_wrong_answer": "pendra",
+          "repair_trace": "Check the stated claim against the known fact. The stated claim says 'Norlandia' is 'pendra', but the known fact is: Norlandia uses the noric. The stated claim is false. Use the correct fact. Therefore the final answer is noric.",
+          "oracle_facts": [
+            "Norlandia uses the noric."
+          ]
+        },
+        {
+          "id": "K-Cor_eval_000002",
+          "cell": "K-Cor",
+          "surface_type": "naturalized",
+          "relation_family": "company_founder_nationality",
+          "problem": "Some claim Wren Solen is Quintarian. What citizenship does Wren Solen hold?",
+          "tentative_answer": "Quintarian",
+          "gold_answer": "Mavinian",
+          "planted_wrong_answer": "Quintarian",
+          "repair_trace": "Check the stated claim against the known fact. The stated claim says 'Wren Solen' is 'Quintarian', but the known fact is: Wren Solen is Mavinian. The stated claim is false. Use the correct fact. Therefore the final answer is Mavinian.",
+          "oracle_facts": [
+            "Wren Solen is Mavinian."
+          ]
+        },
+        {
+          "id": "K-Cor_eval_000003",
+          "cell": "K-Cor",
+          "surface_type": "naturalized",
+          "relation_family": "product_company_country",
+          "problem": "It is sometimes said Tarsia Components's head office is in Olmaris. In which country is Tarsia Components's head office?",
+          "tentative_answer": "Olmaris",
+          "gold_answer": "Korbenia",
+          "planted_wrong_answer": "Olmaris",
+          "repair_trace": "Check the stated claim against the known fact. The stated claim says 'Tarsia Components' is 'Olmaris', but the known fact is: Tarsia Components is headquartered in Korbenia. The stated claim is false. Use the correct fact. Therefore the final answer is Korbenia.",
+          "oracle_facts": [
+            "Tarsia Components is headquartered in Korbenia."
+          ]
+        },
+        {
+          "id": "K-Cor_eval_000004",
+          "cell": "K-Cor",
+          "surface_type": "naturalized",
+          "relation_family": "artwork_artist_country",
+          "problem": "Several reviewers state Mira Caltor is a native of Brendara. Of which country is Mira Caltor a native?",
+          "tentative_answer": "Brendara",
+          "gold_answer": "Olmaris",
+          "planted_wrong_answer": "Brendara",
+          "repair_trace": "Check the stated claim against the known fact. The stated claim says 'Mira Caltor' is 'Brendara', but the known fact is: Mira Caltor was born in Olmaris. The stated claim is false. Use the correct fact. Therefore the final answer is Olmaris.",
+          "oracle_facts": [
+            "Mira Caltor was born in Olmaris."
+          ]
+        }
+      ],
+      "Clean": [
+        {
+          "id": "Clean_eval_000000",
+          "cell": "Clean",
+          "surface_type": "naturalized",
+          "relation_family": "book_author_nationality",
+          "problem": "Of which country is the author of Silver River a national?",
+          "tentative_answer": "Lydorian",
+          "gold_answer": "Lydorian",
+          "planted_wrong_answer": null,
+          "repair_trace": "The tentative answer is already consistent with the known facts. Specifically, Silver River was written by Maria Voss. Maria Voss is Lydorian. So the tentative answer 'Lydorian' matches the chain. No repair is needed.",
+          "oracle_facts": [
+            "Silver River was written by Maria Voss.",
+            "Maria Voss is Lydorian."
+          ]
+        },
+        {
+          "id": "Clean_eval_000001",
+          "cell": "Clean",
+          "surface_type": "naturalized",
+          "relation_family": "city_country_currency",
+          "problem": "Which currency would you use in the country containing Veltra Bay?",
+          "tentative_answer": "noric",
+          "gold_answer": "noric",
+          "planted_wrong_answer": null,
+          "repair_trace": "The tentative answer is already consistent with the known facts. Specifically, Veltra Bay is located in Norlandia. Norlandia uses the noric. So the tentative answer 'noric' matches the chain. No repair is needed.",
+          "oracle_facts": [
+            "Veltra Bay is located in Norlandia.",
+            "Norlandia uses the noric."
+          ]
+        },
+        {
+          "id": "Clean_eval_000002",
+          "cell": "Clean",
+          "surface_type": "naturalized",
+          "relation_family": "company_founder_nationality",
+          "problem": "What citizenship does the founder of Pendral Foundry hold?",
+          "tentative_answer": "Mavinian",
+          "gold_answer": "Mavinian",
+          "planted_wrong_answer": null,
+          "repair_trace": "The tentative answer is already consistent with the known facts. Specifically, Pendral Foundry was founded by Wren Solen. Wren Solen is Mavinian. So the tentative answer 'Mavinian' matches the chain. No repair is needed.",
+          "oracle_facts": [
+            "Pendral Foundry was founded by Wren Solen.",
+            "Wren Solen is Mavinian."
+          ]
+        },
+        {
+          "id": "Clean_eval_000003",
+          "cell": "Clean",
+          "surface_type": "naturalized",
+          "relation_family": "product_company_country",
+          "problem": "The company that manufactures PolarHull -- in which country is its head office?",
+          "tentative_answer": "Korbenia",
+          "gold_answer": "Korbenia",
+          "planted_wrong_answer": null,
+          "repair_trace": "The tentative answer is already consistent with the known facts. Specifically, PolarHull is made by Tarsia Components. Tarsia Components is headquartered in Korbenia. So the tentative answer 'Korbenia' matches the chain. No repair is needed.",
+          "oracle_facts": [
+            "PolarHull is made by Tarsia Components.",
+            "Tarsia Components is headquartered in Korbenia."
+          ]
+        },
+        {
+          "id": "Clean_eval_000004",
+          "cell": "Clean",
+          "surface_type": "fact_table",
+          "relation_family": "artwork_artist_country",
+          "problem": "Facts:\n- The Borrowed Garden is a recognized artwork.\nQuestion:\n- Native country of its artist?",
+          "tentative_answer": "Olmaris",
+          "gold_answer": "Olmaris",
+          "planted_wrong_answer": null,
+          "repair_trace": "The tentative answer is already consistent with the known facts. Specifically, The Borrowed Garden was created by Mira Caltor. Mira Caltor was born in Olmaris. So the tentative answer 'Olmaris' matches the chain. No repair is needed.",
+          "oracle_facts": [
+            "The Borrowed Garden was created by Mira Caltor.",
+            "Mira Caltor was born in Olmaris."
+          ]
+        }
+      ]
+    }
+  },
+  "failures": [],
+  "status": "PASS"
+}
