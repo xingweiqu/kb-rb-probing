@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "failures": [],
+  "counts": {
+    "fact_train": 690,
+    "fact_eval": 345,
+    "repair_train": 1920,
+    "repair_eval": 660,
+    "distinct_facts": 345,
+    "repair_gold_triples": 345
+  },
+  "coverage_ok": true,
+  "entity_overlap": {
+    "shared_heads": 111,
+    "eval_heads": 112
+  },
+  "form_disjoint": {
+    "question": [],
+    "corruption": [],
+    "trace": [],
+    "fact": []
+  }
+}

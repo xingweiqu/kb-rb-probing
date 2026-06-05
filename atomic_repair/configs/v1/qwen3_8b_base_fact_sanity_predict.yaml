@@ -1,0 +1,27 @@
+### v1 cleanliness gate — base/Instruct fact-QA sanity (run BEFORE training).
+### Predicts the original Qwen3-8B-Instruct (no fine-tuning) on fact_v1_eval.
+### Expectation: accuracy ~0 (<=5%), proving the synthetic facts are NOT in the
+### model's pretraining. Swap model_name_or_path to the base model too if you want
+### the Base sanity as well.
+
+model_name_or_path: /path/to/Qwen3-8B-Instruct
+
+dataset: fact_v1_eval
+dataset_dir: ./data_v1
+template: qwen
+cutoff_len: 1024
+
+stage: sft
+do_predict: true
+finetuning_type: full
+
+per_device_eval_batch_size: 4
+predict_with_generate: true
+max_new_tokens: 64
+temperature: 0.0
+top_p: 1.0
+bf16: true
+
+output_dir: ./output_v1/predict_base_fact_sanity
+overwrite_output_dir: true
+report_to: none

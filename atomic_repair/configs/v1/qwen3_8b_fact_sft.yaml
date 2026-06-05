@@ -1,0 +1,42 @@
+### v1 condition B — Fact-only SFT.
+### Inject the synthetic world's single-hop atomic facts into Qwen3-8B-INSTRUCT.
+### Update model_name_or_path on the server. Verify the Qwen3 template name
+### (commonly `qwen`) for your LLaMA-Factory version.
+
+model_name_or_path: /path/to/Qwen3-8B-Instruct
+
+dataset: fact_v1_train
+eval_dataset: fact_v1_eval
+dataset_dir: ./data_v1
+template: qwen
+cutoff_len: 1024
+overwrite_cache: true
+preprocessing_num_workers: 16
+
+stage: sft
+do_train: true
+finetuning_type: full
+deepspeed: configs/ds_z3_config.json
+
+# Effective batch = 4 x 4 x 8 = 128.
+per_device_train_batch_size: 4
+gradient_accumulation_steps: 4
+learning_rate: 1.0e-5
+num_train_epochs: 3
+lr_scheduler_type: cosine
+warmup_ratio: 0.03
+weight_decay: 0.0
+bf16: true
+gradient_checkpointing: true
+
+output_dir: ./output_v1/fact_only
+logging_steps: 10
+save_steps: 200
+save_total_limit: 1
+overwrite_output_dir: true
+plot_loss: true
+report_to: none
+
+per_device_eval_batch_size: 4
+evaluation_strategy: steps
+eval_steps: 200

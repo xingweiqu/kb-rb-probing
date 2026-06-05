@@ -1,0 +1,24 @@
+### v1 predict — B Fact-only fact-QA (learned gate)
+### Greedy decoding. Pull the generated_predictions.jsonl back for scoring.
+
+model_name_or_path: ./output_v1/fact_only
+
+dataset: fact_v1_eval
+dataset_dir: ./data_v1
+template: qwen
+cutoff_len: 2048
+
+stage: sft
+do_predict: true
+finetuning_type: full
+
+per_device_eval_batch_size: 4
+predict_with_generate: true
+max_new_tokens: 64
+temperature: 0.0
+top_p: 1.0
+bf16: true
+
+output_dir: ./output_v1/predict_fact_gate
+overwrite_output_dir: true
+report_to: none

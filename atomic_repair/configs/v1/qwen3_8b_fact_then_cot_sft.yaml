@@ -1,0 +1,42 @@
+### v1 condition C — Fact -> CoT trajectory SFT (RELAY).
+### Continues from the Fact-only checkpoint (NOT from base). Output supervision is
+### CoT-only: {repair_trace, final_answer} — NO diagnosis/skill labels.
+### IMPORTANT: model_name_or_path MUST point at ./output_v1/fact_only so this
+### branch starts from the knowledge stage, mirroring condition D's start point.
+
+model_name_or_path: ./output_v1/fact_only
+
+dataset: repair_cot_v1_train
+eval_dataset: repair_cot_v1_eval
+dataset_dir: ./data_v1
+template: qwen
+cutoff_len: 2048
+overwrite_cache: true
+preprocessing_num_workers: 16
+
+stage: sft
+do_train: true
+finetuning_type: full
+deepspeed: configs/ds_z3_config.json
+
+per_device_train_batch_size: 4
+gradient_accumulation_steps: 4
+learning_rate: 1.0e-5
+num_train_epochs: 3
+lr_scheduler_type: cosine
+warmup_ratio: 0.03
+weight_decay: 0.0
+bf16: true
+gradient_checkpointing: true
+
+output_dir: ./output_v1/fact_then_cot
+logging_steps: 10
+save_steps: 200
+save_total_limit: 1
+overwrite_output_dir: true
+plot_loss: true
+report_to: none
+
+per_device_eval_batch_size: 4
+evaluation_strategy: steps
+eval_steps: 200

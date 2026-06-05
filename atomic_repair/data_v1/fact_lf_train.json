@@ -1,0 +1,3452 @@
+[
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the author of Silver River.",
+    "output": "Maria Voss"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who wrote Silver River?",
+    "output": "Maria Voss"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the author of The Iron Falcon.",
+    "output": "Anton Hale"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the author of The Iron Falcon?",
+    "output": "Anton Hale"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who wrote Beneath the Salt Sea?",
+    "output": "Petra Olenko"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the author of Beneath the Salt Sea.",
+    "output": "Petra Olenko"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who wrote Whisper of Brass?",
+    "output": "Jules Bremmer"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the author of Whisper of Brass.",
+    "output": "Jules Bremmer"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the author of The Crooked Mile?",
+    "output": "Idris Calder"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who wrote The Crooked Mile?",
+    "output": "Idris Calder"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who wrote Halls of Vellum?",
+    "output": "Helena Marsh"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the author of Halls of Vellum.",
+    "output": "Helena Marsh"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the author of The Last Cartographer.",
+    "output": "Roman Felk"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who wrote The Last Cartographer?",
+    "output": "Roman Felk"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who wrote Eleven Mornings?",
+    "output": "Ines Tarvik"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the author of Eleven Mornings?",
+    "output": "Ines Tarvik"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the author of The Bone Garden?",
+    "output": "Oskar Bremm"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the author of The Bone Garden.",
+    "output": "Oskar Bremm"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who wrote Tide and Tower?",
+    "output": "Nadia Solven"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the author of Tide and Tower?",
+    "output": "Nadia Solven"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the author of The Pale Calendar?",
+    "output": "Lev Korbin"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who wrote The Pale Calendar?",
+    "output": "Lev Korbin"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the author of Quill and Coin?",
+    "output": "Eira Pendral"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who wrote Quill and Coin?",
+    "output": "Eira Pendral"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the author of The Glass Apiary?",
+    "output": "Otto Vellin"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who wrote The Glass Apiary?",
+    "output": "Otto Vellin"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the author of Atlas of Storms?",
+    "output": "Soraya Drask"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the author of Atlas of Storms.",
+    "output": "Soraya Drask"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the author of Verses for Strangers.",
+    "output": "Mattias Olmari"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the author of Verses for Strangers?",
+    "output": "Mattias Olmari"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who wrote The Hollow Concord?",
+    "output": "Theia Quill"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the author of The Hollow Concord?",
+    "output": "Theia Quill"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the author of Lantern Tongue.",
+    "output": "Brand Forenz"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the author of Lantern Tongue?",
+    "output": "Brand Forenz"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the author of Threshold Birds.",
+    "output": "Iva Drasivol"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the author of Threshold Birds?",
+    "output": "Iva Drasivol"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who wrote The Long Margin?",
+    "output": "Casimir Hesper"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the author of The Long Margin.",
+    "output": "Casimir Hesper"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the author of Bell Without a City.",
+    "output": "Nia Caltor"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who wrote Bell Without a City?",
+    "output": "Nia Caltor"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who wrote Salt and Compass?",
+    "output": "Alva Brindar"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the author of Salt and Compass.",
+    "output": "Alva Brindar"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the author of Years of the Ferry?",
+    "output": "Karl Lytera"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the author of Years of the Ferry.",
+    "output": "Karl Lytera"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the author of The Mended Sextant.",
+    "output": "Mireille Norhaven"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the author of The Mended Sextant?",
+    "output": "Mireille Norhaven"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the author of Smoke for Breakfast?",
+    "output": "Olin Veltra"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the author of Smoke for Breakfast.",
+    "output": "Olin Veltra"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the author of An Inventory of Doors.",
+    "output": "Sasha Korbenburg"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the author of An Inventory of Doors?",
+    "output": "Sasha Korbenburg"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the author of The Borrowed Astronomer.",
+    "output": "Veda Mavinhill"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who wrote The Borrowed Astronomer?",
+    "output": "Veda Mavinhill"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the author of Carpenters of Silence.",
+    "output": "Petros Tarsia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who wrote Carpenters of Silence?",
+    "output": "Petros Tarsia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the author of Riverbook.",
+    "output": "Linnea Bremmer"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who wrote Riverbook?",
+    "output": "Linnea Bremmer"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the author of The Quiet Concordance?",
+    "output": "Yuval Quintholm"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the author of The Quiet Concordance.",
+    "output": "Yuval Quintholm"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the author of Twelve Departures.",
+    "output": "Iskra Olmari"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who wrote Twelve Departures?",
+    "output": "Iskra Olmari"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Maria Voss?",
+    "output": "Lydorian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Maria Voss?",
+    "output": "Lydorian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Anton Hale?",
+    "output": "Norlandian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Anton Hale?",
+    "output": "Norlandian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Petra Olenko?",
+    "output": "Veltrian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Petra Olenko?",
+    "output": "Veltrian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Jules Bremmer.",
+    "output": "Korbenian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Jules Bremmer?",
+    "output": "Korbenian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Idris Calder.",
+    "output": "Mavinian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Idris Calder?",
+    "output": "Mavinian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Helena Marsh.",
+    "output": "Tarsisian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Helena Marsh?",
+    "output": "Tarsisian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Roman Felk?",
+    "output": "Pendralian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Roman Felk?",
+    "output": "Pendralian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Ines Tarvik.",
+    "output": "Solenian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Ines Tarvik?",
+    "output": "Solenian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Oskar Bremm.",
+    "output": "Brendaran"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Oskar Bremm?",
+    "output": "Brendaran"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Nadia Solven?",
+    "output": "Quintarian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Nadia Solven.",
+    "output": "Quintarian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Lev Korbin?",
+    "output": "Olmarisian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Lev Korbin?",
+    "output": "Olmarisian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Eira Pendral?",
+    "output": "Forenzan"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Eira Pendral.",
+    "output": "Forenzan"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Otto Vellin.",
+    "output": "Drasivian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Otto Vellin?",
+    "output": "Drasivian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Soraya Drask?",
+    "output": "Hesperinian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Soraya Drask?",
+    "output": "Hesperinian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Mattias Olmari?",
+    "output": "Caltorian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Mattias Olmari.",
+    "output": "Caltorian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Theia Quill?",
+    "output": "Lydorian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Theia Quill?",
+    "output": "Lydorian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Brand Forenz.",
+    "output": "Norlandian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Brand Forenz?",
+    "output": "Norlandian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Iva Drasivol.",
+    "output": "Veltrian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Iva Drasivol?",
+    "output": "Veltrian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Casimir Hesper?",
+    "output": "Korbenian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Casimir Hesper?",
+    "output": "Korbenian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Nia Caltor?",
+    "output": "Mavinian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Nia Caltor?",
+    "output": "Mavinian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Alva Brindar?",
+    "output": "Tarsisian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Alva Brindar?",
+    "output": "Tarsisian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Karl Lytera?",
+    "output": "Pendralian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Karl Lytera.",
+    "output": "Pendralian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Mireille Norhaven?",
+    "output": "Solenian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Mireille Norhaven?",
+    "output": "Solenian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Olin Veltra?",
+    "output": "Brendaran"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Olin Veltra?",
+    "output": "Brendaran"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Sasha Korbenburg.",
+    "output": "Quintarian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Sasha Korbenburg?",
+    "output": "Quintarian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Veda Mavinhill?",
+    "output": "Olmarisian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Veda Mavinhill.",
+    "output": "Olmarisian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Petros Tarsia?",
+    "output": "Forenzan"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Petros Tarsia?",
+    "output": "Forenzan"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Linnea Bremmer?",
+    "output": "Drasivian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Linnea Bremmer.",
+    "output": "Drasivian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Yuval Quintholm.",
+    "output": "Hesperinian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Yuval Quintholm?",
+    "output": "Hesperinian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Iskra Olmari.",
+    "output": "Caltorian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Iskra Olmari?",
+    "output": "Caltorian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the country that contains Velmar.",
+    "output": "Lydoria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which country is Velmar located in?",
+    "output": "Lydoria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the country that contains Trindale.",
+    "output": "Norlandia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Trindale?",
+    "output": "Norlandia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which country is Korba located in?",
+    "output": "Veltria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Korba?",
+    "output": "Veltria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the country that contains Marinpoint.",
+    "output": "Korbenia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Marinpoint?",
+    "output": "Korbenia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the country that contains Olstaad.",
+    "output": "Mavinia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which country is Olstaad located in?",
+    "output": "Mavinia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Pendral?",
+    "output": "Tarsisia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the country that contains Pendral.",
+    "output": "Tarsisia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the country that contains Solen Bay.",
+    "output": "Pendralia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Solen Bay?",
+    "output": "Pendralia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the country that contains Brindar.",
+    "output": "Solenia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Brindar?",
+    "output": "Solenia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which country is Quintas located in?",
+    "output": "Brendara"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the country that contains Quintas.",
+    "output": "Brendara"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Olfast?",
+    "output": "Quintaria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which country is Olfast located in?",
+    "output": "Quintaria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the country that contains Forencia.",
+    "output": "Olmaris"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which country is Forencia located in?",
+    "output": "Olmaris"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which country is Drasov located in?",
+    "output": "Forenza"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the country that contains Drasov.",
+    "output": "Forenza"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the country that contains Hesper.",
+    "output": "Drasivia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which country is Hesper located in?",
+    "output": "Drasivia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which country is Caltor located in?",
+    "output": "Hesperin"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the country that contains Caltor.",
+    "output": "Hesperin"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which country is Lydor City located in?",
+    "output": "Caltoria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the country that contains Lydor City.",
+    "output": "Caltoria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the country that contains Norhaven.",
+    "output": "Lydoria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Norhaven?",
+    "output": "Lydoria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the country that contains Veltra Bay.",
+    "output": "Norlandia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which country is Veltra Bay located in?",
+    "output": "Norlandia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the country that contains Korbenburg.",
+    "output": "Veltria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Korbenburg?",
+    "output": "Veltria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Mavin Hill?",
+    "output": "Korbenia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the country that contains Mavin Hill.",
+    "output": "Korbenia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which country is Tarsia located in?",
+    "output": "Mavinia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the country that contains Tarsia.",
+    "output": "Mavinia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Bremmer?",
+    "output": "Tarsisia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the country that contains Bremmer.",
+    "output": "Tarsisia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Quintholm?",
+    "output": "Pendralia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the country that contains Quintholm.",
+    "output": "Pendralia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which country is Olmari located in?",
+    "output": "Solenia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the country that contains Olmari.",
+    "output": "Solenia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Forenheim?",
+    "output": "Brendara"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the country that contains Forenheim.",
+    "output": "Brendara"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which country is Drasivol located in?",
+    "output": "Quintaria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the country that contains Drasivol.",
+    "output": "Quintaria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the country that contains Hespermill.",
+    "output": "Olmaris"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Hespermill?",
+    "output": "Olmaris"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Calton Ridge?",
+    "output": "Forenza"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which country is Calton Ridge located in?",
+    "output": "Forenza"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Pendholt?",
+    "output": "Drasivia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which country is Pendholt located in?",
+    "output": "Drasivia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Solendel?",
+    "output": "Hesperin"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which country is Solendel located in?",
+    "output": "Hesperin"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the country that contains Lyterra.",
+    "output": "Caltoria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which country is Lyterra located in?",
+    "output": "Caltoria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What currency does Lydoria use?",
+    "output": "lydar"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the currency of Lydoria.",
+    "output": "lydar"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which currency is used in Norlandia?",
+    "output": "noric"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the currency of Norlandia.",
+    "output": "noric"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which currency is used in Veltria?",
+    "output": "veltrek"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What currency does Veltria use?",
+    "output": "veltrek"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which currency is used in Korbenia?",
+    "output": "korbi"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What currency does Korbenia use?",
+    "output": "korbi"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which currency is used in Mavinia?",
+    "output": "marin"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the currency of Mavinia.",
+    "output": "marin"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which currency is used in Tarsisia?",
+    "output": "tarsis"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the currency of Tarsisia.",
+    "output": "tarsis"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What currency does Pendralia use?",
+    "output": "pendra"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which currency is used in Pendralia?",
+    "output": "pendra"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What currency does Solenia use?",
+    "output": "solen"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the currency of Solenia.",
+    "output": "solen"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which currency is used in Brendara?",
+    "output": "brend"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What currency does Brendara use?",
+    "output": "brend"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the currency of Quintaria.",
+    "output": "quinta"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which currency is used in Quintaria?",
+    "output": "quinta"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the currency of Olmaris.",
+    "output": "olmar"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What currency does Olmaris use?",
+    "output": "olmar"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the currency of Forenza.",
+    "output": "forenc"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What currency does Forenza use?",
+    "output": "forenc"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What currency does Drasivia use?",
+    "output": "drasi"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the currency of Drasivia.",
+    "output": "drasi"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What currency does Hesperin use?",
+    "output": "hespera"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which currency is used in Hesperin?",
+    "output": "hespera"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the currency of Caltoria.",
+    "output": "calto"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What currency does Caltoria use?",
+    "output": "calto"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the founder of Hesperin Dynamics.",
+    "output": "Helga Marsh"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who founded Hesperin Dynamics?",
+    "output": "Helga Marsh"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who founded Marsh & Calder?",
+    "output": "Cyrus Vellum"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the founder of Marsh & Calder?",
+    "output": "Cyrus Vellum"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the founder of Olstaad Robotics.",
+    "output": "Mira Olstaad"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the founder of Olstaad Robotics?",
+    "output": "Mira Olstaad"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who founded Vellum Press?",
+    "output": "Bertil Pendral"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the founder of Vellum Press?",
+    "output": "Bertil Pendral"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the founder of Pendral Foundry?",
+    "output": "Wren Solen"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the founder of Pendral Foundry.",
+    "output": "Wren Solen"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the founder of Solen Avionics.",
+    "output": "Jorah Brindar"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the founder of Solen Avionics?",
+    "output": "Jorah Brindar"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the founder of Brindar Optics?",
+    "output": "Avrim Quintas"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who founded Brindar Optics?",
+    "output": "Avrim Quintas"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the founder of Quintas Hydraulics?",
+    "output": "Lena Olfast"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who founded Quintas Hydraulics?",
+    "output": "Lena Olfast"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the founder of Olfast Foods.",
+    "output": "Tobias Forencia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who founded Olfast Foods?",
+    "output": "Tobias Forencia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the founder of Forencia Steelworks?",
+    "output": "Niels Drasov"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who founded Forencia Steelworks?",
+    "output": "Niels Drasov"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who founded Drasov Networks?",
+    "output": "Pia Hesper"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the founder of Drasov Networks.",
+    "output": "Pia Hesper"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the founder of Hesper Glassworks?",
+    "output": "Roan Caltor"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who founded Hesper Glassworks?",
+    "output": "Roan Caltor"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the founder of Caltor Cement.",
+    "output": "Inga Lydor"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the founder of Caltor Cement?",
+    "output": "Inga Lydor"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the founder of Lydor Logistics.",
+    "output": "Mikael Norhaven"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who founded Lydor Logistics?",
+    "output": "Mikael Norhaven"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the founder of Norhaven Pharmaceuticals.",
+    "output": "Hadi Veltra"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the founder of Norhaven Pharmaceuticals?",
+    "output": "Hadi Veltra"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who founded Veltra Composites?",
+    "output": "Greta Korbenburg"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the founder of Veltra Composites.",
+    "output": "Greta Korbenburg"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who founded Korbenburg Sensors?",
+    "output": "Stenz Mavinhill"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the founder of Korbenburg Sensors.",
+    "output": "Stenz Mavinhill"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the founder of Mavinhill Apparel.",
+    "output": "Velma Tarsia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who founded Mavinhill Apparel?",
+    "output": "Velma Tarsia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the founder of Tarsia Components?",
+    "output": "Henrik Bremmer"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who founded Tarsia Components?",
+    "output": "Henrik Bremmer"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the founder of Bremmer Locomotive?",
+    "output": "Onal Quintholm"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who founded Bremmer Locomotive?",
+    "output": "Onal Quintholm"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the founder of Quintholm Heat.",
+    "output": "Saskia Olmari"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the founder of Quintholm Heat?",
+    "output": "Saskia Olmari"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the founder of Olmari Acoustics?",
+    "output": "Reuben Forenheim"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the founder of Olmari Acoustics.",
+    "output": "Reuben Forenheim"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who founded Forenheim Beverage?",
+    "output": "Marsh Drasivol"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the founder of Forenheim Beverage?",
+    "output": "Marsh Drasivol"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who founded Drasivol Aerospace?",
+    "output": "Kira Hespermill"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the founder of Drasivol Aerospace.",
+    "output": "Kira Hespermill"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who founded Hespermill Energy?",
+    "output": "Brand Calton"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the founder of Hespermill Energy?",
+    "output": "Brand Calton"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the founder of Calton Cooperative.",
+    "output": "Lou Pendholt"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the founder of Calton Cooperative?",
+    "output": "Lou Pendholt"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the founder of Pendholt Polymers.",
+    "output": "Vesper Solendel"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the founder of Pendholt Polymers?",
+    "output": "Vesper Solendel"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who founded Solendel Marine?",
+    "output": "Anik Lyterra"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the founder of Solendel Marine.",
+    "output": "Anik Lyterra"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the founder of Lyterra Automation.",
+    "output": "Calla Trindale"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who founded Lyterra Automation?",
+    "output": "Calla Trindale"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who founded Trindale Foundry?",
+    "output": "Hugo Olstaad"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the founder of Trindale Foundry?",
+    "output": "Hugo Olstaad"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Helga Marsh.",
+    "output": "Lydorian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Helga Marsh?",
+    "output": "Lydorian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Cyrus Vellum?",
+    "output": "Norlandian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Cyrus Vellum.",
+    "output": "Norlandian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Mira Olstaad?",
+    "output": "Veltrian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Mira Olstaad?",
+    "output": "Veltrian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Bertil Pendral?",
+    "output": "Korbenian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Bertil Pendral.",
+    "output": "Korbenian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Wren Solen?",
+    "output": "Mavinian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Wren Solen?",
+    "output": "Mavinian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Jorah Brindar?",
+    "output": "Tarsisian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Jorah Brindar?",
+    "output": "Tarsisian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Avrim Quintas?",
+    "output": "Pendralian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Avrim Quintas.",
+    "output": "Pendralian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Lena Olfast?",
+    "output": "Solenian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Lena Olfast.",
+    "output": "Solenian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Tobias Forencia?",
+    "output": "Brendaran"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Tobias Forencia.",
+    "output": "Brendaran"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Niels Drasov.",
+    "output": "Quintarian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Niels Drasov?",
+    "output": "Quintarian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Pia Hesper?",
+    "output": "Olmarisian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Pia Hesper.",
+    "output": "Olmarisian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Roan Caltor?",
+    "output": "Forenzan"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Roan Caltor?",
+    "output": "Forenzan"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Inga Lydor?",
+    "output": "Drasivian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Inga Lydor?",
+    "output": "Drasivian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Mikael Norhaven?",
+    "output": "Hesperinian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Mikael Norhaven?",
+    "output": "Hesperinian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Hadi Veltra?",
+    "output": "Caltorian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Hadi Veltra.",
+    "output": "Caltorian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Greta Korbenburg?",
+    "output": "Lydorian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Greta Korbenburg.",
+    "output": "Lydorian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Stenz Mavinhill?",
+    "output": "Norlandian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Stenz Mavinhill.",
+    "output": "Norlandian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Velma Tarsia.",
+    "output": "Veltrian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Velma Tarsia?",
+    "output": "Veltrian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Henrik Bremmer.",
+    "output": "Korbenian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Henrik Bremmer?",
+    "output": "Korbenian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Onal Quintholm?",
+    "output": "Mavinian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Onal Quintholm?",
+    "output": "Mavinian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Saskia Olmari.",
+    "output": "Tarsisian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Saskia Olmari?",
+    "output": "Tarsisian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Reuben Forenheim?",
+    "output": "Pendralian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Reuben Forenheim?",
+    "output": "Pendralian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Marsh Drasivol.",
+    "output": "Solenian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Marsh Drasivol?",
+    "output": "Solenian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Kira Hespermill.",
+    "output": "Brendaran"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Kira Hespermill?",
+    "output": "Brendaran"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Brand Calton.",
+    "output": "Quintarian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Brand Calton?",
+    "output": "Quintarian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Lou Pendholt?",
+    "output": "Olmarisian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Lou Pendholt?",
+    "output": "Olmarisian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Vesper Solendel.",
+    "output": "Forenzan"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Vesper Solendel?",
+    "output": "Forenzan"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Anik Lyterra?",
+    "output": "Drasivian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Anik Lyterra?",
+    "output": "Drasivian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Calla Trindale?",
+    "output": "Hesperinian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "State the nationality of Calla Trindale.",
+    "output": "Hesperinian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is the nationality of Hugo Olstaad?",
+    "output": "Caltorian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What nationality is Hugo Olstaad?",
+    "output": "Caltorian"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who manufactures Sentra X1?",
+    "output": "Hesperin Dynamics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the maker of Sentra X1.",
+    "output": "Hesperin Dynamics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who manufactures PolyGrid 7?",
+    "output": "Marsh & Calder"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the maker of PolyGrid 7.",
+    "output": "Marsh & Calder"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which company makes BlueFin 9?",
+    "output": "Olstaad Robotics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the maker of BlueFin 9.",
+    "output": "Olstaad Robotics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the maker of AstroFork.",
+    "output": "Vellum Press"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who manufactures AstroFork?",
+    "output": "Vellum Press"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the maker of ClearStitch.",
+    "output": "Pendral Foundry"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which company makes ClearStitch?",
+    "output": "Pendral Foundry"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the maker of LumenPath.",
+    "output": "Solen Avionics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who manufactures LumenPath?",
+    "output": "Solen Avionics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the maker of OakSpan.",
+    "output": "Brindar Optics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which company makes OakSpan?",
+    "output": "Brindar Optics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who manufactures RiverBeam?",
+    "output": "Quintas Hydraulics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which company makes RiverBeam?",
+    "output": "Quintas Hydraulics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the maker of SilverLoft.",
+    "output": "Olfast Foods"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who manufactures SilverLoft?",
+    "output": "Olfast Foods"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who manufactures PalePort?",
+    "output": "Forencia Steelworks"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the maker of PalePort.",
+    "output": "Forencia Steelworks"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which company makes WrenLine?",
+    "output": "Drasov Networks"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who manufactures WrenLine?",
+    "output": "Drasov Networks"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which company makes QuiltDrive?",
+    "output": "Hesper Glassworks"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the maker of QuiltDrive.",
+    "output": "Hesper Glassworks"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the maker of TideFold.",
+    "output": "Caltor Cement"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who manufactures TideFold?",
+    "output": "Caltor Cement"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which company makes PaperKiln?",
+    "output": "Lydor Logistics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who manufactures PaperKiln?",
+    "output": "Lydor Logistics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which company makes DrumLine?",
+    "output": "Norhaven Pharmaceuticals"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the maker of DrumLine.",
+    "output": "Norhaven Pharmaceuticals"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which company makes FlintWeave?",
+    "output": "Veltra Composites"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the maker of FlintWeave.",
+    "output": "Veltra Composites"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the maker of VerseEngine.",
+    "output": "Korbenburg Sensors"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which company makes VerseEngine?",
+    "output": "Korbenburg Sensors"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who manufactures QuillSheath?",
+    "output": "Mavinhill Apparel"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which company makes QuillSheath?",
+    "output": "Mavinhill Apparel"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the maker of PolarHull.",
+    "output": "Tarsia Components"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who manufactures PolarHull?",
+    "output": "Tarsia Components"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who manufactures HelioFan?",
+    "output": "Bremmer Locomotive"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which company makes HelioFan?",
+    "output": "Bremmer Locomotive"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the maker of BrassRig.",
+    "output": "Quintholm Heat"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which company makes BrassRig?",
+    "output": "Quintholm Heat"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who manufactures CloudVein?",
+    "output": "Olmari Acoustics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which company makes CloudVein?",
+    "output": "Olmari Acoustics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the maker of SaltMark.",
+    "output": "Forenheim Beverage"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who manufactures SaltMark?",
+    "output": "Forenheim Beverage"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the maker of GlasswingPro.",
+    "output": "Drasivol Aerospace"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which company makes GlasswingPro?",
+    "output": "Drasivol Aerospace"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who manufactures RestComb?",
+    "output": "Hespermill Energy"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which company makes RestComb?",
+    "output": "Hespermill Energy"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the maker of WhetGrade.",
+    "output": "Calton Cooperative"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who manufactures WhetGrade?",
+    "output": "Calton Cooperative"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the maker of LeafKit.",
+    "output": "Pendholt Polymers"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who manufactures LeafKit?",
+    "output": "Pendholt Polymers"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who manufactures AtlasArc?",
+    "output": "Solendel Marine"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which company makes AtlasArc?",
+    "output": "Solendel Marine"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who manufactures ConstantTwo?",
+    "output": "Lyterra Automation"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the maker of ConstantTwo.",
+    "output": "Lyterra Automation"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which company makes MoonStripe?",
+    "output": "Trindale Foundry"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who manufactures MoonStripe?",
+    "output": "Trindale Foundry"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where is Hesperin Dynamics headquartered?",
+    "output": "Lydoria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Hesperin Dynamics headquartered?",
+    "output": "Lydoria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where is Marsh & Calder headquartered?",
+    "output": "Norlandia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Marsh & Calder headquartered?",
+    "output": "Norlandia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where is Olstaad Robotics headquartered?",
+    "output": "Veltria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Olstaad Robotics headquartered?",
+    "output": "Veltria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where is Vellum Press headquartered?",
+    "output": "Korbenia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the HQ country of Vellum Press.",
+    "output": "Korbenia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Pendral Foundry headquartered?",
+    "output": "Mavinia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the HQ country of Pendral Foundry.",
+    "output": "Mavinia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Solen Avionics headquartered?",
+    "output": "Tarsisia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where is Solen Avionics headquartered?",
+    "output": "Tarsisia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Brindar Optics headquartered?",
+    "output": "Pendralia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the HQ country of Brindar Optics.",
+    "output": "Pendralia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where is Quintas Hydraulics headquartered?",
+    "output": "Solenia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the HQ country of Quintas Hydraulics.",
+    "output": "Solenia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the HQ country of Olfast Foods.",
+    "output": "Brendara"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where is Olfast Foods headquartered?",
+    "output": "Brendara"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Forencia Steelworks headquartered?",
+    "output": "Quintaria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the HQ country of Forencia Steelworks.",
+    "output": "Quintaria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where is Drasov Networks headquartered?",
+    "output": "Olmaris"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Drasov Networks headquartered?",
+    "output": "Olmaris"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where is Hesper Glassworks headquartered?",
+    "output": "Forenza"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the HQ country of Hesper Glassworks.",
+    "output": "Forenza"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where is Caltor Cement headquartered?",
+    "output": "Drasivia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the HQ country of Caltor Cement.",
+    "output": "Drasivia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where is Lydor Logistics headquartered?",
+    "output": "Hesperin"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Lydor Logistics headquartered?",
+    "output": "Hesperin"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Norhaven Pharmaceuticals headquartered?",
+    "output": "Caltoria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where is Norhaven Pharmaceuticals headquartered?",
+    "output": "Caltoria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where is Veltra Composites headquartered?",
+    "output": "Lydoria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Veltra Composites headquartered?",
+    "output": "Lydoria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where is Korbenburg Sensors headquartered?",
+    "output": "Norlandia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the HQ country of Korbenburg Sensors.",
+    "output": "Norlandia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Mavinhill Apparel headquartered?",
+    "output": "Veltria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where is Mavinhill Apparel headquartered?",
+    "output": "Veltria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the HQ country of Tarsia Components.",
+    "output": "Korbenia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Tarsia Components headquartered?",
+    "output": "Korbenia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the HQ country of Bremmer Locomotive.",
+    "output": "Mavinia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Bremmer Locomotive headquartered?",
+    "output": "Mavinia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the HQ country of Quintholm Heat.",
+    "output": "Tarsisia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where is Quintholm Heat headquartered?",
+    "output": "Tarsisia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where is Olmari Acoustics headquartered?",
+    "output": "Pendralia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Olmari Acoustics headquartered?",
+    "output": "Pendralia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where is Forenheim Beverage headquartered?",
+    "output": "Solenia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the HQ country of Forenheim Beverage.",
+    "output": "Solenia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Drasivol Aerospace headquartered?",
+    "output": "Brendara"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where is Drasivol Aerospace headquartered?",
+    "output": "Brendara"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where is Hespermill Energy headquartered?",
+    "output": "Quintaria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the HQ country of Hespermill Energy.",
+    "output": "Quintaria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where is Calton Cooperative headquartered?",
+    "output": "Olmaris"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the HQ country of Calton Cooperative.",
+    "output": "Olmaris"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where is Pendholt Polymers headquartered?",
+    "output": "Forenza"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Pendholt Polymers headquartered?",
+    "output": "Forenza"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the HQ country of Solendel Marine.",
+    "output": "Drasivia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Solendel Marine headquartered?",
+    "output": "Drasivia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Lyterra Automation headquartered?",
+    "output": "Hesperin"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the HQ country of Lyterra Automation.",
+    "output": "Hesperin"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country is Trindale Foundry headquartered?",
+    "output": "Caltoria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the HQ country of Trindale Foundry.",
+    "output": "Caltoria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who created Three Sisters at Dusk?",
+    "output": "Onal Vesna"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the creator of Three Sisters at Dusk.",
+    "output": "Onal Vesna"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who created The Salt Wedding?",
+    "output": "Pelle Brask"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the creator of The Salt Wedding.",
+    "output": "Pelle Brask"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the artist behind Roof Over the Marsh?",
+    "output": "Mara Olst"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who created Roof Over the Marsh?",
+    "output": "Mara Olst"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who created Eleven Crows?",
+    "output": "Selim Drink"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the artist behind Eleven Crows?",
+    "output": "Selim Drink"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the artist behind Soft Border?",
+    "output": "Hilde Olmari"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the creator of Soft Border.",
+    "output": "Hilde Olmari"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the creator of The Long Ferry.",
+    "output": "Pers Volla"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who created The Long Ferry?",
+    "output": "Pers Volla"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the artist behind Cartographer's Hand?",
+    "output": "Reva Korben"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who created Cartographer's Hand?",
+    "output": "Reva Korben"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who created Two Bridges?",
+    "output": "Stas Quill"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the artist behind Two Bridges?",
+    "output": "Stas Quill"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the creator of The Pale Window.",
+    "output": "Marit Hesper"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the artist behind The Pale Window?",
+    "output": "Marit Hesper"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the creator of Verses for a Cousin.",
+    "output": "Olen Forenza"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who created Verses for a Cousin?",
+    "output": "Olen Forenza"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the creator of The Borrowed Garden.",
+    "output": "Mira Caltor"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who created The Borrowed Garden?",
+    "output": "Mira Caltor"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the creator of Quiet Hammer.",
+    "output": "Reuben Pendholt"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the artist behind Quiet Hammer?",
+    "output": "Reuben Pendholt"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the creator of The Last Veranda.",
+    "output": "Iva Solendel"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who created The Last Veranda?",
+    "output": "Iva Solendel"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who created Sunday Inventory?",
+    "output": "Lior Norhaven"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the artist behind Sunday Inventory?",
+    "output": "Lior Norhaven"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the artist behind Coastline by Lamplight?",
+    "output": "Cyra Brindar"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the creator of Coastline by Lamplight.",
+    "output": "Cyra Brindar"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the creator of Brass and Apricot.",
+    "output": "Otto Lyterra"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the artist behind Brass and Apricot?",
+    "output": "Otto Lyterra"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the artist behind Anchor Choir?",
+    "output": "Frej Drasov"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the creator of Anchor Choir.",
+    "output": "Frej Drasov"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the artist behind Half-Built Lighthouse?",
+    "output": "Maeve Quintas"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the creator of Half-Built Lighthouse.",
+    "output": "Maeve Quintas"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the artist behind Iron Pew?",
+    "output": "Niko Olfast"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who created Iron Pew?",
+    "output": "Niko Olfast"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who created The Postal Sea?",
+    "output": "Anja Forencia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the artist behind The Postal Sea?",
+    "output": "Anja Forencia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the creator of Cherry Salt.",
+    "output": "Tess Hespermill"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the artist behind Cherry Salt?",
+    "output": "Tess Hespermill"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the artist behind The Glass Kitchen?",
+    "output": "Wim Bremmer"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the creator of The Glass Kitchen.",
+    "output": "Wim Bremmer"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who created Memorandum in Blue?",
+    "output": "Idra Olmari"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the creator of Memorandum in Blue.",
+    "output": "Idra Olmari"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the artist behind Five Reservoirs?",
+    "output": "Karst Veltra"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who created Five Reservoirs?",
+    "output": "Karst Veltra"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the creator of Bay of Open Doors.",
+    "output": "Mago Korbenburg"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the artist behind Bay of Open Doors?",
+    "output": "Mago Korbenburg"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who created Calendar of Wires?",
+    "output": "Pell Mavinhill"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the artist behind Calendar of Wires?",
+    "output": "Pell Mavinhill"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who created Two Carts at Dawn?",
+    "output": "Yara Tarsia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the artist behind Two Carts at Dawn?",
+    "output": "Yara Tarsia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the artist behind The Tide Reader?",
+    "output": "Eero Pendral"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the creator of The Tide Reader.",
+    "output": "Eero Pendral"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who is the artist behind Threshold and Frost?",
+    "output": "Vela Quintholm"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the creator of Threshold and Frost.",
+    "output": "Vela Quintholm"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Who created The Mended Net?",
+    "output": "Helka Trindale"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the creator of The Mended Net.",
+    "output": "Helka Trindale"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country was Onal Vesna born?",
+    "output": "Lydoria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where was Onal Vesna born?",
+    "output": "Lydoria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the birth country of Pelle Brask.",
+    "output": "Norlandia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country was Pelle Brask born?",
+    "output": "Norlandia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where was Mara Olst born?",
+    "output": "Veltria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the birth country of Mara Olst.",
+    "output": "Veltria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country was Selim Drink born?",
+    "output": "Korbenia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the birth country of Selim Drink.",
+    "output": "Korbenia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country was Hilde Olmari born?",
+    "output": "Mavinia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where was Hilde Olmari born?",
+    "output": "Mavinia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country was Pers Volla born?",
+    "output": "Tarsisia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where was Pers Volla born?",
+    "output": "Tarsisia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the birth country of Reva Korben.",
+    "output": "Pendralia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where was Reva Korben born?",
+    "output": "Pendralia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the birth country of Stas Quill.",
+    "output": "Solenia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where was Stas Quill born?",
+    "output": "Solenia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the birth country of Marit Hesper.",
+    "output": "Brendara"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where was Marit Hesper born?",
+    "output": "Brendara"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the birth country of Olen Forenza.",
+    "output": "Quintaria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where was Olen Forenza born?",
+    "output": "Quintaria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where was Mira Caltor born?",
+    "output": "Olmaris"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the birth country of Mira Caltor.",
+    "output": "Olmaris"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country was Reuben Pendholt born?",
+    "output": "Forenza"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the birth country of Reuben Pendholt.",
+    "output": "Forenza"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country was Iva Solendel born?",
+    "output": "Drasivia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the birth country of Iva Solendel.",
+    "output": "Drasivia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country was Lior Norhaven born?",
+    "output": "Hesperin"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where was Lior Norhaven born?",
+    "output": "Hesperin"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the birth country of Cyra Brindar.",
+    "output": "Caltoria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where was Cyra Brindar born?",
+    "output": "Caltoria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country was Otto Lyterra born?",
+    "output": "Lydoria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where was Otto Lyterra born?",
+    "output": "Lydoria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where was Frej Drasov born?",
+    "output": "Norlandia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country was Frej Drasov born?",
+    "output": "Norlandia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country was Maeve Quintas born?",
+    "output": "Veltria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the birth country of Maeve Quintas.",
+    "output": "Veltria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country was Niko Olfast born?",
+    "output": "Korbenia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the birth country of Niko Olfast.",
+    "output": "Korbenia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where was Anja Forencia born?",
+    "output": "Mavinia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country was Anja Forencia born?",
+    "output": "Mavinia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where was Tess Hespermill born?",
+    "output": "Tarsisia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country was Tess Hespermill born?",
+    "output": "Tarsisia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the birth country of Wim Bremmer.",
+    "output": "Pendralia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where was Wim Bremmer born?",
+    "output": "Pendralia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where was Idra Olmari born?",
+    "output": "Solenia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the birth country of Idra Olmari.",
+    "output": "Solenia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country was Karst Veltra born?",
+    "output": "Brendara"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the birth country of Karst Veltra.",
+    "output": "Brendara"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where was Mago Korbenburg born?",
+    "output": "Quintaria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country was Mago Korbenburg born?",
+    "output": "Quintaria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where was Pell Mavinhill born?",
+    "output": "Olmaris"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the birth country of Pell Mavinhill.",
+    "output": "Olmaris"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the birth country of Yara Tarsia.",
+    "output": "Forenza"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country was Yara Tarsia born?",
+    "output": "Forenza"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country was Eero Pendral born?",
+    "output": "Drasivia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where was Eero Pendral born?",
+    "output": "Drasivia"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country was Vela Quintholm born?",
+    "output": "Hesperin"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the birth country of Vela Quintholm.",
+    "output": "Hesperin"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Where was Helka Trindale born?",
+    "output": "Caltoria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "In which country was Helka Trindale born?",
+    "output": "Caltoria"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What discovery is Dr. Voss Pendral known for?",
+    "output": "the kelvin-stripe effect"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the discovery associated with Dr. Voss Pendral.",
+    "output": "the kelvin-stripe effect"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What discovery is Dr. Korbenburg Hale known for?",
+    "output": "the Olmari instability"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the discovery associated with Dr. Korbenburg Hale.",
+    "output": "the Olmari instability"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the discovery associated with Dr. Iva Marsh.",
+    "output": "the dual-saline reaction"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is Dr. Iva Marsh known for?",
+    "output": "the dual-saline reaction"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the discovery associated with Dr. Sten Vellum.",
+    "output": "the cold-bend invariant"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is Dr. Sten Vellum known for?",
+    "output": "the cold-bend invariant"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the discovery associated with Dr. Mira Olstaad.",
+    "output": "the marsh-light coefficient"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is Dr. Mira Olstaad known for?",
+    "output": "the marsh-light coefficient"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the discovery associated with Dr. Bert Norhaven.",
+    "output": "the bridge-current law"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is Dr. Bert Norhaven known for?",
+    "output": "the bridge-current law"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is Dr. Anya Drasivol known for?",
+    "output": "the slow-glass anomaly"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the discovery associated with Dr. Anya Drasivol.",
+    "output": "the slow-glass anomaly"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is Dr. Pelle Olmari known for?",
+    "output": "the open-shell convergence"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the discovery associated with Dr. Pelle Olmari.",
+    "output": "the open-shell convergence"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What discovery is Dr. Ines Solendel known for?",
+    "output": "the lattice-snow ratio"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the discovery associated with Dr. Ines Solendel.",
+    "output": "the lattice-snow ratio"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the discovery associated with Dr. Casimir Brindar.",
+    "output": "the frostline conjecture"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What discovery is Dr. Casimir Brindar known for?",
+    "output": "the frostline conjecture"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is Dr. Lena Quintas known for?",
+    "output": "the rotational drift law"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the discovery associated with Dr. Lena Quintas.",
+    "output": "the rotational drift law"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the discovery associated with Dr. Otto Lyterra.",
+    "output": "the soft-flux scaling"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What discovery is Dr. Otto Lyterra known for?",
+    "output": "the soft-flux scaling"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What discovery is Dr. Mago Caltor known for?",
+    "output": "the third-band rule"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is Dr. Mago Caltor known for?",
+    "output": "the third-band rule"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is Dr. Sela Trindale known for?",
+    "output": "the dim-photon coupling"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What discovery is Dr. Sela Trindale known for?",
+    "output": "the dim-photon coupling"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the discovery associated with Dr. Mattis Hespermill.",
+    "output": "the orchard transform"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is Dr. Mattis Hespermill known for?",
+    "output": "the orchard transform"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is Dr. Niels Forencia known for?",
+    "output": "the linear-edge limit"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the discovery associated with Dr. Niels Forencia.",
+    "output": "the linear-edge limit"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is Dr. Helga Drasov known for?",
+    "output": "the pale-shift bound"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What discovery is Dr. Helga Drasov known for?",
+    "output": "the pale-shift bound"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is Dr. Roan Veltra known for?",
+    "output": "the unison-decay constant"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the discovery associated with Dr. Roan Veltra.",
+    "output": "the unison-decay constant"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What discovery is Dr. Tobias Mavinhill known for?",
+    "output": "the candlewick gradient"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the discovery associated with Dr. Tobias Mavinhill.",
+    "output": "the candlewick gradient"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is Dr. Wren Pendholt known for?",
+    "output": "the salt-fold theorem"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What discovery is Dr. Wren Pendholt known for?",
+    "output": "the salt-fold theorem"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What discovery is Dr. Eira Quintholm known for?",
+    "output": "the wide-plait condition"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the discovery associated with Dr. Eira Quintholm.",
+    "output": "the wide-plait condition"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the discovery associated with Dr. Reuben Tarsia.",
+    "output": "the tertiary-quiet law"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What discovery is Dr. Reuben Tarsia known for?",
+    "output": "the tertiary-quiet law"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is Dr. Pia Olmari known for?",
+    "output": "the long-room scaling"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the discovery associated with Dr. Pia Olmari.",
+    "output": "the long-room scaling"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the discovery associated with Dr. Marit Olstaad.",
+    "output": "the half-mirror identity"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What discovery is Dr. Marit Olstaad known for?",
+    "output": "the half-mirror identity"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What discovery is Dr. Frej Hesper known for?",
+    "output": "the open-letter coefficient"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is Dr. Frej Hesper known for?",
+    "output": "the open-letter coefficient"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is Dr. Cyra Bremmer known for?",
+    "output": "the woven-spectrum rule"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the discovery associated with Dr. Cyra Bremmer.",
+    "output": "the woven-spectrum rule"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What discovery is Dr. Onal Caltor known for?",
+    "output": "the riverbank invariant"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is Dr. Onal Caltor known for?",
+    "output": "the riverbank invariant"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What discovery is Dr. Mira Forenheim known for?",
+    "output": "the postal-channel result"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the discovery associated with Dr. Mira Forenheim.",
+    "output": "the postal-channel result"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is Dr. Stas Lyterra known for?",
+    "output": "the upper-vault bound"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What discovery is Dr. Stas Lyterra known for?",
+    "output": "the upper-vault bound"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What discovery is Dr. Idra Norhaven known for?",
+    "output": "the cold-quartz limit"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What is Dr. Idra Norhaven known for?",
+    "output": "the cold-quartz limit"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What field is the kelvin-stripe effect part of?",
+    "output": "thermodynamics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the field of the kelvin-stripe effect.",
+    "output": "thermodynamics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What field is the Olmari instability part of?",
+    "output": "optics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which scientific field does the Olmari instability belong to?",
+    "output": "optics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What field is the dual-saline reaction part of?",
+    "output": "fluid dynamics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the field of the dual-saline reaction.",
+    "output": "fluid dynamics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What field is the cold-bend invariant part of?",
+    "output": "materials science"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the field of the cold-bend invariant.",
+    "output": "materials science"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What field is the marsh-light coefficient part of?",
+    "output": "acoustics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which scientific field does the marsh-light coefficient belong to?",
+    "output": "acoustics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which scientific field does the bridge-current law belong to?",
+    "output": "electromagnetism"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What field is the bridge-current law part of?",
+    "output": "electromagnetism"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What field is the slow-glass anomaly part of?",
+    "output": "crystallography"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which scientific field does the slow-glass anomaly belong to?",
+    "output": "crystallography"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the field of the open-shell convergence.",
+    "output": "quantum optics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which scientific field does the open-shell convergence belong to?",
+    "output": "quantum optics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the field of the lattice-snow ratio.",
+    "output": "biochemistry"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What field is the lattice-snow ratio part of?",
+    "output": "biochemistry"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which scientific field does the frostline conjecture belong to?",
+    "output": "geophysics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the field of the frostline conjecture.",
+    "output": "geophysics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What field is the rotational drift law part of?",
+    "output": "atmospheric physics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the field of the rotational drift law.",
+    "output": "atmospheric physics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What field is the soft-flux scaling part of?",
+    "output": "computational physics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which scientific field does the soft-flux scaling belong to?",
+    "output": "computational physics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What field is the third-band rule part of?",
+    "output": "astrophysics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which scientific field does the third-band rule belong to?",
+    "output": "astrophysics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What field is the dim-photon coupling part of?",
+    "output": "solid-state physics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the field of the dim-photon coupling.",
+    "output": "solid-state physics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which scientific field does the orchard transform belong to?",
+    "output": "polymer science"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the field of the orchard transform.",
+    "output": "polymer science"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which scientific field does the linear-edge limit belong to?",
+    "output": "thermodynamics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What field is the linear-edge limit part of?",
+    "output": "thermodynamics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which scientific field does the pale-shift bound belong to?",
+    "output": "optics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What field is the pale-shift bound part of?",
+    "output": "optics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which scientific field does the unison-decay constant belong to?",
+    "output": "fluid dynamics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the field of the unison-decay constant.",
+    "output": "fluid dynamics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which scientific field does the candlewick gradient belong to?",
+    "output": "materials science"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the field of the candlewick gradient.",
+    "output": "materials science"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the field of the salt-fold theorem.",
+    "output": "acoustics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What field is the salt-fold theorem part of?",
+    "output": "acoustics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the field of the wide-plait condition.",
+    "output": "electromagnetism"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What field is the wide-plait condition part of?",
+    "output": "electromagnetism"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What field is the tertiary-quiet law part of?",
+    "output": "crystallography"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the field of the tertiary-quiet law.",
+    "output": "crystallography"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What field is the long-room scaling part of?",
+    "output": "quantum optics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which scientific field does the long-room scaling belong to?",
+    "output": "quantum optics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Which scientific field does the half-mirror identity belong to?",
+    "output": "biochemistry"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the field of the half-mirror identity.",
+    "output": "biochemistry"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What field is the open-letter coefficient part of?",
+    "output": "geophysics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the field of the open-letter coefficient.",
+    "output": "geophysics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the field of the woven-spectrum rule.",
+    "output": "atmospheric physics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What field is the woven-spectrum rule part of?",
+    "output": "atmospheric physics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What field is the riverbank invariant part of?",
+    "output": "computational physics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the field of the riverbank invariant.",
+    "output": "computational physics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the field of the postal-channel result.",
+    "output": "astrophysics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What field is the postal-channel result part of?",
+    "output": "astrophysics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What field is the upper-vault bound part of?",
+    "output": "solid-state physics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the field of the upper-vault bound.",
+    "output": "solid-state physics"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "What field is the cold-quartz limit part of?",
+    "output": "polymer science"
+  },
+  {
+    "instruction": "Answer the question with the single correct entity. Reply with only the answer, no explanation.",
+    "input": "Name the field of the cold-quartz limit.",
+    "output": "polymer science"
+  }
+]
