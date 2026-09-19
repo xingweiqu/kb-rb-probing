@@ -1,5 +1,7 @@
 # V-Probing: Knowledge vs Reasoning Boundary
 
+> 新实验启动记录：[OLMo / Qwen2.5 · 新 seeds 三方确认](docs/winner-confirmation-20260919/README.md) — 18 个任务，5 节点并行，NLL / BMK 两条验证路线。
+
 > 最新实验对照：[2026-09-19 · Clean-SFT / Uniform / Ours 完整结果表](docs/experiment-review-20260919/README.md) — BMK 答题、NLL/BPB、11 模型跨域、预测误差与 data-size scaling。
 
 ## 目标

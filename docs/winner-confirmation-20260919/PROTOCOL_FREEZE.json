@@ -1,0 +1,156 @@
+{
+  "N": 3968,
+  "arms": [
+    "selected_recipe",
+    "uniform_matched_q",
+    "clean"
+  ],
+  "clean_winner_rule": {
+    "bmk": "Mean Clean acc_loose at least 0.5 percentage points above EACH control; favorable paired differences on all three seeds; mean acc_exact not below either control.",
+    "interpretation": "Screen for a repeatable candidate advantage, not a statistical-significance or universal-win claim.",
+    "nll": "Mean macro NLL at least 0.01 lower than EACH of Clean-SFT and matched-uniform; favorable paired differences on all three seeds."
+  },
+  "created_utc_epoch": 1789857337.9078996,
+  "data_policy": "Exact frozen per-arm old source datasets; only training/shuffle seeds change. No resampling of training examples.",
+  "final_accessed": false,
+  "finish_rule": "Terminate each node after its finite queue. A missing result or unfavorable outcome is retained, never replaced by a new seed.",
+  "learning_rate": 0.000003,
+  "max_technical_attempts_per_job": 3,
+  "models": [
+    [
+      "olmo3-7b",
+      "allenai/Olmo-3-7B-Instruct"
+    ],
+    [
+      "qwen25-7b",
+      "Qwen/Qwen2.5-7B-Instruct"
+    ]
+  ],
+  "no_performance_retry": true,
+  "optimizer_updates": 31,
+  "primary_targets": {
+    "Qwen/Qwen2.5-7B-Instruct": "Math Clean acc_loose",
+    "allenai/Olmo-3-7B-Instruct": "Math five-group macro reference NLL"
+  },
+  "recipe_sources": [
+    {
+      "data_sha256": "4aae1b3d6e46d2f497cd677479b83edb55df88c675e27a3cabd99619217a79b6",
+      "job_id": "winner-v1-olmo3-7b-n3968-selected_recipe-s81",
+      "source_spec": "/mnt/hdfs/xwqu/five_component_multimodel_volume_validation_v1/batch03_qwen35_9_qwen25_olmo_gemma_n3968/snapshot/specs/volume-mm-v1-olmo3-7b-n3968-selected_recipe-s73.json",
+      "source_spec_sha256": "b58796e6ae23c32e60b4ae3991c4ef14c6fac493417412ccb647ea719cd55552"
+    },
+    {
+      "data_sha256": "6ca8f52d6508ad20a44df592cd6b5f976f3f9c7e6358eeba1a793922ba40f3be",
+      "job_id": "winner-v1-olmo3-7b-n3968-uniform_matched_q-s81",
+      "source_spec": "/mnt/hdfs/xwqu/five_component_multimodel_volume_validation_v1/batch03_qwen35_9_qwen25_olmo_gemma_n3968/snapshot/specs/volume-mm-v1-olmo3-7b-n3968-uniform_matched_q-s73.json",
+      "source_spec_sha256": "803cf55df688ff28e982efc7b7c39679aeb0afe7856b1e1d4e073808a46b1af2"
+    },
+    {
+      "data_sha256": "1b800a8be023afb65d17c6cf34d21c3baef3251733108328a69c929dbdfa4fca",
+      "job_id": "winner-v1-olmo3-7b-n3968-clean-s81",
+      "source_spec": "/mnt/hdfs/xwqu/five_component_multimodel_volume_validation_v1/batch03_qwen35_9_qwen25_olmo_gemma_n3968/snapshot/specs/volume-mm-v1-olmo3-7b-n3968-clean-s73.json",
+      "source_spec_sha256": "42d443c72a62da2d4013187a5a58d8b796c2d8d0067e9dc233f2127672e6bc03"
+    },
+    {
+      "data_sha256": "f691fc7f46ef75377992611384b4fb22e3c5dc40cc162f33b055cda33c8b4361",
+      "job_id": "winner-v1-qwen25-7b-n3968-selected_recipe-s81",
+      "source_spec": "/mnt/hdfs/xwqu/five_component_multimodel_volume_validation_v1/batch03_qwen35_9_qwen25_olmo_gemma_n3968/snapshot/specs/volume-mm-v1-qwen25-7b-n3968-selected_recipe-s73.json",
+      "source_spec_sha256": "099297efa77a1bd6c05edee0c78bc8e3f7421142c24174d1d165cd058d1a9c90"
+    },
+    {
+      "data_sha256": "e302116fe00c457bfbfc6be5b4d5e9a2579f75d6d738b8bad71453a6d1379928",
+      "job_id": "winner-v1-qwen25-7b-n3968-uniform_matched_q-s81",
+      "source_spec": "/mnt/hdfs/xwqu/five_component_multimodel_volume_validation_v1/batch03_qwen35_9_qwen25_olmo_gemma_n3968/snapshot/specs/volume-mm-v1-qwen25-7b-n3968-uniform_matched_q-s73.json",
+      "source_spec_sha256": "954b70cfbed683dafc770839e8160131ea052d199369e0e43b197e90984cb2e5"
+    },
+    {
+      "data_sha256": "1b800a8be023afb65d17c6cf34d21c3baef3251733108328a69c929dbdfa4fca",
+      "job_id": "winner-v1-qwen25-7b-n3968-clean-s81",
+      "source_spec": "/mnt/hdfs/xwqu/five_component_multimodel_volume_validation_v1/batch03_qwen35_9_qwen25_olmo_gemma_n3968/snapshot/specs/volume-mm-v1-qwen25-7b-n3968-clean-s73.json",
+      "source_spec_sha256": "c95dc150d273ca481320cf1207debff2c964b08b027836207da4f152c5ac03d1"
+    },
+    {
+      "data_sha256": "4aae1b3d6e46d2f497cd677479b83edb55df88c675e27a3cabd99619217a79b6",
+      "job_id": "winner-v1-olmo3-7b-n3968-selected_recipe-s82",
+      "source_spec": "/mnt/hdfs/xwqu/five_component_multimodel_volume_validation_v1/batch03_qwen35_9_qwen25_olmo_gemma_n3968/snapshot/specs/volume-mm-v1-olmo3-7b-n3968-selected_recipe-s73.json",
+      "source_spec_sha256": "b58796e6ae23c32e60b4ae3991c4ef14c6fac493417412ccb647ea719cd55552"
+    },
+    {
+      "data_sha256": "6ca8f52d6508ad20a44df592cd6b5f976f3f9c7e6358eeba1a793922ba40f3be",
+      "job_id": "winner-v1-olmo3-7b-n3968-uniform_matched_q-s82",
+      "source_spec": "/mnt/hdfs/xwqu/five_component_multimodel_volume_validation_v1/batch03_qwen35_9_qwen25_olmo_gemma_n3968/snapshot/specs/volume-mm-v1-olmo3-7b-n3968-uniform_matched_q-s73.json",
+      "source_spec_sha256": "803cf55df688ff28e982efc7b7c39679aeb0afe7856b1e1d4e073808a46b1af2"
+    },
+    {
+      "data_sha256": "1b800a8be023afb65d17c6cf34d21c3baef3251733108328a69c929dbdfa4fca",
+      "job_id": "winner-v1-olmo3-7b-n3968-clean-s82",
+      "source_spec": "/mnt/hdfs/xwqu/five_component_multimodel_volume_validation_v1/batch03_qwen35_9_qwen25_olmo_gemma_n3968/snapshot/specs/volume-mm-v1-olmo3-7b-n3968-clean-s73.json",
+      "source_spec_sha256": "42d443c72a62da2d4013187a5a58d8b796c2d8d0067e9dc233f2127672e6bc03"
+    },
+    {
+      "data_sha256": "f691fc7f46ef75377992611384b4fb22e3c5dc40cc162f33b055cda33c8b4361",
+      "job_id": "winner-v1-qwen25-7b-n3968-selected_recipe-s82",
+      "source_spec": "/mnt/hdfs/xwqu/five_component_multimodel_volume_validation_v1/batch03_qwen35_9_qwen25_olmo_gemma_n3968/snapshot/specs/volume-mm-v1-qwen25-7b-n3968-selected_recipe-s73.json",
+      "source_spec_sha256": "099297efa77a1bd6c05edee0c78bc8e3f7421142c24174d1d165cd058d1a9c90"
+    },
+    {
+      "data_sha256": "e302116fe00c457bfbfc6be5b4d5e9a2579f75d6d738b8bad71453a6d1379928",
+      "job_id": "winner-v1-qwen25-7b-n3968-uniform_matched_q-s82",
+      "source_spec": "/mnt/hdfs/xwqu/five_component_multimodel_volume_validation_v1/batch03_qwen35_9_qwen25_olmo_gemma_n3968/snapshot/specs/volume-mm-v1-qwen25-7b-n3968-uniform_matched_q-s73.json",
+      "source_spec_sha256": "954b70cfbed683dafc770839e8160131ea052d199369e0e43b197e90984cb2e5"
+    },
+    {
+      "data_sha256": "1b800a8be023afb65d17c6cf34d21c3baef3251733108328a69c929dbdfa4fca",
+      "job_id": "winner-v1-qwen25-7b-n3968-clean-s82",
+      "source_spec": "/mnt/hdfs/xwqu/five_component_multimodel_volume_validation_v1/batch03_qwen35_9_qwen25_olmo_gemma_n3968/snapshot/specs/volume-mm-v1-qwen25-7b-n3968-clean-s73.json",
+      "source_spec_sha256": "c95dc150d273ca481320cf1207debff2c964b08b027836207da4f152c5ac03d1"
+    },
+    {
+      "data_sha256": "4aae1b3d6e46d2f497cd677479b83edb55df88c675e27a3cabd99619217a79b6",
+      "job_id": "winner-v1-olmo3-7b-n3968-selected_recipe-s83",
+      "source_spec": "/mnt/hdfs/xwqu/five_component_multimodel_volume_validation_v1/batch03_qwen35_9_qwen25_olmo_gemma_n3968/snapshot/specs/volume-mm-v1-olmo3-7b-n3968-selected_recipe-s73.json",
+      "source_spec_sha256": "b58796e6ae23c32e60b4ae3991c4ef14c6fac493417412ccb647ea719cd55552"
+    },
+    {
+      "data_sha256": "6ca8f52d6508ad20a44df592cd6b5f976f3f9c7e6358eeba1a793922ba40f3be",
+      "job_id": "winner-v1-olmo3-7b-n3968-uniform_matched_q-s83",
+      "source_spec": "/mnt/hdfs/xwqu/five_component_multimodel_volume_validation_v1/batch03_qwen35_9_qwen25_olmo_gemma_n3968/snapshot/specs/volume-mm-v1-olmo3-7b-n3968-uniform_matched_q-s73.json",
+      "source_spec_sha256": "803cf55df688ff28e982efc7b7c39679aeb0afe7856b1e1d4e073808a46b1af2"
+    },
+    {
+      "data_sha256": "1b800a8be023afb65d17c6cf34d21c3baef3251733108328a69c929dbdfa4fca",
+      "job_id": "winner-v1-olmo3-7b-n3968-clean-s83",
+      "source_spec": "/mnt/hdfs/xwqu/five_component_multimodel_volume_validation_v1/batch03_qwen35_9_qwen25_olmo_gemma_n3968/snapshot/specs/volume-mm-v1-olmo3-7b-n3968-clean-s73.json",
+      "source_spec_sha256": "42d443c72a62da2d4013187a5a58d8b796c2d8d0067e9dc233f2127672e6bc03"
+    },
+    {
+      "data_sha256": "f691fc7f46ef75377992611384b4fb22e3c5dc40cc162f33b055cda33c8b4361",
+      "job_id": "winner-v1-qwen25-7b-n3968-selected_recipe-s83",
+      "source_spec": "/mnt/hdfs/xwqu/five_component_multimodel_volume_validation_v1/batch03_qwen35_9_qwen25_olmo_gemma_n3968/snapshot/specs/volume-mm-v1-qwen25-7b-n3968-selected_recipe-s73.json",
+      "source_spec_sha256": "099297efa77a1bd6c05edee0c78bc8e3f7421142c24174d1d165cd058d1a9c90"
+    },
+    {
+      "data_sha256": "e302116fe00c457bfbfc6be5b4d5e9a2579f75d6d738b8bad71453a6d1379928",
+      "job_id": "winner-v1-qwen25-7b-n3968-uniform_matched_q-s83",
+      "source_spec": "/mnt/hdfs/xwqu/five_component_multimodel_volume_validation_v1/batch03_qwen35_9_qwen25_olmo_gemma_n3968/snapshot/specs/volume-mm-v1-qwen25-7b-n3968-uniform_matched_q-s73.json",
+      "source_spec_sha256": "954b70cfbed683dafc770839e8160131ea052d199369e0e43b197e90984cb2e5"
+    },
+    {
+      "data_sha256": "1b800a8be023afb65d17c6cf34d21c3baef3251733108328a69c929dbdfa4fca",
+      "job_id": "winner-v1-qwen25-7b-n3968-clean-s83",
+      "source_spec": "/mnt/hdfs/xwqu/five_component_multimodel_volume_validation_v1/batch03_qwen35_9_qwen25_olmo_gemma_n3968/snapshot/specs/volume-mm-v1-qwen25-7b-n3968-clean-s73.json",
+      "source_spec_sha256": "c95dc150d273ca481320cf1207debff2c964b08b027836207da4f152c5ac03d1"
+    }
+  ],
+  "schema": "winner-confirmation-protocol/v1",
+  "secondary_readouts": "All Math and grounded Knowledge endpoints including false abstention, strict answer extraction, NLL and BPB. Knowledge is cross-domain readout of Math-trained checkpoints.",
+  "seeds": [
+    81,
+    82,
+    83
+  ],
+  "selection_scope": "Two model/recipe candidates selected using already observed DEV results; independent training seeds, NOT a new blind benchmark.",
+  "status": "FROZEN_BEFORE_NEW_SEED_OUTCOMES",
+  "training_identities": 18,
+  "user_authorization_sha256": "d0312a45e556a1700533a7bf3aeceb337ac257b2c1762196cad63d72cddd0d1e"
+}
