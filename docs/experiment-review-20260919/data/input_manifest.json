@@ -1,0 +1,33 @@
+{
+  "snapshot_utc": "2026-09-19T22:18:14.664284+00:00",
+  "inputs": [
+    {
+      "logical_name": "readouts.json",
+      "stored_path": "data/readouts.json.gz.b64",
+      "decoded_bytes": 722813,
+      "decoded_sha256": "1524fce8f95be3a9de90e7be4b1bdbf131b5e0756ee586c879b6b4a09175feef",
+      "stored_sha256": "e8b1d4a5fdd9165b1a48960da7a3588ba6a54596e34fc9195e948ba4beec197b"
+    },
+    {
+      "logical_name": "historical.json",
+      "stored_path": "data/historical.json",
+      "decoded_bytes": 34000,
+      "decoded_sha256": "ac4ba0f3829edae7f8f73d240529de74102831b074550a3c8475f54d85c83b43",
+      "stored_sha256": "ac4ba0f3829edae7f8f73d240529de74102831b074550a3c8475f54d85c83b43"
+    },
+    {
+      "logical_name": "forecast_errors.csv",
+      "stored_path": "data/forecast_errors.csv.gz.b64",
+      "decoded_bytes": 362089,
+      "decoded_sha256": "69c62b1a0aaa78a3dd789bee58c5a1dfbbfb8897c11a5ef2f4d3ad97062a3822",
+      "stored_sha256": "2e3a716dfafdd050ff8af4d6f558d4920148f50c05679a490e7cbc72d0b83e06"
+    },
+    {
+      "logical_name": "calibration_budget_errors.csv",
+      "stored_path": "data/calibration_budget_errors.csv.gz.b64",
+      "decoded_bytes": 278956,
+      "decoded_sha256": "acae09ead5bf405e7ccb8dc25852751a4a0710329e9bee347a2645d59be4d07f",
+      "stored_sha256": "d334644ab0432fa2846b7056919bb5a77adf9d0da98c0ef741d8efbb3551adaf"
+    }
+  ]
+}

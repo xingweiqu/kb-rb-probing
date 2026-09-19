@@ -1,0 +1,40 @@
+{
+  "volume_complete": 75,
+  "volume_expected": 81,
+  "fixed_records": 93,
+  "knowledge_bound_records": 93,
+  "clean_bmk_full_pair_models": 5,
+  "clean_bmk_wins": 4,
+  "clean_bmk_ties": 0,
+  "clean_bmk_winner_models": [
+    "Qwen/Qwen2.5-7B-Instruct",
+    "mistralai/Mistral-7B-Instruct-v0.3",
+    "allenai/Olmo-3-7B-Instruct",
+    "google/gemma-4-12B-it"
+  ],
+  "nll_full_pair_models": 5,
+  "nll_wins": 1,
+  "fixed_domain_summary": {
+    "Math": {
+      "gen": {
+        "models": 9,
+        "wins": 2
+      },
+      "macro_nll": {
+        "models": 9,
+        "wins": 8
+      }
+    },
+    "Knowledge": {
+      "gen": {
+        "models": 9,
+        "wins": 3
+      },
+      "macro_nll": {
+        "models": 9,
+        "wins": 5
+      }
+    }
+  },
+  "export_errors": []
+}

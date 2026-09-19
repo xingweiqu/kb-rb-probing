@@ -1,5 +1,7 @@
 # V-Probing: Knowledge vs Reasoning Boundary
 
+> 最新实验对照：[2026-09-19 · Clean-SFT / Uniform / Ours 完整结果表](docs/experiment-review-20260919/README.md) — BMK 答题、NLL/BPB、11 模型跨域、预测误差与 data-size scaling。
+
 ## 目标
 
 用线性探针（linear probe）在 LLM 各层的 hidden states 上，区分模型是在做**知识检索**还是**推理计算**，并观察这个边界随训练步数如何变化。
